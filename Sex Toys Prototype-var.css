@@ -10,13 +10,23 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
 }
 
 /* iOS Click styles */
-#bl-sex-toy-guide .bl-button, #bl-sex-toy-guide .bl-guide-menu-item{
+#bl-sex-toy-guide .bl-rf-button, #bl-sex-toy-guide .bl-guide-menu-item{
     cursor: pointer;
 }
 
 
 
 /* Background Gradients */
+
+/* Intro pages */
+.bl-intro-page, .bl-info-page{
+    background: #F2A6BF; /* Old browsers */
+    background: -moz-linear-gradient(top, #F2A6BF 0%, #E3338B 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #F2A6BF 0%,#E3338B 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #F2A6BF 0%,#E3338B 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F2A6BF', endColorstr='#E3338B',GradientType=0 ); /* IE6-9 */
+}
+
 /* Home page */
 .bl-inner-container{
     background: #ED145B; /* Old browsers */
@@ -88,7 +98,7 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    height: 350px;
+    height: 45vh;
 }
 
 .bl-slider-inner-container > div{
@@ -104,13 +114,21 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
 }
 
 .bl-option-one-checkbox, .bl-option-two-checkbox, .bl-option-three-checkbox, .bl-option-four-checkbox{
-    height: 50px;
-    width: 50px;
-    border: solid 1px #F0E02C;
+    height: 30px;
+    width: 30px;
+    border: solid 1px white;
     display: inline-block;
-    border-radius: 30px;
+    border-radius: 0px;
     background: rgba(255, 255, 255, 0.3);
-}   
+}
+
+.bl-slider-checkbox-text{
+    bottom: 10px;
+    position: relative;
+    margin-left: 10px;
+    color: white;
+    font-size: 1.1em;
+}
 
 .bl-slider-checkbox-sim{
     bottom: 0;
@@ -128,8 +146,9 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     bottom: 30px;
     position: relative;
     margin-left: 15px;
+    margin-bottom: 5vh;
     color: white;
-    font-size: 1.2em;
+    font-size: 2em;
 }
 
 .bl-feel-slider .bl-slider-inner-container .small{
@@ -148,9 +167,9 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     width: 50%;
 }
 
-.bl-size-slider .bl-slider-checkbox-sim{
+/* .bl-size-slider .bl-slider-checkbox-sim{
     bottom: -40px !important;
-}
+} */
 
 /* Styles */
 /* activation button */
@@ -230,6 +249,193 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
 
 /* app styles */
 
+/* Loading screen */
+.bl-loading-screen{
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: black;
+    color: white;
+    position: absolute;
+    opacity: 1;
+    transition: opacity 2s;
+    -webkit-transition: opacity 2s;
+    pointer-events: none;
+}
+
+.bl-loading-screen.bl-active{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.bl-loading-screen .st0{
+    fill:#E3348C;
+}
+
+.bl-loading-screen.bl-loading .st1{
+    stroke: white;
+    stroke-width: 4;
+    stroke-dasharray: 800px;
+    stroke-dashoffset: 800px;
+    animation-name: drawRabbit;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    fill: transparent;
+}
+
+
+.bl-loading-screen.bl-loading .st2{
+    stroke: white;
+    stroke-width: 4;
+    stroke-dasharray: 500px;
+    stroke-dashoffset: 500px;
+    animation-name: fade;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    fill: transparent;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+.bl-loading-screen .question-mark, .bl-loading-screen .vibe{
+    opacity: 0;
+    animation-name: pulse;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    fill: transparent;
+    animation-delay: 5s;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+        fill: white;
+        stroke-width: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    to {
+        opacity: 1;
+        fill: white;
+    }
+}
+
+@keyframes drawRabbit {
+    0%{
+        stroke-dashoffset: 800px;
+    }
+    80%{
+        stroke-dashoffset: 0;
+        fill: transparent;
+    }
+    100%{
+        stroke-dashoffset: 0;
+        fill: white;
+    }
+}
+
+
+
+/* 
+@keyframes drawStar {
+    to {
+        stroke-dashoffset: 0;
+        fill: #f39671;
+        stroke-width: 1;
+    }
+} */
+
+/* Global */
+.bl-header{
+    height: 50px;
+    background-color: black;
+}
+
+.bl-header #as_logo{
+    margin-top: 12px;
+}
+
+.bl-header span{
+    margin: 0;
+    color: white;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+/* Rabbit introduction and info screen */
+.bl-info-page, .bl-intro-page{
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: yellow;
+    color: black;
+    position: absolute;
+}
+
+.bl-info-page{
+    display: none;
+}
+
+.bl-intro-page{
+    display: inline-block;
+}
+
+.bl-intro-page .bl-info{
+    background-color: #E3338B;
+    color: white;
+}
+
+.bl-info-page .bl-start, .bl-intro-page .bl-start{
+    background-color: black;
+    color: white;
+}
+
+.bl-info-page .bl-start.bl-sticky{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0;
+}
+
+.bl-info-page .bl-page-header p, .bl-intro-page .bl-page-header p{
+    margin: 0;
+    color: white;
+}
+
+.bl-info-page .bl-page-header p.large, .bl-intro-page .bl-page-header p.large{
+    font-size: 2em;
+    color: white;
+}
+
+.bl-info-page .bl-intro-content, .bl-intro-page .bl-intro-content{
+    width: 70%;
+    margin: auto;
+    color: white;
+    line-height: 2em;
+    font-size: 1.2em;
+}
+
 /* home page */
 #bl-sex-toy-guide .bl-homepage-svg{
     height: 0;    
@@ -241,9 +447,7 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     height: 85px;
 }
 
-.bl-home-item-selected{
-    border: solid 4px #F0E02C;
-}
+
 
 .bl-inner-container, .bl-inner-container-right{
     display: inline-block;
@@ -275,12 +479,11 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
 .bl-container h3{
     color: white;
     font-size: 2.1em;
-    margin-top: 30px;
     position: relative;
     line-height: 40px;
     font-weight: 100;
     width: 85%;
-    margin: 15px auto;
+    margin: 1.5vh auto;
 }
 
 .bl-container .bl-slider-container h3{
@@ -317,25 +520,30 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
 }
 
 .bl-guide-menu-item{
-    width: 40%;
+    width: 22vh;
     display: inline-block;
     text-align: center;
-    background: #F05C8D;
+    background: white;
     margin: 10px 10px;
-    height: 150px;
+    height: 22vh;
     position: relative;
     transition: all 1s;
     border-radius: 140px;
     vertical-align: top;
+    border: solid 1px black;
 }
 
+.bl-guide-menu-item.bl-home-item-selected{
+    border: solid 4px black;
+}
 .bl-guide-menu-item p{
-    color: white;
+    color: black;
     top: 95px;
     position: relative;
     font-size: 1.2em;
     width: 67%;
     margin: auto;
+
 }
 
 .bl-guide-menu-item-one{
@@ -383,12 +591,12 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
 }
 
 
-.bl-button{
+.bl-rf-button{
     width: 80%;
     background-color: #F05C8D;
-    height: 60px;
+    height: 9vh;
     margin: auto;
-    border-radius: 30px;
+    border-radius: 10px;
     margin-top: 20px;
     text-align: center;
     color: white;
@@ -397,7 +605,7 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     letter-spacing: 0.04em;
 }
 
-.bl-button.bl-slider-results-button, .bl-button.bl-slider-skip-button{
+.bl-rf-button.bl-slider-results-button, .bl-rf-button.bl-slider-skip-button{
     width: 40%;
     display: inline-block;
     vertical-align: -webkit-baseline-middle;
@@ -416,19 +624,19 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     position: absolute;
 }
 
-.bl-button .bl-text-button{
+.bl-rf-button .bl-text-button{
     position: relative;
     top: 20px;
 }
 
-.bl-button.bl-view-all{
+.bl-rf-button.bl-view-all{
     background-color: transparent;
-    border: solid 1px #F05C8D;
-    color: #F05C8D;
+    border: solid 1px white;
+    color: white;
 }
 
 
-.bl-gradient-four .bl-button{
+.bl-gradient-four .bl-rf-button{
     color: #F05C8D !important;
     border-color: #F05C8D;
 }
@@ -438,20 +646,21 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     float: right;
     margin-right: 20px;
     height: 50px;
-    border-radius: 40px;
+    border-radius: 10px;
     background-color: transparent;
-    border: solid 2px #F0E02C;
-    color: #F0E02C !important;
+    border: solid 2px white;
+    color: white !important;
 }
 
 .bl-new-container .bl-info-details, .bl-previous-container .bl-info-details{
-    margin-top: 100px;
-    text-align: center;
+    margin-top: 10vh;
     padding: 0 20px;
+    width: 80%;
+    margin: 10vh auto;
 }
 
 .bl-new-container .bl-info-details span, .bl-previous-container .bl-info-details span{
-    color: #A00739;
+    color: black;
     font-size: 14px;
 }
 
@@ -466,22 +675,30 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     height: 30px;
     width: 50%;
     margin: 40px auto;
+    text-align: center;
 }
 
 
-.bl-new-container .bl-circle-containers span, .bl-previous-container .bl-circle-containers span{
+.bl-new-container .bl-circle-containers > span, .bl-previous-container .bl-circle-containers > span{
     height: 12px;
     width: 12px;
     border-radius: 10px;
-    background-color: #F0E02C;
+    background-color: white;
     display: inline-block;
     margin: 10px;
+    position: relative;
 }
 
-.bl-new-container .bl-circle-containers span.active, .bl-previous-container .bl-circle-containers span.active{
-    height: 20px;
-    width: 20px;
+.bl-new-container .bl-circle-containers > span.active span, .bl-previous-container .bl-circle-containers > span.active span{
+    height: 21px;
+    width: 21px;
     vertical-align: bottom;
+    border-radius: 15px;
+    background-color: transparent;
+    position: absolute;
+    border: solid 3px black;
+    left: -7px;
+    top: -7px;
 }
 
 .bl-plp-page{
@@ -495,8 +712,7 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
 }
 
 .bl-plp-page .bl-product-plp-tile{
-    width: 90%;
-    margin: 20px auto;
+    min-width: 85vw;
     background: white;
     padding: 10px;
 }
@@ -508,14 +724,15 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
 }
 
 .bl-plp-page .bl-details-list{
-    width: 48%;
-    float: right;
+    width: 55%;
     color: #A00739;
+    display: inline-block;
 }
 
 .bl-plp-page img{
-    float: left;
-    width: 48%;
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
 }
 
 .bl-plp-page button{
@@ -526,9 +743,28 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     border: none;
 }
 
+.bl-details-price{
+    float: left;
+    width: 30%;
+    left: 19px;
+    position: relative;
+    top: -20px;
+    font-size: 2em;
+}
+
 
 .bl-pdp-page{
     overflow: scroll;
+}
+
+#bl-sex-toy-guide .bl-horizontal-container .bl-pdp-container{
+    background-color: white;
+}
+
+#bl-sex-toy-guide .bl-horizontal-container .bl-pdp-container div#header-placeholder,
+    #bl-sex-toy-guide .bl-horizontal-container .bl-pdp-container header#header,
+        #bl-sex-toy-guide .bl-horizontal-container .bl-pdp-container nav.breadcrumb{
+    display: none;
 }
 
 .bl-pdp-page .bl-pdp-header{
@@ -907,11 +1143,73 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     text-align: center;
 }
 
+/* PLP Products */
+/* .bl-plp-horizontal-products > div, .bl-plp-horizontal-products .bl-plp-horizontal-filter-title p{
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+} */
+
+.bl-plp-horizontal-products{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 67vh;
+    display: flex;
+}
+
+.bl-plp-horizontal-products .bl-product-plp-tile{
+    display: inline-grid;
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+.bl-plp-horizontal-products .bl-product-plp-tile.bl-single-filter-tile{
+    display: block;
+}
+
+.bl-plp-horizontal-products .bl-product-plp-tile.bl-single-filter-tile .bl-single-filter{
+    display: inline-block;
+    width: auto;
+    padding: 10px 30px;
+    background-color: green;
+    margin: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.1em;
+}
+
+/* 
+.bl-plp-horizontal-products .bl-plp-horizontal-filter-title p{
+    margin-left: 30px;
+    color: #A00739;
+    font-size: 1.2em;
+}
+
+.bl-plp-horizontal-products p{
+    color: #A00739;
+}
+
+.bl-plp-horizontal-products > div > div {
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    border: solid 1px #A00739;
+    background: rgba(255, 255, 255, 0.3);
+    margin: auto;
+    top: 5px;
+    position: relative;
+}
+
+.bl-plp-horizontal-products .bl-plp-horizontal-filter{
+    text-align: center;
+} */
+
 .bl-change-preference-button-cont{
     position: fixed;
     height: 60px;
     color: white;
-    background-color: #A00739;
+    background-color: black;
     width: 100%;
     margin: 0;
     display: block;

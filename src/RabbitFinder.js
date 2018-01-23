@@ -8794,15 +8794,25 @@ $(document).ready(function () {
         $(pageOne).animate({
             right: width
         }, {
-                duration: speed, queue: false, complete: function () {
+                duration: speed, 
+                queue: false, 
+                specialEasing: {
+                    right: "linear"
                 }
+                //   , complete: function () {
+                // }
             })
 
         $(pageTwo).animate({
             right: 0
         }, {
-                duration: speed, queue: false, complete: function () {
+                duration: speed, 
+                queue: false, 
+                specialEasing: {
+                    right: "linear"
                 }
+                // complete: function () {
+                // }
             })
         setTimeout(function () {
             $(removeElement).remove();
@@ -8815,15 +8825,25 @@ $(document).ready(function () {
         $(pageOne).animate({
             right: -Math.abs(width)
         }, {
-                duration: speed, queue: false, complete: function () {
+                duration: speed, 
+                queue: false, 
+                specialEasing: {
+                    right: "linear"
                 }
+                // complete: function () {
+                // }
             })
 
         $(pageTwo).animate({
             right: 0
         }, {
-                duration: speed, queue: false, complete: function () {
+                duration: speed, 
+                queue: false, 
+                specialEasing: {
+                    right: "linear"
                 }
+                // complete: function () {
+                // }
             })
         setTimeout(function () {
             $(removeElement).remove();
@@ -9229,16 +9249,16 @@ $(document).ready(function () {
 
                 if (prop == 'size') {
                     // Set product size
-                    property = 'Size: ' + product.optionsValue.size;
+                    property = 'Size: '+ product.optionsValue.size;
                 } else if (prop == 'intensity') {
                     // Set product vibration intensity
-                    property = 'Intensity: ' + product.optionsValue.intensity;
+                    property = 'Intensity: '+ product.optionsValue.intensity;
                 } else if (prop == 'feel') {
                     // Set product shape
-                    property = 'Shape: ' + product.optionsValue.feel;
+                    property = 'Shape: '+ product.optionsValue.feel;
                 } else if (prop == 'style') {
                     // Set product vibration style
-                    property = 'Style: ' + product.optionsValue.style;
+                    property = 'Style: '+ product.optionsValue.style;
                 }
 
                 console.log(prop);
@@ -9555,7 +9575,7 @@ $(document).ready(function () {
             //     animation: `<img src="${svgs.gspot}" />`,
             //     searchValue: 4
             // }];
-            content.options = [{
+             content.options = [{
                 text: 'Contoured',
                 value: 'contoured',
                 animation: `<img src="${svgs.contoured}" />`,
@@ -9980,7 +10000,7 @@ $(document).ready(function () {
             ASSTBG_1.showPage(cat, 2, direction);
         }
 
-        // el.addClass('bl-home-item-selected');
+       // el.addClass('bl-home-item-selected');
 
     })
 
@@ -10046,7 +10066,7 @@ $(document).ready(function () {
     })
 
     /* Show PLP page from PDP */
-    $(document).on('click', '.bl-pdp-back-arrow', function () {
+    $(document).on('click', '.bl-pdp-back-arrow', function(){
         const cat = 'all';
         const page = 6;
         const direction = 'previous';
@@ -10166,18 +10186,18 @@ $(document).ready(function () {
         // show loading screen
         $('.bl-loading-screen').show();
         $('.bl-loading-screen').addClass('animate');
-
+        
         // Loading dots
         var loadingDotTotal = 0;
         var delay = 200;
-        var loadingDots = setInterval(function () {
-            if (loadingDotTotal === 1) {
+        var loadingDots = setInterval(function(){
+            if(loadingDotTotal === 1){
                 $('.loading-dots').text('.');
-            } else if (loadingDotTotal === 2) {
+            } else if(loadingDotTotal === 2){
                 $('.loading-dots').text('..');
-            } else if (loadingDotTotal === 3) {
+            } else if(loadingDotTotal === 3){
                 $('.loading-dots').text('...');
-            } else if (loadingDotTotal === 4) {
+            } else if(loadingDotTotal === 4){
                 $('.loading-dots').text('....');
                 loadingDotTotal = 0;
             }
@@ -10186,10 +10206,10 @@ $(document).ready(function () {
         }, 200);
 
         // hide loading screen
-        setTimeout(function () {
-            $('.bl-loading-screen').hide();
-            $('.bl-loading-screen').removeClass('animate');
-            clearInterval(loadingDots);
+        setTimeout(function(){
+           $('.bl-loading-screen').hide();
+           $('.bl-loading-screen').removeClass('animate');
+           clearInterval(loadingDots);
         }, 2000);
 
         let options = {
@@ -10262,12 +10282,12 @@ $(document).ready(function () {
 
     // })
 
-    $(document).on('click', '#bl-header .mini-cart-total', function () {
+    $(document).on('click', '#bl-header .mini-cart-total', function(){
         var miniCartContent = $(this).next();
         $(miniCartContent).show();
-        setTimeout(function () {
+        setTimeout(function(){
             $(miniCartContent).hide();
-        }, 3000);
+        },3000);
     });
 
     // detect swipe

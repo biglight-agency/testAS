@@ -6926,15 +6926,25 @@ $(document).ready(function () {
         $(pageOne).animate({
             right: width
         }, {
-                duration: speed, queue: false, complete: function () {
+                duration: speed, 
+                queue: false, 
+                specialEasing: {
+                    right: "linear"
                 }
+                //   , complete: function () {
+                // }
             })
 
         $(pageTwo).animate({
             right: 0
         }, {
-                duration: speed, queue: false, complete: function () {
+                duration: speed, 
+                queue: false, 
+                specialEasing: {
+                    right: "linear"
                 }
+                // complete: function () {
+                // }
             })
         setTimeout(function () {
             $(removeElement).remove();
@@ -6947,15 +6957,25 @@ $(document).ready(function () {
         $(pageOne).animate({
             right: -Math.abs(width)
         }, {
-                duration: speed, queue: false, complete: function () {
+                duration: speed, 
+                queue: false, 
+                specialEasing: {
+                    right: "linear"
                 }
+                // complete: function () {
+                // }
             })
 
         $(pageTwo).animate({
             right: 0
         }, {
-                duration: speed, queue: false, complete: function () {
+                duration: speed, 
+                queue: false, 
+                specialEasing: {
+                    right: "linear"
                 }
+                // complete: function () {
+                // }
             })
         setTimeout(function () {
             $(removeElement).remove();

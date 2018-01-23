@@ -1,0 +1,2136 @@
+/* Ann Summers Sex Toy Buyer Guide Prototype Styles 
+    Dev: Chris Davies */
+
+/* #################################################### 
+CV CSS
+#################################################### */
+
+#bl-sex-toy-guide{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.bl-cross{
+    color: transparent !important;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 20px;
+    width: 21px;
+    height: 21px;
+    z-index: 99;
+}
+.bl-cross:before {
+    content: '';
+    color: white !important;
+    position: absolute;
+    top: 10px;
+    width: 18px;
+    height: 3px;
+    background-color: currentColor;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    z-index: 99;
+}
+.bl-cross:after {
+    content: '';
+    position: absolute;
+    color: white !important;
+    top: 10px;
+    left: 0px;
+    width: 18px;
+    height: 3px;
+    background-color: currentColor;
+    border-radius: 10px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 99;
+}
+
+.bl-close-text{
+    display: block;
+    color: white;
+    width: 46px;
+    bottom: -25px;
+    position: relative;
+    left: 13px;
+    font-size: 11px;
+    z-index: 99;
+}
+
+/* !!! This solution to align the button to the button of the page still doesn't work :(
+     - in case the text is too long the button will overlap the text
+*/
+.bl-btn-container{
+    height:100%;
+}
+.bl-btn-container .bl-start{
+    position: absolute;
+    bottom: calc(0% + 30px);
+    vertical-align: bottom;
+    text-align: center;
+    margin: 0 5%;
+}
+
+.bl-btn-container.bl-what-is-rampant-rabbit .bl-start{
+    margin-left: 0;
+}
+
+.bl-intro-page .bl-intro-content{
+    margin-top: 30px !important;
+    font-weight:400;
+}
+
+.bl-info .bl-text-button:before{
+    content: "\003F";
+    position: absolute;
+    left: 0px;
+    width: 24px;
+    height: 23px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #E3338B;
+    background-color: white;
+    border-radius: 30px;
+    top: 0px;
+}
+
+.bl-info .bl-text-button{
+    padding-left: 30px;
+}
+
+
+
+  
+  
+
+
+
+/* ################################################ */
+
+.bl-hide{
+    display: none;
+}
+
+html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
+    overflow: hidden;
+}
+
+/* iOS Click styles */
+#bl-sex-toy-guide .bl-rf-button, #bl-sex-toy-guide .bl-guide-menu-item{
+    cursor: pointer;
+}
+
+
+
+/* Background Gradients */
+
+/* Intro pages */
+.bl-intro-page, .bl-info-page{
+    background: #F2A6BF; /* Old browsers */
+    background: -moz-linear-gradient(top, #F2A6BF 0%, #E3338B 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #F2A6BF 0%,#E3338B 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #F2A6BF 0%,#E3338B 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F2A6BF', endColorstr='#E3338B',GradientType=0 ); /* IE6-9 */
+}
+
+/* Home page */
+.bl-inner-container{
+    background: #ED145B; /* Old browsers */
+    background: -moz-linear-gradient(top, #F2A6BF 0%, #E3338B 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #F2A6BF 0%,#E3338B 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #F2A6BF 0%,#E3338B 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E3338B', endColorstr='#F2A6BF',GradientType=0 ); /* IE6-9 */
+}
+
+.bl-new-container.bl-info-container, .bl-previous-container.bl-info-container{
+    background: #F2A6BF; /* Old browsers */
+    background: -moz-linear-gradient(top, #F2A6BF 0%, #E3338B 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #F2A6BF 0%,#E3338B 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #F2A6BF 0%,#E3338B 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F2A6BF', endColorstr='#E3338B',GradientType=0 ); /* IE6-9 */
+}
+
+
+.bl-plp-page, .bl-pdp-page{
+    background: #F2A6BF; /* Old browsers */
+    background: -moz-linear-gradient(top, #FFF 0%, #F2A6BF 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #FFF 0%,#F2A6BF 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #FFF 0%,#F2A6BF 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFF', endColorstr='#F2A6BF',GradientType=0 ); /* IE6-9 */
+}
+
+/*sliders*/
+/* vibration style */
+
+/*.bl-intensity-slider, .bl-size-slider, .bl-style-slider, .bl-feel-slider{*/
+.bl-style-slider{
+    background: #f2a6bf;
+    background: -moz-radial-gradient(center, ellipse cover, #f2a6bf 0%, #582b82 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f2a6bf), color-stop(100%,#582b82));
+    background: -webkit-radial-gradient(center, ellipse cover, #f2a6bf 0%,#582b82 100%);
+    background: -o-radial-gradient(center, ellipse cover, #f2a6bf 0%,#582b82 100%);
+    background: -ms-radial-gradient(center, ellipse cover, #f2a6bf 0%,#582b82 100%);
+    background: radial-gradient(ellipse at center, #f2a6bf 0%,#582b82 100%);
+    transition: all 0.5s;
+}
+
+.bl-feel-slider{
+    background: #F2A6BF; /* Old browsers */
+    background: -moz-linear-gradient(top, #F2A6BF 0%, #E3338B 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #F2A6BF 0%,#E3338B 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #F2A6BF 0%,#E3338B 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F2A6BF', endColorstr='#E3338B',GradientType=0 ); /* IE6-9 */
+}
+
+.bl-intensity-slider,
+.bl-intensity-slider.bl-gradient-one{
+    background: #229ABA; /* Old browsers */
+    background: -moz-linear-gradient(top, #229ABA 0%, #F2A6BF 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #229ABA 0%,#F2A6BF 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #229ABA 0%,#F2A6BF 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#229ABA', endColorstr='#F2A6BF',GradientType=0 ); /* IE6-9 */
+}
+
+.bl-intensity-slider.bl-gradient-two{
+    background: #582B82; /* Old browsers */
+    background: -moz-linear-gradient(top, #582B82 0%, #067FA0 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #582B82 0%,#067FA0 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #582B82 0%,#067FA0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#582B82', endColorstr='#067FA0',GradientType=0 ); /* IE6-9 */
+}
+
+.bl-intensity-slider.bl-gradient-three{
+    background: #E3338B; /* Old browsers */
+    background: -moz-linear-gradient(top, #E3338B 0%, #582B82 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #E3338B 0%,#582B82 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #E3338B 0%,#582B82 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E3338B', endColorstr='#582B82',GradientType=0 ); /* IE6-9 */
+}
+
+.bl-intensity-slider.bl-gradient-four{
+    background: #F0E02C; /* Old browsers */
+    background: -moz-linear-gradient(top, #F0E02C 0%, #E3338B 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #F0E02C 0%,#E3338B 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #F0E02C 0%,#E3338B 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F0E02C', endColorstr='#E3338B',GradientType=0 ); /* IE6-9 */
+}
+
+.bl-size-slider,
+.bl-size-slider.bl-gradient-one{
+    background: #229ABA; /* Old browsers */
+    background: -moz-linear-gradient(top, #229ABA 0%, #F2A6BF 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #229ABA 0%,#F2A6BF 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #229ABA 0%,#F2A6BF 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#229ABA', endColorstr='#F2A6BF',GradientType=0 ); /* IE6-9 */
+}
+
+.bl-size-slider.bl-gradient-two{
+    background: #582B82; /* Old browsers */
+    background: -moz-linear-gradient(top, #582B82 0%, #067FA0 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #582B82 0%,#067FA0 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #582B82 0%,#067FA0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#582B82', endColorstr='#067FA0',GradientType=0 ); /* IE6-9 */
+}
+
+.bl-size-slider.bl-gradient-three{
+    background: #582B82; /* Old browsers */
+    background: -moz-linear-gradient(top, #582B82 0%, #E3338B 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #582B82 0%,#E3338B 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #582B82 0%,#E3338B 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#582B82', endColorstr='#E3338B',GradientType=0 ); /* IE6-9 */
+}
+
+.bl-size-slider.bl-gradient-four{
+    background: #E3338B; /* Old browsers */
+    background: -moz-linear-gradient(top, #E3338B 0%, #F0E02C 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #E3338B 0%,#F0E02C 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #E3338B 0%,#F0E02C 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E3338B', endColorstr='#F0E02C',GradientType=0 ); /* IE6-9 */
+}
+
+/*.bl-intensity-slider.bl-gradient-two, .bl-size-slider.bl-gradient-two, .bl-style-slider.bl-gradient-two, .bl-feel-slider.bl-gradient-two{
+    background: #f2a6bf;
+    background: -moz-radial-gradient(center, ellipse cover, #f2a6bf 0%, #582b82 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f2a6bf), color-stop(100%,#582b82));
+    background: -webkit-radial-gradient(center, ellipse cover, #f2a6bf 0%,#582b82 100%);
+    background: -o-radial-gradient(center, ellipse cover, #f2a6bf 0%,#582b82 100%);
+    background: -ms-radial-gradient(center, ellipse cover, #f2a6bf 0%,#582b82 100%);
+    background: radial-gradient(ellipse at center, #f2a6bf 0%,#582b82 100%);
+    transition: all 0.5s;
+}
+
+.bl-intensity-slider.bl-gradient-three, .bl-size-slider.bl-gradient-three, .bl-style-slider.bl-gradient-three, .bl-feel-slider.bl-gradient-three{
+    background: #f2a6bf;
+    background: -moz-radial-gradient(center, ellipse cover, #f2a6bf 0%, #582b82 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f2a6bf), color-stop(100%,#582b82));
+    background: -webkit-radial-gradient(center, ellipse cover, #f2a6bf 0%,#582b82 100%);
+    background: -o-radial-gradient(center, ellipse cover, #f2a6bf 0%,#582b82 100%);
+    background: -ms-radial-gradient(center, ellipse cover, #f2a6bf 0%,#582b82 100%);
+    background: radial-gradient(ellipse at center, #f2a6bf 0%,#582b82 100%);
+    transition: all 0.5s;
+}
+
+.bl-intensity-slider.bl-gradient-four, .bl-size-slider.bl-gradient-four, .bl-style-slider.bl-gradient-four, .bl-feel-slider.bl-gradient-four{
+    background: #f2a6bf;
+    background: -moz-radial-gradient(center, ellipse cover, #f2a6bf 0%, #582b82 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f2a6bf), color-stop(100%,#582b82));
+    background: -webkit-radial-gradient(center, ellipse cover, #f2a6bf 0%,#582b82 100%);
+    background: -o-radial-gradient(center, ellipse cover, #f2a6bf 0%,#582b82 100%);
+    background: -ms-radial-gradient(center, ellipse cover, #f2a6bf 0%,#582b82 100%);
+    background: radial-gradient(ellipse at center, #f2a6bf 0%,#582b82 100%);
+    transition: all 0.5s;
+}*/
+
+.bl-intensity-slider .bl-slider-inner-container{
+    margin-top: 0px;    
+}
+
+.bl-slider-inner-container{
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 45vh;
+    margin-top: 50px;
+}
+
+.bl-slider-inner-container > div{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+.bl-slider-checkbox{
+    display: none;
+}
+
+.bl-option-one-checkbox, .bl-option-two-checkbox, .bl-option-three-checkbox, .bl-option-four-checkbox{
+    height: 25px;
+    width: 25px;
+    border: solid 2px #FFF;
+    display: inline-block;
+    border-radius: 0px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.bl-slider-checkbox-text{
+    bottom: 10px;
+    position: relative;
+    margin-left: 10px;
+    color: white;
+    font-size: 1.1em;
+}
+
+.bl-slider-checkbox-sim{
+    bottom: 0;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.bl-slider-checkbox-sim.bl-selected > .bl-option-checkbox{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.bl-option-one-text, .bl-option-two-text, .bl-option-three-text, .bl-option-four-text{
+    bottom: 30px;
+    position: relative;
+    margin-left: 15px;
+    margin-bottom: 5vh;
+    color: white;
+    font-size: 2em;
+}
+
+/* .bl-feel-slider .bl-slider-inner-container .small{
+    top: -25%;
+} */
+.bl-feel-slider .bl-slider-inner-container .small{
+    top: 0%;
+}
+
+.bl-feel-slider .bl-slider-inner-container .small img{
+    width: 50%;
+}
+
+.bl-size-slider .bl-slider-inner-container .small{
+    top: -15%;
+}
+
+.bl-size-slider .bl-slider-inner-container .small img{
+    width: 50%;
+}
+
+.bl-size-slider .bl-slider-container > h3{
+    width: 60%;
+}
+
+/* .bl-size-slider .bl-slider-checkbox-sim{
+    bottom: -40px !important;
+} */
+
+/* Styles */
+/* activation button */
+#bl-sex-toy-guide h5, #bl-sex-toy-guide h3{
+    text-align: center;
+}
+.bl-guide-banner{
+    width: 100%;
+    position: relative;
+    font-family: 'Open Sans',sans-serif;
+    height: 110px;
+    border: solid 1px #ed145b;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: normal;
+    -webkit-transition:  all 1s;
+    transition: all 1s;
+}
+
+.bl-guide-banner:hover, .bl-guide-banner:active{
+    font-weight: bold;
+    color: #ed145b;
+    -webkit-transition:  all 1s;
+    transition: all 1s;
+}
+
+.bl-guide-banner div{
+    display: inline-block;
+}
+
+.bl-banner-img-one{
+    left: 10px;
+    position: absolute;
+}
+
+.bl-banner-img-one, .bl-banner-img-two{
+    height: 80px;  
+    top: 10px;
+}
+
+.bl-banner-img-two{
+    right: 10px;
+    position: absolute;
+}
+
+.bl-banner-message{
+    width: 100%;
+    position: absolute;
+}
+.bl-banner-message p{
+    text-align: center;
+    font-size: 1.4em;
+    line-height: 2em;
+    margin-left: 60px;
+    width: 80%;
+}
+.col-primary.search-results{
+    clear: both;
+}
+.bl-overlay{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 99998;
+    opacity: 0.7;
+}
+.bl-overlay.bl-display, .bl-container.bl-display{
+    display: block;
+    -webkit-transition:  all 1s;
+    transition: all 1s;
+}
+
+
+/* end */
+
+/* app styles */
+
+/* Loading screen */
+.bl-loading-screen{
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: black;
+    color: white;
+    position: absolute;
+    opacity: 1;
+    transition: opacity 2s;
+    -webkit-transition: opacity 2s;
+    pointer-events: none;
+}
+
+
+.bl-loading-screen.bl-active{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.bl-loading-screen .st0{
+    fill:#E3348C;
+}
+
+.bl-loading-screen.bl-loading .st1{
+    stroke: white;
+    stroke-width: 4;
+    stroke-dasharray: 800px;
+    stroke-dashoffset: 800px;
+    animation-name: drawRabbit;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    fill: transparent;
+}
+
+
+.bl-loading-screen.bl-loading .st2{
+    stroke: white;
+    stroke-width: 4;
+    stroke-dasharray: 500px;
+    stroke-dashoffset: 500px;
+    animation-name: fade;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    fill: transparent;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+.bl-loading-screen .question-mark, .bl-loading-screen .vibe{
+    opacity: 0;
+    animation-name: pulse;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    fill: transparent;
+    animation-delay: 3s;
+}
+
+.bl-loading-screen.animate{
+    opacity: 0.9;
+}
+
+.bl-loading-screen.animate .bl-header-svg{
+    display: none;
+}
+
+.bl-loading-screen.animate .bl-loading-text{
+    display: block;
+    width: auto;
+    margin: auto;
+    display: block;
+    text-align: center;
+    font-size: 1.3em;
+}
+.bl-loading-screen .bl-header-svg{
+    display: block;
+}
+
+.bl-loading-screen .bl-loading-text{
+    display: none;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+        fill: white;
+        stroke-width: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    to {
+        opacity: 1;
+        fill: white;
+    }
+}
+
+@keyframes drawRabbit {
+    0%{
+        stroke-dashoffset: 800px;
+    }
+    80%{
+        stroke-dashoffset: 0;
+        fill: transparent;
+    }
+    100%{
+        stroke-dashoffset: 0;
+        fill: white;
+    }
+}
+
+
+
+/* 
+@keyframes drawStar {
+    to {
+        stroke-dashoffset: 0;
+        fill: #f39671;
+        stroke-width: 1;
+    }
+} */
+
+/* Global */
+#bl-header{
+    height: 50px;
+    background-color: black;
+    position: relative;
+}
+
+#bl-header:nth-child(2){
+    display: none;
+}
+
+#bl-header .container{
+    position: absolute;
+    bottom: 10px;
+}
+
+#bl-header .brand > a{
+    width: 70%;
+    position: relative;
+    display: block;
+    margin: auto;
+}
+
+.bl-pdp-back-arrow{
+    background: black;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    border-top: solid 1px white;
+    padding: 10px;
+}
+
+/* Rabbit introduction and info screen */
+.bl-info-page, .bl-intro-page{
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: yellow;
+    color: black;
+    position: absolute;
+}
+
+.bl-info-page{
+    display: none;
+    overflow-y: scroll;
+}
+
+.bl-intro-page{
+    display: inline-block;
+}
+
+.bl-intro-page .bl-info{
+    background-color: #E3338B;
+    color: white;
+}
+
+.bl-info-page .bl-start, .bl-intro-page .bl-start{
+    background-color: black;
+    color: white;
+}
+
+.bl-info-page .bl-start.bl-sticky{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0;
+    z-index: 2;
+}
+
+.bl-intro-image{
+    position: relative;
+    height: 500px;
+    z-index: 0;
+}
+
+.bl-intro-image img{
+    position: absolute;
+}
+
+.bl-intro-image img:nth-child(1){
+    position: absolute;
+    z-index: 1;
+    width: 90%;
+    top: -58px;
+    right: 8px;
+}
+
+.bl-info-page .bl-page-header p, .bl-intro-page .bl-page-header p{
+    margin: 0;
+    color: white;
+}
+
+.bl-info-page .bl-page-header p.large, .bl-intro-page .bl-page-header p.large{
+    font-size: 4vh;
+    color: white;
+    font-weight: bold;
+}
+
+.bl-info-page .bl-intro-content, .bl-intro-page .bl-intro-content{
+    width: 70%;
+    margin: auto;
+    color: white;
+    line-height: 2em;
+    font-size: 2.3vh;
+    margin-top: 20px;
+}
+
+/* home page */
+#bl-sex-toy-guide .bl-homepage-svg{
+    height: 0;    
+    top: 14px;
+    position: relative;
+}
+
+#bl-sex-toy-guide .bl-homepage-svg svg{
+    height: 11vh;
+}
+
+.bl-inner-container, .bl-inner-container-right{
+    display: inline-block;
+    position: relative;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    right: 0;
+    -webkit-transition:  all 1s;
+    transition: all 1s;
+    background-color: white;
+    z-index: 1;
+
+}
+.bl-container{
+    display: none;
+    background: white;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    position: relative;
+    z-index: 99999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.bl-container h3{
+    color: white;
+    font-size: 4vh;
+    position: relative;
+    line-height: 40px;
+    font-weight: 100;
+    width: 85%;
+    margin: 1.5vh auto;
+}
+
+.bl-container .bl-slider-container h3{
+    margin: 30px auto;
+}
+
+.bl-container label{
+    height: 80px;
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #FFCBD3;
+    margin-bottom: 30px;
+    cursor: pointer;
+    -webkit-transition:  all 1s;
+    transition: all 1s;
+    
+}
+
+.bl-guide-menu{
+    position: relative;
+    text-align: center;
+}
+.bl-inner-container label.bl-selected{
+    font-weight: bold;
+    color: white;
+    background: #ed145b;
+    -webkit-transition:  all 1s;
+    transition: all 1s;
+}
+.bl-inner-container label input{
+    display: none;
+}
+
+.bl-guide-menu-item{
+    width: 22vh;
+    display: inline-block;
+    text-align: center;
+    background: white;
+    margin: 10px 10px;
+    height: 22vh;
+    position: relative;
+    transition: all 1s;
+    border-radius: 140px;
+    vertical-align: top;
+    border: solid 1px black;
+}
+
+.bl-guide-menu-item.bl-home-item-selected{
+    border: solid 4px black;
+}
+
+.bl-guide-menu-item.bl-home-item-selected::after{
+    content: url(http://localhost:3000/CXO/Ann%20Summers/Sex%20Toys%20Prototype/src/Misc/180119-AS-rabbit_finder-tick_circle.svg);
+    height: 37px;
+    width: 50px;
+    display: block;
+    right: 0px;
+    top: 0;
+    position: absolute;
+}
+
+.bl-vibration-animation-overlay-circle{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    border: 2px solid black;
+    border-radius: 50%;
+    z-index: 10000;
+    overflow: hidden;
+    background: black;
+}
+
+.bl-guide-menu-item p{
+    color: black;
+    top: 95px;
+    position: relative;
+    font-size: 1.2em;
+    width: 67%;
+    margin: auto;
+
+}
+
+.bl-guide-menu-item-one{
+    left: 0;
+}
+.bl-guide-menu-item-two{
+    right: 0;
+}
+.bl-guide-menu-item-three{
+    left: 0;
+}
+.bl-guide-menu-item-four{
+    right: 0;
+}
+.bl-options.bl-right{
+    left: 600px;
+    position: relative;
+    width: 100%;
+}
+.bl-options.bl-left{
+    right: 600px;
+    position: relative;
+    width: 100%;
+}
+
+
+.bl-options.bl-bottom{
+    top: 600px;
+    position: relative;
+    width: 100%;
+}
+#bl-sex-toy-guide button{
+    margin-bottom: 20px;
+}
+
+#bl-sex-toy-guide{
+    overflow: hidden;
+}
+.bl-new-container, .bl-previous-container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+
+.bl-rf-button{
+    width: 80%;
+    background-color: #E3338B;
+    height: 8vh;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2vh;
+    letter-spacing: 0.04em;
+}
+
+.bl-rf-button.bl-slider-results-button, .bl-rf-button.bl-slider-skip-button{
+    width: 43%;
+    display: inline-block;
+    vertical-align: -webkit-baseline-middle;
+    vertical-align: bottom;
+    margin: auto 5px;
+    font-size: 1.09em;
+    border: solid 2px #F0E02C;
+    background: transparent;
+    color: #F0E02C !important;
+}
+
+.bl-slider-buttons{
+    width: 100%;
+    text-align: center;   
+    bottom: 20px;
+    position: absolute;
+}
+
+.bl-rf-button .bl-text-button{
+    position: relative;
+    top: 17px;
+}
+
+.bl-rf-button.bl-view-all{
+    background-color: transparent;
+    border: solid 2px white;
+    color: white;
+}
+
+
+.bl-gradient-four .bl-rf-button{
+    color: #F05C8D !important;
+    border-color: #F05C8D;
+}
+
+.bl-rf-button.bl-transparent-white-border-btn{
+    background: transparent !important;
+    color: #fff !important;
+    border: 2px solid #fff;
+}
+
+.bl-rf-button.bl-black-white-text-btn,
+.bl-rf-button.bl-black-white-text-btn.bl-option-selected{
+    background-color: #000 !important;
+    color: #fff !important;
+    border: none;
+}
+
+.bl-new-container .bl-next-page, .bl-previous-container .bl-next-page{
+    width: 40%;
+    float: right;
+    margin-right: 20px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: solid 2px white;
+    color: white !important;
+}
+
+.bl-new-container .bl-info-details, .bl-previous-container .bl-info-details{
+    margin-top: 10vh;
+    padding: 0 20px;
+    width: 80%;
+    margin: 10vh auto;
+}
+
+.bl-new-container .bl-info-details span, .bl-previous-container .bl-info-details span{
+    color: #000;
+    font-size: 14px;
+/*    font-weight: 600;*/
+    text-transform: uppercase;
+}
+
+.bl-new-container .bl-info-details p, .bl-previous-container .bl-info-details p{
+    color: #fff;
+    font-size: 2em;
+    line-height: 1.5em;
+    margin-top: 0;
+}
+
+.bl-new-container .bl-circle-containers, .bl-previous-container .bl-circle-containers{
+    height: 30px;
+    width: 50%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+
+.bl-new-container .bl-circle-containers > span, .bl-previous-container .bl-circle-containers > span{
+    height: 12px;
+    width: 12px;
+    border-radius: 10px;
+    background-color: white;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+}
+
+.bl-new-container .bl-circle-containers > span.active span, .bl-previous-container .bl-circle-containers > span.active span{
+    height: 21px;
+    width: 21px;
+    vertical-align: bottom;
+    border-radius: 15px;
+    background-color: transparent;
+    position: absolute;
+    border: solid 3px black;
+    left: -7px;
+    top: -7px;
+}
+
+.bl-plp-page{
+    overflow: scroll;
+}
+
+.bl-plp-page .bl-plp-header{
+    color: #000;
+    text-align: center;
+    font-size: 2em;
+}
+
+.bl-plp-page .bl-product-plp-tile{
+    min-width: 80vw;
+    background: white;
+    padding: 10px;
+    position: relative;
+}
+
+.bl-plp-page .bl-product-plp-tile .bl-plp-close-match{
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.bl-plp-page .bl-product-plp-tile .bl-rf-button{
+    left: 0;
+    right: 0;
+    position: absolute;
+    bottom: 10px;
+    width: 90%;
+}
+
+.bl-matched-tick{
+    position: absolute;
+}
+
+.bl-ratings{
+    margin-left: 20px;
+    height: 30px;
+    margin-top: 6px;
+}
+
+.bl-ratings .rating-avg, .bl-ratings .rating-count{
+    display: none;
+}
+
+.bl-matched-tick::before{
+    content: '✔';
+    height: 10px;
+    width: 10px;
+    color: #E3338B;
+    position: relative;
+    display: inline-block;
+    left: -25px;
+}
+
+.bl-plp-page .bl-product-title{
+    text-align: left;
+    color: #000;
+    font-size: 3vh;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.bl-plp-page .bl-details-list{
+    width: 55%;
+    color: #E3338B;
+    display: inline-block;
+    font-weight: 600;
+    position: relative;
+}
+
+.bl-plp-page img{
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+}
+
+.bl-plp-page button{
+    width: 100%;
+    clear: both;
+    background: #29921B;
+    color: #FFF !important;
+    border: none;
+}
+
+.bl-details-price{
+    float: left;
+    width: 30%;
+    left: 20px;
+    position: relative;
+    top: -20px;
+    font-size: 3vh;
+}
+
+
+.bl-pdp-page{
+    overflow: scroll;
+}
+
+#bl-sex-toy-guide .bl-horizontal-container .bl-pdp-container{
+    background-color: white;
+}
+
+#bl-sex-toy-guide .bl-horizontal-container .bl-pdp-container div#header-placeholder,
+    #bl-sex-toy-guide .bl-horizontal-container .bl-pdp-container header#header,
+        #bl-sex-toy-guide .bl-horizontal-container .bl-pdp-container nav.breadcrumb{
+    display: none;
+}
+
+.bl-pdp-page .bl-pdp-header{
+    font-size: 2em;
+    text-align: center;
+    color: #A00739 !important;
+    width: 70%;
+    margin: 30px auto 10px auto;
+    line-height: 1.3em;
+
+}
+
+.bl-pdp-page .bl-pdp-main-image, .bl-pdp-page{
+    padding-bottom: 65px;
+
+}
+
+.bl-pdp-page .bl-pdp-main-image img{
+    float: right;
+    margin-right: 5%;
+    width: 80%;
+}
+
+.bl-pdp-page .bl-thumbnails div{
+    position: relative;
+    height: 40px;
+    background: white;
+    display: block;
+    margin: 0 0 10px 7px;
+    width: 40px;
+    float: left;
+    
+}
+.bl-pdp-page .bl-thumbnails{
+    float: left;
+    width: 10%;
+}
+
+.bl-pdp-page .bl-pdp-properties{
+    clear: both;
+    width: 100%;
+    margin: 20px auto;
+}
+.bl-pdp-page .bl-pdp-properties p{
+    width: 48%;
+    display: inline-block;
+    color: #A00739 !important;
+    text-decoration: underline;
+}
+
+.bl-pdp-page .bl-pdp-description{
+    clear: both;
+    margin: 20px auto;
+}
+
+.bl-pdp-page .bl-pdp-description p{
+    color: #A00739 !important;
+    font-size: 1.4em;
+    width: 70%;
+    margin: auto;
+    line-height: 1.5em;
+}
+
+.bl-pdp-page .bl-pdp-add-to-bag #add-to-cart{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: 0;
+    border: none;
+    background-color: #F0E02C;
+    color: #ed145b !important;
+}
+
+/* SLIDER EFFECTS */
+/* PULSE */
+.pulsatingCircle{
+    width:25px;
+    height:25px;
+    display:block;
+    position:relative;
+    margin:20% auto;
+    transform:scale(5,5);
+    -webkit-transform:scale(5,5);
+}
+
+.firstCircle,
+.secondCircle,
+.thirdCircle,
+.fourthCircle{
+    top:50%;
+    left:50%;
+    display:block;
+    border-radius:50%;
+    position:absolute;
+    vertical-align:middle;
+}
+    
+.firstCircle{
+    width:10px;
+    height:10px;
+    margin:-5px 0 0 -5px;
+    background-color:#fff;
+}
+
+.secondCircle{
+    width:16px;
+    height:16px;
+    margin:-9px 0 0 -9px;
+    border:1px solid #ccc;					
+}
+
+.thirdCircle{
+    width:24px;
+    height:24px;
+    border:1px solid #fff;
+    margin:-13px 0 0 -13px;
+}
+
+.fourthCircle{
+    width:32px;
+    height:32px;
+    border:1px solid #fff;
+    margin:-17px 0 0 -17px;	
+}
+
+.moderate .secondCircle{
+    animation:2000ms pulseIn ease-in-out infinite;
+    -webkit-animation:2000ms pulseIn 200s linear  infinite;	
+}
+
+.moderate .thirdCircle{
+    animation:2000ms pulseIn 500ms ease-in-out infinite;
+    -webkit-animation:2000ms pulseIn 500ms linear  infinite;	
+}
+
+.moderate .fourthCircle{
+    animation:2000ms pulseIn 500ms ease-in-out infinite;
+    -webkit-animation:2000ms pulseIn 700ms linear  infinite;
+}
+
+.intense .secondCircle{
+    animation:1500ms pulseIn ease-in-out infinite;
+    -webkit-animation:1500ms pulseIn 200s linear  infinite;	
+}
+
+.intense .thirdCircle{
+    animation:1500ms pulseIn 500ms ease-in-out infinite;
+    -webkit-animation:1500ms pulseIn 500ms linear infinite;	
+}
+
+.intense .fourthCircle{
+    animation:1500ms pulseIn 500ms ease-in-out infinite;
+    -webkit-animation:1500ms pulseIn 700ms linear infinite;
+}
+
+.powerful .secondCircle{
+    animation:1000ms pulseIn ease-in-out infinite;
+    -webkit-animation:1000ms pulseIn 200s linear infinite;	
+}
+
+.powerful .thirdCircle{
+    animation:1000ms pulseIn 500ms ease-in-out infinite;
+    -webkit-animation:1000ms pulseIn 500ms linear infinite;	
+}
+
+.powerful .fourthCircle{
+    animation:1000ms pulseIn 500ms ease-in-out infinite;
+    -webkit-animation:1000ms pulseIn 700ms linear infinite;
+}
+
+.offTheScale .secondCircle{
+    animation:500ms pulseIn ease-in-out infinite;
+    -webkit-animation:500ms pulseIn 200s linear infinite;	
+}
+
+.offTheScale .thirdCircle{
+    animation:500ms pulseIn 500ms ease-in-out infinite;
+    -webkit-animation:500ms pulseIn 500ms linear infinite;	
+}
+
+.offTheScale .fourthCircle{
+    animation:500ms pulseIn 500ms ease-in-out infinite;
+    -webkit-animation:500ms pulseIn 700ms linear infinite;
+}
+
+
+
+@keyframes pulseIn{
+    0%{
+        opacity:0;
+        transform:scale(0.2,0.2);
+    }
+    50%{
+        opacity:1;
+        transform:scale(1,1);
+    }
+    100%{
+                    opacity:0;
+        transform:scale(0.2,0.2);
+    }
+}
+
+@-webkit-keyframes pulseIn{
+                0%{
+        opacity:0;
+        -webkit-transform:scale(0.2,0.2);
+    }
+    50%{
+        opacity:1;
+        -webkit-transform:scale(1,1);
+    }
+    100%{
+                    opacity:0;
+        -webkit-transform:scale(0.2,0.2);
+    }
+}
+
+.bl-slider-inner-container > div{
+
+    transition: all 1s;
+}
+            
+
+.bl-slider-inner-container{
+    position: relative;
+}
+
+
+
+/* Position One */
+.bl-animation-container-one.positionOne{
+    left: 0;
+}
+
+.bl-animation-container-two.positionOne{
+    left: -50%;
+}
+
+.bl-animation-container-three.positionOne{
+    left: -100%;
+}
+
+.bl-animation-container-four.positionOne{
+    left: -150%;
+}
+
+/* Position Two */
+.bl-animation-container-one.positionTwo{
+    left: -50%;
+}
+
+.bl-animation-container-two.positionTwo{
+    left: -100%;
+}
+
+.bl-animation-container-three.positionTwo{
+    left: -150%;
+}
+
+.bl-animation-container-four.positionTwo{
+    left: -200%;
+}
+
+.bl-animation-container-one.positionThree{
+    left: -100%;
+}
+
+.bl-animation-container-two.positionThree{
+    left: -150%;
+}
+
+.bl-animation-container-three.positionThree{
+    left: -200%;
+}
+
+.bl-animation-container-four.positionThree{
+    left: -250%;
+}
+
+.bl-animation-container-one.positionFour{
+    left: -150%;
+}
+
+.bl-animation-container-two.positionFour{
+    left: -200%;
+}
+
+.bl-animation-container-three.positionFour{
+    left: -250%;
+}
+
+.bl-animation-container-four.positionFour{
+    left: -300%;
+}
+
+.bl-slider-inner-container .small .bl-slider-checkbox-sim{
+    display: none;
+}
+
+.bl-slider-checkbox-sim .bl-option-one-text p{
+    width: 40%;
+    margin: 0% 44%;
+}
+
+.bl-slider-checkbox-sim .bl-option-two-text p{
+    width: 32%;
+    margin: 0% 44%;
+}
+
+.bl-slider-checkbox-sim .bl-option-three-text p{
+    width: 34%;
+    margin: 0% 44%;
+}
+
+.bl-slider-checkbox-sim .bl-option-four-text p{
+    width: 37%;
+    margin: 0% 44%;
+}
+
+.bl-slider-inner-container .small .pulsatingCircle{
+    height: 10px;
+    width: 10px;
+    -webkit-transform: scale(5,5);
+    transform: scale(2,2);
+    transition: all 0.2s;
+}
+
+
+/* Slider video styles */
+.bl-slider-inner-container video{
+/*    top: 50PX;
+    POSITION: relative;*/
+    top: 0px;
+    POSITION: absolute;
+    z-index: 0;
+    left: -12px;
+    right: 0;
+    width: 116%;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+}
+
+/*.bl-slider-inner-container .positionOne:nth-child(1),
+.bl-slider-inner-container .positionTwo:nth-child(2),
+.bl-slider-inner-container .positionThree:nth-child(3),
+.bl-slider-inner-container .positionFour:nth-child(4),
+.bl-slider-inner-container .positionFive:nth-child(5){
+    border: 4px solid #000;
+}*/
+
+.bl-vibration-animation-overlay-circle-container{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+}
+
+/* PLP Filters */
+.bl-plp-horizontal-filters-cont > div, .bl-plp-horizontal-filters-cont .bl-plp-horizontal-filter-title p{
+    display: inline-block;
+    width: 25%;
+}
+
+.bl-plp-horizontal-filters-cont{
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 10px 0px 10px 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+}
+
+.bl-plp-horizontal-filters-cont .bl-plp-horizontal-filter-title p{
+    margin-left: 10px;
+    font-size: 1.8vh;
+    font-weight: 500;
+    color: #E3338B;
+}
+
+.bl-plp-horizontal-filters-cont p{
+    color: #000;
+    text-transform: uppercase;
+    font-size: 1.8vh;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.bl-plp-horizontal-filters-cont > div > div {
+    height: 20px;
+    width: 20px;
+    border: solid 2px #000;
+    background: transparent;
+    margin: auto;
+    top: 5px;
+    position: relative;
+}
+
+.bl-plp-horizontal-filters-cont .bl-plp-horizontal-filter{
+    text-align: center;
+}
+
+/* PLP Products */
+/* .bl-plp-horizontal-products > div, .bl-plp-horizontal-products .bl-plp-horizontal-filter-title p{
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+} */
+
+.bl-plp-horizontal-products{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 57vh;
+    display: flex;
+}
+
+.bl-plp-horizontal-products .bl-product-plp-tile{
+    display: inline-grid;
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+.bl-plp-horizontal-products .bl-product-plp-tile.bl-single-filter-tile{
+    display: block;
+}
+
+.bl-plp-horizontal-products .bl-product-plp-tile.bl-single-filter-tile .bl-single-filter{
+    display: inline-block;
+    width: auto;
+    padding: 10px 30px;
+    background-color: green;
+    margin: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+
+.bl-single-filter-container{
+    margin-top: 40px;
+    display: block;
+    width: 100%;
+}
+
+/* 
+.bl-plp-horizontal-products .bl-plp-horizontal-filter-title p{
+    margin-left: 30px;
+    color: #A00739;
+    font-size: 1.2em;
+}
+
+.bl-plp-horizontal-products p{
+    color: #A00739;
+}
+
+.bl-plp-horizontal-products > div > div {
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    border: solid 1px #A00739;
+    background: rgba(255, 255, 255, 0.3);
+    margin: auto;
+    top: 5px;
+    position: relative;
+}
+
+.bl-plp-horizontal-products .bl-plp-horizontal-filter{
+    text-align: center;
+} */
+
+.bl-change-preference-button-cont{
+    position: fixed;
+    height: 60px;
+    color: white;
+    background-color: black;
+    width: 100%;
+    margin: 0;
+    display: block;
+    bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.3em;
+
+}
+
+.bl-pdp-back-button{
+    position: absolute;
+    background: #A00739 !important;
+    height: 35px;
+    width: 40px;
+    top: 0;
+    margin-top: 0;
+    color: white;
+    padding: 10px 5px 0px;
+    vertical-align: text-top;
+}
+
+.bl-slider-inner-container.mini, .bl-slider-inner-container.smaller, .bl-slider-inner-container.realistic, .bl-slider-inner-container.larger{
+    top: 0;
+    position: absolute;
+}
+
+/* selected buttons */
+.bl-slider-skip-button.bl-option-selected{
+    background-color: #F0E02C;
+    color: #A00739 !important;
+}
+
+.bl-slider-results-button.bl-option-selected{
+    background-color: #A00739;
+    color: #F2A6BF !important;
+    border: none;
+}
+
+.bl-slider-results-button.bl-option-selected span{
+    color: white;
+}
+
+.bl-pdp-prop-tick{
+    width: 35px;
+    display: inline-block;
+    top: 12px;
+    position: relative;
+}
+
+.bl-shape-slider-icon-container{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+}
+
+.bl-shape-slider-icon-circle{
+    background-color: #E3338B;
+    width: 150px;
+    height: 150px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 0;
+}
+
+.bl-shape-slider-icon-text{
+
+}
+
+.bl-shape-slider-overlay-circle{
+    background-color: transparent;
+    width: 150px;
+    height: 150px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    /* position: absolute; */
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 0;
+}
+
+.bl-shape-slider-icon{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 75px;
+    background-color: #fff;
+    width: 30px;
+    height: 175px;
+    z-index: 0;
+    margin: 0 auto;
+}
+
+.pulsatingCircle.active .firstCircle{
+    margin: -6px 0 0 -6px;
+    border: 1px solid black;
+}
+
+.bl-size-slider .bl-slider-inner-container,
+.bl-feel-slider .bl-slider-inner-container{
+    margin-top: 0;
+}
+
+.bl-size-slider .bl-animation-container-one > img,
+.bl-size-slider .bl-animation-container-two > img,
+.bl-size-slider .bl-animation-container-three > img,
+.bl-size-slider .bl-animation-container-four > img{
+    widows: 200px;
+}
+
+.bl-size-slider .bl-slider-checkbox-sim{
+
+}
+
+.bl-product-plp-tile .bl-rf-button,
+#bl-sex-toy-guide .bl-product-plp-tile button{
+    margin-bottom: 0;
+}
+
+.bl-size-slider p.bl-checkbox-title{
+    display: block;
+}
+
+.bl-size-slider p.bl-checkbox-title + p{
+    display: block;
+}
+
+.bl-size-slider p.bl-checkbox-title + p + p{
+    display: none;
+}
+
+.bl-plp-page .bl-product-plp-tile .bl-product-title{
+    line-height: 4vh;
+    margin-bottom: 0;
+}
+
+.bl-plp-page .bl-plp-horizontal-products .bl-product-plp-tile{
+    display: block;
+}
+
+.bl-plp-page .bl-plp-horizontal-products .bl-product-plp-tile .bl-product-details{
+    width: 50%;
+    float: left;
+    display: block;
+}
+
+.bl-plp-page .bl-plp-horizontal-products .bl-product-plp-tile .bl-product-details .bl-details-price{
+    top: 0;
+    font-weight: bold;
+}
+
+.bl-plp-page .bl-plp-horizontal-products .bl-product-plp-tile .bl-product-details img{
+    width: 50%;
+    margin: 5vh 20%;
+}
+
+.bl-plp-page .bl-plp-horizontal-products .bl-product-plp-tile .bl-details-list{
+    width: 45%;
+    color: #E3338B;
+    display: block;
+    font-weight: 600;
+    float: left;
+}
+
+.bl-plp-page .bl-plp-horizontal-products .bl-product-plp-tile .bl-details-list p{
+    margin-top: 0;
+}
+
+#bl-sex-toy-guide .bl-guide-menu .bl-homepage-svg{
+    top: 20px;
+}
+
+#bl-sex-toy-guide .bl-guide-menu .bl-homepage-svg + p{
+    top: 15vh;
+    width: 62%;
+    font-weight: 600;
+}
+
+.bl-new-container .bl-info-details p,
+.bl-previous-container .bl-info-details p{
+    width: 90%;
+}
+
+.bl-new-container .bl-info-details p::after,
+.bl-previous-container .bl-info-details p::after{
+    position: absolute;
+    content: url(http://localhost:3000/CXO/Ann%20Summers/Sex%20Toys%20Prototype/src/Misc/180119-AS-rabbit_finder-chevron.svg);
+    right: -10px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    display: block;
+    width: 50px;
+    height: 60px;
+    color: #000;
+}
+
+.bl-new-container .bl-info-details, .bl-previous-container .bl-info-details{
+    position: relative;    
+}
+
+.bl-container .bl-rf-button{
+    padding: 3px 20px;
+}
+
+.bl-rabbit-shape-container{
+    display: none;
+}
+
+.bl-feel-slider .bl-rabbit-shape-container{
+    display: block;
+    margin-top: 60px;
+}
+
+.bl-feel-slider .bl-rabbit-shape-container + img{
+    display: none;
+}
+
+.bl-feel-slider .bl-rabbit-shape-image-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.bl-feel-slider .bl-rabbit-shape-circle-container{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    /* top: 55px; */
+    top: -36vh;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.bl-feel-slider .bl-rabbit-shape-circle{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #E3338B;
+    border: 4px solid transparent;
+}
+
+.bl-feel-slider .bl-rabbit-shape-circle.active{
+    border: 4px solid #000;
+    top: 4px;
+}
+
+.bl-feel-slider .bl-rabbit-shape-circle-image{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    position: absolute;
+    top: -87px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.bl-feel-slider .bl-animation-container-one .bl-rabbit-shape-circle-image{
+    background-image: url('Shape/180109-AS-rabbit_finder-shape1.svg');
+}
+
+.bl-feel-slider .bl-animation-container-two .bl-rabbit-shape-circle-image{
+    background-image: url('Shape/180109-AS-rabbit_finder-shape2.svg');
+}
+
+.bl-feel-slider .bl-animation-container-three .bl-rabbit-shape-circle-image{
+    background-image: url('Shape/180109-AS-rabbit_finder-shape3.svg');
+}
+
+.bl-feel-slider .bl-animation-container-four .bl-rabbit-shape-circle-image{
+    background-image: url('Shape/180109-AS-rabbit_finder-shape4.svg');
+}
+
+.bl-rabbit-size-container{
+    display: none;
+}
+
+.bl-size-slider .bl-rabbit-size-container{
+    display: block;
+    margin-top: 60px;
+}
+
+.bl-size-slider .bl-rabbit-size-container + .bl-rabbit-shape-container + img{
+    display: none;
+}
+
+.bl-size-slider .bl-rabbit-size-image-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.bl-size-slider .bl-rabbit-size-circle-container{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.bl-size-slider .bl-rabbit-size-circle{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bl-size-slider .bl-animation-container-one .bl-rabbit-size-circle{
+    background-image: url('Size/180109-AS-rabbit_finder-size1.svg');
+}
+
+.bl-size-slider .bl-animation-container-two .bl-rabbit-size-circle{
+    background-image: url('Size/180109-AS-rabbit_finder-size2.svg');
+}
+
+.bl-size-slider .bl-animation-container-three .bl-rabbit-size-circle{
+    background-image: url('Size/180109-AS-rabbit_finder-size3.svg');
+}
+
+.bl-size-slider .bl-animation-container-four .bl-rabbit-size-circle{
+    background-image: url('Size/180109-AS-rabbit_finder-size4.svg');
+}
+
+.bl-size-slider .bl-rabbit-size-circle.active{
+    border: 4px solid #000;
+}
+
+.bl-feel-slider .bl-slider-inner-container .bl-slider-checkbox-sim{
+    position: relative;
+    margin-top: 100px;
+    bottom: 48vh;
+/*    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;*/
+}
+
+.bl-intensity-slider .bl-slider-container,
+.bl-feel-slider .bl-slider-container,
+.bl-size-slider .bl-slider-container{
+    height: 100%;
+}
+
+.bl-feel-slider .bl-slider-container .bl-slider-inner-container,
+.bl-intensity-slider .bl-slider-container .bl-slider-inner-container,
+.bl-size-slider .bl-slider-container .bl-slider-inner-container{
+    height: 100%;
+}
+
+/* .bl-feel-slider .bl-animation-container-one,
+.bl-feel-slider .bl-animation-container-two,
+.bl-feel-slider .bl-animation-container-three,
+.bl-feel-slider .bl-animation-container-four{
+    top: -45%;
+} */
+
+.bl-intensity-slider .firstCircle::after{
+/*.bl-intensity-slider .secondCircle::after,
+.bl-intensity-slider .thirdCircle::after,
+.bl-intensity-slider .fourthCircle::after{
+*/    position: relative;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url('Navigation/180109-AS-rabbit_finder-intensity.svg');
+/*    background-image: url('Intensity/180110-AS-rabbit_finder-intensity1.svg');
+*/
+    z-index: 10000;
+    display: block;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+/*.bl-intensity-slider .bl-slider-inner-container .small,
+.bl-feel-slider .bl-slider-inner-container .small,
+.bl-size-slider .bl-slider-inner-container .small,
+*/
+.bl-size-slider .bl-slider-inner-container .small{
+    top: 0;
+}
+
+.bl-homepage-svg svg{
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    width: 50%;
+    background-position: center center;
+}
+
+.bl-homepage-svg.with-feel svg{
+    background-image: url('Navigation/180109-AS-rabbit_finder-shape.svg');
+}
+
+.bl-homepage-svg.with-intensity svg{
+    background-image: url('Navigation/180109-AS-rabbit_finder-intensity.svg');
+}
+
+.bl-homepage-svg.with-size svg{
+    background-image: url('Navigation/180109-AS-rabbit_finder-size.svg');
+    background-position: 5px 0%;
+}
+
+.bl-homepage-svg.with-vibration svg{
+    background-image: url('Navigation/180109-AS-rabbit_finder-vibration.svg');
+}
+
+.bl-plp-horizontal-products .bl-product-reviews{
+    width: 100%;
+    height: 30px;
+    display: block;
+    margin-left: 15px;
+}
+
+.bl-plp-horizontal-products .bl-product-reviews .bl-each-review-container{
+    width: 20px;
+    height: 28px;
+    float: left;
+}
+
+.bl-plp-horizontal-products .bl-product-reviews .bl-each-review{
+    width: 100%;
+    height: 100%;
+    background-image: url('Misc/180109-AS-rabbit_finder-reviews.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bl-size-slider .bl-slider-checkbox-sim,
+.bl-intensity-slider .bl-slider-checkbox-sim{
+    top: 270px;
+    color: #fff;
+}
+
+.bl-size-slider .bl-slider-checkbox-sim .bl-option-one-text{
+    margin-left: 0;
+}
+
+.bl-size-slider .bl-slider-checkbox-sim .bl-checkbox-title + p{
+    margin-top: -40px;
+}
+
+.bl-size-slider .bl-slider-checkbox-sim .bl-option-checkbox{
+    margin-top: 25px;
+}
+
+/* .bl-feel-slider .bl-animation-container-one.small,
+.bl-feel-slider .bl-animation-container-two.small,
+.bl-feel-slider .bl-animation-container-three.small,
+.bl-feel-slider .bl-animation-container-four.small{
+    top: -45% !important;
+} */
+
+.bl-feel-slider .bl-animation-container-one.small,
+.bl-feel-slider .bl-animation-container-two.small,
+.bl-feel-slider .bl-animation-container-three.small,
+.bl-feel-slider .bl-animation-container-four.small{
+    top: 0 !important;
+}
+
+.bl-feel-slider .bl-animation-container-one.small .bl-rabbit-shape-circle-container,
+.bl-feel-slider .bl-animation-container-two.small .bl-rabbit-shape-circle-container,
+.bl-feel-slider .bl-animation-container-three.small .bl-rabbit-shape-circle-container,
+.bl-feel-slider .bl-animation-container-four.small .bl-rabbit-shape-circle-container{
+    width: 100px;
+    height: 100px;
+    top: 25px;
+}
+
+.bl-feel-slider .bl-animation-container-one.small .bl-rabbit-shape-circle-image,
+.bl-feel-slider .bl-animation-container-two.small .bl-rabbit-shape-circle-image,
+.bl-feel-slider .bl-animation-container-three.small .bl-rabbit-shape-circle-image,
+.bl-feel-slider .bl-animation-container-four.small .bl-rabbit-shape-circle-image{
+    height: 125px;
+    width: 100px;
+    top: -15px;
+}
+
+.bl-feel-slider .bl-animation-container-one.small .bl-rabbit-shape-circle,
+.bl-feel-slider .bl-animation-container-two.small .bl-rabbit-shape-circle,
+.bl-feel-slider .bl-animation-container-three.small .bl-rabbit-shape-circle,
+.bl-feel-slider .bl-animation-container-four.small .bl-rabbit-shape-circle{
+    height: 100px;
+    width: 100px;
+}
+
+
+.bl-size-slider .bl-animation-container-one.small .bl-rabbit-size-circle,
+.bl-size-slider .bl-animation-container-two.small .bl-rabbit-size-circle,
+.bl-size-slider .bl-animation-container-three.small .bl-rabbit-size-circle,
+.bl-size-slider .bl-animation-container-four.small .bl-rabbit-size-circle,
+.bl-style-slider .bl-animation-container-one.small .bl-vibration-animation-overlay-circle,
+.bl-style-slider .bl-animation-container-two.small .bl-vibration-animation-overlay-circle,
+.bl-style-slider .bl-animation-container-three.small .bl-vibration-animation-overlay-circle,
+.bl-style-slider .bl-animation-container-four.small .bl-vibration-animation-overlay-circle{
+    width: 100px;
+    height: 100px;
+    top: 25px;
+}
+
+.bl-what-is-rampant-rabbit .bl-rf-button{
+    padding: 3px 0;
+}
+
+.bl-btn-container.bl-what-is-rampant-rabbit{
+    position: fixed;
+}

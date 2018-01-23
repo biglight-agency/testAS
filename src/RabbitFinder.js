@@ -8796,9 +8796,7 @@ $(document).ready(function () {
         }, {
                 duration: speed, 
                 queue: false, 
-                specialEasing: {
-                    right: "linear"
-                }
+                easing: "linear"
                 //   , complete: function () {
                 // }
             })
@@ -8808,9 +8806,7 @@ $(document).ready(function () {
         }, {
                 duration: speed, 
                 queue: false, 
-                specialEasing: {
-                    right: "linear"
-                }
+                easing: "linear"
                 // complete: function () {
                 // }
             })

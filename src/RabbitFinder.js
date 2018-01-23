@@ -8815,17 +8815,15 @@ $(document).ready(function () {
             if (addFn !== undefined && param !== undefined) {
                 addFn(param.target, param.fn.name, param.fn.param.one, param.fn.param.two);
             }
-        }, speed * 3.6)
+        }, speed * 5.6)
     }
     ASSTBG_1.swipeRight = (width, pageOne, pageTwo, cb, speed, removeElement, addFn, param) => {
         $(pageOne).animate({
             right: -Math.abs(width)
         }, {
                 duration: speed, 
-                queue: false, 
-                specialEasing: {
-                    right: "linear"
-                }
+                queue: false,
+                easing: "linear"
                 // complete: function () {
                 // }
             })
@@ -8835,9 +8833,7 @@ $(document).ready(function () {
         }, {
                 duration: speed, 
                 queue: false, 
-                specialEasing: {
-                    right: "linear"
-                }
+                easing: "linear"
                 // complete: function () {
                 // }
             })
@@ -8846,7 +8842,7 @@ $(document).ready(function () {
             if (addFn !== undefined && param !== undefined) {
                 addFn(param.target, param.fn.name, param.fn.param.one, param.fn.param.two);
             }
-        }, speed * 3.6)
+        }, speed * 5.6)
     }
     ASSTBG_1.getPageHTML = (pageType, page, pageNumber, direction, id) => {
         const content = ASSTBG_1.getPageContent(pageType, page, pageNumber);

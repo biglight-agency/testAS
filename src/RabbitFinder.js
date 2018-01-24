@@ -18,7 +18,7 @@
 
 */
 $(document).ready(function () {
-    // Search
+    // Search functionality
     /* 
  Author: Chris Davies 
  Company: Biglight 
@@ -1884,8 +1884,7 @@ $(document).ready(function () {
 
     ASRFS.setupRabbits();
 
-
-    // Rabbit code
+    // Finder Functionality
     const ASSTBG_1 = {};
     BL_RESULTS_GLOBAL = {};
     BL_PLP_SELECTED_GLOBAL = {};
@@ -1981,8 +1980,8 @@ $(document).ready(function () {
             <div class="bl-main">
                 <p> Our infamous Rampant Rabbit combines a vibrating dildo with a bunny-eared bullet to ensure a mind-blowing combination of deep penetration and clitoral stimulation. It really is the best of both worlds. Try it, we think you'll soon be screaming your support.</p>
                 <div class="bl-intro-image">
-                    <img id="bl-finder-svg" src="http://localhost:3000/CXO/Ann%20Summers/Sex%20Toys%20Prototype/src/Misc/180119-AS-rabbit_finder-diagram.svg" />
-                    <img id="bl-finder-png" src="http://localhost:3000/CXO/Ann%20Summers/Sex%20Toys%20Prototype/src/Misc/171221-AS-original_rabbit2.png" />
+                    <img id="bl-finder-svg" src="https://raw.githubusercontent.com/biglight-agency/testAS/master/src/Misc/180119-AS-rabbit_finder-diagram.svg?sanitize=true" />
+                    <img id="bl-finder-png" src="https://raw.githubusercontent.com/biglight-agency/testAS/master/src/Misc/171221-AS-original_rabbit2.png" />
                 </div>
             </div>
         </div>
@@ -8700,12 +8699,6 @@ $(document).ready(function () {
         $('head').append('<meta class="bl-zoom-restriction" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->');
 
     }
-    ASSTBG_1.addCSS = function () {
-        const style = `
-       `;
-
-        $('head').append(style);
-    }
     ASSTBG_1.setupOverlay = function (content, position) {
         let options = '';
         for (let i = 0; i < content.options.length; i++) {
@@ -8790,6 +8783,66 @@ $(document).ready(function () {
         }
     }
     /* ANIMATION FUNCTIONS */
+    // ASSTBG_1.swipeLeft = (width, pageOne, pageTwo, cb, speed, removeElement, addFn, param) => {
+    //     $(pageOne).animate({
+    //         right: width
+    //     }, {
+    //             duration: speed, 
+    //             queue: false
+    //             // , 
+    //             // easing: "ease-in-out"
+    //             //   , complete: function () {
+    //             // }
+    //         })
+
+    //     $(pageTwo).animate({
+    //         right: 0
+    //     }, {
+    //             duration: speed, 
+    //             queue: false
+    //             // , 
+    //             // easing: "ease-in-out"
+    //             // complete: function () {
+    //             // }
+    //         })
+    //     setTimeout(function () {
+    //         $(removeElement).remove();
+    //         if (addFn !== undefined && param !== undefined) {
+    //             addFn(param.target, param.fn.name, param.fn.param.one, param.fn.param.two);
+    //         }
+    //     }, speed * 3.6)
+    // }
+    // ASSTBG_1.swipeRight = (width, pageOne, pageTwo, cb, speed, removeElement, addFn, param) => {
+    //     $(pageOne).animate({
+    //         right: -Math.abs(width)
+    //     }, {
+    //             duration: speed, 
+    //             queue: false
+    //             // ,
+    //             // easing: "ease-in-out"
+    //             // complete: function () {
+    //             // }
+    //         })
+
+    //     $(pageTwo).animate({
+    //         right: 0
+    //     }, {
+    //             duration: speed, 
+    //             queue: false
+    //             // , 
+    //             // easing: "ease-in-out"
+    //             // complete: function () {
+    //             // }
+    //         })
+    //     setTimeout(function () {
+    //         $(removeElement).remove();
+    //         if (addFn !== undefined && param !== undefined) {
+    //             addFn(param.target, param.fn.name, param.fn.param.one, param.fn.param.two);
+    //         }
+    //     }, speed * 3.6)
+    // }
+
+    // BETTER
     ASSTBG_1.swipeLeft = (width, pageOne, pageTwo, cb, speed, removeElement, addFn, param) => {
         $(pageOne).addClass('bl-left-transition');
         $(pageTwo).addClass('bl-left-transition');
@@ -8828,6 +8881,7 @@ $(document).ready(function () {
             }
         }, speed * 3.6)
     }
+
     ASSTBG_1.getPageHTML = (pageType, page, pageNumber, direction, id) => {
         const content = ASSTBG_1.getPageContent(pageType, page, pageNumber);
         const width = direction === 'next' ? -Math.abs($('.bl-container').width()) : Math.abs($('.bl-container').width());
@@ -9225,16 +9279,16 @@ $(document).ready(function () {
 
                 if (prop == 'size') {
                     // Set product size
-                    property = 'Size: '+ product.optionsValue.size;
+                    property = 'Size: ' + product.optionsValue.size;
                 } else if (prop == 'intensity') {
                     // Set product vibration intensity
-                    property = 'Intensity: '+ product.optionsValue.intensity;
+                    property = 'Intensity: ' + product.optionsValue.intensity;
                 } else if (prop == 'feel') {
                     // Set product shape
-                    property = 'Shape: '+ product.optionsValue.feel;
+                    property = 'Shape: ' + product.optionsValue.feel;
                 } else if (prop == 'style') {
                     // Set product vibration style
-                    property = 'Style: '+ product.optionsValue.style;
+                    property = 'Style: ' + product.optionsValue.style;
                 }
 
                 console.log(prop);
@@ -9551,7 +9605,7 @@ $(document).ready(function () {
             //     animation: `<img src="${svgs.gspot}" />`,
             //     searchValue: 4
             // }];
-             content.options = [{
+            content.options = [{
                 text: 'Contoured',
                 value: 'contoured',
                 animation: `<img src="${svgs.contoured}" />`,
@@ -9976,7 +10030,7 @@ $(document).ready(function () {
             ASSTBG_1.showPage(cat, 2, direction);
         }
 
-       // el.addClass('bl-home-item-selected');
+        // el.addClass('bl-home-item-selected');
 
     })
 
@@ -10042,7 +10096,7 @@ $(document).ready(function () {
     })
 
     /* Show PLP page from PDP */
-    $(document).on('click', '.bl-pdp-back-arrow', function(){
+    $(document).on('click', '.bl-pdp-back-arrow', function () {
         const cat = 'all';
         const page = 6;
         const direction = 'previous';
@@ -10162,18 +10216,18 @@ $(document).ready(function () {
         // show loading screen
         $('.bl-loading-screen').show();
         $('.bl-loading-screen').addClass('animate');
-        
+
         // Loading dots
         var loadingDotTotal = 0;
         var delay = 200;
-        var loadingDots = setInterval(function(){
-            if(loadingDotTotal === 1){
+        var loadingDots = setInterval(function () {
+            if (loadingDotTotal === 1) {
                 $('.loading-dots').text('.');
-            } else if(loadingDotTotal === 2){
+            } else if (loadingDotTotal === 2) {
                 $('.loading-dots').text('..');
-            } else if(loadingDotTotal === 3){
+            } else if (loadingDotTotal === 3) {
                 $('.loading-dots').text('...');
-            } else if(loadingDotTotal === 4){
+            } else if (loadingDotTotal === 4) {
                 $('.loading-dots').text('....');
                 loadingDotTotal = 0;
             }
@@ -10182,10 +10236,10 @@ $(document).ready(function () {
         }, 200);
 
         // hide loading screen
-        setTimeout(function(){
-           $('.bl-loading-screen').hide();
-           $('.bl-loading-screen').removeClass('animate');
-           clearInterval(loadingDots);
+        setTimeout(function () {
+            $('.bl-loading-screen').hide();
+            $('.bl-loading-screen').removeClass('animate');
+            clearInterval(loadingDots);
         }, 2000);
 
         let options = {
@@ -10258,12 +10312,12 @@ $(document).ready(function () {
 
     // })
 
-    $(document).on('click', '#bl-header .mini-cart-total', function(){
+    $(document).on('click', '#bl-header .mini-cart-total', function () {
         var miniCartContent = $(this).next();
         $(miniCartContent).show();
-        setTimeout(function(){
+        setTimeout(function () {
             $(miniCartContent).hide();
-        },3000);
+        }, 3000);
     });
 
     // detect swipe
@@ -10318,7 +10372,6 @@ $(document).ready(function () {
 
     /* Run functions on load */
     ASSTBG_1.init();
-    ASSTBG_1.addCSS();
     ASSTBG_1.getShapeSVGs = () => {
         const svgs = {};
         // svgs.gspot = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/ebd47dd90932abaa4c77a0c6ddd6cb31_500_500.png`;

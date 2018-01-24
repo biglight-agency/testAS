@@ -8791,58 +8791,42 @@ $(document).ready(function () {
     }
     /* ANIMATION FUNCTIONS */
     ASSTBG_1.swipeLeft = (width, pageOne, pageTwo, cb, speed, removeElement, addFn, param) => {
-        $(pageOne).animate({
-            right: width
-        }, {
-                duration: speed, 
-                queue: false, 
-                easing: "linear"
-                //   , complete: function () {
-                // }
+        $(pageOne).addClass('bl-left-transition');
+        $(pageTwo).addClass('bl-left-transition');
+        setTimeout(function () {
+            $(pageOne).css({
+                right: width
             })
 
-        $(pageTwo).animate({
-            right: 0
-        }, {
-                duration: speed, 
-                queue: false, 
-                easing: "linear"
-                // complete: function () {
-                // }
+            $(pageTwo).css({
+                right: 0
             })
+        }, 200);
+
         setTimeout(function () {
             $(removeElement).remove();
             if (addFn !== undefined && param !== undefined) {
                 addFn(param.target, param.fn.name, param.fn.param.one, param.fn.param.two);
             }
-        }, speed * 5.6)
+        }, speed * 3.6)
     }
     ASSTBG_1.swipeRight = (width, pageOne, pageTwo, cb, speed, removeElement, addFn, param) => {
-        $(pageOne).animate({
-            right: -Math.abs(width)
-        }, {
-                duration: speed, 
-                queue: false,
-                easing: "linear"
-                // complete: function () {
-                // }
-            })
-
-        $(pageTwo).animate({
-            right: 0
-        }, {
-                duration: speed, 
-                queue: false, 
-                easing: "linear"
-                // complete: function () {
-                // }
-            })
+        $(pageOne).addClass('bl-right-transition');
+        $(pageTwo).addClass('bl-right-transition');
+        setTimeout(function () {
+            $(pageOne).css({
+                right: -Math.abs(width)
+            });
+            $(pageTwo).animate({
+                right: 0
+            });
+        }, 200);
         setTimeout(function () {
             $(removeElement).remove();
             if (addFn !== undefined && param !== undefined) {
                 addFn(param.target, param.fn.name, param.fn.param.one, param.fn.param.two);
             }
-        }, speed * 5.6)
+        }, speed * 3.6)
     }
     ASSTBG_1.getPageHTML = (pageType, page, pageNumber, direction, id) => {
         const content = ASSTBG_1.getPageContent(pageType, page, pageNumber);

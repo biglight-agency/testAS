@@ -8870,7 +8870,7 @@ $(document).ready(function () {
             $(pageOne).css({
                 right: -Math.abs(width)
             });
-            $(pageTwo).animate({
+            $(pageTwo).css({
                 right: 0
             });
         }, 200);

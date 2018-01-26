@@ -16677,7 +16677,7 @@ ASRFS.setupRabbits();
         $('.bl-intro-page').hide();
 
         // Add session cookie to not show logo and intro pages when app is opened again
-        ASSTBG_1.setCookie('BL-RF-OPENED', 'true', 1);
+        //ASSTBG_1.setCookie('BL-RF-OPENED', 'true', 1);
     })
 
     // Toggle menu and show selected options

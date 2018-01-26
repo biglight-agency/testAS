@@ -25,64 +25,64 @@ ASRFS.rabbit = function (id, url, imgURL, options, optionsValue, features, match
 
 ASRFS.setupRabbits = function () {
     // OVO E6>>PINK>>NO SIZE
-    ASRFS.pushRabbit(
-        1,
-        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-vibrators/ovo-e6-rechargeable-rabbit-triple-vibrator/85470.html',
-        'https://i1.adis.ws/i/annsummers/07SCNRAS1180041_Z?$product-large$',
-        {
-            intensity: [1],
-            style: [3],
-            size: [2, 3],
-            feel: [3]
-        },
-        {
-            intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
-            feel: "Straight"
-        },
-         {
-            name: 'OVO E6 Rechargeable Rabbit Triple Vibrator',
-            price: '£53.00',
-            brand: 'OVO',
-            forCouples: true,
-            waterResistant: true,
-            flexibility: {
-                firm: true,
-                flexable: false,
-                soft: false
-            },
-            material: {
-                silicone: false,
-                metal: false
-            },
-            controllerType: {
-                pushButton: true,
-                switch: false,
-                app: false
-            },
-            noiseLevel: {
-                quiet: true,
-                normal: false
-            },
-            powerSource: {
-                USB: true,
-                battery: {
-                    used: false,
-                    batteryType: '',
-                    noBattery: 0,
-                    batteryIncluded: false,
-                }
-            },
-            matchedFeatures: {
-                size: false,
-                intensity: false,
-                feel: false,
-                style: false
-            }
-        },
-        0
-    );
+    // ASRFS.pushRabbit(
+    //     1,
+    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-vibrators/ovo-e6-rechargeable-rabbit-triple-vibrator/85470.html',
+    //     'https://i1.adis.ws/i/annsummers/07SCNRAS1180041_Z?$product-large$',
+    //     {
+    //         intensity: [1],
+    //         style: [3],
+    //         size: [2, 3],
+    //         feel: [3]
+    //     },
+    //     {
+    //         intensity: "Moderate",
+    //         style: "Rotations",
+    //         size: "Smaller",
+    //         feel: "Straight"
+    //     },
+    //      {
+    //         name: 'OVO E6 Rechargeable Rabbit Triple Vibrator',
+    //         price: '£53.00',
+    //         brand: 'OVO',
+    //         forCouples: true,
+    //         waterResistant: true,
+    //         flexibility: {
+    //             firm: true,
+    //             flexable: false,
+    //             soft: false
+    //         },
+    //         material: {
+    //             silicone: false,
+    //             metal: false
+    //         },
+    //         controllerType: {
+    //             pushButton: true,
+    //             switch: false,
+    //             app: false
+    //         },
+    //         noiseLevel: {
+    //             quiet: true,
+    //             normal: false
+    //         },
+    //         powerSource: {
+    //             USB: true,
+    //             battery: {
+    //                 used: false,
+    //                 batteryType: '',
+    //                 noBattery: 0,
+    //                 batteryIncluded: false,
+    //             }
+    //         },
+    //         matchedFeatures: {
+    //             size: false,
+    //             intensity: false,
+    //             feel: false,
+    //             style: false
+    //         }
+    //     },
+    //     0
+    // );
 
     // CHEAP THRILLS MINI RABBIT>>PINK>>NO SIZE -- REMOVED FROM SITE
     // ASRFS.pushRabbit(
@@ -107,8 +107,8 @@ ASRFS.setupRabbits = function () {
             feel: [1]
         },{
             intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
+            style: "Single speed",
+            size: "Mini",
             feel: "Straight"
         }, {
             name: 'Bunny Banger Mini Rabbit Vibrator',
@@ -165,10 +165,10 @@ ASRFS.setupRabbits = function () {
             size: [2, 3],
             feel: [4]
         },{
-            intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
-            feel: "Straight"
+            intensity: "Powerful",
+            style: "3 speeds, 7 pulse patterns",
+            size: "Realistic",
+            feel: "G-spot"
         }, {
             name: 'Rampant Rabbit The Metal One',
             price: '£48.00',
@@ -223,10 +223,10 @@ ASRFS.setupRabbits = function () {
             size: [3],
             feel: [3]
         },{
-            intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
-            feel: "Straight"
+            intensity: "Powerful",
+            style: "3 speeds, 2 pulse patterns",
+            size: "Realistic",
+            feel: "Contoured"
         }, {
             name: 'Rampant Rabbit The Aqua One',
             price: '£30.00',
@@ -281,10 +281,10 @@ ASRFS.setupRabbits = function () {
             size: [3],
             feel: [3]
         },{
-            intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
-            feel: "Straight"
+            intensity: "Powerful",
+            style: "6 speeds and pulses",
+            size: "Realistic",
+            feel: "Contoured"
         }, {
             name: 'Rampant Rabbit Vibrator -The Signature Moregasm Black One',
             price: '£35.00',
@@ -339,10 +339,10 @@ ASRFS.setupRabbits = function () {
             size: [3],
             feel: [3]
         },{
-            intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
-            feel: "Straight"
+            intensity: "Powerful",
+            style: "3 speeds and 3 pulse patterns",
+            size: "Realistic",
+            feel: "Contoured"
         }, {
             name: 'Moregasm Contour Rampant Rabbit',
             price: '£70.00',
@@ -398,9 +398,9 @@ ASRFS.setupRabbits = function () {
             feel: [3]
         },{
             intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
-            feel: "Straight"
+            style: "Rotations, 3 speeds and 10 vibration settings",
+            size: "Realistic",
+            feel: "Contoured"
         }, {
             name: 'Rampant Rabbit The Pearlised One',
             price: '£40.00',
@@ -455,10 +455,10 @@ ASRFS.setupRabbits = function () {
             size: [3],
             feel: [2, 3]
         },{
-            intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
-            feel: "Straight"
+            intensity: "Off the scale",
+            style: "Variable speeds and patterns",
+            size: "Realistic",
+            feel: "Contoured and flexible"
         }, {
             name: 'LELO Ina Wave Luxury G-Spot Vibrator',
             price: '£134.10',
@@ -514,9 +514,9 @@ ASRFS.setupRabbits = function () {
             feel: [2, 3]
         },{
             intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
-            feel: "Straight"
+            style: "10 speeds and patterns",
+            size: "Realistic",
+            feel: "Contoured and flexible"
         }, {
             name: 'NOVA BY WE-VIBE',
             price: '£107.00',
@@ -561,62 +561,62 @@ ASRFS.setupRabbits = function () {
     );
 
     // THE MIGHTY ONE PINK>>PINK>>NO SIZE
-    ASRFS.pushRabbit(
-        10,
-        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-the-mighty-one/63326.html',
-        'https://i1.adis.ws/i/annsummers/07SCNRAS1155041_Z?$product-large$',
-        {
-            intensity: [3],
-            style: [3],
-            size: [4],
-            feel: [2, 3]
-        },{
-            intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
-            feel: "Straight"
-        }, {
-            name: 'Rampant Rabbit The Mighty One',
-            price: '£65.00',
-            brand: 'Ann Summers',
-            forCouples: false,
-            waterResistant: true,
-            flexibility: {
-                firm: true,
-                flexable: false,
-                soft: false
-            },
-            material: {
-                silicone: true,
-                metal: false
-            },
-            controllerType: {
-                pushButton: true,
-                switch: false,
-                app: false
-            },
-            noiseLevel: {
-                quiet: true,
-                normal: false
-            },
-            powerSource: {
-                USB: true,
-                battery: {
-                    used: false,
-                    batteryType: '',
-                    noBattery: 0,
-                    batteryIncluded: false,
-                }
-            },
-            matchedFeatures: {
-                size: false,
-                intensity: false,
-                feel: false,
-                style: false
-            }
-        },
-        0
-    );
+    // ASRFS.pushRabbit(
+    //     10,
+    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-the-mighty-one/63326.html',
+    //     'https://i1.adis.ws/i/annsummers/07SCNRAS1155041_Z?$product-large$',
+    //     {
+    //         intensity: [3],
+    //         style: [3],
+    //         size: [4],
+    //         feel: [2, 3]
+    //     },{
+    //         intensity: "Moderate",
+    //         style: "Rotations",
+    //         size: "Smaller",
+    //         feel: "Straight"
+    //     }, {
+    //         name: 'Rampant Rabbit The Mighty One',
+    //         price: '£65.00',
+    //         brand: 'Ann Summers',
+    //         forCouples: false,
+    //         waterResistant: true,
+    //         flexibility: {
+    //             firm: true,
+    //             flexable: false,
+    //             soft: false
+    //         },
+    //         material: {
+    //             silicone: true,
+    //             metal: false
+    //         },
+    //         controllerType: {
+    //             pushButton: true,
+    //             switch: false,
+    //             app: false
+    //         },
+    //         noiseLevel: {
+    //             quiet: true,
+    //             normal: false
+    //         },
+    //         powerSource: {
+    //             USB: true,
+    //             battery: {
+    //                 used: false,
+    //                 batteryType: '',
+    //                 noBattery: 0,
+    //                 batteryIncluded: false,
+    //             }
+    //         },
+    //         matchedFeatures: {
+    //             size: false,
+    //             intensity: false,
+    //             feel: false,
+    //             style: false
+    //         }
+    //     },
+    //     0
+    // );
 
     // PURPLE SILICONE CURVED RABBIT (UPF)>>PURPLE>>NO SIZE
     ASRFS.pushRabbit(
@@ -630,9 +630,9 @@ ASRFS.setupRabbits = function () {
             feel: [3]
         }, {
             intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
-            feel: "Straight"
+            style: "Variable speeds and patterns",
+            size: "Realistic",
+            feel: "Contoured"
         },{
             name: 'Rampant Rabbit Vibrator - The Purple Silicone Curved One',
             price: '£50.00',
@@ -687,10 +687,10 @@ ASRFS.setupRabbits = function () {
             size: [4],
             feel: [4]
         },{
-            intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
-            feel: "Straight"
+            intensity: "Powerful",
+            style: "4 speeds and patterns",
+            size: "Larger",
+            feel: "G-spot"
         }, {
             name: 'Rampant Rabbit The Throbbing One',
             price: '£45.00',
@@ -745,10 +745,10 @@ ASRFS.setupRabbits = function () {
             size: [4],
             feel: [1, 4]
         },{
-            intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
-            feel: "Straight"
+            intensity: "Powerful",
+            style: "5 speeds and 7 patterns",
+            size: "Larger",
+            feel: "Straight and G-spot"
         }, {
             name: 'Sensations Feel The Ripple Rampant Rabbit',
             price: '£55.00',
@@ -836,9 +836,9 @@ ASRFS.setupRabbits = function () {
             size: [4],
             feel: [1]
         },{
-            intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
+            intensity: "Powerful",
+            style: "3 speeds and 7 patterns",
+            size: "Larger",
             feel: "Straight"
         }, {
             name: 'Rampant Rabbit The Platinum Rotating One',
@@ -894,10 +894,10 @@ ASRFS.setupRabbits = function () {
             size: [3],
             feel: [2, 3]
         },{
-            intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
-            feel: "Straight"
+            intensity: "Powerful",
+            style: "7 speeds and patterns",
+            size: "Realistic",
+            feel: "Contoured and flexible"
         }, {
             name: 'Magnetize Rampant Rabbit',
             price: '£80.00',
@@ -985,10 +985,10 @@ ASRFS.setupRabbits = function () {
             size: [3],
             feel: [2, 3, 4]
         },{
-            intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
-            feel: "Straight"
+            intensity: "Powerful",
+            style: "3 speeds and 7 patterns",
+            size: "Larger",
+            feel: "Contoured, flexible and G-spot"
         }, {
             name: 'Rampant Rabbit The Bendy One',
             price: '£40.00',
@@ -1043,10 +1043,10 @@ ASRFS.setupRabbits = function () {
             size: [4],
             feel: [3]
         },{
-            intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
-            feel: "Straight"
+            intensity: "Powerful",
+            style: "3 speeds and 3 pulse patterns",
+            size: "Larger",
+            feel: "Contoured"
         }, {
             name: 'Rampant Rabbit Vibrator - The Moregasm Move Rechargeable One',
             price: '£75.00',
@@ -1128,8 +1128,8 @@ ASRFS.setupRabbits = function () {
             feel: [1]
         },{
             intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
+            style: "Rotations and variable patterns",
+            size: "Realistic",
             feel: "Straight"
         }, {
             name: 'Rampant Rabbit Vibrator - The Slim Rechargeable One',
@@ -1185,10 +1185,10 @@ ASRFS.setupRabbits = function () {
             size: [4],
             feel: [2, 3]
         },{
-            intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
-            feel: "Straight"
+            intensity: "Powerful",
+            style: "Variable speeds and patterns",
+            size: "Larger",
+            feel: "Contoured and flexible"
         }, {
             name: 'Mila Rechargeable Flexible Rabbit Vibrator',
             price: '£90.00',
@@ -1243,10 +1243,10 @@ ASRFS.setupRabbits = function () {
             size: [3],
             feel: [3]
         },{
-            intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
-            feel: "Straight"
+            intensity: "Intense",
+            style: "Variable speeds and patterns",
+            size: "Realistic",
+            feel: "Contoured"
         }, {
             name: 'Pornhub Turbo Rabbit Vibrator',
             price: '£75.00',
@@ -1303,10 +1303,10 @@ ASRFS.setupRabbits = function () {
             size: [3],
             feel: [3]
         },{
-            intensity: "Moderate",
-            style: "Rotations",
-            size: "Smaller",
-            feel: "Straight"
+            intensity: "Intense",
+            style: "Variable speeds and patterns",
+            size: "Realistic",
+            feel: "Contoured"
         }, {
             name: 'Rampant Rabbit Vibrator - The Suction Base One',
             price: '£44.00',
@@ -1361,10 +1361,10 @@ ASRFS.setupRabbits = function () {
             size: [2],
             feel: [3]
         },{
-            intensity: "Moderate",
-            style: "Rotations",
+            intensity: "Powerful",
+            style: "Variable speeds and patterns",
             size: "Smaller",
-            feel: "Straight"
+            feel: "Contoured"
         }, {
             name: 'Searle Black Rechargeable Rabbit',
             price: '£70.00',
@@ -1420,10 +1420,10 @@ ASRFS.setupRabbits = function () {
             size: [2],
             feel: [3]
         },{
-            intensity: "Moderate",
-            style: "Rotations",
+            intensity: "Powerful",
+            style: "Variable speeds and patterns",
             size: "Smaller",
-            feel: "Straight"
+            feel: "Contoured"
         }, {
             name: 'Searle Black Rechargeable Rabbit',
             price: '£70.00',
@@ -1478,10 +1478,10 @@ ASRFS.setupRabbits = function () {
             size: [2],
             feel: [3]
         }, {
-            intensity: "Moderate",
-            style: "Rotations",
+            intensity: "Powerful",
+            style: "Variable speeds and patterns",
             size: "Smaller",
-            feel: "Straight"
+            feel: "Contoured"
         },{
             name: 'Searle Purple Rechargeable Rabbit',
             price: '£70.00',
@@ -1536,10 +1536,10 @@ ASRFS.setupRabbits = function () {
             size: [2],
             feel: [2, 4]
         },{
-            intensity: "Moderate",
-            style: "Rotations",
+            intensity: "Powerful",
+            style: "Variable patterns",
             size: "Smaller",
-            feel: "Straight"
+            feel: "Flexible and G-spot"
         }, {
             name: 'Silicone Bunny Purple Rabbit',
             price: '£70.00',
@@ -1594,10 +1594,10 @@ ASRFS.setupRabbits = function () {
             size: [2],
             feel: [2, 4]
         },{
-            intensity: "Moderate",
-            style: "Rotations",
+            intensity: "Powerful",
+            style: "Variable patterns",
             size: "Smaller",
-            feel: "Straight"
+            feel: "Flexible and G-spot"
         }, {
             name: 'Silicone Bunny Pink Rabbit',
             price: '£70.00',
@@ -1652,10 +1652,10 @@ ASRFS.setupRabbits = function () {
             size: [2],
             feel: [2, 4]
         },{
-            intensity: "Moderate",
-            style: "Rotations",
+            intensity: "Powerful",
+            style: "Variable patterns",
             size: "Smaller",
-            feel: "Straight"
+            feel: "Flexible and G-spot"
         }, {
             name: 'Silicone Bunny Black Rabbit',
             price: '£70.00',
@@ -1682,6 +1682,64 @@ ASRFS.setupRabbits = function () {
             },
             powerSource: {
                 USB: true,
+                battery: {
+                    used: false,
+                    batteryType: '',
+                    noBattery: 0,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
+
+    // THE THRUSTING ONE ONE
+    ASRFS.pushRabbit(
+        28,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-vibrator--the-thrusting-one/74897.html',
+        'https://i1.adis.ws/i/annsummers/07CSSPAS1030043_Z?$product-mobile-large$',
+        {
+            intensity: [3],
+            style: [1],
+            size: [2],
+            feel: [3]
+        },{
+            intensity: "Powerful",
+            style: "3 rotations and 7 vibrations",
+            size: "Realistic",
+            feel: "Straight"
+        }, {
+            name: 'Rampant Rabbit Vibrator -The Thrusting One',
+            price: '£45.00',
+            brand: 'OVO',
+            forCouples: false,
+            waterResistant: false,
+            flexibility: {
+                firm: true,
+                flexable: false,
+                soft: false
+            },
+            material: {
+                silicone: false,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: false,
+                normal: true
+            },
+            powerSource: {
+                USB: false,
                 battery: {
                     used: false,
                     batteryType: '',

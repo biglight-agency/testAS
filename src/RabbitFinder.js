@@ -18,7 +18,6 @@
 
 */
 $(document).ready(function () {
-
     // Rabbits
     /* 
  Author: Chris Davies 
@@ -1875,14 +1874,14 @@ ASRFS.filterRabbits = function (searchOptions) {
 }
 
 // Refine filters
-ASRFS.refineFilterRabbits = function (refineOptions, rabbitList, filterCount) {
+ASRFS.refineFilterRabbits = function (refineOptions, filteredRabbitList, filterCount) {
     // Refine options
     // waterproof 
     // quiet
     // forCouples
     // usb
     let refinedList = [];
-    var rabbits = ASRFS.rabbitList;
+    var rabbits = filteredRabbitList;
     for (let i = 0; i < rabbits.length; i++) {
         let count = 0;
         let features = rabbits[i].features;
@@ -1942,9 +1941,8 @@ ASRFS.singleSearch = function (searchOption) {
 }
 
 ASRFS.setupRabbits();
-
-    // Logic
-    const ASSTBG_1 = {};
+    // logic
+    ASSTBG_1 = {};
     BL_RESULTS_GLOBAL = {};
     BL_PLP_SELECTED_GLOBAL = {};
     let showAllRabbits = true;
@@ -15640,7 +15638,7 @@ ASRFS.setupRabbits();
                 if(matchesNumber === 1){
                     filteredRabbits = "1 match";
                 } else if(matchesNumber > 1){
-                    ASSTBG_1.filteredRabbits.length + " matches";
+                    filteredRabbits = ASSTBG_1.filteredRabbits.length + " matches";
                 }
                 //let filteredRabbits = ASSTBG_1.filteredRabbits.length === 0 ? "0 matches" : ASSTBG_1.filteredRabbits.length + " matches";
                 html = `
@@ -16730,7 +16728,7 @@ ASRFS.setupRabbits();
         const appUsed = ASSTBG_1.getCookie('BL-RF-OPENED');
 
         if (appUsed !== 'true') {
-            $('#bl-header').hide();
+            $('#bl-header').css('opacity', '0');
             // Show overlay
 
             //$('.bl-loading-screen').addClass('bl-loading');
@@ -16756,7 +16754,7 @@ ASRFS.setupRabbits();
             setTimeout(function () {
                 $('.bl-loading-screen').show();
                 $('.bl-loading-screen').addClass('bl-active');
-                $('#bl-header').show();
+                $('#bl-header').css('opacity', '1');
                 // $('.bl-loading-screen .vibe').show();
                 // $('.bl-loading-screen .question-mark').show();
 
@@ -16971,8 +16969,8 @@ ASRFS.setupRabbits();
         const cat = 'all';
         const page = 6;
         const direction = 'next';
-        if (!$(this).hasClass('bl-rabbits-filtered')) {
-            showAllRabbits = true;
+        if ($(this).hasClass('bl-rabbits-filtered')) {
+            showAllRabbits = false;
         }
 
         ASSTBG_1.showPage(cat, page, direction);
@@ -17063,7 +17061,7 @@ ASRFS.setupRabbits();
     $(document).on('click', '.bl-pdp-filter', function () {
 
         // show loading screen
-        $('#bl-header').hide();
+        $('#bl-header').css('opacity', '0');
         $('.bl-loading-screen').show();
         $('.bl-loading-screen').addClass('animate');
 
@@ -17089,7 +17087,7 @@ ASRFS.setupRabbits();
         setTimeout(function () {
             $('.bl-loading-screen').hide();
             $('.bl-loading-screen').removeClass('animate');
-            $('#bl-header').show();
+            $('#bl-header').css('opacity', '1');
             clearInterval(loadingDots);
         }, 2500);
 

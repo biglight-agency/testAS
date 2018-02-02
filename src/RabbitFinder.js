@@ -16701,23 +16701,25 @@ $(document).ready(function () {
 // Set app to full screen - doesn't work for iOS safari
 ASSTBG_1.toggleFullScreen = () => {
     var doc = window.document;
-    var docEl = doc.documentElement;
-    if (docEl != null && docEl != 'undefined') {
+    if (doc != null && doc != 'undefined') {
+        var docEl = doc.documentElement;
+        if (docEl != null && docEl != 'undefined') {
 
-        var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
-        var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+            var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+            var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
 
-        if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
-            if(docEl != null && docEl != 'undefined'){
-                requestFullScreen.call(docEl);
+            if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+                if(docEl != null && docEl != 'undefined'){
+                    requestFullScreen.call(docEl);
+                }
             }
-        }
-        else {
-            if(doc != null && doc != 'undefined'){
-                cancelFullScreen.call(doc);
+            else {
+                if(doc != null && doc != 'undefined'){
+                    cancelFullScreen.call(doc);
+                }
             }
-        }
 
+        }
     }
 }
 

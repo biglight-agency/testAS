@@ -16716,7 +16716,7 @@ $(document).ready(function () {
     }
 
     /* Event Handlers */
-    $(document).on('click tap', '.bl-guide-banner', function () {
+    $(document).on('click tap', '.bl-guide-banner, .bl-banner-message', function () {
         // Set screen to full screen
         ASSTBG_1.toggleFullScreen();
 

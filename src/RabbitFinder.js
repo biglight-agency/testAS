@@ -16708,11 +16708,16 @@ ASSTBG_1.toggleFullScreen = () => {
         var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
 
         if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
-            requestFullScreen.call(docEl);
+            if(docEl != null && docEl != 'undefined'){
+                requestFullScreen.call(docEl);
+            }
         }
         else {
-            cancelFullScreen.call(doc);
+            if(doc != null && doc != 'undefined'){
+                cancelFullScreen.call(doc);
+            }
         }
+
     }
 }
 

@@ -1942,6 +1942,7 @@ Description: Rabbit finder search functionality
     }
 
     ASRFS.setupRabbits();
+
     // Logic
     ASSTBG_1 = {};
     BL_RESULTS_GLOBAL = {};
@@ -2012,9 +2013,45 @@ Description: Rabbit finder search functionality
     }
 
     ASSTBG_1.landscapeOverlayHTML = `
-        <p>
-            THIS DOESN'T WORK IN LANDSCAPE VIEW
-        </p>
+        <div class="bl-landscape-content">
+            <p>
+                Woah there!
+            </p>
+            <p>
+               Our finder tool only works in portrait mode flip your phone around to keep playing.
+            </p>
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+            <style type="text/css">
+                .st0{opacity:0.2;}
+                .st1{fill:#FFFFFF;}
+                .st2{opacity:0.2;fill:#FFFFFF;}
+            </style>
+            <g>
+                <g class="st0">
+                    <g>
+                        <path class="st1" d="M18.5,88V67.6c0-3.3,2.7-5.9,5.9-5.9h40.4c3.3,0,5.9,2.7,5.9,5.9V88c0,3.3-2.7,5.9-5.9,5.9H24.4
+                            C21.2,93.9,18.5,91.3,18.5,88z M67.6,67.6c0-1.5-1.2-2.8-2.8-2.8H24.4c-1.5,0-2.8,1.2-2.8,2.8V88c0,1.5,1.2,2.8,2.8,2.8h40.4
+                            c1.5,0,2.8-1.2,2.8-2.8V67.6z"/>
+                    </g>
+                    <circle class="st1" cx="29.7" cy="77.8" r="3"/>
+                </g>
+                <g>
+                    <g>
+                        <path class="st1" d="M39.9,89H19.5c-3.3,0-5.9-2.7-5.9-5.9V42.7c0-3.3,2.7-5.9,5.9-5.9h20.3c3.3,0,5.9,2.7,5.9,5.9v40.4
+                            C45.8,86.4,43.2,89,39.9,89z M19.5,40c-1.5,0-2.8,1.2-2.8,2.8v40.4c0,1.5,1.2,2.8,2.8,2.8h20.3c1.5,0,2.8-1.2,2.8-2.8V42.7
+                            c0-1.5-1.2-2.8-2.8-2.8H19.5z"/>
+                    </g>
+                    <circle class="st1" cx="29.7" cy="77.9" r="3"/>
+                </g>
+                <path class="st2" d="M85.7,31.8c-1.6-7.8-6.2-14.6-12.9-19C66.1,8.5,58.1,7,50.3,8.6c-7,1.5-13.2,5.3-17.5,10.9v-8.7h-3v14h14v-3
+                    h-9c3.9-5.3,9.6-8.9,16.1-10.3c7.1-1.5,14.3-0.1,20.3,3.8c6,4,10.2,10,11.6,17.1c1.5,7.1,0.1,14.3-3.8,20.3l2.5,1.6
+                    C85.9,47.7,87.4,39.7,85.7,31.8z"/>
+            </g>
+            </svg>
+        </div>
     `;
 
     ASSTBG_1.introHTML = `
@@ -16956,7 +16993,7 @@ Description: Rabbit finder search functionality
 
         ASSTBG_1.filteredRabbits = ASRFS.filterRabbits(ASSTBG_1.getFilterOptions(selectedCat));
         var matchesText = ' matches';
-        if(ASSTBG_1.filteredRabbits.length === 1){
+        if (ASSTBG_1.filteredRabbits.length === 1) {
             matchesText = ' match';
         }
         $('.bl-slider-results-button').text(ASSTBG_1.filteredRabbits.length + matchesText);

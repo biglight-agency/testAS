@@ -16485,15 +16485,16 @@ ASRFS.setupRabbits();
                 // let interval = setInterval(function () {
                 for (let x = 0; x < rabbits.length; x++) {
                     if (rabbits[x].id === parseInt(id)) {
-                        let productHTMLObj = rabbits[x].HTML;
-                        for (let i = 0; i < productHTMLObj.length; i++) {
-                            if ($(productHTMLObj[i]).hasClass('wrapper')) {
-                                $(productHTMLObj[i]).addClass('bl-pdp-container');
-                                productHtml = productHTMLObj[i].outerHTML;
+                     //   let productHTMLObj = rabbits[x].HTML;
+                        // for (let i = 0; i < productHTMLObj.length; i++) {
+                        //     if ($(productHTMLObj[i]).hasClass('wrapper')) {
+                         //       $(productHTMLObj[i]).addClass('bl-pdp-container');
+                          //      productHtml = productHTMLObj[i].outerHTML;
+                          productHtml = rabbits[x].HTML.outerHTML;
                                 rabbitFound = true;
                                 break;
-                            }
-                        }
+                        //     }
+                        // }
                     }
                 }
 
@@ -16935,15 +16936,10 @@ ASRFS.setupRabbits();
                 value: 'ears',
                 animation: `<div class="bl-vibration-animation-overlay-circle-container">
                                 <div class="bl-vibration-animation-overlay-circle">
-                                    <!-- video width="260" height="150" autoplay loop muted playsinline -->>
-                                        <!-- source src="http://localhost:3000/CXO/Ann Summers/Sex Toys Prototype/videos/Rotations.mov" type="video/mp4" -->
-                                        <!-- source src="http://localhost:3000/CXO/Ann Summers/Sex Toys Prototype/videos/Rotations.mov" type="video/quicktime" -->
-                                        <!-- source src="https://github.com/biglight-agency/testAS/blob/master/videos/c6f32646-a382-477c-9da1-19e243d4122c.mp4" type="video/mp4" -->
-                                        <!-- Your browser does not support the video tag. -->
-                                    <!-- /video -->
-                                    <!-- iframe class="bl-video-1" src="https://player.vimeo.com/video/253573583?autoplay=1&loop=1" width="300" height="150" frameborder="0">  </iframe-->
-                                    <iframe class="bl-video-1" src="https://player.vimeo.com/video/253612767?autoplay=1&loop=1" width="300" height="150" frameborder="0" ></iframe>
-                                   
+                                    <video width="260" height="150" autoplay loop muted playsinline>
+                                        <source src="http://i1.adis.ws/v/annsummers/test-pulsepatterns/mp4_240p" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
                                 </div>
                             </div>`,
                 searchValue: 1
@@ -16953,7 +16949,7 @@ ASRFS.setupRabbits();
                 animation: `<div class="bl-vibration-animation-overlay-circle-container">
                                 <div class="bl-vibration-animation-overlay-circle">
                                     <video width="100" height="150" autoplay loop muted playsinline>
-                                        <source src="http://i1.adis.ws/v/annsummers/07CSSPAS1050041_VID/mp4_240p" type="video/mp4">
+                                        <source src="http://i1.adis.ws/v/annsummers/test-rotations/mp4_240p" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
@@ -16965,7 +16961,7 @@ ASRFS.setupRabbits();
                 animation: `<div class="bl-vibration-animation-overlay-circle-container">
                                 <div class="bl-vibration-animation-overlay-circle">
                                     <video width="100" height="150" autoplay loop muted playsinline>
-                                        <source src="http://s1.adis.ws/annsummers/_vid/07ncsvas1145041_vid/422fc98e-c7c0-4570-a913-ce6629308119/video/02d7690f-2cf4-47c8-8868-181b2deed25e.mp4" type="video/mp4">
+                                        <source src="http://i1.adis.ws/v/annsummers/test-misc/mp4_240p" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
@@ -16977,7 +16973,7 @@ ASRFS.setupRabbits();
                 animation: `<div class="bl-vibration-animation-overlay-circle-container">
                                 <div class="bl-vibration-animation-overlay-circle">
                                     <video width="100" height="150" autoplay loop muted playsinline>
-                                        <source src="http://i1.adis.ws/v/annsummers/07CSSPAS1040043_VID/mp4_240p" type="video/mp4">
+                                        <source src="http://i1.adis.ws/v/annsummers/test-thrusting/mp4_240p" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
@@ -17203,13 +17199,14 @@ ASRFS.setupRabbits();
         // Remove Loading screens
         $(data).find('.loading_ctr').remove();
         $(data).find('.loader').remove();
-        
+
 
         // Setup product image
         var url = $(data).find('.product-image').attr('data-base-path');
         var dataImage = $(data).find('.product-image').attr('data-image-url');
         // $(data).find('.quantity-attribute').remove();
         $(data).find('#add-to-cart').addClass('bl-add-to-bag');
+        console.log($(data));
         if (dataImage) {
             var lastFowardSlashIndex = dataImage.lastIndexOf('/');
             dataImage = dataImage.substring(lastFowardSlashIndex, dataImage.length);
@@ -17219,7 +17216,17 @@ ASRFS.setupRabbits();
             $(data).find('.product-image').append('<img src="' + url + '/i/annsummers' + dataImage + '" />');
         }
 
-        // Setup discreet packaging
+        // setup wrapper
+        // for (let i = 0; i < productHTMLObj.length; i++) {
+        //     if ($(productHTMLObj[i]).hasClass('wrapper')) {
+        //         $(productHTMLObj[i]).addClass('bl-pdp-container');
+        //         productHtml = productHTMLObj[i].outerHTML;
+        //         rabbitFound = true;
+        //         break;
+        //     }
+        // }
+        data = $(data)[50];
+        $(data).addClass('bl-pdp-container');
         return data;
     }
 
@@ -17686,7 +17693,7 @@ ASRFS.setupRabbits();
     })
 
     // Clear all filters
-    $(document).on('click tap', '.bl-product-plp-tile-no-results .bl-product-tile-no-results-button', function(){
+    $(document).on('click tap', '.bl-product-plp-tile-no-results .bl-product-tile-no-results-button', function () {
         // show loading screen
         $('#bl-header').css('opacity', '0');
         $('.bl-loading-screen').show();
@@ -17821,9 +17828,9 @@ ASRFS.setupRabbits();
     });
 
     $(document).on('click tap', '.bl-add-to-bag', function (e) {
-       e.preventDefault();
-       $(this).closest('form').submit();
-       console.log('ADD TO BAG');
+        e.preventDefault();
+        $(this).closest('form').submit();
+        console.log('ADD TO BAG');
     });
 
     ASSTBG_1.exitHandler = function () {

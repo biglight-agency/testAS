@@ -61,6 +61,11 @@ html.bl-app-loading{
     -moz-osx-font-smoothing: grayscale;
 }
 
+#bl-sex-toy-guide .pdp-container .col-1{
+    width: 100%;
+    display: block;
+}
+
 .bl-cross{
     color: transparent !important;
     position: absolute;
@@ -746,7 +751,7 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     padding: 10px;
     cursor: pointer;
 } */
-.bl-pdp-back-arrow{
+#wrapper .bl-pdp-back-arrow{
     background: black;
     color: white;
     text-align: center;

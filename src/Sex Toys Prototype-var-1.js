@@ -18,26 +18,26 @@
 
 */
 $(document).ready(function () {
-    
- 
-     // Logic
-     ASSTBG_1 = {};
-     BL_RESULTS_GLOBAL = {};
-     BL_PLP_SELECTED_GLOBAL = {};
-     let showAllRabbits = true;
-     BL_PLP_SELECTED_GLOBAL.props = [];
-     ASSTBG_1.filteredRabbits = [];
-     ASSTBG_1.refinedRabbits = [];
-     ASSTBG_1.allRabbits = ASRFS.getAllRabbits();
- 
-     const questionMarkSVG = `
+
+
+    // Logic
+    ASSTBG_1 = {};
+    BL_RESULTS_GLOBAL = {};
+    BL_PLP_SELECTED_GLOBAL = {};
+    let showAllRabbits = true;
+    BL_PLP_SELECTED_GLOBAL.props = [];
+    ASSTBG_1.filteredRabbits = [];
+    ASSTBG_1.refinedRabbits = [];
+    ASSTBG_1.allRabbits = ASRFS.getAllRabbits();
+
+    const questionMarkSVG = `
      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.29 34.29"><defs><style>.cls-1{fill:#fff;}</style></defs><title>question-mark-white</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M17.14,34.29A17.15,17.15,0,1,1,34.29,17.14,17.15,17.15,0,0,1,17.14,34.29Zm.45-28.58a9.07,9.07,0,0,0-8.28,4.76.71.71,0,0,0,.18.94l2.94,2.23a.71.71,0,0,0,.43.13.74.74,0,0,0,.56-.26,9.64,9.64,0,0,1,1.92-2.06,3.54,3.54,0,0,1,1.92-.53c1.43,0,2.74.91,2.74,1.89,0,1.16-.6,1.74-2,2.37-1.59.71-3.75,2.57-3.75,4.73v.81a.7.7,0,0,0,.71.71h4.29a.7.7,0,0,0,.71-.71,3.35,3.35,0,0,1,1.7-2.21c1.7-1,4-2.26,4-5.65C25.72,8.77,21.43,5.71,17.59,5.71ZM20,23.57a.7.7,0,0,0-.71-.71H15a.7.7,0,0,0-.71.71v4.29a.7.7,0,0,0,.71.71h4.29a.7.7,0,0,0,.71-.71Z"/></g></g></svg>
      `;
- 
-     const whiteChevronSVG = `
+
+    const whiteChevronSVG = `
      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.92 26"><defs><style>.cls-1{fill:#fff;}</style></defs><title>chevron-back-white</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M12.92,26a3,3,0,0,1-2.12-.88L.88,15.2A3,3,0,0,1,0,13.08,3.38,3.38,0,0,1,.88,10.8L10.8.88A3,3,0,0,1,15,5.12L7.17,13,15,20.88A3,3,0,0,1,12.92,26Z"/></g></g></svg>`;
- 
-     const tickSVG = `
+
+    const tickSVG = `
      <svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
      
@@ -45,59 +45,66 @@ $(document).ready(function () {
          11.6,20 15.9,24.2 26.4,13.8 "/>
      </svg>
  `;
-     ASSTBG_1.content = function (content) {
-         this.header = content.header;
-         this.options = content.options;
-         this.index = content.index;
- 
-         return this;
-     }
- 
-     ASSTBG_1.headerSVG = `
+    ASSTBG_1.content = function (content) {
+        this.header = content.header;
+        this.options = content.options;
+        this.index = content.index;
+
+        return this;
+    }
+
+    ASSTBG_1.headerSVG = `
          <svg id="as_logo" xmlns="//www.w3.org/2000/svg" viewBox="0 0 218 32" alt="Ann Summers Brand Logo">
              <path d="M15.3 17.9h-7l3.5-9.7 3.5 9.7zm.9 2.3l4 10.6c.2.4.2.6 1 .6H24c.3 0 .6 0 .6-.4 0-.2-.1-.4-.2-.6l-10.6-27c-.2-.5-.2-.5-.8-.5h-1.5c-.5 0-.6.2-.8.6L.1 30.5c0 .2-.1.4-.1.6 0 .5.6.4.6.4h2c.7 0 .8-.3.9-.6l3.9-10.6 8.8-.1zm22.7-2.3c0-1.7-.2-2.6-.8-3.3-1-1-2.3-1.5-3.7-1.4-.3 0-2.7 0-3.7 1.4-.3.6-.5 1.3-.5 2v14c0 .4 0 .8-.8.8h-1.9c-.6 0-.7-.1-.7-.7V15.4c-.1-.8.1-1.6.7-2.2 1-1 3.9-1.9 7.4-1.9.7 0 1.4 0 2.1.1.7.1 3.7.5 4.8 3.1.3 1 .5 2.1.4 3.1v13.2c0 .6-.2.8-.8.8h-1.8c-.6 0-.8-.1-.8-.8V17.9zm20 0c0-1.7-.2-2.6-.8-3.3-1-1-2.3-1.5-3.7-1.4-.3 0-2.7 0-3.7 1.4-.3.6-.5 1.3-.5 2v14c0 .4 0 .8-.8.8h-1.9c-.6 0-.7-.1-.7-.7V15.4c-.1-.8.1-1.6.7-2.2 1-1 3.9-1.9 7.4-1.9.7 0 1.4 0 2.1.1.7.1 3.7.5 4.8 3.1.3 1 .5 2.1.4 3.1v13.2c0 .6-.2.8-.8.8h-1.8c-.6 0-.8-.1-.8-.8l.1-12.9zm21.6-.6c-1.2-.6-5.8-2.6-5.8-7.6 0-1.1.2-2.3.7-3.3C76.9 3.3 80 2 83.3 2c1.8 0 3.5.4 5.1 1.2.5.3 1 .7 1.5 1.1.8.6 1.4 1.6 1.5 2.7 0 1-.7 1.8-1.7 1.9h-.1c-.7 0-1.4-.4-1.7-1l-.2-.4c-1.1-1.8-2.4-3-4.6-3-.6 0-1.1.1-1.6.3-1.8.6-3 2.3-2.9 4.2 0 1.3.5 2.5 1.4 3.3 1.3 1 2.7 1.8 4.2 2.4l2.2 1c.9.4 1.8.9 2.6 1.5 2.3 1.5 3.7 4.1 3.7 6.8 0 1.3-.3 2.5-.8 3.7-.9 1.8-3.3 4.5-8.3 4.5-1.2 0-5.3-.1-7.8-3.3-.7-.8-1.2-1.8-1.3-2.9 0-1.1.8-2 1.9-2h.1c.8 0 1.5.5 1.8 1.1l.3.6c.8 2.3 2.9 3.8 5.3 3.8 1.3 0 2.6-.4 3.5-1.3 1-.9 1.5-2.2 1.5-3.5 0-1.5-.7-2.9-1.8-3.9-1.3-1-2.7-1.8-4.2-2.5l-2.4-1zm15.6-4.9c0-.5.2-.6.7-.6h2c.6 0 .8.1.8.7v12.7c0 1.4 0 2.6 1.1 3.6.4.4.9.6 1.4.8.6.1 1.2.2 1.8.2 4 0 3.9-2.5 3.9-4.1V12.5c0-.6.2-.7.8-.8h1.8c.3 0 .8 0 .8.7v14.3c.1 1-.1 2-.6 2.9-.3.4-.7.8-1.1 1-1.9.9-4 1.4-6.2 1.3-2.8 0-4.3-.6-5.4-1.5-.6-.4-1-1-1.3-1.7-.4-.9-.5-1.9-.5-2.9V12.4zm44.5 18.4c0 .5-.1.7-.7.7h-2c-.6 0-.7-.1-.7-.7V18.3c.1-1.2-.1-2.5-.7-3.6-.7-.9-1.8-1.5-3-1.3-1.5-.1-2.9.7-3.5 2.1-.2.6-.2 1.3-.2 1.9v13.3c0 .5-.1.7-.6.7h-2c-.5 0-.7-.1-.7-.7V18c0-.9.2-4.7-3.7-4.7-1.5-.2-2.9.7-3.5 2.1-.2.6-.3 1.3-.2 2v13.4c0 .4 0 .7-.7.7h-2c-.6 0-.7-.2-.7-.7V14.5c0-.8.2-1.4 1.6-2.1 1.7-.7 3.5-1.1 5.4-1.1 1.6 0 3.3.4 4.7 1.2.4.3.8.7 1.1 1.1.2-.3.5-.5.8-.7 1-.8 2.4-1.6 5.2-1.6.8 0 4.8-.1 5.9 3.4.2.9.3 1.8.3 2.7l-.1 13.4zm29.5 0c0 .5-.1.7-.7.7h-2c-.6 0-.7-.1-.7-.7V18.3c.1-1.2-.1-2.5-.7-3.6-.7-.9-1.8-1.5-3-1.3-1.5-.1-2.9.7-3.5 2.1-.2.6-.2 1.3-.2 1.9v13.3c0 .5-.1.7-.6.7h-2c-.5 0-.7-.1-.7-.7V18c0-.9.1-4.7-3.7-4.7-1.5-.2-2.9.7-3.5 2.1-.2.6-.3 1.3-.2 2v13.4c0 .4 0 .7-.7.7h-2c-.6 0-.7-.2-.7-.7V14.5c0-.8.2-1.4 1.6-2.1 1.7-.7 3.6-1.1 5.4-1.1 1.6 0 3.3.4 4.7 1.2.4.3.8.7 1.1 1.1.2-.3.5-.5.8-.7 1-.8 2.4-1.6 5.2-1.6.8 0 4.8-.1 5.9 3.4.2.9.3 1.8.3 2.7l-.1 13.4zm6.5-11.6c.3-3.1 1.6-4.5 2.8-5.1.7-.4 1.4-.6 2.2-.6 2.8 0 3.8 2.7 4 3.4.1.3.1.6.1.9l-9.1 1.4zm11.2 6.3c-1 2-3.1 3.3-5.3 3.4-1.7 0-3.2-.8-4.1-2.2-1.2-1.7-1.8-3.6-1.8-5.6l11.7-1.7c.5-.1 1.1-.1 1.1-1.2-.1-1-.3-1.9-.7-2.8-1.2-2.6-3.8-4.1-6.6-4-1.7 0-3.4.5-4.8 1.6-1.8 1.3-3.6 3.8-3.6 8.7 0 6.1 2.7 8.9 5.4 9.8 1 .4 2 .5 3 .5 3.3 0 6.2-2 7.2-5.1.2-.5.4-1 .4-1.5 0-.1 0-1-.8-1-.5 0-.7.4-.9.8l-.2.3zm6 6c-.6 0-.8-.1-.8-.7V14.9c0-1.3.1-1.9 1.5-2.5 1.8-.7 3.7-1.1 5.7-1.1 1.1-.1 2.1.2 3.1.6.5.4.8.9.8 1.6 0 .9-.7 1.6-1.5 1.6-.5 0-1-.3-1.3-.7l-.4-.4c-.5-.6-1.3-1-2.1-1-.7 0-1.3.3-1.8.7-.4.6-.6 1.3-.5 2v15c0 .6-.4.6-.7.6l-2 .2zm14.9-3.5c.1.2.2.4.4.5.7.8 1.7 1.3 2.8 1.2.5 0 .9-.1 1.3-.3 1-.5 1.6-1.5 1.6-2.6 0-.7-.2-1.3-.5-1.9-.8-1-1.9-1.7-3.1-2.1l-1.6-.8c-.7-.3-1.4-.7-2-1.2-1.4-1-2.2-2.6-2.2-4.4 0-.9.2-1.7.6-2.5 1.1-2 3.3-2.8 5.5-2.8.6 0 3.5 0 5.1 2 .5.5.8 1.2.8 1.9 0 .8-.6 1.4-1.4 1.5h-.1c-.6 0-1.2-.4-1.5-1l-.2-.3c-.5-1.2-1.7-2.1-3-2.1-.5 0-.9.1-1.3.3-.9.5-1.4 1.5-1.4 2.5 0 .5.1 1.1.4 1.5.7 1 1.7 1.7 2.8 2.1l1.6.8 1.2.6c2.1.9 3.4 2.9 3.4 5.2 0 2.1-1.1 5.8-6.4 5.8-2.1.1-4.1-.6-5.6-2.1-.6-.6-1-1.4-1.1-2.2 0-.2.1-.4.1-.6.2-.6.8-1 1.5-1 1 0 1.5 1 1.9 1.7l.4.3z"></path>
          </svg>
      `;
- 
-     ASSTBG_1.getHeader = () => {
-         // Clone current Header
-         let header = $('#header').clone();
- 
-         // Remove Search and menu
-         $(header).find('.header-search').remove();
-         $(header).find('nav').remove();
-         $(header).find('.mini-cart-link').removeAttr('href');
-         $(header).find('.mini-cart-link-cart.only-on-mobile').remove();
-         return `<div id="bl-header"> <span class="bl-cross"></span><span class="bl-close-text">CLOSE</span> ${$(header).html()}</div>`;
-         // return `<div class="bl-header"> 
-         //     ${ASSTBG_1.headerSVG}
-         //     <span class="bl-cross"> X </span>
-         // </div>`;
-     }
- 
-     ASSTBG_1.getBackHeader = () => {
-         // Clone current Header
-         let header = $('#header').clone();
- 
-         // Remove Search and menu
-         $(header).find('.header-search').remove();
-         $(header).find('nav').remove();
-         $(header).find('.mini-cart-link').removeAttr('href');
-         $(header).find('.mini-cart-link-cart.only-on-mobile').remove();
-         return `<div id="bl-header"> 
+
+    ASSTBG_1.getHeader = () => {
+        // Clone current Header
+        let header = $('#header').clone();
+
+        // Remove Search and menu
+        $(header).find('.header-search').remove();
+        $(header).find('nav').remove();
+        $(header).find('.mini-cart-link').removeAttr('href');
+        $(header).find('.mini-cart-link-cart.only-on-mobile').remove();
+        return `<div id="bl-header"> <span class="bl-cross"></span><span class="bl-close-text">CLOSE</span> ${$(header).html()}</div>`;
+        // return `<div class="bl-header"> 
+        //     ${ASSTBG_1.headerSVG}
+        //     <span class="bl-cross"> X </span>
+        // </div>`;
+    }
+
+    ASSTBG_1.getBackHeader = () => {
+        // Clone current Header
+        let header = $('#header').clone();
+
+        // Remove Search and menu
+        $(header).find('.header-search').remove();
+        $(header).find('nav').remove();
+        $(header).find('.mini-cart-link').removeAttr('href');
+        $(header).find('.mini-cart-link-cart.only-on-mobile').remove();
+        return `<div id="bl-header"> 
                      <span class="bl-cross"></span>
                      <span class="bl-close-text">CLOSE</span> 
                      ${$(header).html()}
-                 </div>
-                 <div class="bl-pdp-back-arrow"><span class="bl-pdp-back-arrow-icon">${whiteChevronSVG}</span>Back to results</div>`;
-         //return `<div id="bl-header"> <span class="bl-pdp-back-arrow"><=</span><span class="bl-back-text">BACK</span> ${$(header).html()}</div>`;
-         // return `<div class="bl-header"> 
-         //     ${ASSTBG_1.headerSVG}
-         //     <span class="bl-cross"> X </span>
-         // </div>`;
-     }
- 
-     ASSTBG_1.landscapeOverlayHTML = `
+                 </div>`;
+        //<div class="bl-pdp-back-arrow"><span class="bl-pdp-back-arrow-icon">${whiteChevronSVG}</span>Back to results</div>`;
+        //return `<div id="bl-header"> <span class="bl-pdp-back-arrow"><=</span><span class="bl-back-text">BACK</span> ${$(header).html()}</div>`;
+        // return `<div class="bl-header"> 
+        //     ${ASSTBG_1.headerSVG}
+        //     <span class="bl-cross"> X </span>
+        // </div>`;
+    }
+
+    ASSTBG_1.addToBagConfirmationHTML = `
+     <div class="bl-add-to-bag-confirmation" style="display:none">
+        <p> Successfully added to your bag </p>
+        <p> Here are some items to match </p>
+     </div>
+     `;
+
+    ASSTBG_1.landscapeOverlayHTML = `
          <div class="bl-landscape-content">
              <p>
                  Wait a minute!
@@ -138,8 +145,8 @@ $(document).ready(function () {
              </svg>
          </div>
      `;
- 
-     ASSTBG_1.introHTML = `
+
+    ASSTBG_1.introHTML = `
          <p class="bl-rf-button bl-info"><span class="bl-question-icon">${questionMarkSVG}</span><span class="bl-text-button">What is a rampant rabbit?</span></p>
          <div class="bl-intro-content">
              <div class="bl-page-header">
@@ -153,8 +160,8 @@ $(document).ready(function () {
              <p class="bl-rf-button bl-start"><span class="bl-text-button">Got it, lets get started</span></p>
          </div>
      `;
- 
-     ASSTBG_1.rabbitInfoHTML = `
+
+    ASSTBG_1.rabbitInfoHTML = `
           <div class="bl-intro-content">
              <div class="bl-page-header">
                  <p class="large">What is a Rampant Rabbit?</p>
@@ -171,32 +178,32 @@ $(document).ready(function () {
              <p class="bl-rf-button bl-start bl-sticky"><span class="bl-text-button">Got it, lets get started</span></p>
          </div>
      `;
- 
-     ASSTBG_1.init = function () {
-         // Get product HTML - AJAX
-         ASSTBG_1.getRabbitData();
-         const feelSVG = `
+
+    ASSTBG_1.init = function () {
+        // Get product HTML - AJAX
+        ASSTBG_1.getRabbitData();
+        const feelSVG = `
          <div class="bl-homepage-svg with-feel">
              <svg></svg>
          </div>
          `;
-         const intensitySVG = `
+        const intensitySVG = `
          <div class="bl-homepage-svg with-intensity">
              <svg></svg>
          </div>
          `;
-         const sizeSVG = `
+        const sizeSVG = `
          <div class="bl-homepage-svg with-size">
              <svg></svg>
          </div>
          `;
-         const vibrationSVG = `
+        const vibrationSVG = `
          <div class="bl-homepage-svg with-vibration">
              <svg></svg>
          </div>
          `;
-         BL_RESULTS_GLOBAL = ASSTBG_1.storeResults();
-         const buttonHTML = `
+        BL_RESULTS_GLOBAL = ASSTBG_1.storeResults();
+        const buttonHTML = `
              <div class="bl-guide-banner" style="height: 0;">
                  <div class="bl-banner-message">
                      <p class="bl-banner-title">Find your perfect Rabbit</p>
@@ -204,8 +211,8 @@ $(document).ready(function () {
                  </div>
              </div>
          `;
- 
-         const logoSVG = `
+
+        const logoSVG = `
          <?xml version="1.0" encoding="utf-8"?>
          <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -6839,8 +6846,8 @@ $(document).ready(function () {
          </svg>
          
          `;
- 
-         const logoSVGOld = `
+
+        const logoSVGOld = `
              <?xml version="1.0" encoding="utf-8"?>
              <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -13475,8 +13482,9 @@ $(document).ready(function () {
              </g>
              </svg>
              `;
-         const overlayHTML = `
+        const overlayHTML = `
              <div id="bl-sex-toy-guide" class="bl-container">
+             ${ASSTBG_1.addToBagConfirmationHTML}
              <div class="bl-landscape-overlay" style="display:none;">
                  ${ASSTBG_1.landscapeOverlayHTML}
              </div>
@@ -13515,206 +13523,206 @@ $(document).ready(function () {
                  </div>
              </div>
          `;
- 
-         // Fade in the button at the top of the page
-         $('nav.breadcrumb').after(buttonHTML);
-         // Fade in the button on the 8th product
-         var productList = $('.search-result-items li');
-         $(productList[7]).after(buttonHTML);
-         $('.bl-guide-banner').animate({
-             height: 70
-         }, 2000);
- 
-         setTimeout(function () {
-             $('.bl-banner-message .bl-banner-desc').animate({
-                 opacity: 0.6
-             })
-         }, 3000);
- 
- 
- 
-         $('body').prepend(overlayHTML);
-         $('.bl-inner-container-right').css('left', $('.bl-inner-container').width());
-         // Stop Zooming
-         $('head').append('<meta class="bl-zoom-restriction" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->');
- 
-     }
-     ASSTBG_1.setupOverlay = function (content, position) {
-         let options = '';
-         for (let i = 0; i < content.options.length; i++) {
-             options = options + `<label>${content.options[i].text} 
+
+        // Fade in the button at the top of the page
+        $('nav.breadcrumb').after(buttonHTML);
+        // Fade in the button on the 8th product
+        var productList = $('.search-result-items li');
+        $(productList[7]).after(buttonHTML);
+        $('.bl-guide-banner').animate({
+            height: 70
+        }, 2000);
+
+        setTimeout(function () {
+            $('.bl-banner-message .bl-banner-desc').animate({
+                opacity: 0.6
+            })
+        }, 3000);
+
+
+
+        $('body').prepend(overlayHTML);
+        $('.bl-inner-container-right').css('left', $('.bl-inner-container').width());
+        // Stop Zooming
+        $('head').append('<meta class="bl-zoom-restriction" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->');
+
+    }
+    ASSTBG_1.setupOverlay = function (content, position) {
+        let options = '';
+        for (let i = 0; i < content.options.length; i++) {
+            options = options + `<label>${content.options[i].text} 
                                      <input type="checkbox" value="${content.options[i].value}" />
                                  </label>`;
-         }
-         const overlayHTML = `
+        }
+        const overlayHTML = `
              <h5> ${content.header}</h5>
              ${options}
              <button class="bl-back-to-menu">Menu</button>
              <button class="bl-show-products">Show Products</button>
          `;
-         $('.bl-options.' + position).addClass('bl-active');
-         $('.bl-options.' + position).attr('data-index', content.index);
-         $('.bl-options.' + position).html(overlayHTML);
-     }
-     /* Show different page types */
-     ASSTBG_1.showPage = (page, pageNumber, direction, id) => {
-         // Swipe values
-         const width = $('.bl-inner-container').width();
-         let html = '';
-         // setup new container
-         if ($('.bl-new-container').length > 0) {
-             $('.bl-new-container').addClass('bl-previous-container').removeClass('bl-new-container');
-         }
-         const container = $('.bl-previous-container').length === 0 ? $('.bl-inner-container') : $('.bl-previous-container');
-         // Setup next page
-         if (pageNumber < 5) {
-             if (page === 'intensity') {
-                 html = ASSTBG_1.getPageHTML('info', 'intensity', pageNumber, direction);
-             } else if (page === 'size') {
-                 html = ASSTBG_1.getPageHTML('info', 'size', pageNumber, direction);
-             } else if (page === 'feel') {
-                 html = ASSTBG_1.getPageHTML('info', 'feel', pageNumber, direction);
-             } else if (page === 'style') {
-                 html = ASSTBG_1.getPageHTML('info', 'style', pageNumber, direction);
-             }
-         } else if (pageNumber === 5) {
-             // Slider pages
-             html = ASSTBG_1.getPageHTML('slider', page, pageNumber, direction);
-         } else if (pageNumber === 6) {
-             // PLP pages
-             html = ASSTBG_1.getPageHTML('plp', page, pageNumber, direction);
-         } else if (pageNumber === 7) {
-             // PDP pages
-             html = ASSTBG_1.getPageHTML('pdp', page, pageNumber, direction, id);
-         }
-         // Add new page and swipe to it
-         if (pageNumber > 1) {
-             if (direction === 'next') {
-                 try {
-                     $(container).after($(html));
-                 }
-                 catch (error) {
-                     console.log(error);
-                 }
-                 // Setup swipe event
-                 let param = {};
-                 param.target = '.bl-info-container';
-                 param.fn = {};
-                 param.fn.param = {}
-                 param.fn.name = ASSTBG_1.swipeInfoPages;
-                 param.fn.param.one = 'next';
-                 param.fn.param.two = 'previous';
-                 ASSTBG_1.swipeLeft(width, container, $('.bl-new-container'), null, 300, $('.bl-previous-container'), ASSTBG_1.addSwipeEvent, param);
-             } else if (direction === 'previous') {
-                 $(container).before(html);
-                 // Setup swipe event
-                 let param = {};
-                 param.target = '.bl-info-container';
-                 param.fn = {};
-                 param.fn.param = {}
-                 param.fn.name = ASSTBG_1.swipeInfoPages;
-                 param.fn.param.one = 'next';
-                 param.fn.param.two = 'previous';
-                 ASSTBG_1.swipeRight(width, container, $('.bl-new-container'), null, 300, $('.bl-previous-container'), ASSTBG_1.addSwipeEvent, param);
-             }
-         } else {
-             if (direction === 'previous') {
-                 ASSTBG_1.swipeRight(width, container, $('.bl-inner-container'), null, 300, $('.bl-previous-container'));
-             }
-         }
-         // Add swipe event on page 5 (slider page)
-         if (pageNumber === 5) {
-             ASSTBG_1.addSwipeEvent('.bl-slider-inner-container', ASSTBG_1.swipeSlider, 'left', 'right');
-         }
-     }
- 
-     // BETTER
-     ASSTBG_1.swipeLeft = (width, pageOne, pageTwo, cb, speed, removeElement, addFn, param) => {
-         $(pageOne).addClass('bl-left-transition');
-         $(pageTwo).addClass('bl-left-transition');
-         setTimeout(function () {
-             $(pageOne).css({
-                 right: width
-             })
- 
-             $(pageTwo).css({
-                 right: 0
-             })
- 
-         }, 200);
- 
-         setTimeout(function () {
-             $(removeElement).remove();
-             if (addFn !== undefined && param !== undefined) {
-                 addFn(param.target, param.fn.name, param.fn.param.one, param.fn.param.two);
-             }
-         }, speed * 3.6)
- 
- 
-         // Make page clickable
-         setTimeout(function () {
-             $('html').removeClass('bl-app-loading');
-         }, 1200);
-     }
-     ASSTBG_1.swipeRight = (width, pageOne, pageTwo, cb, speed, removeElement, addFn, param) => {
-         setTimeout(function () {
-             $(pageOne).css({
-                 right: -Math.abs(width)
-             });
-             $(pageTwo).css({
-                 right: 0
-             });
- 
-         }, 200);
-         setTimeout(function () {
-             $(removeElement).remove();
-             if (addFn !== undefined && param !== undefined) {
-                 addFn(param.target, param.fn.name, param.fn.param.one, param.fn.param.two);
-             }
-         }, speed * 3.6)
- 
-         // Make page clickable
-         setTimeout(function () {
-             $('html').removeClass('bl-app-loading');
-         }, 1200);
-     }
- 
-     ASSTBG_1.getPageHTML = (pageType, page, pageNumber, direction, id) => {
-         const content = ASSTBG_1.getPageContent(pageType, page, pageNumber);
-         const width = direction === 'next' ? -Math.abs($('.bl-container').width()) : Math.abs($('.bl-container').width());
-         let html = '';
-         if (pageType === 'info') {
-             if (pageNumber > 1 && pageNumber < 5) {
-                 var buttonText = pageNumber === 4 ? 'Got it!' : 'Skip Tips';
-                 var buttonClass = pageNumber === 4 ? 'bl-secondary' : '';
-                 html = `
+        $('.bl-options.' + position).addClass('bl-active');
+        $('.bl-options.' + position).attr('data-index', content.index);
+        $('.bl-options.' + position).html(overlayHTML);
+    }
+    /* Show different page types */
+    ASSTBG_1.showPage = (page, pageNumber, direction, id) => {
+        // Swipe values
+        const width = $('.bl-inner-container').width();
+        let html = '';
+        // setup new container
+        if ($('.bl-new-container').length > 0) {
+            $('.bl-new-container').addClass('bl-previous-container').removeClass('bl-new-container');
+        }
+        const container = $('.bl-previous-container').length === 0 ? $('.bl-inner-container') : $('.bl-previous-container');
+        // Setup next page
+        if (pageNumber < 5) {
+            if (page === 'intensity') {
+                html = ASSTBG_1.getPageHTML('info', 'intensity', pageNumber, direction);
+            } else if (page === 'size') {
+                html = ASSTBG_1.getPageHTML('info', 'size', pageNumber, direction);
+            } else if (page === 'feel') {
+                html = ASSTBG_1.getPageHTML('info', 'feel', pageNumber, direction);
+            } else if (page === 'style') {
+                html = ASSTBG_1.getPageHTML('info', 'style', pageNumber, direction);
+            }
+        } else if (pageNumber === 5) {
+            // Slider pages
+            html = ASSTBG_1.getPageHTML('slider', page, pageNumber, direction);
+        } else if (pageNumber === 6) {
+            // PLP pages
+            html = ASSTBG_1.getPageHTML('plp', page, pageNumber, direction);
+        } else if (pageNumber === 7) {
+            // PDP pages
+            html = ASSTBG_1.getPageHTML('pdp', page, pageNumber, direction, id);
+        }
+        // Add new page and swipe to it
+        if (pageNumber > 1) {
+            if (direction === 'next') {
+                try {
+                    $(container).after($(html));
+                }
+                catch (error) {
+                    console.log(error);
+                }
+                // Setup swipe event
+                let param = {};
+                param.target = '.bl-info-container';
+                param.fn = {};
+                param.fn.param = {}
+                param.fn.name = ASSTBG_1.swipeInfoPages;
+                param.fn.param.one = 'next';
+                param.fn.param.two = 'previous';
+                ASSTBG_1.swipeLeft(width, container, $('.bl-new-container'), null, 300, $('.bl-previous-container'), ASSTBG_1.addSwipeEvent, param);
+            } else if (direction === 'previous') {
+                $(container).before(html);
+                // Setup swipe event
+                let param = {};
+                param.target = '.bl-info-container';
+                param.fn = {};
+                param.fn.param = {}
+                param.fn.name = ASSTBG_1.swipeInfoPages;
+                param.fn.param.one = 'next';
+                param.fn.param.two = 'previous';
+                ASSTBG_1.swipeRight(width, container, $('.bl-new-container'), null, 300, $('.bl-previous-container'), ASSTBG_1.addSwipeEvent, param);
+            }
+        } else {
+            if (direction === 'previous') {
+                ASSTBG_1.swipeRight(width, container, $('.bl-inner-container'), null, 300, $('.bl-previous-container'));
+            }
+        }
+        // Add swipe event on page 5 (slider page)
+        if (pageNumber === 5) {
+            ASSTBG_1.addSwipeEvent('.bl-slider-inner-container', ASSTBG_1.swipeSlider, 'left', 'right');
+        }
+    }
+
+    // BETTER
+    ASSTBG_1.swipeLeft = (width, pageOne, pageTwo, cb, speed, removeElement, addFn, param) => {
+        $(pageOne).addClass('bl-left-transition');
+        $(pageTwo).addClass('bl-left-transition');
+        setTimeout(function () {
+            $(pageOne).css({
+                right: width
+            })
+
+            $(pageTwo).css({
+                right: 0
+            })
+
+        }, 200);
+
+        setTimeout(function () {
+            $(removeElement).remove();
+            if (addFn !== undefined && param !== undefined) {
+                addFn(param.target, param.fn.name, param.fn.param.one, param.fn.param.two);
+            }
+        }, speed * 3.6)
+
+
+        // Make page clickable
+        setTimeout(function () {
+            $('html').removeClass('bl-app-loading');
+        }, 1200);
+    }
+    ASSTBG_1.swipeRight = (width, pageOne, pageTwo, cb, speed, removeElement, addFn, param) => {
+        setTimeout(function () {
+            $(pageOne).css({
+                right: -Math.abs(width)
+            });
+            $(pageTwo).css({
+                right: 0
+            });
+
+        }, 200);
+        setTimeout(function () {
+            $(removeElement).remove();
+            if (addFn !== undefined && param !== undefined) {
+                addFn(param.target, param.fn.name, param.fn.param.one, param.fn.param.two);
+            }
+        }, speed * 3.6)
+
+        // Make page clickable
+        setTimeout(function () {
+            $('html').removeClass('bl-app-loading');
+        }, 1200);
+    }
+
+    ASSTBG_1.getPageHTML = (pageType, page, pageNumber, direction, id) => {
+        const content = ASSTBG_1.getPageContent(pageType, page, pageNumber);
+        const width = direction === 'next' ? -Math.abs($('.bl-container').width()) : Math.abs($('.bl-container').width());
+        let html = '';
+        if (pageType === 'info') {
+            if (pageNumber > 1 && pageNumber < 5) {
+                var buttonText = pageNumber === 4 ? 'Got it!' : 'Skip Tips';
+                var buttonClass = pageNumber === 4 ? 'bl-secondary' : '';
+                html = `
                      <div class="bl-new-container ${content.class}" style="right:${width}px">
                          ${content.details}
                          <button class="bl-next-page ${buttonClass}" data-cat="${content.cat}" data-page="${pageNumber + 1}">${buttonText}</button>
                          <!--button class="bl-prev-page" data-cat="${content.cat}" data-page="${pageNumber - 1}">Previous Page</button-->
                      </div>
                  `;
-             }
-         } else if (pageType === 'slider') {
-             if (pageNumber === 5) {
-                 const checkboxOne = BL_RESULTS_GLOBAL.page[content.type].one === true ? 'bl-selected' : '';
-                 const tickOne = BL_RESULTS_GLOBAL.page[content.type].one === true ? '' : 'bl-hide';
-                 const checkboxTwo = BL_RESULTS_GLOBAL.page[content.type].two === true ? 'bl-selected' : '';
-                 const tickTwo = BL_RESULTS_GLOBAL.page[content.type].two === true ? '' : 'bl-hide';
-                 const checkboxThree = BL_RESULTS_GLOBAL.page[content.type].three === true ? 'bl-selected' : '';
-                 const tickThree = BL_RESULTS_GLOBAL.page[content.type].three === true ? '' : 'bl-hide';
-                 const checkboxFour = BL_RESULTS_GLOBAL.page[content.type].four === true ? 'bl-selected' : '';
-                 const tickFour = BL_RESULTS_GLOBAL.page[content.type].four === true ? '' : 'bl-hide';
-                 // let filteredRabbits = ASSTBG_1.filteredRabbits.length === 0 ? ASSTBG_1.allRabbits.length : ASSTBG_1.filteredRabbits.length;
-                 let matchesNumber = ASSTBG_1.filteredRabbits.length;
-                 let filteredRabbits = "0 matches";
-                 if (matchesNumber === 1) {
-                     filteredRabbits = "1 match";
-                 } else if (matchesNumber > 1) {
-                     filteredRabbits = ASSTBG_1.filteredRabbits.length + " matches";
-                 }
-                 //let filteredRabbits = ASSTBG_1.filteredRabbits.length === 0 ? "0 matches" : ASSTBG_1.filteredRabbits.length + " matches";
-                 html = `
+            }
+        } else if (pageType === 'slider') {
+            if (pageNumber === 5) {
+                const checkboxOne = BL_RESULTS_GLOBAL.page[content.type].one === true ? 'bl-selected' : '';
+                const tickOne = BL_RESULTS_GLOBAL.page[content.type].one === true ? '' : 'bl-hide';
+                const checkboxTwo = BL_RESULTS_GLOBAL.page[content.type].two === true ? 'bl-selected' : '';
+                const tickTwo = BL_RESULTS_GLOBAL.page[content.type].two === true ? '' : 'bl-hide';
+                const checkboxThree = BL_RESULTS_GLOBAL.page[content.type].three === true ? 'bl-selected' : '';
+                const tickThree = BL_RESULTS_GLOBAL.page[content.type].three === true ? '' : 'bl-hide';
+                const checkboxFour = BL_RESULTS_GLOBAL.page[content.type].four === true ? 'bl-selected' : '';
+                const tickFour = BL_RESULTS_GLOBAL.page[content.type].four === true ? '' : 'bl-hide';
+                // let filteredRabbits = ASSTBG_1.filteredRabbits.length === 0 ? ASSTBG_1.allRabbits.length : ASSTBG_1.filteredRabbits.length;
+                let matchesNumber = ASSTBG_1.filteredRabbits.length;
+                let filteredRabbits = "0 matches";
+                if (matchesNumber === 1) {
+                    filteredRabbits = "1 match";
+                } else if (matchesNumber > 1) {
+                    filteredRabbits = ASSTBG_1.filteredRabbits.length + " matches";
+                }
+                //let filteredRabbits = ASSTBG_1.filteredRabbits.length === 0 ? "0 matches" : ASSTBG_1.filteredRabbits.length + " matches";
+                html = `
                  <div class="bl-new-container ${content.class}" style="right:${width}px">
                      <div class="bl-slider-container">
                          <h3>${content.header}</h3>
@@ -13851,11 +13859,11 @@ $(document).ready(function () {
                      </div>
                  </div>
                  `;
-             }
-         } else if (pageType === 'plp') {
-             if (pageNumber === 6) {
-                 let items = ASSTBG_1.setupProducts(content.products);
-                 html = `
+            }
+        } else if (pageType === 'plp') {
+            if (pageNumber === 6) {
+                let items = ASSTBG_1.setupProducts(content.products);
+                html = `
                  <div class="bl-new-container bl-plp-page" style="right:${width}px">
                      <div class="bl-change-preference-button-cont">
                          <p class="bl-change-preference-button">Return to options</p>
@@ -13886,108 +13894,108 @@ $(document).ready(function () {
                          ${items}
                      </div>
                  </div>`
-             }
-         } else if (pageType === 'pdp') {
-             if (pageNumber === 7) {
-                 var productHtml = '';
-                 var rabbits = ASSTBG_1.filteredRabbits;
-                 let rabbitFound = false;
-                 // var count = 0;
-                 // var maxCount = 50;
-                 // var delay = 100;
-                 // let interval = setInterval(function () {
-                 for (let x = 0; x < rabbits.length; x++) {
-                     if (rabbits[x].id === parseInt(id)) {
-                      //   let productHTMLObj = rabbits[x].HTML;
-                         // for (let i = 0; i < productHTMLObj.length; i++) {
-                         //     if ($(productHTMLObj[i]).hasClass('wrapper')) {
-                          //       $(productHTMLObj[i]).addClass('bl-pdp-container');
-                           //      productHtml = productHTMLObj[i].outerHTML;
-                           productHtml = rabbits[x].HTML.outerHTML;
-                                 rabbitFound = true;
-                                 break;
-                         //     }
-                         // }
-                     }
-                 }
- 
-                 //     if(rabbitFound){
-                 //         clearInterval(interval);
-                 //     }
-                 //     if(count > maxCount){
-                 //         clearInterval(interval);
-                 //         productHtml = "No Rabbit Data Found, please go back and try again";
-                 //     }
-                 //     count++;
-                 // }, delay);
- 
-                 html = `<div class="bl-new-container bl-pdp-page" style="right:${width}px">
+            }
+        } else if (pageType === 'pdp') {
+            if (pageNumber === 7) {
+                var productHtml = '';
+                var rabbits = ASSTBG_1.filteredRabbits;
+                let rabbitFound = false;
+                // var count = 0;
+                // var maxCount = 50;
+                // var delay = 100;
+                // let interval = setInterval(function () {
+                for (let x = 0; x < rabbits.length; x++) {
+                    if (rabbits[x].id === parseInt(id)) {
+                        //   let productHTMLObj = rabbits[x].HTML;
+                        // for (let i = 0; i < productHTMLObj.length; i++) {
+                        //     if ($(productHTMLObj[i]).hasClass('wrapper')) {
+                        //       $(productHTMLObj[i]).addClass('bl-pdp-container');
+                        //      productHtml = productHTMLObj[i].outerHTML;
+                        productHtml = rabbits[x].HTML.outerHTML;
+                        rabbitFound = true;
+                        break;
+                        //     }
+                        // }
+                    }
+                }
+
+                //     if(rabbitFound){
+                //         clearInterval(interval);
+                //     }
+                //     if(count > maxCount){
+                //         clearInterval(interval);
+                //         productHtml = "No Rabbit Data Found, please go back and try again";
+                //     }
+                //     count++;
+                // }, delay);
+
+                html = `<div class="bl-new-container bl-pdp-page" style="right:${width}px">
                              ${productHtml}
                          </div>`;
-             }
- 
-         }
-         return html;
-     }
- 
-     ASSTBG_1.setupProducts = (products) => {
-         let items = '';
-         let highestMatch = 0;
-         if (products.length > 0) {
-             for (let i = 0; i < products.length; i++) {
-                 let product = products[i];
-                 let matchesHTML = '';
-                 let matches = product.features.matchedFeatures;
-                 let matchPercentage = product.matches * (100 / Object.keys(product.features.matchedFeatures).length);
-                 let productHTML = product.HTML;
-                 let ratings = $(productHTML).find('.product-rating').addClass('bl-ratings');
-                 let price = $(productHTML).find('.product-price').addClass('bl-price');
-                 if (price.length === 0) {
-                     price = product.features.price;
-                 } else {
-                     price = $(price).html();
-                 }
-                 ratings = ratings[0] !== undefined ? ratings[0].outerHTML : '<div class="bl-ratings"></div>';
- 
-                 if (highestMatch === 0 || highestMatch === matchPercentage) {
-                     highestMatch = matchPercentage;
-                     matchPercentage = "Close match";
-                 } else if (highestMatch > matchPercentage) {
-                     matchPercentage = '';
-                 }
- 
- 
-                 // Setup ticks
-                 for (let prop in matches) {
-                     let tick = '';
-                     let property = '';
- 
-                     if (showAllRabbits) {
-                         tick = 'bl-matched-tick';
-                         matchPercentage = '';
-                     } else if (matches[prop] == true) {
-                         tick = 'bl-matched-tick';
-                     }
- 
-                     if (prop == 'size') {
-                         // Set product size
-                         property = product.optionsValue.size;
-                     } else if (prop == 'intensity') {
-                         // Set product vibration intensity
-                         property = product.optionsValue.intensity;
-                     } else if (prop == 'feel') {
-                         // Set product shape
-                         property = product.optionsValue.feel;
-                     } else if (prop == 'style') {
-                         // Set product vibration style
-                         property = product.optionsValue.style;
-                     }
- 
-                     // console.log(prop);
-                     matchesHTML = matchesHTML + `<p><span class="${tick}"></span>${property}</p>`;
-                 }
- 
-                 let newItem = `
+            }
+
+        }
+        return html;
+    }
+
+    ASSTBG_1.setupProducts = (products) => {
+        let items = '';
+        let highestMatch = 0;
+        if (products.length > 0) {
+            for (let i = 0; i < products.length; i++) {
+                let product = products[i];
+                let matchesHTML = '';
+                let matches = product.features.matchedFeatures;
+                let matchPercentage = product.matches * (100 / Object.keys(product.features.matchedFeatures).length);
+                let productHTML = product.HTML;
+                let ratings = $(productHTML).find('.product-rating').addClass('bl-ratings');
+                let price = $(productHTML).find('.product-price').addClass('bl-price');
+                if (price.length === 0) {
+                    price = product.features.price;
+                } else {
+                    price = $(price).html();
+                }
+                ratings = ratings[0] !== undefined ? ratings[0].outerHTML : '<div class="bl-ratings"></div>';
+
+                if (highestMatch === 0 || highestMatch === matchPercentage) {
+                    highestMatch = matchPercentage;
+                    matchPercentage = "Close match";
+                } else if (highestMatch > matchPercentage) {
+                    matchPercentage = '';
+                }
+
+
+                // Setup ticks
+                for (let prop in matches) {
+                    let tick = '';
+                    let property = '';
+
+                    if (showAllRabbits) {
+                        tick = 'bl-matched-tick';
+                        matchPercentage = '';
+                    } else if (matches[prop] == true) {
+                        tick = 'bl-matched-tick';
+                    }
+
+                    if (prop == 'size') {
+                        // Set product size
+                        property = product.optionsValue.size;
+                    } else if (prop == 'intensity') {
+                        // Set product vibration intensity
+                        property = product.optionsValue.intensity;
+                    } else if (prop == 'feel') {
+                        // Set product shape
+                        property = product.optionsValue.feel;
+                    } else if (prop == 'style') {
+                        // Set product vibration style
+                        property = product.optionsValue.style;
+                    }
+
+                    // console.log(prop);
+                    matchesHTML = matchesHTML + `<p><span class="${tick}"></span>${property}</p>`;
+                }
+
+                let newItem = `
                  <div class="bl-product-plp-tile">
                      <p class="bl-product-title">${product.features.name}</p>
                      ${ratings}
@@ -14004,63 +14012,63 @@ $(document).ready(function () {
                  </div>
              
              `;
-                 items = items + newItem;
-             }
-         } else {
-             items = `
+                items = items + newItem;
+            }
+        } else {
+            items = `
              <div class="bl-product-plp-tile-no-results">
                  <p class="bl-product-tile-no-results-title">Oops!</p>
                  <p class="bl-product-tile-no-results-title">No matches found</p>
                  <p class="bl-product-tile-no-results-desc">Find something else to tickle your fancy...</p>
                  <p class="bl-product-tile-no-results-button">REMOVE FILTERS</p>
              </div>`;
-         }
- 
-         return items;
-     }
- 
-     ASSTBG_1.getAddToBagHTML = (price) => {
-         return `
+        }
+
+        return items;
+    }
+
+    ASSTBG_1.getAddToBagHTML = (price) => {
+        return `
              <form class="pdpForm" >
                  <button id="add-to-cart" class="bl-rf-button bl-pdp-button" type="submit" title="Add to Bag" value="Add to Bag" class="add-to-cart">
                   <span class="bl-product-price">${price} - </span>Add to Bag
                  </button>
              </form>
          `;
-     }
-     ASSTBG_1.getPageContent = (pageType, page, pageNumber) => {
-         let content = {};
-         switch (pageNumber) {
-             case 1:
-                 break;
-             case 2:
-                 content = ASSTBG_1.getPageTwo(pageType, page);
-                 break;
-             case 3:
-                 content = ASSTBG_1.getPageThree(pageType, page);
-                 break;
-             case 4:
-                 content = ASSTBG_1.getPageFour(pageType, page);
-                 break;
-             case 5:
-                 content = ASSTBG_1.getPageFive(page);
-                 break;
-             case 6:
-                 content = ASSTBG_1.getPageSix(page);
-                 break;
-             case 7:
-                 content = '';
-                 break;
-         }
-         return content;
-     }
-     /* Setup pages and data */
-     ASSTBG_1.getPageTwo = (pageType, page) => {
-         let content = {};
-         if (pageType === 'info') {
-             if (page === 'intensity') {
-                 content.class = 'bl-info-container';
-                 content.details = `
+    }
+    ASSTBG_1.getPageContent = (pageType, page, pageNumber) => {
+        let content = {};
+        switch (pageNumber) {
+            case 1:
+                break;
+            case 2:
+                content = ASSTBG_1.getPageTwo(pageType, page);
+                break;
+            case 3:
+                content = ASSTBG_1.getPageThree(pageType, page);
+                break;
+            case 4:
+                content = ASSTBG_1.getPageFour(pageType, page);
+                break;
+            case 5:
+                content = ASSTBG_1.getPageFive(page);
+                break;
+            case 6:
+                content = ASSTBG_1.getPageSix(page);
+                break;
+            case 7:
+                content = '';
+                break;
+        }
+        return content;
+    }
+    /* Setup pages and data */
+    ASSTBG_1.getPageTwo = (pageType, page) => {
+        let content = {};
+        if (pageType === 'info') {
+            if (page === 'intensity') {
+                content.class = 'bl-info-container';
+                content.details = `
                      <div class="bl-info-details">
                          <span>Top tip</span>
                          <p>Start by using your rabbit on the lowest setting and explore the sensations on your clit, before you turn up the intensity and use internally. Don’t forget the lube!</p>
@@ -14068,10 +14076,10 @@ $(document).ready(function () {
                          <div class="bl-circle-containers"><span class="active"><span></span></span><span></span><span></span></div>
                      </div>
                  `;
-                 content.cat = 'intensity';
-             } else if (page === 'size') {
-                 content.class = 'bl-info-container';
-                 content.details = `
+                content.cat = 'intensity';
+            } else if (page === 'size') {
+                content.class = 'bl-info-container';
+                content.details = `
                  <div class="bl-info-details">
                      <span>Top tip</span>
                      <p>Over 29% of women can orgasm through nipple stimulation alone. Use your Rabbit along with some lube to slide the vibrating shaft over your nipples.</p>
@@ -14079,10 +14087,10 @@ $(document).ready(function () {
                      <div class="bl-circle-containers"><span class="active"><span></span></span><span></span><span></span></div>
                  </div>
              `;
-                 content.cat = 'size';
-             } else if (page === 'feel') {
-                 content.class = 'bl-info-container';
-                 content.details = `
+                content.cat = 'size';
+            } else if (page === 'feel') {
+                content.class = 'bl-info-container';
+                content.details = `
                  <div class="bl-info-details">
                      <span>Top tip</span>
                      <p>On all fours, get your partner to insert your rabbit from behind. This angle is amazing for hitting the G spot, and an incredibly hot way to work up to the main event.</p>
@@ -14090,10 +14098,10 @@ $(document).ready(function () {
                      <div class="bl-circle-containers"><span class="active"><span></span></span><span></span><span></span></div>
                  </div>
              `;
-                 content.cat = 'feel';
-             } else if (page === 'style') {
-                 content.class = 'bl-info-container';
-                 content.details = `
+                content.cat = 'feel';
+            } else if (page === 'style') {
+                content.class = 'bl-info-container';
+                content.details = `
                  <div class="bl-info-details">
                      <span>Top tip</span>
                      <p>Give the best oral sensational. Hold your rabbit against your throat when giving oral sex, the vibrations will give them a mind blowing climax they’re sure  to thank you for.</p>
@@ -14101,17 +14109,17 @@ $(document).ready(function () {
                      <div class="bl-circle-containers"><span class="active"><span></span></span><span><span></span></span><span><span></span></span></div>
                  </div>
              `;
-                 content.cat = 'style';
-             }
-         }
-         return content;
-     }
-     ASSTBG_1.getPageThree = (pageType, page) => {
-         let content = {};
-         if (pageType === 'info') {
-             if (page === 'intensity') {
-                 content.class = 'bl-info-container';
-                 content.details = `
+                content.cat = 'style';
+            }
+        }
+        return content;
+    }
+    ASSTBG_1.getPageThree = (pageType, page) => {
+        let content = {};
+        if (pageType === 'info') {
+            if (page === 'intensity') {
+                content.class = 'bl-info-container';
+                content.details = `
                  <div class="bl-info-details">
                      <span>Fact</span>
                      <p>Our wide range of Rampant Rabbits go through over 100 vigorous tests to ensure they deliver truly record-breaking, Earth-shattering orgasms. </p>
@@ -14119,10 +14127,10 @@ $(document).ready(function () {
                      <div class="bl-circle-containers"><span class="complete"></span><span class="active"><span></span></span><span></span></div>
                  </div>
              `;
-                 content.cat = 'intensity';
-             } else if (page === 'size') {
-                 content.class = 'bl-info-container';
-                 content.details = `
+                content.cat = 'intensity';
+            } else if (page === 'size') {
+                content.class = 'bl-info-container';
+                content.details = `
                  <div class="bl-info-details">
                      <span>Fact</span>
                      <p>A woman’s clitoris is actually the same length as an average-sized courgette and only the tip is visible externally.</p>
@@ -14130,10 +14138,10 @@ $(document).ready(function () {
                      <div class="bl-circle-containers"><span class="complete"></span><span class="active"><span></span></span><span></span></div>
                  </div>
              `;
-                 content.cat = 'size';
-             } else if (page === 'feel') {
-                 content.class = 'bl-info-container';
-                 content.details = `
+                content.cat = 'size';
+            } else if (page === 'feel') {
+                content.class = 'bl-info-container';
+                content.details = `
                  <div class="bl-info-details">
                      <span>Fact</span>
                      <p>75% of women can’t orgasm through penetration alone, they also need clitoral stimulation. This is why the Rampant Rabbit is the number one vibrator!</p>
@@ -14141,10 +14149,10 @@ $(document).ready(function () {
                      <div class="bl-circle-containers"><span class="complete"></span><span class="active"><span></span></span><span></span></div>
                  </div>
              `;
-                 content.cat = 'feel';
-             } else if (page === 'style') {
-                 content.class = 'bl-info-container';
-                 content.details = `
+                content.cat = 'feel';
+            } else if (page === 'style') {
+                content.class = 'bl-info-container';
+                content.details = `
                  <div class="bl-info-details">
                      <span>Fact</span>
                      <p>Vibrations travel further and feel more intense with lube. Always use lube with any vibrator to increase your sensitivity and pleasure.</p>
@@ -14152,17 +14160,17 @@ $(document).ready(function () {
                      <div class="bl-circle-containers"><span class="complete"></span><span class="active"><span></span></span><span></span></div>
                  </div>
              `;
-                 content.cat = 'style';
-             }
-         }
-         return content;
-     }
-     ASSTBG_1.getPageFour = (pageType, page) => {
-         let content = {};
-         if (pageType === 'info') {
-             if (page === 'intensity') {
-                 content.class = 'bl-info-container';
-                 content.details = `
+                content.cat = 'style';
+            }
+        }
+        return content;
+    }
+    ASSTBG_1.getPageFour = (pageType, page) => {
+        let content = {};
+        if (pageType === 'info') {
+            if (page === 'intensity') {
+                content.class = 'bl-info-container';
+                content.details = `
                  <div class="bl-info-details">
                      <span>Did you know...</span>
                      <p>The clitoris has around 8,000 nerve endings, which is double the number of nerves in the glands of a penis... Girl power! </p>
@@ -14170,10 +14178,10 @@ $(document).ready(function () {
                      <div class="bl-circle-containers"><span class="complete"></span><span class="complete"></span><span class="active"><span></span></span></div>
                  </div>
              `;
-                 content.cat = 'intensity';
-             } else if (page === 'size') {
-                 content.class = 'bl-info-container';
-                 content.details = `
+                content.cat = 'intensity';
+            } else if (page === 'size') {
+                content.class = 'bl-info-container';
+                content.details = `
                  <div class="bl-info-details">
                      <span>Did you know...</span>
                      <p>A study of more than 15,000 men found that the size of an erect penis has little or no correlation with the size of a flaccid one, to foot size or race.</p>
@@ -14181,10 +14189,10 @@ $(document).ready(function () {
                      <div class="bl-circle-containers"><span class="complete"></span><span class="complete"></span><span class="active"><span></span></span></div>
                  </div>
              `;
-                 content.cat = 'size';
-             } else if (page === 'feel') {
-                 content.class = 'bl-info-container';
-                 content.details = `
+                content.cat = 'size';
+            } else if (page === 'feel') {
+                content.class = 'bl-info-container';
+                content.details = `
                  <div class="bl-info-details">
                      <span>Did you know...</span>
                      <p>Our rabbits come in many different shapes and sizes, but all have a larger or angled tip to the shaft. This is to target the G-spot for intense orgasms. Come again?</p>
@@ -14192,10 +14200,10 @@ $(document).ready(function () {
                      <div class="bl-circle-containers"><span class="complete"></span><span class="complete"></span><span class="active"><span></span></span></div>
                  </div>
              `;
-                 content.cat = 'feel';
-             } else if (page === 'style') {
-                 content.class = 'bl-info-container';
-                 content.details = `
+                content.cat = 'feel';
+            } else if (page === 'style') {
+                content.class = 'bl-info-container';
+                content.details = `
                  <div class="bl-info-details">
                      <span>Did you know...</span>
                      <p>Legend has it that Egyptian queen, Cleopatra invented the first vibrator by pleasuring herself with a papyrus box filled with live bees... Buzzin’.</p>
@@ -14203,50 +14211,50 @@ $(document).ready(function () {
                      <div class="bl-circle-containers"><span class="complete"></span><span class="complete"></span><span class="active"><span></span></span></div>
                  </div>
              `;
-                 content.cat = 'style';
-             }
-         }
-         return content;
-     }
-     ASSTBG_1.getPageFive = function (page) {
-         let content = {};
-         content.checkboxText = 'SHOW ME THESE';
-         if (page === 'size') {
-             const svgs =
-                 ASSTBG_1.getRulerSVGs();
-             content.type = 'size',
-                 content.class = 'bl-size-slider';
-             content.header = 'Discover the different sizes:';
-             content.options = [{
-                 text: 'Mini <p>(Up to 3")</p>',
-                 value: 'mini',
-                 animation: `<img src="${svgs.upToThree}" />`,
-                 searchValue: 1
-             }, {
-                 text: 'Smaller <p>(3" to 5")</p>',
-                 value: 'smaller',
-                 animation: `<img src="${svgs.threeToFive}" />`,
-                 searchValue: 2
-             }, {
-                 text: 'Medium <p>(5" to 5.5")</p>',
-                 value: 'realistic',
-                 animation: `<img src="${svgs.fiveToFive}" />`,
-                 searchValue: 3
-             }, {
-                 text: 'Larger <p>(Over 5.5")</p>',
-                 value: 'larger',
-                 animation: `<img src="${svgs.overFive}" />`,
-                 searchValue: 4
-             }];
-             content.animation = ``;
-         } else if (page === 'intensity') {
-             content.type = 'intensity',
-                 content.class = 'bl-intensity-slider';
-             content.header = 'Choose your vibration intensity:';
-             content.options = [{
-                 text: 'Moderate',
-                 value: 'moderate',
-                 animation: `
+                content.cat = 'style';
+            }
+        }
+        return content;
+    }
+    ASSTBG_1.getPageFive = function (page) {
+        let content = {};
+        content.checkboxText = 'SHOW ME THESE';
+        if (page === 'size') {
+            const svgs =
+                ASSTBG_1.getRulerSVGs();
+            content.type = 'size',
+                content.class = 'bl-size-slider';
+            content.header = 'Discover the different sizes:';
+            content.options = [{
+                text: 'Mini <p>(Up to 3")</p>',
+                value: 'mini',
+                animation: `<img src="${svgs.upToThree}" />`,
+                searchValue: 1
+            }, {
+                text: 'Smaller <p>(3" to 5")</p>',
+                value: 'smaller',
+                animation: `<img src="${svgs.threeToFive}" />`,
+                searchValue: 2
+            }, {
+                text: 'Medium <p>(5" to 5.5")</p>',
+                value: 'realistic',
+                animation: `<img src="${svgs.fiveToFive}" />`,
+                searchValue: 3
+            }, {
+                text: 'Larger <p>(Over 5.5")</p>',
+                value: 'larger',
+                animation: `<img src="${svgs.overFive}" />`,
+                searchValue: 4
+            }];
+            content.animation = ``;
+        } else if (page === 'intensity') {
+            content.type = 'intensity',
+                content.class = 'bl-intensity-slider';
+            content.header = 'Choose your vibration intensity:';
+            content.options = [{
+                text: 'Moderate',
+                value: 'moderate',
+                animation: `
                  <div class="pulsatingCircle">
                      <span class="firstCircle"></span>
                      <span class="secondCircle"></span>
@@ -14254,11 +14262,11 @@ $(document).ready(function () {
                      <span class="fourthCircle"></span>
                  </div>
              `,
-                 searchValue: 1
-             }, {
-                 text: 'Intense',
-                 value: 'intense',
-                 animation: `
+                searchValue: 1
+            }, {
+                text: 'Intense',
+                value: 'intense',
+                animation: `
                  <div class="pulsatingCircle">
                      <span class="firstCircle"></span>
                      <span class="secondCircle"></span>
@@ -14266,11 +14274,11 @@ $(document).ready(function () {
                      <span class="fourthCircle"></span>
                  </div>
              `,
-                 searchValue: 2
-             }, {
-                 text: 'Powerful',
-                 value: 'powerful',
-                 animation: `
+                searchValue: 2
+            }, {
+                text: 'Powerful',
+                value: 'powerful',
+                animation: `
                  <div class="pulsatingCircle">
                      <span class="firstCircle"></span>
                      <span class="secondCircle"></span>
@@ -14278,11 +14286,11 @@ $(document).ready(function () {
                      <span class="fourthCircle"></span>
                  </div>
              `,
-                 searchValue: 3
-             }, {
-                 text: 'Off the scale',
-                 value: 'offTheScale',
-                 animation: `
+                searchValue: 3
+            }, {
+                text: 'Off the scale',
+                value: 'offTheScale',
+                animation: `
                  <div class="pulsatingCircle">
                      <span class="firstCircle"></span>
                      <span class="secondCircle"></span>
@@ -14290,64 +14298,64 @@ $(document).ready(function () {
                      <span class="fourthCircle"></span>
                  </div>
              `,
-                 searchValue: 4
-             }];
-         } else if (page === 'feel') {
-             const svgs = ASSTBG_1.getShapeSVGs();
-             content.type = 'feel',
-                 content.class = 'bl-feel-slider';
-             content.header = 'Find the best shape for you:';
-             // content.options = [{
-             //     text: 'Straight',
-             //     value: 'firm',
-             //     animation: `<img src="${svgs.straight}" />`,
-             //     searchValue: 1
-             // }, {
-             //     text: 'Flexible',
-             //     value: 'flexible',
-             //     animation: `<img src="${svgs.flexible}" />`,
-             //     searchValue: 2
-             // }, {
-             //     text: 'Contoured',
-             //     value: 'contoured',
-             //     animation: `<img src="${svgs.contoured}" />`,
-             //     searchValue: 3
-             // }, {
-             //     text: 'G-Spot',
-             //     value: 'gSpot',
-             //     animation: `<img src="${svgs.gspot}" />`,
-             //     searchValue: 4
-             // }];
-             content.options = [{
-                 text: 'Contoured',
-                 value: 'contoured',
-                 animation: `<img src="${svgs.contoured}" />`,
-                 searchValue: 1
-             }, {
-                 text: 'Straight',
-                 value: 'firm',
-                 animation: `<img src="${svgs.straight}" />`,
-                 searchValue: 2
-             }, {
-                 text: 'G-Spot',
-                 value: 'gSpot',
-                 animation: `<img src="${svgs.gspot}" />`,
-                 searchValue: 3
-             }, {
-                 text: 'Flexible',
-                 value: 'flexible',
-                 animation: `<img src="${svgs.flexible}" />`,
-                 searchValue: 4
-             }];
-             content.animation = ``;
-         } else if (page === 'style') {
-             content.type = 'style',
-                 content.class = 'bl-style-slider';
-             content.header = 'Choose a vibration style:';
-             content.options = [{
-                 text: 'Pulse patterns in the ears',
-                 value: 'ears',
-                 animation: `<div class="bl-vibration-animation-overlay-circle-container">
+                searchValue: 4
+            }];
+        } else if (page === 'feel') {
+            const svgs = ASSTBG_1.getShapeSVGs();
+            content.type = 'feel',
+                content.class = 'bl-feel-slider';
+            content.header = 'Find the best shape for you:';
+            // content.options = [{
+            //     text: 'Straight',
+            //     value: 'firm',
+            //     animation: `<img src="${svgs.straight}" />`,
+            //     searchValue: 1
+            // }, {
+            //     text: 'Flexible',
+            //     value: 'flexible',
+            //     animation: `<img src="${svgs.flexible}" />`,
+            //     searchValue: 2
+            // }, {
+            //     text: 'Contoured',
+            //     value: 'contoured',
+            //     animation: `<img src="${svgs.contoured}" />`,
+            //     searchValue: 3
+            // }, {
+            //     text: 'G-Spot',
+            //     value: 'gSpot',
+            //     animation: `<img src="${svgs.gspot}" />`,
+            //     searchValue: 4
+            // }];
+            content.options = [{
+                text: 'Contoured',
+                value: 'contoured',
+                animation: `<img src="${svgs.contoured}" />`,
+                searchValue: 1
+            }, {
+                text: 'Straight',
+                value: 'firm',
+                animation: `<img src="${svgs.straight}" />`,
+                searchValue: 2
+            }, {
+                text: 'G-Spot',
+                value: 'gSpot',
+                animation: `<img src="${svgs.gspot}" />`,
+                searchValue: 3
+            }, {
+                text: 'Flexible',
+                value: 'flexible',
+                animation: `<img src="${svgs.flexible}" />`,
+                searchValue: 4
+            }];
+            content.animation = ``;
+        } else if (page === 'style') {
+            content.type = 'style',
+                content.class = 'bl-style-slider';
+            content.header = 'Choose a vibration style:';
+            content.options = [{
+                text: 'Pulse patterns in the ears',
+                value: 'ears',
+                animation: `<div class="bl-vibration-animation-overlay-circle-container">
                                  <div class="bl-vibration-animation-overlay-circle">
                                      <video width="260" height="150" autoplay loop muted playsinline>
                                          <source src="http://i1.adis.ws/v/annsummers/test-pulsepatterns/mp4_240p" type="video/mp4">
@@ -14355,11 +14363,11 @@ $(document).ready(function () {
                                      </video>
                                  </div>
                              </div>`,
-                 searchValue: 1
-             }, {
-                 text: 'Rotations',
-                 value: 'rotations',
-                 animation: `<div class="bl-vibration-animation-overlay-circle-container">
+                searchValue: 1
+            }, {
+                text: 'Rotations',
+                value: 'rotations',
+                animation: `<div class="bl-vibration-animation-overlay-circle-container">
                                  <div class="bl-vibration-animation-overlay-circle">
                                      <video width="100" height="150" autoplay loop muted playsinline>
                                          <source src="http://i1.adis.ws/v/annsummers/test-rotations/mp4_240p" type="video/mp4">
@@ -14367,11 +14375,11 @@ $(document).ready(function () {
                                      </video>
                                  </div>
                              </div>`,
-                 searchValue: 2
-             }, {
-                 text: 'Variable vibration speeds',
-                 value: 'variable',
-                 animation: `<div class="bl-vibration-animation-overlay-circle-container">
+                searchValue: 2
+            }, {
+                text: 'Variable vibration speeds',
+                value: 'variable',
+                animation: `<div class="bl-vibration-animation-overlay-circle-container">
                                  <div class="bl-vibration-animation-overlay-circle">
                                      <video width="100" height="150" autoplay loop muted playsinline>
                                          <source src="http://i1.adis.ws/v/annsummers/test-misc/mp4_240p" type="video/mp4">
@@ -14379,11 +14387,11 @@ $(document).ready(function () {
                                      </video>
                                  </div>
                              </div>`,
-                 searchValue: 3
-             }, {
-                 text: 'Thrusting Shafts',
-                 value: 'thrusting',
-                 animation: `<div class="bl-vibration-animation-overlay-circle-container">
+                searchValue: 3
+            }, {
+                text: 'Thrusting Shafts',
+                value: 'thrusting',
+                animation: `<div class="bl-vibration-animation-overlay-circle-container">
                                  <div class="bl-vibration-animation-overlay-circle">
                                      <video width="100" height="150" autoplay loop muted playsinline>
                                          <source src="http://i1.adis.ws/v/annsummers/test-thrusting/mp4_240p" type="video/mp4">
@@ -14392,961 +14400,1027 @@ $(document).ready(function () {
                                  </div>
                              </div>
                              `,
-                 searchValue: 4
-             }];
-         }
-         return content;
-     }
-     ASSTBG_1.getPageSix = (page) => {
-         let content = {};
-         if (showAllRabbits) {
-             content.products = ASSTBG_1.allRabbits;
-         } else {
-             content.products = ASSTBG_1.filteredRabbits;
-         }
- 
-         //     id: 1,
-         //     title: 'The Moregasm Move Rechargeable One',
-         //     imgURL: '//i1.adis.ws/i/annsummers/07CSSPAS1019043_Z?$lister-thumbnail-desktop$',
-         //     properties: ['5.75" insertable', '4.5" girth', 'G-spot massage', 'Worldwide travel', 'Playing underwater', 'USB charging'],
-         //     price: '£75.00'
-         // }, {
-         //     id: 2,
-         //     title: 'Sensations Feel The Thrust',
-         //     imgURL: '//i1.adis.ws/i/annsummers/07CSSPAS1040043_Z?$lister-thumbnail-desktop$',
-         //     properties: ['5.25" insertable', '5.5" girth', 'Thrusting motions', 'Quiet play', ' Lighter vibration'],
-         //     price: '£36.00'
-         // }, {
-         //     id: 3,
-         //     title: 'Mini Jack Rabbit Vibrator ',
-         //     imgURL: '//i1.adis.ws/i/annsummers/07SCNRAS1184014_Z?$lister-thumbnail-desktop$',
-         //     properties: ['3" insertable', '4.25" girth', 'Smaller toys', 'Battery power'],
-         //     price: '£8.00'
-         // }, {
-         //     id: 4,
-         //     title: 'The Original',
-         //     imgURL: '//i1.adis.ws/i/annsummers/07SCRTAS1047041_Z?$lister-thumbnail-desktop$',
-         //     properties: ['4.5" insertable', '4" girth', 'Rotating shaft', 'Realistic shape'],
-         //     price: '£30.00'
-         // }, {
-         //     id: 5,
-         //     title: 'The G-Spot',
-         //     imgURL: '//i1.adis.ws/i/annsummers/07CSSPAS1042026_Z?$lister-thumbnail-desktop$',
-         //     properties: ['4.75" insertable', '4.5" girth', 'Targeted G-stop stimulation', 'Vibrations variety', 'Waterproof play'],
-         //     price: '£25.00'
-         // }];
-         return content;
-     }
-     /* infoSlider */
-     ASSTBG_1.swipeInfoPages = (direction) => {
-         const currentPage = parseInt($('.bl-info-container button').data('page')) - 1;
-         const cat = $('.bl-info-container button').data('cat');
-         let page = 0;
-         if (direction === 'previous') {
-             page = currentPage - 1;
-         } else if (direction === 'next') {
-             page = currentPage + 1;
-         }
-         // Show page
-         ASSTBG_1.showPage(cat, page, direction);
-     }
-     /* Slider function */
-     ASSTBG_1.swipeSlider = (direction) => {
-         const options = $('.bl-slider-inner-container > div');
-         const slider = $('.bl-new-container');
-         if (direction === 'left') {
-             if ($(options).hasClass('positionOne')) {
-                 $(options).removeClass('positionOne').addClass('positionTwo');
-                 $(options[0]).addClass('small');
-                 $(options[1]).removeClass('small');
-                 //gradient
-                 $(slider).addClass('bl-gradient-two')
-                 // Resize videos
-                 const currentVid = $('.bl-slider-inner-container .ears video');
-                 const newVid = $('.bl-slider-inner-container .rotations video');
-                 if (currentVid && newVid) ASSTBG_1.resizeVideos(currentVid, newVid);
-             } else if ($(options).hasClass('positionTwo')) {
-                 $(options).removeClass('positionTwo').addClass('positionThree');
-                 $(options[1]).addClass('small');
-                 $(options[2]).removeClass('small');
-                 //gradient
-                 $(slider).addClass('bl-gradient-three')
-                 $(slider).removeClass('bl-gradient-two');
-                 // Resize videos
-                 const currentVid = $('.bl-slider-inner-container .rotations video');
-                 const newVid = $('.bl-slider-inner-container .variable video');
-                 if (currentVid && newVid) ASSTBG_1.resizeVideos(currentVid, newVid);
-             } else if ($(options).hasClass('positionThree')) {
-                 options.removeClass('positionThree').addClass('positionFour');
-                 $(options[2]).addClass('small');
-                 $(options[3]).removeClass('small');
-                 //gradient
-                 $(slider).addClass('bl-gradient-four')
-                 $(slider).removeClass('bl-gradient-three');
-                 // Resize videos
-                 const currentVid = $('.bl-slider-inner-container .variable video');
-                 const newVid = $('.bl-slider-inner-container .thrusting video');
-                 if (currentVid && newVid) ASSTBG_1.resizeVideos(currentVid, newVid);
-             } else if ($(options).hasClass('positionFour')) {
-                 return;
-             }
-         }
-         else if (direction === 'right') {
-             if ($(options).hasClass('positionOne')) {
-                 return;
-             } else if ($(options).hasClass('positionTwo')) {
-                 $(options).removeClass('positionTwo').addClass('positionOne');
-                 $(options[1]).addClass('small');
-                 $(options[0]).removeClass('small');
-                 //gradient
-                 $(slider).removeClass('bl-gradient-two')
-                 $(slider).addClass('bl-gradient-one');
-                 // Resize videos
-                 const newVid = $('.bl-slider-inner-container .ears video');
-                 const currentVid = $('.bl-slider-inner-container .rotations video');
-                 if (currentVid && newVid) ASSTBG_1.resizeVideos(currentVid, newVid);
-             } else if ($(options).hasClass('positionThree')) {
-                 $(options).removeClass('positionThree').addClass('positionTwo');
-                 $(options[2]).addClass('small');
-                 $(options[1]).removeClass('small');
-                 //gradient
-                 $(slider).removeClass('bl-gradient-three')
-                 $(slider).addClass('bl-gradient-two');
-                 // Resize videos
-                 const newVid = $('.bl-slider-inner-container .rotations video');
-                 const currentVid = $('.bl-slider-inner-container .variable video');
-                 if (currentVid && newVid) ASSTBG_1.resizeVideos(currentVid, newVid);
-             } else if ($(options).hasClass('positionFour')) {
-                 $(options).removeClass('positionFour').addClass('positionThree');
-                 $(options[3]).addClass('small');
-                 $(options[2]).removeClass('small');
-                 //gradient
-                 $(slider).removeClass('bl-gradient-four')
-                 $(slider).addClass('bl-gradient-three');
-                 // Resize videos
-                 const newVid = $('.bl-slider-inner-container .variable video');
-                 const currentVid = $('.bl-slider-inner-container .thrusting video');
-                 if (currentVid && newVid) ASSTBG_1.resizeVideos(currentVid, newVid);
-             }
-         }
-     }
- 
- 
-     ASSTBG_1.searchOptions = { intensity: [], feel: [], size: [], style: [] };
- 
-     ASSTBG_1.getFilterOptions = (selectedCat) => {
-         let searchOptions = ASSTBG_1.searchOptions;
-         const options = $('.bl-slider-checkbox-sim.bl-selected');
-         let searchCat = $(options[0]).data('search-category');
- 
-         // Empty category array before populating it
-         searchOptions[selectedCat] = [];
-         for (let i = 0; i < options.length; i++) {
-             let searchValue = $(options[i]).data('search-value');
- 
-             searchOptions[searchCat].push(parseInt(searchValue));
-         }
- 
-         return searchOptions;
-     }
- 
-     /* Resize videos */
-     ASSTBG_1.resizeVideos = (currentVid, newVid) => {
-         setTimeout(function () {
-             // Resize current video
-             $(currentVid).attr('width', '100');
-             // Resize new video
-             $(newVid).attr('width', '260');
-         }, 300);
-     }
- 
- 
-     ASSTBG_1.getRabbitData = function () {
-         let rabbitHTML = [];
-         const rabbits = ASRFS.getAllRabbits();
-         let responseCount = 0;
- 
-         for (let x = 0; x < rabbits.length; x++) {
-             if (!rabbits[x].HTML) {
-                 let URL = rabbits[x].url;
- 
-                 // Get product data
-                 $.ajax({
-                     method: 'GET',
-                     url: URL
-                 })
-                     .done(function (data) {
-                         console.log("success");
-                         rabbits[x].id = x + 1;
-                         rabbits[x].HTML = ASSTBG_1.setupPDPHTML($(data));
-                         rabbits[x].status = 'success';
-                     })
-                     .fail(function () {
-                         rabbits[x].status = 'error';
-                         rabbits[x].HTML = 'Product not found';
-                         console.log("error");
-                     });
-             }
-         }
- 
-         const maxCount = 100;
-         const delay = 100;
-         let count = 0;
-         const responseInterval = setInterval(function () {
-             if (responseCount >= rabbits.length) {
-                 ASSTBG_1.filteredRabbits = rabbits;
-                 clearInterval(responseInterval);
- 
-             }
-             if (count > maxCount) {
-                 ASSTBG_1.filteredRabbits = rabbits;
-                 clearInterval(responseInterval);
-             }
-             count++;
-         }, delay);
- 
-     }
- 
-     ASSTBG_1.setupPDPHTML = function (data) {
-         var html = '';
-         // Remove Loading screens
-         $(data).find('.loading_ctr').remove();
-         $(data).find('.loader').remove();
- 
- 
-         // Setup product image
-         var url = $(data).find('.product-image').attr('data-base-path');
-         var dataImage = $(data).find('.product-image').attr('data-image-url');
-         // $(data).find('.quantity-attribute').remove();
-         $(data).find('#add-to-cart').addClass('bl-add-to-bag');
-         console.log($(data));
-         if (dataImage) {
-             var lastFowardSlashIndex = dataImage.lastIndexOf('/');
-             dataImage = dataImage.substring(lastFowardSlashIndex, dataImage.length);
-             dataImage = dataImage.split('.')[0];
- 
-             // Add image to pdp
-             $(data).find('.product-image').append('<img src="' + url + '/i/annsummers' + dataImage + '" />');
-         }
- 
-         // setup wrapper
-         // for (let i = 0; i < productHTMLObj.length; i++) {
-         //     if ($(productHTMLObj[i]).hasClass('wrapper')) {
-         //         $(productHTMLObj[i]).addClass('bl-pdp-container');
-         //         productHtml = productHTMLObj[i].outerHTML;
-         //         rabbitFound = true;
-         //         break;
-         //     }
-         // }
-         data = $(data)[50];
-         $(data).addClass('bl-pdp-container');
-         return data;
-     }
- 
- 
-     ASSTBG_1.setCookie = function (name, value, days) {
-         var expires = "";
-         if (days) {
-             var date = new Date();
-             date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-             expires = "; expires=" + date.toUTCString();
-         }
-         document.cookie = name + "=" + (value || "") + expires + "; path=/";
-     }
-     ASSTBG_1.getCookie = function (name) {
-         var nameEQ = name + "=";
-         var ca = document.cookie.split(';');
-         for (var i = 0; i < ca.length; i++) {
-             var c = ca[i];
-             while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-             if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-         }
-         return null;
-     }
-     ASSTBG_1.eraseCookie = function (name) {
-         document.cookie = name + '=; Max-Age=-99999999;';
-     }
- 
-     // RESULTS FUNCTION
-     ASSTBG_1.storeResults = () => {
-         let results = {};
-         results.home = {};
-         results.home.size = false;
-         results.home.intensity = false;
-         results.home.feel = false;
-         results.home.style = false;
-         results.page = {};
-         results.page.intensity = {};
-         results.page.intensity.one = false;
-         results.page.intensity.two = false;
-         results.page.intensity.three = false;
-         results.page.intensity.four = false;
-         results.page.feel = {};
-         results.page.feel.one = false;
-         results.page.feel.two = false;
-         results.page.feel.three = false;
-         results.page.feel.four = false;
-         results.page.size = {};
-         results.page.size.one = false;
-         results.page.size.two = false;
-         results.page.size.three = false;
-         results.page.size.four = false;
-         results.page.style = {};
-         results.page.style.one = false;
-         results.page.style.two = false;
-         results.page.style.three = false;
-         results.page.style.four = false;
- 
-         return results;
-     }
- 
-     // Set app to full screen - doesn't work for iOS safari
-     ASSTBG_1.toggleFullScreen = (state) => {
-         var doc = window.document;
-         var docEl = doc.documentElement;
-         if (docEl != null && docEl != 'undefined') {
-             var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
-             var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
-             if ((requestFullScreen != null && requestFullScreen != 'undefined') && (cancelFullScreen != null && cancelFullScreen != 'undefined')) {
-                 if (!state) {
-                     cancelFullScreen.call(doc);
-                 } else {
-                     if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
-                         requestFullScreen.call(docEl);
-                     }
-                     else {
-                         cancelFullScreen.call(doc);
-                     }
-                 }
-             }
- 
-         }
-     }
- 
-     /* Event Handlers */
-     $(document).on('click tap', '.bl-guide-banner', function () {
-         // Set screen to full screen
-         ASSTBG_1.toggleFullScreen(true);
- 
-         $('.bl-container').addClass('bl-display');
-         $('body').addClass('bl-sex-toy-guide-visible');
-         $('html').addClass('bl-sex-toy-guide-visible');
- 
-         // // Get product HTML - AJAX
-         // ASSTBG_1.getRabbitData();
- 
-         const appUsed = ASSTBG_1.getCookie('BL-RF-OPENED');
- 
-         if (appUsed !== 'true') {
-             $('#bl-header').css('opacity', '0');
-             // Show overlay
- 
-             //$('.bl-loading-screen').addClass('bl-loading');
-             // Loading dots
-             var loadingDotTotal = 0;
-             var delay = 200;
-             var loadingDots = setInterval(function () {
-                 if (loadingDotTotal === 1) {
-                     $('.loading-dots').text('.');
-                 } else if (loadingDotTotal === 2) {
-                     $('.loading-dots').text('..');
-                 } else if (loadingDotTotal === 3) {
-                     $('.loading-dots').text('...');
-                 } else if (loadingDotTotal === 4) {
-                     $('.loading-dots').text('....');
-                     loadingDotTotal = 0;
-                 }
-                 loadingDotTotal++;
- 
-             }, 500);
- 
-             // Setup loading screen
-             setTimeout(function () {
-                 $('.bl-loading-screen').show();
-                 $('.bl-loading-screen').addClass('bl-active');
-                 $('#bl-header').css('opacity', '1');
-                 // $('.bl-loading-screen .vibe').show();
-                 // $('.bl-loading-screen .question-mark').show();
- 
-                 setTimeout(fadeOut, 1000);
-                 clearInterval(loadingDots);
-             }, 3000);
- 
-             function fadeOut() {
-                 $('.bl-loading-screen').removeClass('bl-active', 'bl-loading');
-                 $('.bl-loading-screen').hide();
- 
-             }
-         } else {
-             $('.bl-loading-screen').hide();
-             $('.bl-intro-page').hide();
-             $('.bl-info-page').hide();
-         }
- 
-         // Get all rabbits for PDPs and set filtered rabbits to all rabbits
-         // ASSTBG_1.allRabbits = ASRFS.getAllRabbits();
-         //ASSTBG_1.filteredRabbits = ASSTBG_1.allRabbits;
- 
-     });
- 
-     // Close the app
-     $(document).on('click tap', '#bl-header .bl-cross, #bl-header .bl-close-text', function () {
-         // Go full screen
-         ASSTBG_1.toggleFullScreen();
- 
-         $('#bl-sex-toy-guide').removeClass('bl-display');
-         $('body').removeClass('bl-sex-toy-guide-visible');
-         $('html').removeClass('bl-sex-toy-guide-visible');
- 
-         // var int = setInterval(function () {
-         //     if ($('html').hasClass('bl-app-loading')) {
-         //         $('html').removeClass('bl-app-loading');
-         //         clearInterval(int);
-         //     } else {
-         //         clearInterval(int);
-         //     }
-         // }, 100);
-     })
- 
-     // Show 'What is a Rabbit?' page
-     $(document).on('click tap', '.bl-info', function () {
-         $('.bl-info-page').show();
-     })
- 
-     // Hide 'What is a Rabbit?' page
-     $(document).on('click tap', '.bl-info-page .bl-start, .bl-intro-page .bl-start', function () {
-         $('.bl-info-page').hide();
-         $('.bl-intro-page').hide();
- 
-         // Add session cookie to not show logo and intro pages when app is opened again
-         ASSTBG_1.setCookie('BL-RF-OPENED', 'true', 1);
-     })
- 
-     // Toggle menu and show selected options
-     $(document).on('click tap', '.bl-guide-menu-item', function () {
-         $('html').addClass('bl-app-loading');
- 
-         const el = $(this);
-         const cat = $(el).data('cat');
-         const direction = $(el).data('direction');
- 
-         // $('.bl-guide-menu-item').each(function(){
-         //     $(this).removeClass('bl-home-item-selected');
-         // });
- 
-         if ($(el).hasClass('bl-home-item-selected')) {
-             ASSTBG_1.showPage(cat, 5, direction);
-         } else {
-             ASSTBG_1.showPage(cat, 2, direction);
-         }
- 
-         // el.addClass('bl-home-item-selected');
-     })
- 
-     // show next page
-     $(document).on('click tap', '.bl-next-page', function () {
-         $('html').addClass('bl-app-loading');
-         // const page = $(this).data('page');
-         const cat = $(this).data('cat');
-         const direction = 'next';
- 
-         // Show page
-         ASSTBG_1.showPage(cat, 5, direction);
-     })
- 
-     $(document).on('click tap', '.bl-prev-page', function () {
-         $('html').addClass('bl-app-loading');
-         const page = $(this).data('page');
-         const cat = $(this).data('cat');
-         const direction = 'previous';
-         if (page > 1 && page < 5) {
-             ASSTBG_1.showPage(cat, page, direction);
-         }
-     })
- 
-     $(document).on('click tap', '.bl-slider-results-button', function () {
-         if ($(this).text() === "0 matches") {
-             return false;
-         }
- 
-         $('html').addClass('bl-app-loading');
-         const cat = 'all';
-         const page = 6;
-         const direction = 'next';
- 
-         // Save results
-         const type = $('.bl-slider-inner-container').data('type');
-         var sliderCheckboxs = document.querySelectorAll('.bl-slider-checkbox-sim');
-         BL_RESULTS_GLOBAL.page[type].one = $(sliderCheckboxs[0]).hasClass('bl-selected') ? true : false;
-         BL_RESULTS_GLOBAL.page[type].two = $(sliderCheckboxs[1]).hasClass('bl-selected') ? true : false;
-         BL_RESULTS_GLOBAL.page[type].three = $(sliderCheckboxs[2]).hasClass('bl-selected') ? true : false;
-         BL_RESULTS_GLOBAL.page[type].four = $(sliderCheckboxs[3]).hasClass('bl-selected') ? true : false;
- 
-         if (BL_RESULTS_GLOBAL.page[type].one === true || BL_RESULTS_GLOBAL.page[type].two === true ||
-             BL_RESULTS_GLOBAL.page[type].three === true || BL_RESULTS_GLOBAL.page[type].four === true) {
-             BL_RESULTS_GLOBAL.home[type] = true;
-             $('.bl-guide-menu-item').each(function () {
-                 if ($(this).data('cat') === type) {
-                     $(this).addClass('bl-home-item-selected');
-                 }
-             })
-         } else {
-             BL_RESULTS_GLOBAL.home[type] = false;
-             $('.bl-guide-menu-item').each(function () {
-                 if ($(this).data('cat') === type) {
-                     $(this).removeClass('bl-home-item-selected');
-                 }
-             })
-         }
- 
-         // Get products - AJAX METHOD
-         // ASSTBG_1.getRabbitData(function () {
-         //     ASSTBG_1.showPage(cat, page, direction);
-         // });
- 
-         // // Get product HTML - AJAX
-         // ASSTBG_1.getRabbitData();
-         showAllRabbits = false;
-         ASSTBG_1.showPage(cat, page, direction);
- 
-     })
- 
-     /* Show PLP page from PDP */
-     $(document).on('click tap', '.bl-pdp-back-arrow', function () {
-         $('html').addClass('bl-app-loading');
-         const cat = 'all';
-         const page = 6;
-         const direction = 'previous';
-         ASSTBG_1.showPage(cat, page, direction);
-         $('.bl-pdp-back-arrow').hide();
-     });
- 
-     $(document).on('click tap', '.bl-slider-checkbox-sim > span', function () {
-         var that = $(this);
-         selectCategories(that);
-     });
- 
-     $(document).on('click tap', '.pulsatingCircle span', function () {
-         var that = $(this).parent().parent().find('.bl-slider-checkbox-sim  > span');
-         selectCategories(that);
-     });
- 
-     $(document).on('click tap', '.bl-rabbit-size-circle-container', function () {
-         var that = $(this).parent().parent().parent().find('.bl-slider-checkbox-sim  > span');
-         selectCategories(that);
-     });
- 
-     $(document).on('click tap', '.bl-rabbit-shape-circle-container', function () {
-         var that = $(this).parent().parent().parent().find('.bl-slider-checkbox-sim  > span');
-         selectCategories(that);
-     });
- 
- 
- 
-     // select categories
-     var selectCategories = function (that) {
-         if ($(that).parent().find('.bl-tick-container').hasClass('bl-hide')) {
-             $(that).parent().find('.bl-tick-container').removeClass('bl-hide');
-             $(that).parent().addClass('bl-selected');
- 
-             // Change skip button copy
-             if ($('.bl-slider-checkbox-sim.bl-selected').length > 0) {
-                 //$('.bl-rf-button.bl-slider-skip-button').text('NEXT QUESTION');
-                 $('.bl-rf-button.bl-slider-skip-button').addClass('bl-option-selected');
-                 $(that).parent().siblings('.pulsatingCircle').addClass('active');
-                 $(that).parent().siblings('.bl-rabbit-shape-container').find('.bl-rabbit-shape-circle').addClass('active');
-             }
- 
-             // Active vibration video
-             if ($(that).closest('.bl-slider-checkbox-sim').prev().hasClass('bl-vibration-animation-overlay-circle-container')) {
-                 $(that).closest('.bl-slider-checkbox-sim').prev().find('.bl-vibration-animation-overlay-circle').addClass('bl-active');
-             }
- 
-         } else {
-             $(that).parent().find('.bl-tick-container').addClass('bl-hide');
-             $(that).parent().removeClass('bl-selected');
-             // Change skip button copy
-             if ($('.bl-slider-checkbox-sim.bl-selected').length === 0) {
-                 //$('.bl-rf-button.bl-slider-skip-button').text('MORE OPTIONS');
-                 $('.bl-rf-button.bl-slider-skip-button').removeClass('bl-option-selected');
-                 $(that).parent().siblings('.pulsatingCircle').removeClass('active');
-                 $(that).parent().siblings('.bl-rabbit-shape-container').find('.bl-rabbit-shape-circle').removeClass('active');
-             }
- 
-             // Deactive vibration video
-             if ($(that).closest('.bl-slider-checkbox-sim').prev().hasClass('bl-vibration-animation-overlay-circle-container')) {
-                 $(that).closest('.bl-slider-checkbox-sim').prev().find('.bl-vibration-animation-overlay-circle').removeClass('bl-active');
-             }
-         }
- 
-         // Search
-         var selectedCat = $(that).parent().data('search-category');
- 
-         ASSTBG_1.filteredRabbits = ASRFS.filterRabbits(ASSTBG_1.getFilterOptions(selectedCat));
-         var matchesText = ' matches';
-         if (ASSTBG_1.filteredRabbits.length === 1) {
-             matchesText = ' match';
-         }
-         $('.bl-slider-results-button').text(ASSTBG_1.filteredRabbits.length + matchesText);
-     }
- 
-     /* View PDP */
-     $(document).on('click tap', '.bl-product-plp-tile .bl-rf-button', function (e) {
-         $('html').addClass('bl-app-loading');
-         const cat = 'all';
-         const page = 7;
-         const direction = 'next';
-         // let id = $(this).data('id');
-         let id = e.currentTarget.getAttribute('data-id');
- 
-         // BL_PLP_SELECTED_GLOBAL.title = $(tile).find('.bl-product-title').text();
-         // BL_PLP_SELECTED_GLOBAL.img = $(tile).find('img').attr('src');
-         // BL_PLP_SELECTED_GLOBAL.price = $(tile).find('.bl-plp-price').val();
-         // console.log(BL_PLP_SELECTED_GLOBAL.price);
-         // let properties = $(tile).find('.bl-details-list p');
-         // for (let i = 0; i < properties.length; i++) {
-         //     BL_PLP_SELECTED_GLOBAL.props[i] = $(properties[i]).text();
-         // }
-         ASSTBG_1.showPage(cat, page, direction, id);
-         $('.bl-pdp-back-arrow').show();
-     })
- 
-     /* Show all dildos */
-     $(document).on('click tap', '.bl-rf-button.bl-view-all', function () {
-         $('html').addClass('bl-app-loading');
-         const cat = 'all';
-         const page = 6;
-         const direction = 'next';
-         if ($(this).hasClass('bl-rabbits-filtered')) {
-             showAllRabbits = false;
-         }
- 
-         ASSTBG_1.showPage(cat, page, direction);
-     })
- 
-     /* Change preferences button */
-     $(document).on('click tap', '.bl-change-preference-button-cont', function () {
-         $('html').addClass('bl-app-loading');
-         ASSTBG_1.showPage('home', 1, 'previous');
- 
-         //  change view all button text
-         var filtered = false;
-         if (BL_RESULTS_GLOBAL.home.feel || BL_RESULTS_GLOBAL.home.intensity || BL_RESULTS_GLOBAL.home.size || BL_RESULTS_GLOBAL.home.style) {
-             var filteredPorudcts = ASSTBG_1.filteredRabbits.length;
-             $('.bl-rf-button.bl-view-all').html('<span class="bl-text-button">View ' + filteredPorudcts + ' matched Rabbits</span>');
-             $('.bl-rf-button.bl-view-all').addClass('bl-rabbits-filtered');
-         } else {
-             $('.bl-rf-button.bl-view-all').html('<span class="bl-text-button">Or... view all rabbits</span>');
-             $('.bl-rf-button.bl-view-all').removeClass('bl-rabbits-filtered');
-         }
- 
-     })
- 
-     /* Add to Bag / Close app */
-     $(document).on('click tap', '.bl-pdp-add-to-bag #add-to-cart', function () {
-         $('html').addClass('bl-app-loading');
-         $('.bl-container').hide();
-         ASSTBG_1.showPage('home', 1, 'previous');
-     })
- 
-     /* Back to PDP */
-     $(document).on('click tap', '.bl-pdp-back-button', function () {
-         $('html').addClass('bl-app-loading');
-         ASSTBG_1.showPage('pdp', 6, 'previous');
-     })
- 
-     $(document).on('click tap', '.bl-slider-skip-button', function () {
-         $('html').addClass('bl-app-loading');
-         ASSTBG_1.showPage('home', 1, 'previous');
-         const type = $('.bl-slider-inner-container').data('type');
-         // BL_RESULTS_GLOBAL.page[type].one = $('.bl-slider-inner-container .positionOne .bl-slider-checkbox-sim').hasClass('bl-selected') ? true : false;
-         // BL_RESULTS_GLOBAL.page[type].two = $('.bl-slider-inner-container .positionTwo .bl-slider-checkbox-sim').hasClass('bl-selected') ? true : false;
-         // BL_RESULTS_GLOBAL.page[type].three = $('.bl-slider-inner-container .positionThree .bl-slider-checkbox-sim').hasClass('bl-selected') ? true : false;
-         // BL_RESULTS_GLOBAL.page[type].four = $('.bl-slider-inner-container .positionFour .bl-slider-checkbox-sim').hasClass('bl-selected') ? true : false;
-         var sliderCheckboxs = document.querySelectorAll('.bl-slider-checkbox-sim');
-         BL_RESULTS_GLOBAL.page[type].one = $(sliderCheckboxs[0]).hasClass('bl-selected') ? true : false;
-         BL_RESULTS_GLOBAL.page[type].two = $(sliderCheckboxs[1]).hasClass('bl-selected') ? true : false;
-         BL_RESULTS_GLOBAL.page[type].three = $(sliderCheckboxs[2]).hasClass('bl-selected') ? true : false;
-         BL_RESULTS_GLOBAL.page[type].four = $(sliderCheckboxs[3]).hasClass('bl-selected') ? true : false;
- 
-         if (BL_RESULTS_GLOBAL.page[type].one === true || BL_RESULTS_GLOBAL.page[type].two === true ||
-             BL_RESULTS_GLOBAL.page[type].three === true || BL_RESULTS_GLOBAL.page[type].four === true) {
-             BL_RESULTS_GLOBAL.home[type] = true;
-             $('.bl-guide-menu-item').each(function () {
-                 if ($(this).data('cat') === type) {
-                     $(this).addClass('bl-home-item-selected');
-                 }
-             })
-         } else {
-             BL_RESULTS_GLOBAL.home[type] = false;
-             $('.bl-guide-menu-item').each(function () {
-                 if ($(this).data('cat') === type) {
-                     $(this).removeClass('bl-home-item-selected');
-                 }
-             })
-         }
- 
-         //  change view all button text
-         var filtered = false;
-         if (BL_RESULTS_GLOBAL.home.feel || BL_RESULTS_GLOBAL.home.intensity || BL_RESULTS_GLOBAL.home.size || BL_RESULTS_GLOBAL.home.style) {
-             var filteredPorudcts = ASSTBG_1.filteredRabbits.length;
-             $('.bl-rf-button.bl-view-all').html('<span class="bl-text-button">View ' + filteredPorudcts + ' matched Rabbits</span>');
-             $('.bl-rf-button.bl-view-all').addClass('bl-rabbits-filtered');
-         } else {
-             $('.bl-rf-button.bl-view-all').html('<span class="bl-text-button">Or... view all rabbits</span>');
-             $('.bl-rf-button.bl-view-all').removeClass('bl-rabbits-filtered');
-         }
-     })
- 
-     $(document).on('click tap', '.bl-info-details .bl-info-chevron', function () {
-         $('html').addClass('bl-app-loading');
-         var page = $(this).data('cat');
-         var pageNumber = parseInt($(this).data('page')) + 1;
-         ASSTBG_1.showPage(page, pageNumber, 'next');
-     })
- 
-     // Clear all filters
-     $(document).on('click tap', '.bl-product-plp-tile-no-results .bl-product-tile-no-results-button', function () {
-         // show loading screen
-         $('#bl-header').css('opacity', '0');
-         $('.bl-loading-screen').show();
-         $('.bl-loading-screen').addClass('animate');
- 
-         // Loading dots
-         var loadingDotTotal = 0;
-         var delay = 200;
-         var loadingDots = setInterval(function () {
-             if (loadingDotTotal === 1) {
-                 $('.loading-dots').text('.');
-             } else if (loadingDotTotal === 2) {
-                 $('.loading-dots').text('..');
-             } else if (loadingDotTotal === 3) {
-                 $('.loading-dots').text('...');
-             } else if (loadingDotTotal === 4) {
-                 $('.loading-dots').text('....');
-                 loadingDotTotal = 0;
-             }
-             loadingDotTotal++;
- 
-         }, 200);
- 
-         // hide loading screen
-         setTimeout(function () {
-             $('.bl-loading-screen').hide();
-             $('.bl-loading-screen').removeClass('animate');
-             $('#bl-header').css('opacity', '1');
-             clearInterval(loadingDots);
-         }, 2500);
- 
-         let options = {
-             // forCouples: false,
-             waterproof: false,
-             usb: false,
-             quiet: false
-         };
- 
-         $('.bl-pdp-filter').removeClass('bl-selected');
-         $('.bl-pdp-filter span').addClass('bl-hide');
-         // Refine
-         ASSTBG_1.refinedRabbits = ASRFS.refineFilterRabbits(options, ASSTBG_1.filteredRabbits, 0);
-         let productHTML = ASSTBG_1.setupProducts(ASSTBG_1.refinedRabbits);
-         $('.bl-plp-horizontal-products').html(productHTML);
-         $('.bl-plp-horizontal-products').scrollLeft(0);
-     })
- 
-     // Filters on horiztonal bar on PLP page
-     $(document).on('click tap', '.bl-pdp-filter', function () {
- 
-         // show loading screen
-         $('#bl-header').css('opacity', '0');
-         $('.bl-loading-screen').show();
-         $('.bl-loading-screen').addClass('animate');
- 
-         // Loading dots
-         var loadingDotTotal = 0;
-         var delay = 200;
-         var loadingDots = setInterval(function () {
-             if (loadingDotTotal === 1) {
-                 $('.loading-dots').text('.');
-             } else if (loadingDotTotal === 2) {
-                 $('.loading-dots').text('..');
-             } else if (loadingDotTotal === 3) {
-                 $('.loading-dots').text('...');
-             } else if (loadingDotTotal === 4) {
-                 $('.loading-dots').text('....');
-                 loadingDotTotal = 0;
-             }
-             loadingDotTotal++;
- 
-         }, 200);
- 
-         // hide loading screen
-         setTimeout(function () {
-             $('.bl-loading-screen').hide();
-             $('.bl-loading-screen').removeClass('animate');
-             $('#bl-header').css('opacity', '1');
-             clearInterval(loadingDots);
-         }, 2500);
- 
-         let options = {
-             // forCouples: false,
-             waterproof: false,
-             usb: false,
-             quiet: false
-         };
-         if ($(this).hasClass('bl-selected')) {
-             $(this).removeClass('bl-selected');
-         } else {
-             $(this).addClass('bl-selected');
-         }
- 
-         if ($(this).find('span').hasClass('bl-hide')) {
-             $(this).find('span').removeClass('bl-hide');
-         } else {
-             $(this).find('span').addClass('bl-hide');
-         }
- 
-         let filterCount = 0;
-         $('.bl-pdp-filter.bl-selected').each(function () {
-             let selectedFilter = $(this).data('filter');
-             // if (selectedFilter === "forCouples") {
-             //     options.forCouples = true;
-             //     filterCount++;
-             // } else if (selectedFilter === "waterproof") {
-             if (selectedFilter === "waterproof") {
-                 options.waterproof = true;
-                 filterCount++;
-             } else if (selectedFilter === "usb") {
-                 options.usb = true;
-                 filterCount++;
-             } else if (selectedFilter === "quiet") {
-                 options.quiet = true;
-                 filterCount++;
-             }
-         });
- 
-         // Refine
-         ASSTBG_1.refinedRabbits = ASRFS.refineFilterRabbits(options, ASSTBG_1.filteredRabbits, filterCount);
-         let productHTML = ASSTBG_1.setupProducts(ASSTBG_1.refinedRabbits);
-         $('.bl-plp-horizontal-products').html(productHTML);
-         $('.bl-plp-horizontal-products').scrollLeft(0);
-     })
- 
-     $(document).on('click tap', '#bl-header .mini-cart-total', function () {
-         var miniCartContent = $(this).next();
-         $(miniCartContent).show();
-         setTimeout(function () {
-             $(miniCartContent).hide();
-         }, 3000);
-     });
- 
-     $(document).on('click tap', '.bl-add-to-bag', function (e) {
-         e.preventDefault();
-         $(this).closest('form').submit();
-         console.log('ADD TO BAG');
-     });
- 
-     ASSTBG_1.exitHandler = function () {
-         if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
-             ///fire your event
-             $('#bl-sex-toy-guide').removeClass('bl-display');
-             $('body').removeClass('bl-sex-toy-guide-visible');
-             $('html').removeClass('bl-sex-toy-guide-visible');
-             console.log('closed');
- 
-         }
-     }
- 
-     // Exit full screen 
-     document.addEventListener('fullscreenchange', ASSTBG_1.exitHandler);
-     document.addEventListener('webkitfullscreenchange', ASSTBG_1.exitHandler);
-     document.addEventListener('mozfullscreenchange', ASSTBG_1.exitHandler);
-     document.addEventListener('MSFullscreenChange', ASSTBG_1.exitHandler);
- 
-     // On orientation change
-     window.addEventListener("resize", function () {
-         var width = $(window).width();
-         var height = $(window).height();
-         var landscapeOverlay = $('.bl-landscape-overlay');
-         if (width > height) {
-             $(landscapeOverlay).show();
-         } else {
-             $(landscapeOverlay).hide();
-         }
-     }, false);
- 
-     // detect swipe
-     ASSTBG_1.addSwipeEvent = (el, swipeFn, leftParam, rightParam) => {
-         let count = 0;
-         const maxCount = 100;
-         const delay = 50;
-         const swipeInterval = setInterval(function () {
-             const slider = document.querySelector(el);
-             if (slider !== undefined && slider) {
-                 slider.addEventListener('touchstart', handleTouchStart, false);
-                 slider.addEventListener('touchmove', handleTouchMove, false);
-                 var xDown = null;
-                 var yDown = null;
-                 function handleTouchStart(evt) {
-                     xDown = evt.touches[0].clientX;
-                     yDown = evt.touches[0].clientY;
-                 }
- 
-                 function handleTouchMove(evt) {
-                     if (!xDown || !yDown) {
-                         return;
-                     }
- 
-                     var xUp = evt.touches[0].clientX;
-                     var yUp = evt.touches[0].clientY;
- 
-                     var xDiff = xDown - xUp;
-                     var yDiff = yDown - yUp;
- 
-                     if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
-                         if (xDiff > 0) {
-                             /* left swipe */
-                             swipeFn(leftParam);
-                         } else {
-                             /* right swipe */
-                             swipeFn(rightParam);
-                         }
-                     }
-                     /* reset values */
-                     xDown = null;
-                     yDown = null;
-                 }
-                 clearInterval(swipeInterval);
-             }
-             if (count > maxCount) {
-                 clearInterval(swipeInterval);
-             }
-             count++;
-         }, delay);
-     }
- 
-     /* Run functions on load */
-     ASSTBG_1.init();
-     ASSTBG_1.getShapeSVGs = () => {
-         const svgs = {};
-         // svgs.gspot = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/ebd47dd90932abaa4c77a0c6ddd6cb31_500_500.png`;
-         // svgs.flexible = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/b515e2e1f34ff323ab04b62db11fa2c0_500_500.png`;
-         // svgs.straight = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/1a58c711fc704f0673243b907701f7f7_500_500.png`;
-         // svgs.contoured = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/b5ba0893f4f0b1a5729a8ea691e56111_500_500.png`;
-         svgs.flexible = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/ebd47dd90932abaa4c77a0c6ddd6cb31_500_500.png`;
-         svgs.straight = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/b515e2e1f34ff323ab04b62db11fa2c0_500_500.png`;
-         svgs.contoured = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/1a58c711fc704f0673243b907701f7f7_500_500.png`;
-         svgs.gspot = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/b5ba0893f4f0b1a5729a8ea691e56111_500_500.png`;
- 
- 
-         return svgs;
-     }
-     ASSTBG_1.getRulerSVGs = () => {
-         const svgs = {};
-         svgs.threeToFive = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/1f543ed0b04fa1b03752c12ce72f2adc_288_283.png`;
-         svgs.fiveToFive = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/64884ae20afe004df5bd2f09b5f29b59_288_283.png`;
-         svgs.overFive = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/65b20bfcea61e250f2fc8679f2355f05_288_283.png`;
-         svgs.upToThree = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/0a3a1dc70bf978af647dcfb71483346f_288_283.png`;
-         return svgs;
-     }
- })
+                searchValue: 4
+            }];
+        }
+        return content;
+    }
+    ASSTBG_1.getPageSix = (page) => {
+        let content = {};
+        if (showAllRabbits) {
+            content.products = ASSTBG_1.allRabbits;
+        } else {
+            content.products = ASSTBG_1.filteredRabbits;
+        }
+
+        //     id: 1,
+        //     title: 'The Moregasm Move Rechargeable One',
+        //     imgURL: '//i1.adis.ws/i/annsummers/07CSSPAS1019043_Z?$lister-thumbnail-desktop$',
+        //     properties: ['5.75" insertable', '4.5" girth', 'G-spot massage', 'Worldwide travel', 'Playing underwater', 'USB charging'],
+        //     price: '£75.00'
+        // }, {
+        //     id: 2,
+        //     title: 'Sensations Feel The Thrust',
+        //     imgURL: '//i1.adis.ws/i/annsummers/07CSSPAS1040043_Z?$lister-thumbnail-desktop$',
+        //     properties: ['5.25" insertable', '5.5" girth', 'Thrusting motions', 'Quiet play', ' Lighter vibration'],
+        //     price: '£36.00'
+        // }, {
+        //     id: 3,
+        //     title: 'Mini Jack Rabbit Vibrator ',
+        //     imgURL: '//i1.adis.ws/i/annsummers/07SCNRAS1184014_Z?$lister-thumbnail-desktop$',
+        //     properties: ['3" insertable', '4.25" girth', 'Smaller toys', 'Battery power'],
+        //     price: '£8.00'
+        // }, {
+        //     id: 4,
+        //     title: 'The Original',
+        //     imgURL: '//i1.adis.ws/i/annsummers/07SCRTAS1047041_Z?$lister-thumbnail-desktop$',
+        //     properties: ['4.5" insertable', '4" girth', 'Rotating shaft', 'Realistic shape'],
+        //     price: '£30.00'
+        // }, {
+        //     id: 5,
+        //     title: 'The G-Spot',
+        //     imgURL: '//i1.adis.ws/i/annsummers/07CSSPAS1042026_Z?$lister-thumbnail-desktop$',
+        //     properties: ['4.75" insertable', '4.5" girth', 'Targeted G-stop stimulation', 'Vibrations variety', 'Waterproof play'],
+        //     price: '£25.00'
+        // }];
+        return content;
+    }
+    /* infoSlider */
+    ASSTBG_1.swipeInfoPages = (direction) => {
+        // const currentPage = parseInt($('.bl-info-container button').data('page')) - 1;
+        // const cat = $('.bl-info-container button').data('cat');
+        const currentPage = parseInt(document.querySelector('.bl-info-container button').getAttribute('data-page')) - 1;
+        const cat = document.querySelector('.bl-info-container button').getAttribute('data-cat');
+        let page = 0;
+        if (direction === 'previous') {
+            page = currentPage - 1;
+        } else if (direction === 'next') {
+            page = currentPage + 1;
+        }
+        // Show page
+        ASSTBG_1.showPage(cat, page, direction);
+    }
+    /* Slider function */
+    ASSTBG_1.swipeSlider = (direction) => {
+        const options = $('.bl-slider-inner-container > div');
+        const slider = $('.bl-new-container');
+        if (direction === 'left') {
+            if ($(options).hasClass('positionOne')) {
+                $(options).removeClass('positionOne').addClass('positionTwo');
+                $(options[0]).addClass('small');
+                $(options[1]).removeClass('small');
+                //gradient
+                $(slider).addClass('bl-gradient-two')
+                // Resize videos
+                const currentVid = $('.bl-slider-inner-container .ears video');
+                const newVid = $('.bl-slider-inner-container .rotations video');
+                if (currentVid && newVid) ASSTBG_1.resizeVideos(currentVid, newVid);
+            } else if ($(options).hasClass('positionTwo')) {
+                $(options).removeClass('positionTwo').addClass('positionThree');
+                $(options[1]).addClass('small');
+                $(options[2]).removeClass('small');
+                //gradient
+                $(slider).addClass('bl-gradient-three')
+                $(slider).removeClass('bl-gradient-two');
+                // Resize videos
+                const currentVid = $('.bl-slider-inner-container .rotations video');
+                const newVid = $('.bl-slider-inner-container .variable video');
+                if (currentVid && newVid) ASSTBG_1.resizeVideos(currentVid, newVid);
+            } else if ($(options).hasClass('positionThree')) {
+                options.removeClass('positionThree').addClass('positionFour');
+                $(options[2]).addClass('small');
+                $(options[3]).removeClass('small');
+                //gradient
+                $(slider).addClass('bl-gradient-four')
+                $(slider).removeClass('bl-gradient-three');
+                // Resize videos
+                const currentVid = $('.bl-slider-inner-container .variable video');
+                const newVid = $('.bl-slider-inner-container .thrusting video');
+                if (currentVid && newVid) ASSTBG_1.resizeVideos(currentVid, newVid);
+            } else if ($(options).hasClass('positionFour')) {
+                return;
+            }
+        }
+        else if (direction === 'right') {
+            if ($(options).hasClass('positionOne')) {
+                return;
+            } else if ($(options).hasClass('positionTwo')) {
+                $(options).removeClass('positionTwo').addClass('positionOne');
+                $(options[1]).addClass('small');
+                $(options[0]).removeClass('small');
+                //gradient
+                $(slider).removeClass('bl-gradient-two')
+                $(slider).addClass('bl-gradient-one');
+                // Resize videos
+                const newVid = $('.bl-slider-inner-container .ears video');
+                const currentVid = $('.bl-slider-inner-container .rotations video');
+                if (currentVid && newVid) ASSTBG_1.resizeVideos(currentVid, newVid);
+            } else if ($(options).hasClass('positionThree')) {
+                $(options).removeClass('positionThree').addClass('positionTwo');
+                $(options[2]).addClass('small');
+                $(options[1]).removeClass('small');
+                //gradient
+                $(slider).removeClass('bl-gradient-three')
+                $(slider).addClass('bl-gradient-two');
+                // Resize videos
+                const newVid = $('.bl-slider-inner-container .rotations video');
+                const currentVid = $('.bl-slider-inner-container .variable video');
+                if (currentVid && newVid) ASSTBG_1.resizeVideos(currentVid, newVid);
+            } else if ($(options).hasClass('positionFour')) {
+                $(options).removeClass('positionFour').addClass('positionThree');
+                $(options[3]).addClass('small');
+                $(options[2]).removeClass('small');
+                //gradient
+                $(slider).removeClass('bl-gradient-four')
+                $(slider).addClass('bl-gradient-three');
+                // Resize videos
+                const newVid = $('.bl-slider-inner-container .variable video');
+                const currentVid = $('.bl-slider-inner-container .thrusting video');
+                if (currentVid && newVid) ASSTBG_1.resizeVideos(currentVid, newVid);
+            }
+        }
+    }
+
+
+    ASSTBG_1.searchOptions = { intensity: [], feel: [], size: [], style: [] };
+
+    ASSTBG_1.getFilterOptions = (selectedCat) => {
+        let searchOptions = ASSTBG_1.searchOptions;
+        const options = $('.bl-slider-checkbox-sim.bl-selected');
+        // let searchCat = $(options[0]).data('search-category');
+        let searchCat = options[0].getAttribute('data-search-category');
+
+        // Empty category array before populating it
+        searchOptions[selectedCat] = [];
+        for (let i = 0; i < options.length; i++) {
+            // let searchValue = $(options[i]).data('search-value');
+            let searchValue = options[i].getAttribute('data-search-value');
+
+            searchOptions[searchCat].push(parseInt(searchValue));
+        }
+
+        return searchOptions;
+    }
+
+    /* Resize videos */
+    ASSTBG_1.resizeVideos = (currentVid, newVid) => {
+        setTimeout(function () {
+            // Resize current video
+            $(currentVid).attr('width', '100');
+            // Resize new video
+            $(newVid).attr('width', '260');
+        }, 300);
+    }
+
+
+    ASSTBG_1.getRabbitData = function () {
+        let rabbitHTML = [];
+        const rabbits = ASRFS.getAllRabbits();
+        let responseCount = 0;
+
+
+        for (let x = 0; x < rabbits.length; x++) {
+            if (!rabbits[x].HTML) {
+                let URL = rabbits[x].url;
+
+                // Get product data
+                $.ajax({
+                    method: 'GET',
+                    url: URL
+                })
+                    .done(function (data) {
+                        console.log("success");
+                        rabbits[x].id = x + 1;
+                        rabbits[x].HTML = ASSTBG_1.setupPDPHTML($(data));
+                        rabbits[x].status = 'success';
+                    })
+                    .fail(function () {
+                        rabbits[x].status = 'error';
+                        rabbits[x].HTML = 'Product not found';
+                        console.log("error");
+                    });
+            }
+        }
+
+        const maxCount = 100;
+        const delay = 100;
+        let count = 0;
+        const responseInterval = setInterval(function () {
+            if (responseCount >= rabbits.length) {
+                ASSTBG_1.filteredRabbits = rabbits;
+                clearInterval(responseInterval);
+
+            }
+            if (count > maxCount) {
+                ASSTBG_1.filteredRabbits = rabbits;
+                clearInterval(responseInterval);
+            }
+            count++;
+        }, delay);
+
+    }
+
+    ASSTBG_1.setupPDPHTML = function (data) {
+        var html = '';
+        var dataImage = '';
+        var url = '';
+        // Remove Loading screens
+        //  $(data).find('.loading_ctr').remove();
+        //  $(data).find('.loader').remove();
+        $(data).find('#discreet_video').next().remove();
+        $(data).find('.loading_ctr').hide();
+        $(data).find('.loader').hide();
+
+
+        // Setup product image
+        url = $(data).find('.product-image').attr('data-base-path');
+        dataImage = $(data).find('.product-image').attr('data-image-url');
+        // $(data).find('.quantity-attribute').remove();
+        $(data).find('#add-to-cart').addClass('bl-add-to-bag');
+        if (dataImage !== undefined && dataImage !== null) {
+            var lastFowardSlashIndex = dataImage.lastIndexOf('/');
+            dataImage = dataImage.substring(lastFowardSlashIndex, dataImage.length);
+            dataImage = dataImage.split('.')[0];
+
+
+        }
+
+        // setup wrapper
+        for (let i = 0; i < data.length; i++) {
+            if ($(data[i]).hasClass('wrapper')) {
+                $(data[i]).addClass('bl-pdp-container');
+                $(data[i]).prepend('<div class="bl-pdp-back-arrow"><span class="bl-pdp-back-arrow-icon">' + whiteChevronSVG + '</span>Back to results</div>');
+                if (dataImage !== undefined && dataImage !== null) {
+                    $(data[i]).find('.product-image').append('<img src="' + url + '/i/annsummers' + dataImage + '" />');
+                }
+                data = data[i];
+                break;
+            }
+        }
+        //data = $(data)[50];
+        //  console.log($(data).find);
+        //$(data).addClass('bl-pdp-container');
+        return data;
+    }
+
+
+    ASSTBG_1.setCookie = function (name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+    ASSTBG_1.getCookie = function (name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+    ASSTBG_1.eraseCookie = function (name) {
+        document.cookie = name + '=; Max-Age=-99999999;';
+    }
+
+    ASSTBG_1.loadPage = function(){
+        $('html').addClass('bl-app-loading');
+        setTimeout(function(){
+            $('html').removeClass('bl-app-loading');
+        }, 200);
+    }
+
+    // RESULTS FUNCTION
+    ASSTBG_1.storeResults = () => {
+        let results = {};
+        results.home = {};
+        results.home.size = false;
+        results.home.intensity = false;
+        results.home.feel = false;
+        results.home.style = false;
+        results.page = {};
+        results.page.intensity = {};
+        results.page.intensity.one = false;
+        results.page.intensity.two = false;
+        results.page.intensity.three = false;
+        results.page.intensity.four = false;
+        results.page.feel = {};
+        results.page.feel.one = false;
+        results.page.feel.two = false;
+        results.page.feel.three = false;
+        results.page.feel.four = false;
+        results.page.size = {};
+        results.page.size.one = false;
+        results.page.size.two = false;
+        results.page.size.three = false;
+        results.page.size.four = false;
+        results.page.style = {};
+        results.page.style.one = false;
+        results.page.style.two = false;
+        results.page.style.three = false;
+        results.page.style.four = false;
+
+        return results;
+    }
+
+    // Set app to full screen - doesn't work for iOS safari
+    ASSTBG_1.toggleFullScreen = (state) => {
+        var doc = window.document;
+        var docEl = doc.documentElement;
+        if (docEl != null && docEl != 'undefined') {
+            var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+            var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+            if ((requestFullScreen != null && requestFullScreen != 'undefined') && (cancelFullScreen != null && cancelFullScreen != 'undefined')) {
+                if (!state) {
+                    cancelFullScreen.call(doc);
+                } else {
+                    if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+                        requestFullScreen.call(docEl);
+                    }
+                    else {
+                        cancelFullScreen.call(doc);
+                    }
+                }
+            }
+
+        }
+    }
+
+    /* Event Handlers */
+    $(document).on('click tap', '.bl-guide-banner', function () {
+        // Set screen to full screen
+        ASSTBG_1.toggleFullScreen(true);
+
+        $('.bl-container').addClass('bl-display');
+        $('body').addClass('bl-sex-toy-guide-visible');
+        $('html').addClass('bl-sex-toy-guide-visible');
+
+        // // Get product HTML - AJAX
+        // ASSTBG_1.getRabbitData();
+
+        const appUsed = ASSTBG_1.getCookie('BL-RF-OPENED');
+
+        if (appUsed !== 'true') {
+            $('#bl-header').css('opacity', '0');
+            // Show overlay
+
+            //$('.bl-loading-screen').addClass('bl-loading');
+            // Loading dots
+            var loadingDotTotal = 0;
+            var delay = 200;
+            var loadingDots = setInterval(function () {
+                if (loadingDotTotal === 1) {
+                    $('.loading-dots').text('.');
+                } else if (loadingDotTotal === 2) {
+                    $('.loading-dots').text('..');
+                } else if (loadingDotTotal === 3) {
+                    $('.loading-dots').text('...');
+                } else if (loadingDotTotal === 4) {
+                    $('.loading-dots').text('....');
+                    loadingDotTotal = 0;
+                }
+                loadingDotTotal++;
+
+            }, 500);
+
+            // Setup loading screen
+            setTimeout(function () {
+                $('.bl-loading-screen').show();
+                $('.bl-loading-screen').addClass('bl-active');
+                $('#bl-header').css('opacity', '1');
+                // $('.bl-loading-screen .vibe').show();
+                // $('.bl-loading-screen .question-mark').show();
+
+                setTimeout(fadeOut, 1000);
+                clearInterval(loadingDots);
+            }, 3000);
+
+            function fadeOut() {
+                $('.bl-loading-screen').removeClass('bl-active', 'bl-loading');
+                $('.bl-loading-screen').hide();
+
+            }
+        } else {
+            $('.bl-loading-screen').hide();
+            $('.bl-intro-page').hide();
+            $('.bl-info-page').hide();
+        }
+
+        // Get all rabbits for PDPs and set filtered rabbits to all rabbits
+        // ASSTBG_1.allRabbits = ASRFS.getAllRabbits();
+        //ASSTBG_1.filteredRabbits = ASSTBG_1.allRabbits;
+
+    });
+
+    // Close the app
+    $(document).on('click tap', '#bl-header .bl-cross, #bl-header .bl-close-text', function () {
+        // Go full screen
+        ASSTBG_1.toggleFullScreen();
+
+        $('#bl-sex-toy-guide').removeClass('bl-display');
+        $('body').removeClass('bl-sex-toy-guide-visible');
+        $('html').removeClass('bl-sex-toy-guide-visible');
+
+        // var int = setInterval(function () {
+        //     if ($('html').hasClass('bl-app-loading')) {
+        //         $('html').removeClass('bl-app-loading');
+        //         clearInterval(int);
+        //     } else {
+        //         clearInterval(int);
+        //     }
+        // }, 100);
+    })
+
+    // Show 'What is a Rabbit?' page
+    $(document).on('click tap', '.bl-info', function () {
+        $('.bl-info-page').show();
+    })
+
+    // Hide 'What is a Rabbit?' page
+    $(document).on('click tap', '.bl-info-page .bl-start, .bl-intro-page .bl-start', function () {
+        $('.bl-info-page').hide();
+        $('.bl-intro-page').hide();
+
+        // Add session cookie to not show logo and intro pages when app is opened again
+        ASSTBG_1.setCookie('BL-RF-OPENED', 'true', 1);
+    })
+
+    // Toggle menu and show selected options
+    $(document).on('click tap', '.bl-guide-menu-item', function () {
+        ASSTBG_1.loadPage();
+
+        // const el = $(this);
+        // const cat = $(el).data('cat');
+        // const direction = $(el).data('direction');
+        const el = this;
+        const cat = el.getAttribute('data-cat');
+        const direction = el.getAttribute('data-direction');
+
+        // $('.bl-guide-menu-item').each(function(){
+        //     $(this).removeClass('bl-home-item-selected');
+        // });
+
+        if ($(this).hasClass('bl-home-item-selected')) {
+            ASSTBG_1.showPage(cat, 5, direction);
+        } else {
+            ASSTBG_1.showPage(cat, 2, direction);
+        }
+
+        // el.addClass('bl-home-item-selected');
+    })
+
+    // show next page
+    $(document).on('click tap', '.bl-next-page', function () {
+        ASSTBG_1.loadPage();
+        // const page = $(this).data('page');
+        //const cat = $(this).data('cat');
+        const cat = this.getAttribute('data-cat');
+        const direction = 'next';
+
+        // Show page
+        ASSTBG_1.showPage(cat, 5, direction);
+    })
+
+    $(document).on('click tap', '.bl-prev-page', function () {
+        ASSTBG_1.loadPage();
+        // const page = $(this).data('page');
+        // const cat = $(this).data('cat');
+        const page = this.getAttribute('data-page');
+        const cat = this.getAttribute('data-cat');
+        const direction = 'previous';
+        if (page > 1 && page < 5) {
+            ASSTBG_1.showPage(cat, page, direction);
+        }
+    })
+
+    $(document).on('click tap', '.bl-slider-results-button', function () {
+        if ($(this).text() === "0 matches") {
+            return false;
+        }
+        ASSTBG_1.loadPage();
+        
+        const cat = 'all';
+        const page = 6;
+        const direction = 'next';
+
+        // Save results
+        // const type = $('.bl-slider-inner-container').data('type');
+        const type = document.querySelector('.bl-slider-inner-container').getAttribute('data-type');
+        var sliderCheckboxs = document.querySelectorAll('.bl-slider-checkbox-sim');
+        BL_RESULTS_GLOBAL.page[type].one = $(sliderCheckboxs[0]).hasClass('bl-selected') ? true : false;
+        BL_RESULTS_GLOBAL.page[type].two = $(sliderCheckboxs[1]).hasClass('bl-selected') ? true : false;
+        BL_RESULTS_GLOBAL.page[type].three = $(sliderCheckboxs[2]).hasClass('bl-selected') ? true : false;
+        BL_RESULTS_GLOBAL.page[type].four = $(sliderCheckboxs[3]).hasClass('bl-selected') ? true : false;
+
+        if (BL_RESULTS_GLOBAL.page[type].one === true || BL_RESULTS_GLOBAL.page[type].two === true ||
+            BL_RESULTS_GLOBAL.page[type].three === true || BL_RESULTS_GLOBAL.page[type].four === true) {
+            BL_RESULTS_GLOBAL.home[type] = true;
+            $('.bl-guide-menu-item').each(function () {
+                // if ($(this).data('cat') === type) {
+                //     $(this).addClass('bl-home-item-selected');
+                // }
+                if (this.getAttribute('data-cat') === type) {
+                    $(this).addClass('bl-home-item-selected');
+                }
+            })
+        } else {
+            BL_RESULTS_GLOBAL.home[type] = false;
+            $('.bl-guide-menu-item').each(function () {
+                // if ($(this).data('cat') === type) {
+                //     $(this).removeClass('bl-home-item-selected');
+                // }
+                if (this.getAttribute('data-cat') === type) {
+                    $(this).removeClass('bl-home-item-selected');
+                }
+            })
+        }
+
+        // Get products - AJAX METHOD
+        // ASSTBG_1.getRabbitData(function () {
+        //     ASSTBG_1.showPage(cat, page, direction);
+        // });
+
+        // // Get product HTML - AJAX
+        // ASSTBG_1.getRabbitData();
+        showAllRabbits = false;
+        ASSTBG_1.showPage(cat, page, direction);
+
+    })
+
+    /* Show PLP page from PDP */
+    $(document).on('click tap', '.bl-pdp-back-arrow', function () {
+        ASSTBG_1.loadPage();
+        const cat = 'all';
+        const page = 6;
+        const direction = 'previous';
+        ASSTBG_1.showPage(cat, page, direction);
+        $('.bl-pdp-back-arrow').hide();
+    });
+
+    $(document).on('click tap', '.bl-slider-checkbox-sim > span', function () {
+        var that = $(this);
+        selectCategories(that);
+    });
+
+    $(document).on('click tap', '.pulsatingCircle span', function () {
+        var that = $(this).parent().parent().find('.bl-slider-checkbox-sim  > span');
+        selectCategories(that);
+    });
+
+    $(document).on('click tap', '.bl-rabbit-size-circle-container', function () {
+        var that = $(this).parent().parent().parent().find('.bl-slider-checkbox-sim  > span');
+        selectCategories(that);
+    });
+
+    $(document).on('click tap', '.bl-rabbit-shape-circle-container', function () {
+        var that = $(this).parent().parent().parent().find('.bl-slider-checkbox-sim  > span');
+        selectCategories(that);
+    });
+
+
+
+    // select categories
+    var selectCategories = function (that) {
+        if ($(that).parent().find('.bl-tick-container').hasClass('bl-hide')) {
+            $(that).parent().find('.bl-tick-container').removeClass('bl-hide');
+            $(that).parent().addClass('bl-selected');
+
+            // Change skip button copy
+            if ($('.bl-slider-checkbox-sim.bl-selected').length > 0) {
+                //$('.bl-rf-button.bl-slider-skip-button').text('NEXT QUESTION');
+                $('.bl-rf-button.bl-slider-skip-button').addClass('bl-option-selected');
+                $(that).parent().siblings('.pulsatingCircle').addClass('active');
+                $(that).parent().siblings('.bl-rabbit-shape-container').find('.bl-rabbit-shape-circle').addClass('active');
+            }
+
+            // Active vibration video
+            if ($(that).closest('.bl-slider-checkbox-sim').prev().hasClass('bl-vibration-animation-overlay-circle-container')) {
+                $(that).closest('.bl-slider-checkbox-sim').prev().find('.bl-vibration-animation-overlay-circle').addClass('bl-active');
+            }
+
+        } else {
+            $(that).parent().find('.bl-tick-container').addClass('bl-hide');
+            $(that).parent().removeClass('bl-selected');
+            // Change skip button copy
+            if ($('.bl-slider-checkbox-sim.bl-selected').length === 0) {
+                //$('.bl-rf-button.bl-slider-skip-button').text('MORE OPTIONS');
+                $('.bl-rf-button.bl-slider-skip-button').removeClass('bl-option-selected');
+                $(that).parent().siblings('.pulsatingCircle').removeClass('active');
+                $(that).parent().siblings('.bl-rabbit-shape-container').find('.bl-rabbit-shape-circle').removeClass('active');
+            }
+
+            // Deactive vibration video
+            if ($(that).closest('.bl-slider-checkbox-sim').prev().hasClass('bl-vibration-animation-overlay-circle-container')) {
+                $(that).closest('.bl-slider-checkbox-sim').prev().find('.bl-vibration-animation-overlay-circle').removeClass('bl-active');
+            }
+        }
+
+        // Search
+        // var selectedCat = $(that).parent().data('search-category');
+        var selectedCat = that[0].parentNode.getAttribute('data-search-category');
+
+        ASSTBG_1.filteredRabbits = ASRFS.filterRabbits(ASSTBG_1.getFilterOptions(selectedCat));
+        var matchesText = ' matches';
+        if (ASSTBG_1.filteredRabbits.length === 1) {
+            matchesText = ' match';
+        }
+        $('.bl-slider-results-button').text(ASSTBG_1.filteredRabbits.length + matchesText);
+    }
+
+    /* View PDP */
+    $(document).on('click tap', '.bl-product-plp-tile .bl-rf-button', function (e) {
+        ASSTBG_1.loadPage();
+        const cat = 'all';
+        const page = 7;
+        const direction = 'next';
+        // let id = $(this).data('id');
+        let id = e.currentTarget.getAttribute('data-id');
+
+        // BL_PLP_SELECTED_GLOBAL.title = $(tile).find('.bl-product-title').text();
+        // BL_PLP_SELECTED_GLOBAL.img = $(tile).find('img').attr('src');
+        // BL_PLP_SELECTED_GLOBAL.price = $(tile).find('.bl-plp-price').val();
+        // console.log(BL_PLP_SELECTED_GLOBAL.price);
+        // let properties = $(tile).find('.bl-details-list p');
+        // for (let i = 0; i < properties.length; i++) {
+        //     BL_PLP_SELECTED_GLOBAL.props[i] = $(properties[i]).text();
+        // }
+        ASSTBG_1.showPage(cat, page, direction, id);
+        $('.bl-pdp-back-arrow').show();
+    })
+
+    /* Show all dildos */
+    $(document).on('click tap', '.bl-rf-button.bl-view-all', function () {
+        ASSTBG_1.loadPage();
+        setTimeout(function(){
+            $('html').removeClass('bl-app-loading');
+        }, 300);
+        const cat = 'all';
+        const page = 6;
+        const direction = 'next';
+        if ($(this).hasClass('bl-rabbits-filtered')) {
+            showAllRabbits = false;
+        }
+
+        ASSTBG_1.showPage(cat, page, direction);
+    })
+
+    /* Change preferences button */
+    $(document).on('click tap', '.bl-change-preference-button-cont', function () {
+        ASSTBG_1.loadPage();
+        ASSTBG_1.showPage('home', 1, 'previous');
+
+        //  change view all button text
+        var filtered = false;
+        if (BL_RESULTS_GLOBAL.home.feel || BL_RESULTS_GLOBAL.home.intensity || BL_RESULTS_GLOBAL.home.size || BL_RESULTS_GLOBAL.home.style) {
+            var filteredPorudcts = ASSTBG_1.filteredRabbits.length;
+            $('.bl-rf-button.bl-view-all').html('<span class="bl-text-button">View ' + filteredPorudcts + ' matched Rabbits</span>');
+            $('.bl-rf-button.bl-view-all').addClass('bl-rabbits-filtered');
+        } else {
+            $('.bl-rf-button.bl-view-all').html('<span class="bl-text-button">Or... view all rabbits</span>');
+            $('.bl-rf-button.bl-view-all').removeClass('bl-rabbits-filtered');
+        }
+
+    })
+
+    /* Add to Bag / Close app */
+    //  $(document).on('click.basket_add tap.basket_add', '.bl-pdp-add-to-bag #add-to-cart', function () {
+    //      $('html').addClass('bl-app-loading');
+    //      $('.bl-container').hide();
+    //      ASSTBG_1.showPage('home', 1, 'previous');
+    //  })
+
+    /* Back to PDP */
+    $(document).on('click tap', '.bl-pdp-back-button', function () {
+        ASSTBG_1.loadPage();
+        ASSTBG_1.showPage('pdp', 6, 'previous');
+    })
+
+    $(document).on('click tap', '.bl-slider-skip-button', function () {
+        ASSTBG_1.loadPage();
+        ASSTBG_1.showPage('home', 1, 'previous');
+        // const type = $('.bl-slider-inner-container').data('type');
+        const type = document.querySelector('.bl-slider-inner-container').getAttribute('data-type');
+        var sliderCheckboxs = document.querySelectorAll('.bl-slider-checkbox-sim');
+        BL_RESULTS_GLOBAL.page[type].one = $(sliderCheckboxs[0]).hasClass('bl-selected') ? true : false;
+        BL_RESULTS_GLOBAL.page[type].two = $(sliderCheckboxs[1]).hasClass('bl-selected') ? true : false;
+        BL_RESULTS_GLOBAL.page[type].three = $(sliderCheckboxs[2]).hasClass('bl-selected') ? true : false;
+        BL_RESULTS_GLOBAL.page[type].four = $(sliderCheckboxs[3]).hasClass('bl-selected') ? true : false;
+
+        if (BL_RESULTS_GLOBAL.page[type].one === true || BL_RESULTS_GLOBAL.page[type].two === true ||
+            BL_RESULTS_GLOBAL.page[type].three === true || BL_RESULTS_GLOBAL.page[type].four === true) {
+            BL_RESULTS_GLOBAL.home[type] = true;
+            $('.bl-guide-menu-item').each(function () {
+                // if ($(this).data('cat') === type) {
+                //     $(this).addClass('bl-home-item-selected');
+                // }
+                if (this.getAttribute('data-cat') === type) {
+                    $(this).addClass('bl-home-item-selected');
+                }
+            })
+        } else {
+            BL_RESULTS_GLOBAL.home[type] = false;
+            $('.bl-guide-menu-item').each(function () {
+                // if ($(this).data('cat') === type) {
+                //     $(this).removeClass('bl-home-item-selected');
+                // }
+                if (this.getAttribute('data-cat') === type) {
+                    $(this).removeClass('bl-home-item-selected');
+                }
+            })
+        }
+
+        //  change view all button text
+        var filtered = false;
+        if (BL_RESULTS_GLOBAL.home.feel || BL_RESULTS_GLOBAL.home.intensity || BL_RESULTS_GLOBAL.home.size || BL_RESULTS_GLOBAL.home.style) {
+            var filteredPorudcts = ASSTBG_1.filteredRabbits.length;
+            $('.bl-rf-button.bl-view-all').html('<span class="bl-text-button">View ' + filteredPorudcts + ' matched Rabbits</span>');
+            $('.bl-rf-button.bl-view-all').addClass('bl-rabbits-filtered');
+        } else {
+            $('.bl-rf-button.bl-view-all').html('<span class="bl-text-button">Or... view all rabbits</span>');
+            $('.bl-rf-button.bl-view-all').removeClass('bl-rabbits-filtered');
+        }
+    })
+
+    $(document).on('click tap', '.bl-info-details .bl-info-chevron', function () {
+        ASSTBG_1.loadPage();
+        var page = this.getAttribute('data-cat');
+        var pageNumber = parseInt(this.getAttribute('data-page')) + 1;
+        // var page = $(this).data('cat');
+        // var pageNumber = parseInt($(this).data('page')) + 1;
+        ASSTBG_1.showPage(page, pageNumber, 'next');
+    })
+
+    // Clear all filters
+    $(document).on('click tap', '.bl-product-plp-tile-no-results .bl-product-tile-no-results-button', function () {
+        // show loading screen
+        $('#bl-header').css('opacity', '0');
+        $('.bl-loading-screen').show();
+        $('.bl-loading-screen').addClass('animate');
+
+        // Loading dots
+        var loadingDotTotal = 0;
+        var delay = 200;
+        var loadingDots = setInterval(function () {
+            if (loadingDotTotal === 1) {
+                $('.loading-dots').text('.');
+            } else if (loadingDotTotal === 2) {
+                $('.loading-dots').text('..');
+            } else if (loadingDotTotal === 3) {
+                $('.loading-dots').text('...');
+            } else if (loadingDotTotal === 4) {
+                $('.loading-dots').text('....');
+                loadingDotTotal = 0;
+            }
+            loadingDotTotal++;
+
+        }, 200);
+
+        // hide loading screen
+        setTimeout(function () {
+            $('.bl-loading-screen').hide();
+            $('.bl-loading-screen').removeClass('animate');
+            $('#bl-header').css('opacity', '1');
+            clearInterval(loadingDots);
+        }, 2500);
+
+        let options = {
+            // forCouples: false,
+            waterproof: false,
+            usb: false,
+            quiet: false
+        };
+
+        $('.bl-pdp-filter').removeClass('bl-selected');
+        $('.bl-pdp-filter span').addClass('bl-hide');
+        // Refine
+        ASSTBG_1.refinedRabbits = ASRFS.refineFilterRabbits(options, ASSTBG_1.filteredRabbits, 0);
+        let productHTML = ASSTBG_1.setupProducts(ASSTBG_1.refinedRabbits);
+        $('.bl-plp-horizontal-products').html(productHTML);
+        $('.bl-plp-horizontal-products').scrollLeft(0);
+    })
+
+    // Filters on horiztonal bar on PLP page
+    $(document).on('click tap', '.bl-pdp-filter', function () {
+
+        // show loading screen
+        $('#bl-header').css('opacity', '0');
+        $('.bl-loading-screen').show();
+        $('.bl-loading-screen').addClass('animate');
+
+        // Loading dots
+        var loadingDotTotal = 0;
+        var delay = 200;
+        var loadingDots = setInterval(function () {
+            if (loadingDotTotal === 1) {
+                $('.loading-dots').text('.');
+            } else if (loadingDotTotal === 2) {
+                $('.loading-dots').text('..');
+            } else if (loadingDotTotal === 3) {
+                $('.loading-dots').text('...');
+            } else if (loadingDotTotal === 4) {
+                $('.loading-dots').text('....');
+                loadingDotTotal = 0;
+            }
+            loadingDotTotal++;
+
+        }, 200);
+
+        // hide loading screen
+        setTimeout(function () {
+            $('.bl-loading-screen').hide();
+            $('.bl-loading-screen').removeClass('animate');
+            $('#bl-header').css('opacity', '1');
+            clearInterval(loadingDots);
+        }, 2500);
+
+        let options = {
+            // forCouples: false,
+            waterproof: false,
+            usb: false,
+            quiet: false
+        };
+        if ($(this).hasClass('bl-selected')) {
+            $(this).removeClass('bl-selected');
+        } else {
+            $(this).addClass('bl-selected');
+        }
+
+        if ($(this).find('span').hasClass('bl-hide')) {
+            $(this).find('span').removeClass('bl-hide');
+        } else {
+            $(this).find('span').addClass('bl-hide');
+        }
+
+        let filterCount = 0;
+        $('.bl-pdp-filter.bl-selected').each(function () {
+            // let selectedFilter = $(this).data('filter');
+            let selectedFilter = this.getAttribute('data-filter');
+            // if (selectedFilter === "forCouples") {
+            //     options.forCouples = true;
+            //     filterCount++;
+            // } else if (selectedFilter === "waterproof") {
+            if (selectedFilter === "waterproof") {
+                options.waterproof = true;
+                filterCount++;
+            } else if (selectedFilter === "usb") {
+                options.usb = true;
+                filterCount++;
+            } else if (selectedFilter === "quiet") {
+                options.quiet = true;
+                filterCount++;
+            }
+        });
+
+        // Refine
+        ASSTBG_1.refinedRabbits = ASRFS.refineFilterRabbits(options, ASSTBG_1.filteredRabbits, filterCount);
+        let productHTML = ASSTBG_1.setupProducts(ASSTBG_1.refinedRabbits);
+        $('.bl-plp-horizontal-products').html(productHTML);
+        $('.bl-plp-horizontal-products').scrollLeft(0);
+    })
+
+    $(document).on('click tap', '#bl-header .mini-cart-total', function () {
+        var miniCartContent = $(this).next();
+        $(miniCartContent).show();
+        setTimeout(function () {
+            $(miniCartContent).hide();
+        }, 3000);
+    });
+
+    $(document).on('click tap', '#bl-sex-toy-guide .bl-add-to-bag', function (e) {
+        //e.preventDefault();
+        //  $(this).closest('form').submit();
+        var URL = $(this).closest('form').attr('action');
+        // Scroll to other items
+        $('.bl-add-to-bag-confirmation').fadeIn("slow");
+        setTimeout(function () {
+            $('.bl-add-to-bag-confirmation').fadeOut("slow");
+        }, 3000);
+        $('#bl-sex-toy-guide .bl-pdp-page').animate({
+            scrollTop: Math.abs($('.product-bottom-content').offset().top + 200)
+        }, 400);
+
+        ASSTBG_1.setCookie('BL-PRODUCT-ADDED', 'true', 1);
+    });
+
+    ASSTBG_1.exitHandler = function () {
+        if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
+            ///fire your event
+            $('#bl-sex-toy-guide').removeClass('bl-display');
+            $('body').removeClass('bl-sex-toy-guide-visible');
+            $('html').removeClass('bl-sex-toy-guide-visible');
+            console.log('closed');
+
+        }
+    }
+
+    // QTY
+    //  $(document).on('click tap', '#bl-sex-toy-guide .count', function(){
+    //      var counter = $(this).parent().find('input');
+    //     if($(this).hasClass('inc')){
+    //         $(counter).val(function(i, oldVal){
+    //             return ++oldVal;
+    //         });
+    //     } else if($(this).hasClass('dec')){
+    //         $(counter).val(function(i, oldVal){
+    //             return oldVal-- > 1 ? oldVal-- : 1;
+    //         });
+    //     }
+    //  })
+
+    // Exit full screen 
+    document.addEventListener('fullscreenchange', ASSTBG_1.exitHandler);
+    document.addEventListener('webkitfullscreenchange', ASSTBG_1.exitHandler);
+    document.addEventListener('mozfullscreenchange', ASSTBG_1.exitHandler);
+    document.addEventListener('MSFullscreenChange', ASSTBG_1.exitHandler);
+
+    // On orientation change
+    window.addEventListener("resize", function () {
+        var width = $(window).width();
+        var height = $(window).height();
+        var landscapeOverlay = $('.bl-landscape-overlay');
+        if (width > height) {
+            $(landscapeOverlay).show();
+        } else {
+            $(landscapeOverlay).hide();
+        }
+    }, false);
+
+    // detect swipe
+    ASSTBG_1.addSwipeEvent = (el, swipeFn, leftParam, rightParam) => {
+        let count = 0;
+        const maxCount = 100;
+        const delay = 50;
+        const swipeInterval = setInterval(function () {
+            const slider = document.querySelector(el);
+            if (slider !== undefined && slider) {
+                slider.addEventListener('touchstart', handleTouchStart, false);
+                slider.addEventListener('touchmove', handleTouchMove, false);
+                var xDown = null;
+                var yDown = null;
+                function handleTouchStart(evt) {
+                    xDown = evt.touches[0].clientX;
+                    yDown = evt.touches[0].clientY;
+                }
+
+                function handleTouchMove(evt) {
+                    if (!xDown || !yDown) {
+                        return;
+                    }
+
+                    var xUp = evt.touches[0].clientX;
+                    var yUp = evt.touches[0].clientY;
+
+                    var xDiff = xDown - xUp;
+                    var yDiff = yDown - yUp;
+
+                    if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
+                        if (xDiff > 0) {
+                            /* left swipe */
+                            swipeFn(leftParam);
+                        } else {
+                            /* right swipe */
+                            swipeFn(rightParam);
+                        }
+                    }
+                    /* reset values */
+                    xDown = null;
+                    yDown = null;
+                }
+                clearInterval(swipeInterval);
+            }
+            if (count > maxCount) {
+                clearInterval(swipeInterval);
+            }
+            count++;
+        }, delay);
+    }
+
+    /* Run functions on load */
+    ASSTBG_1.init();
+    ASSTBG_1.getShapeSVGs = () => {
+        const svgs = {};
+        // svgs.gspot = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/ebd47dd90932abaa4c77a0c6ddd6cb31_500_500.png`;
+        // svgs.flexible = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/b515e2e1f34ff323ab04b62db11fa2c0_500_500.png`;
+        // svgs.straight = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/1a58c711fc704f0673243b907701f7f7_500_500.png`;
+        // svgs.contoured = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/b5ba0893f4f0b1a5729a8ea691e56111_500_500.png`;
+        svgs.flexible = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/ebd47dd90932abaa4c77a0c6ddd6cb31_500_500.png`;
+        svgs.straight = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/b515e2e1f34ff323ab04b62db11fa2c0_500_500.png`;
+        svgs.contoured = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/1a58c711fc704f0673243b907701f7f7_500_500.png`;
+        svgs.gspot = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/b5ba0893f4f0b1a5729a8ea691e56111_500_500.png`;
+
+
+        return svgs;
+    }
+    ASSTBG_1.getRulerSVGs = () => {
+        const svgs = {};
+        svgs.threeToFive = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/1f543ed0b04fa1b03752c12ce72f2adc_288_283.png`;
+        svgs.fiveToFive = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/64884ae20afe004df5bd2f09b5f29b59_288_283.png`;
+        svgs.overFive = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/65b20bfcea61e250f2fc8679f2355f05_288_283.png`;
+        svgs.upToThree = `https://dd6zx4ibq538k.cloudfront.net/static/images/3158/0a3a1dc70bf978af647dcfb71483346f_288_283.png`;
+        return svgs;
+    }
+})

@@ -543,7 +543,7 @@ ASRFS.setupRabbits = function () {
             size: "Realistic",
             feel: "Contoured and flexible"
         }, {
-            name: 'NOVA BY WE-VIBE',
+            name: 'Nova by We-Vibe',
             price: '£107.00',
             brand: 'We-Vibe',
             forCouples: false,
@@ -909,62 +909,62 @@ ASRFS.setupRabbits = function () {
     );
 
     // MAGNET RABBIT>>NO COLOUR>>NO SIZE
-    ASRFS.pushRabbit(
-        15,
-        'https://www.annsummers.com/magnetize-rampant-rabbit.html',
-        'https://i1.adis.ws/i/annsummers/Magnetize_product_image_hero_rabbit?$product-large$',
-        {
-            intensity: [3],
-            style: [1, 3],
-            size: [3],
-            feel: [1, 4]
-        },{
-            intensity: "Powerful",
-            style: "7 speeds and patterns",
-            size: "Realistic",
-            feel: "Contoured and flexible"
-        }, {
-            name: 'Magnetize Rampant Rabbit',
-            price: '£80.00',
-            brand: 'Ann Summers',
-            forCouples: false,
-            waterResistant: true,
-            flexibility: {
-                firm: true,
-                flexable: false,
-                soft: false
-            },
-            material: {
-                silicone: true,
-                metal: false
-            },
-            controllerType: {
-                pushButton: true,
-                switch: false,
-                app: false
-            },
-            noiseLevel: {
-                quiet: false,
-                normal: true
-            },
-            powerSource: {
-                USB: true,
-                battery: {
-                    used: false,
-                    batteryType: '',
-                    noBattery: 0,
-                    batteryIncluded: false,
-                }
-            },
-            matchedFeatures: {
-                size: false,
-                intensity: false,
-                feel: false,
-                style: false
-            }
-        },
-        0
-    );
+    // ASRFS.pushRabbit(
+    //     15,
+    //     'https://www.annsummers.com/magnetize-rampant-rabbit.html',
+    //     'https://i1.adis.ws/i/annsummers/Magnetize_product_image_hero_rabbit?$product-large$',
+    //     {
+    //         intensity: [3],
+    //         style: [1, 3],
+    //         size: [3],
+    //         feel: [1, 4]
+    //     },{
+    //         intensity: "Powerful",
+    //         style: "7 speeds and patterns",
+    //         size: "Realistic",
+    //         feel: "Contoured and flexible"
+    //     }, {
+    //         name: 'Magnetize Rampant Rabbit',
+    //         price: '£80.00',
+    //         brand: 'Ann Summers',
+    //         forCouples: false,
+    //         waterResistant: true,
+    //         flexibility: {
+    //             firm: true,
+    //             flexable: false,
+    //             soft: false
+    //         },
+    //         material: {
+    //             silicone: true,
+    //             metal: false
+    //         },
+    //         controllerType: {
+    //             pushButton: true,
+    //             switch: false,
+    //             app: false
+    //         },
+    //         noiseLevel: {
+    //             quiet: false,
+    //             normal: true
+    //         },
+    //         powerSource: {
+    //             USB: true,
+    //             battery: {
+    //                 used: false,
+    //                 batteryType: '',
+    //                 noBattery: 0,
+    //                 batteryIncluded: false,
+    //             }
+    //         },
+    //         matchedFeatures: {
+    //             size: false,
+    //             intensity: false,
+    //             feel: false,
+    //             style: false
+    //         }
+    //     },
+    //     0
+    // );
 
     // SENSATIONS G-SPOT GESTURE ONE>>GREEN>>NO SIZE -- REMOVED FROM SITE
     // ASRFS.pushRabbit(
@@ -1786,7 +1786,7 @@ ASRFS.setupRabbits = function () {
     ASRFS.pushRabbit(
         29,
         'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-vibrators/pulsar-double-stimulation-vibrator/86712.html#start=4',
-        'https://i1.adis.ws/i/annsummers/07SCNRAS1187041_Z?$product-large$',
+        'https://i1.adis.ws/i/annsummers/07NCSVAS1149041_Z?$product-mobile-large$',
         {
             intensity: [1],
             style: [3],
@@ -1844,7 +1844,7 @@ ASRFS.setupRabbits = function () {
     ASRFS.pushRabbit(
         30,
         'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-vibrator---the-g-spot-one/86355.html#start=12',
-        'https://i1.adis.ws/i/annsummers/07SCNRAS1187041_Z?$product-large$',
+        'https://i1.adis.ws/i/annsummers/07SCNRAS1181041_Z?$product-mobile-large$',
         {
             intensity: [2],
             style: [1, 3],
@@ -1902,7 +1902,7 @@ ASRFS.setupRabbits = function () {
     ASRFS.pushRabbit(
         31,
         'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-vibrators/lelo-soraya-luxury-rechargeable-vibrator/50714.html#start=6',
-        'https://i1.adis.ws/i/annsummers/07SCNRAS1187041_Z?$product-large$',
+        'https://i1.adis.ws/i/annsummers/07SCNRAS1163016_Z?$product-mobile-large$',
         {
             intensity: [3],
             style: [1, 3],
@@ -1960,7 +1960,7 @@ ASRFS.setupRabbits = function () {
     ASRFS.pushRabbit(
         32,
         'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbits-type-rechargeable/remote-controlled-rampant-rabbit/104339.html#start=3',
-        'https://i1.adis.ws/i/annsummers/07SCNRAS1187041_Z?$product-large$',
+        'https://i1.adis.ws/i/annsummers/07CPHDAS1018006_Z?$product-mobile-large$',
         {
             intensity: [1],
             style: [1, 3],
@@ -2018,7 +2018,7 @@ ASRFS.setupRabbits = function () {
     ASRFS.pushRabbit(
         32,
         'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/mila-rechargeable-flexible-rabbit-vibrator/88414.html#start=10',
-        'https://i1.adis.ws/i/annsummers/07SCNRAS1187041_Z?$product-large$',
+        'https://i1.adis.ws/i/annsummers/07NCSVAS1162043_Z?$product-mobile-large$',
         {
             intensity: [3],
             style: [1, 3],
@@ -2030,7 +2030,7 @@ ASRFS.setupRabbits = function () {
             size: "Larger",
             feel: "Contoured and flexible"
         }, {
-            name: 'MILA PINK RECHARGABLE FLEXIBLE ONE',
+            name: 'Mila Pink Rechargeable Flexible One',
             price: '£90.00',
             brand: 'Jil',
             forCouples: false,
@@ -2073,68 +2073,68 @@ ASRFS.setupRabbits = function () {
     );
 
     // PornHUB Virtual Rabbit
-    ASRFS.pushRabbit(
-        33,
-        'https://www.annsummers.com/pornhub-virtual-rabbit.html#start=8',
-        'https://i1.adis.ws/i/annsummers/07SCNRAS1187041_Z?$product-large$',
-        {
-            intensity: [2],
-            style: [1, 3],
-            size: [3],
-            feel: [1]
-        },{
-            intensity: "Intense",
-            style: "Vibration patterns and speeds",
-            size: "Realistic",
-            feel: "Contoured"
-        }, {
-            name: 'PornHUB Virtual Rabbit',
-            price: '£139.00',
-            brand: 'Pornhub',
-            forCouples: true,
-            waterResistant: true,
-            flexibility: {
-                firm: false,
-                flexable: true,
-                soft: false
-            },
-            material: {
-                silicone: true,
-                metal: false
-            },
-            controllerType: {
-                pushButton: false,
-                switch: true,
-                app: false
-            },
-            noiseLevel: {
-                quiet: true,
-                normal: false
-            },
-            powerSource: {
-                USB: true,
-                battery: {
-                    used: false,
-                    batteryType: '',
-                    noBattery: 2,
-                    batteryIncluded: false,
-                }
-            },
-            matchedFeatures: {
-                size: false,
-                intensity: false,
-                feel: false,
-                style: false
-            }
-        },
-        0
-    );
+    // ASRFS.pushRabbit(
+    //     33,
+    //     'https://www.annsummers.com/pornhub-virtual-rabbit.html#start=8',
+    //     'https://i1.adis.ws/i/annsummers/PH-RABBIT-VIRTUAL-TOY-v1_z?$product-large$',
+    //     {
+    //         intensity: [2],
+    //         style: [1, 3],
+    //         size: [3],
+    //         feel: [1]
+    //     },{
+    //         intensity: "Intense",
+    //         style: "Vibration patterns and speeds",
+    //         size: "Realistic",
+    //         feel: "Contoured"
+    //     }, {
+    //         name: 'PornHUB Virtual Rabbit',
+    //         price: '£139.00',
+    //         brand: 'Pornhub',
+    //         forCouples: true,
+    //         waterResistant: true,
+    //         flexibility: {
+    //             firm: false,
+    //             flexable: true,
+    //             soft: false
+    //         },
+    //         material: {
+    //             silicone: true,
+    //             metal: false
+    //         },
+    //         controllerType: {
+    //             pushButton: false,
+    //             switch: true,
+    //             app: false
+    //         },
+    //         noiseLevel: {
+    //             quiet: true,
+    //             normal: false
+    //         },
+    //         powerSource: {
+    //             USB: true,
+    //             battery: {
+    //                 used: false,
+    //                 batteryType: '',
+    //                 noBattery: 2,
+    //                 batteryIncluded: false,
+    //             }
+    //         },
+    //         matchedFeatures: {
+    //             size: false,
+    //             intensity: false,
+    //             feel: false,
+    //             style: false
+    //         }
+    //     },
+    //     0
+    // );
 
     // The Sleek One
     ASRFS.pushRabbit(
         34,
         'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-vibrator---the-sleek-one/92294.html#start=5',
-        'https://i1.adis.ws/i/annsummers/07SCNRAS1187041_Z?$product-large$',
+        'https://i1.adis.ws/i/annsummers/07CSNRAS1046014_Z?$product-mobile-large$',
         {
             intensity: [1],
             style: [1],
@@ -2192,7 +2192,7 @@ ASRFS.setupRabbits = function () {
     ASRFS.pushRabbit(
         35,
         'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-vibrator--the-rechargeable-mini-one/63316.html#start=2',
-        'https://i1.adis.ws/i/annsummers/07SCNRAS1187041_Z?$product-large$',
+        'https://i1.adis.ws/i/annsummers/07SCNRAS1153041_Z?$product-mobile-large$',
         {
             intensity: [1],
             style: [3],
@@ -2250,7 +2250,7 @@ ASRFS.setupRabbits = function () {
     ASRFS.pushRabbit(
         36,
         'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/vibrating-beginners-rabbit/100263.html#start=8',
-        'https://i1.adis.ws/i/annsummers/07SCNRAS1187041_Z?$product-large$',
+        'https://i1.adis.ws/i/annsummers/07SCNRAS1197043_Z?$product-mobile-large$',
         {
             intensity: [1],
             style: [3],
@@ -2308,7 +2308,7 @@ ASRFS.setupRabbits = function () {
     ASRFS.pushRabbit(
         37,
         'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/the-original-rampant-rabbit/67767.html#start=3',
-        'https://i1.adis.ws/i/annsummers/07SCNRAS1187041_Z?$product-large$',
+        'https://i1.adis.ws/i/annsummers/07SCRTAS1047041_Z?$product-mobile-large$',
         {
             intensity: [1],
             style: [2, 3],
@@ -2320,7 +2320,7 @@ ASRFS.setupRabbits = function () {
             size: "Smaller and realistic",
             feel: "Straight"
         }, {
-            name: 'ORIGINAL ONE',
+            name: 'Original One',
             price: '£21.00',
             brand: 'Ann Summers',
             forCouples: false,
@@ -2366,7 +2366,7 @@ ASRFS.setupRabbits = function () {
     ASRFS.pushRabbit(
         38,
         'https://www.annsummers.com/elation-rabbit.html#start=1',
-        'https://i1.adis.ws/i/annsummers/07SCNRAS1187041_Z?$product-large$',
+        'https://i1.adis.ws/i/annsummers/Elation-Rabbit-Profile-Shot1?$product-large$',
         {
             intensity: [1],
             style: [1, 3],
@@ -2378,7 +2378,7 @@ ASRFS.setupRabbits = function () {
             size: "Realistic",
             feel: "Contoured and g-spot"
         }, {
-            name: 'ELATION RABBIT',
+            name: 'Elation Rabbit',
             price: '£80.00',
             brand: 'Ann Summers',
             forCouples: false,

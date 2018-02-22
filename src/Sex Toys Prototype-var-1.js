@@ -14641,8 +14641,6 @@ $(document).ready(function () {
             var lastFowardSlashIndex = dataImage.lastIndexOf('/');
             dataImage = dataImage.substring(lastFowardSlashIndex, dataImage.length);
             dataImage = dataImage.split('.')[0];
-
-
         }
 
         // setup wrapper
@@ -14650,9 +14648,10 @@ $(document).ready(function () {
             if ($(data[i]).hasClass('wrapper')) {
                 $(data[i]).addClass('bl-pdp-container');
                 $(data[i]).prepend('<div class="bl-pdp-back-arrow"><span class="bl-pdp-back-arrow-icon">' + whiteChevronSVG + '</span>Back to results</div>');
-                if (dataImage !== undefined && dataImage !== null) {
-                    $(data[i]).find('.product-image').append('<img src="' + url + '/i/annsummers' + dataImage + '" />');
-                }
+               // if (dataImage !== undefined && dataImage !== null) {
+                    $(data[i]).find('.col-2 .product-image').append('<img class="bl-plp-image" src="' + url + '/i/annsummers' + dataImage + '" />');
+              //  }
+                console.log('image added');
                 data = data[i];
                 break;
             }
@@ -14687,9 +14686,9 @@ $(document).ready(function () {
         document.cookie = name + '=; Max-Age=-99999999;';
     }
 
-    ASSTBG_1.loadPage = function(){
+    ASSTBG_1.loadPage = function () {
         $('html').addClass('bl-app-loading');
-        setTimeout(function(){
+        setTimeout(function () {
             $('html').removeClass('bl-app-loading');
         }, 200);
     }
@@ -14902,7 +14901,7 @@ $(document).ready(function () {
             return false;
         }
         ASSTBG_1.loadPage();
-        
+
         const cat = 'all';
         const page = 6;
         const direction = 'next';
@@ -15055,7 +15054,7 @@ $(document).ready(function () {
     /* Show all dildos */
     $(document).on('click tap', '.bl-rf-button.bl-view-all', function () {
         ASSTBG_1.loadPage();
-        setTimeout(function(){
+        setTimeout(function () {
             $('html').removeClass('bl-app-loading');
         }, 300);
         const cat = 'all';

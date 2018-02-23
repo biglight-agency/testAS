@@ -766,6 +766,10 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     width: calc(100% - 30px);
     margin: 5px auto;
     border-radius: 5px;
+    margin: auto;
+    left: 0;
+    right: 0;
+
 }
 
 /* PDP reviews - disable clicks */
@@ -1904,12 +1908,8 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     font-size: 1.3em;
     cursor: pointer;
     border-radius: 10px;
-<<<<<<< HEAD
 } */
-=======
-    margin-left: 3%;
-}
->>>>>>> 1764a77a871275884b37e3ff87d1441d0ce5c368
+
 .bl-change-preference-button-cont p{
     position: relative;
     top: 3px;

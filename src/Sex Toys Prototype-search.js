@@ -909,62 +909,62 @@ ASRFS.setupRabbits = function () {
     );
 
     // MAGNET RABBIT>>NO COLOUR>>NO SIZE
-    // ASRFS.pushRabbit(
-    //     15,
-    //     'https://www.annsummers.com/magnetize-rampant-rabbit.html',
-    //     'https://i1.adis.ws/i/annsummers/Magnetize_product_image_hero_rabbit?$product-large$',
-    //     {
-    //         intensity: [3],
-    //         style: [1, 3],
-    //         size: [3],
-    //         feel: [1, 4]
-    //     },{
-    //         intensity: "Powerful",
-    //         style: "7 speeds and patterns",
-    //         size: "Realistic",
-    //         feel: "Contoured and flexible"
-    //     }, {
-    //         name: 'Magnetize Rampant Rabbit',
-    //         price: '£80.00',
-    //         brand: 'Ann Summers',
-    //         forCouples: false,
-    //         waterResistant: true,
-    //         flexibility: {
-    //             firm: true,
-    //             flexable: false,
-    //             soft: false
-    //         },
-    //         material: {
-    //             silicone: true,
-    //             metal: false
-    //         },
-    //         controllerType: {
-    //             pushButton: true,
-    //             switch: false,
-    //             app: false
-    //         },
-    //         noiseLevel: {
-    //             quiet: false,
-    //             normal: true
-    //         },
-    //         powerSource: {
-    //             USB: true,
-    //             battery: {
-    //                 used: false,
-    //                 batteryType: '',
-    //                 noBattery: 0,
-    //                 batteryIncluded: false,
-    //             }
-    //         },
-    //         matchedFeatures: {
-    //             size: false,
-    //             intensity: false,
-    //             feel: false,
-    //             style: false
-    //         }
-    //     },
-    //     0
-    // );
+    ASRFS.pushRabbit(
+        15,
+        'https://www.annsummers.com/magnetize-rampant-rabbit.html',
+        'https://i1.adis.ws/i/annsummers/Magnetize_product_image_hero_rabbit?$product-large$',
+        {
+            intensity: [3],
+            style: [1, 3],
+            size: [3],
+            feel: [1, 4]
+        },{
+            intensity: "Powerful",
+            style: "7 speeds and patterns",
+            size: "Realistic",
+            feel: "Contoured and flexible"
+        }, {
+            name: 'Magnetize Rampant Rabbit',
+            price: '£80.00',
+            brand: 'Ann Summers',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: true,
+                flexable: false,
+                soft: false
+            },
+            material: {
+                silicone: true,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: false,
+                normal: true
+            },
+            powerSource: {
+                USB: true,
+                battery: {
+                    used: false,
+                    batteryType: '',
+                    noBattery: 0,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
 
     // SENSATIONS G-SPOT GESTURE ONE>>GREEN>>NO SIZE -- REMOVED FROM SITE
     // ASRFS.pushRabbit(
@@ -2073,62 +2073,62 @@ ASRFS.setupRabbits = function () {
     );
 
     // PornHUB Virtual Rabbit
-    // ASRFS.pushRabbit(
-    //     33,
-    //     'https://www.annsummers.com/pornhub-virtual-rabbit.html#start=8',
-    //     'https://i1.adis.ws/i/annsummers/PH-RABBIT-VIRTUAL-TOY-v1_z?$product-large$',
-    //     {
-    //         intensity: [2],
-    //         style: [1, 3],
-    //         size: [3],
-    //         feel: [1]
-    //     },{
-    //         intensity: "Intense",
-    //         style: "Vibration patterns and speeds",
-    //         size: "Realistic",
-    //         feel: "Contoured"
-    //     }, {
-    //         name: 'PornHUB Virtual Rabbit',
-    //         price: '£139.00',
-    //         brand: 'Pornhub',
-    //         forCouples: true,
-    //         waterResistant: true,
-    //         flexibility: {
-    //             firm: false,
-    //             flexable: true,
-    //             soft: false
-    //         },
-    //         material: {
-    //             silicone: true,
-    //             metal: false
-    //         },
-    //         controllerType: {
-    //             pushButton: false,
-    //             switch: true,
-    //             app: false
-    //         },
-    //         noiseLevel: {
-    //             quiet: true,
-    //             normal: false
-    //         },
-    //         powerSource: {
-    //             USB: true,
-    //             battery: {
-    //                 used: false,
-    //                 batteryType: '',
-    //                 noBattery: 2,
-    //                 batteryIncluded: false,
-    //             }
-    //         },
-    //         matchedFeatures: {
-    //             size: false,
-    //             intensity: false,
-    //             feel: false,
-    //             style: false
-    //         }
-    //     },
-    //     0
-    // );
+    ASRFS.pushRabbit(
+        33,
+        'https://www.annsummers.com/pornhub-virtual-rabbit.html#start=8',
+        'https://i1.adis.ws/i/annsummers/PH-RABBIT-VIRTUAL-TOY-v1_z?$product-large$',
+        {
+            intensity: [2],
+            style: [1, 3],
+            size: [3],
+            feel: [1]
+        },{
+            intensity: "Intense",
+            style: "Vibration patterns and speeds",
+            size: "Realistic",
+            feel: "Contoured"
+        }, {
+            name: 'PornHUB Virtual Rabbit',
+            price: '£139.00',
+            brand: 'Pornhub',
+            forCouples: true,
+            waterResistant: true,
+            flexibility: {
+                firm: false,
+                flexable: true,
+                soft: false
+            },
+            material: {
+                silicone: true,
+                metal: false
+            },
+            controllerType: {
+                pushButton: false,
+                switch: true,
+                app: false
+            },
+            noiseLevel: {
+                quiet: true,
+                normal: false
+            },
+            powerSource: {
+                USB: true,
+                battery: {
+                    used: false,
+                    batteryType: '',
+                    noBattery: 2,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
 
     // The Sleek One
     ASRFS.pushRabbit(

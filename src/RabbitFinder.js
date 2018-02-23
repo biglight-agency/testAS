@@ -19,7 +19,7 @@
 */
 $(document).ready(function () {
 
-    // Rabbits
+    // rabbits
      // Rabbits
     /* 
  Author: Chris Davies 

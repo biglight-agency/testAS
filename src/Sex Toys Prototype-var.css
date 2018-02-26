@@ -66,10 +66,6 @@ html.bl-app-loading{
     display: block;
 }
 
-#bl-sex-toy-guide .col-1 .product-image .bl-plp-image{
-    display: none;
-}
-
 .bl-cross{
     color: transparent !important;
     position: absolute;
@@ -768,15 +764,7 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     border-radius: 5px;
 }
 
-/* PDP reviews - disable clicks */
-.trustpilot-widget, 
-.tp-widget-container,
-.tp-widget-container + div{
-    pointer-events: none;
-}
-.tp-widget-container + div{
-    display: none !important;
-}
+/**/
 
 /* Rabbit introduction and info screen */
 .bl-info-page, .bl-intro-page{
@@ -1303,8 +1291,7 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
 
 #bl-sex-toy-guide .bl-pdp-back-arrow{
     display: none;
-    position: fixed;
-    z-index: 9;
+    position: relative;
 }
 
 #bl-sex-toy-guide .bl-pdp-back-arrow .bl-pdp-back-arrow-icon{
@@ -1313,10 +1300,6 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     left: 60px;
     top: 11px;
 
-}
-
-#bl-sex-toy-guide #mp-pusher{
-    top: 55px;
 }
 
 .bl-add-to-bag-confirmation{
@@ -1329,8 +1312,13 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     left: 0;
     right: 0;
     text-align: center;
-    z-index: 10;
-    background-color: #E3338B;
+    z-index: 9;
+    background: linear-gradient(200deg, #229ABA, #E3338B, #F0E02C);
+    background: radial-gradient(circle, #229ABA, #E3338B, #F0E02C);
+    background-size: 1200% 1000%;
+    -webkit-animation: fadeBG 50s ease infinite;
+    -moz-animation: fadeBG 50s ease infinite;
+    animation: fadeBG 50s ease infinite;
     cursor: pointer;
     text-transform: uppercase;
     font-weight: bold;
@@ -1877,7 +1865,7 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     text-align: center;
 } */
 
-.bl-change-preference-button-cont{
+/* .bl-change-preference-button-cont{
     position: fixed;
     height: 60px;
     color: white;
@@ -1890,8 +1878,8 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     text-transform: uppercase;
     font-size: 1.3em;
     cursor: pointer;
-}
-/* .bl-change-preference-button-cont{
+} */
+.bl-change-preference-button-cont{
     position: fixed;
     height: 60px;
     color: white;
@@ -1904,7 +1892,8 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     font-size: 1.3em;
     cursor: pointer;
     border-radius: 10px;
-} */
+    margin-left: 3%;
+}
 .bl-change-preference-button-cont p{
     position: relative;
     top: 3px;

@@ -13865,9 +13865,6 @@ $(document).ready(function () {
                 let items = ASSTBG_1.setupProducts(content.products);
                 html = `
                  <div class="bl-new-container bl-plp-page" style="right:${width}px">
-                     <div class="bl-change-preference-button-cont">
-                         <p class="bl-change-preference-button">Return to options</p>
-                     </div>
                      <p class="bl-plp-header">Suggested for you:</p>
                      <div class="bl-plp-horizontal-filters-cont">
                          <div class="bl-plp-horizontal-filter-title">
@@ -13892,6 +13889,9 @@ $(document).ready(function () {
                      </div>
                      <div class="bl-plp-horizontal-products">
                          ${items}
+                     </div>
+                     <div class="bl-change-preference-button-cont">
+                         <p class="bl-change-preference-button">Return to options</p>
                      </div>
                  </div>`
             }

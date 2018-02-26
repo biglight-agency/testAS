@@ -14648,9 +14648,9 @@ $(document).ready(function () {
             if ($(data[i]).hasClass('wrapper')) {
                 $(data[i]).addClass('bl-pdp-container');
                 $(data[i]).prepend('<div class="bl-pdp-back-arrow"><span class="bl-pdp-back-arrow-icon">' + whiteChevronSVG + '</span>Back to results</div>');
-               // if (dataImage !== undefined && dataImage !== null) {
-                    $(data[i]).find('.col-2 .product-image').append('<img class="bl-plp-image" src="' + url + '/i/annsummers' + dataImage + '" />');
-              //  }
+                // if (dataImage !== undefined && dataImage !== null) {
+                $(data[i]).find('.col-2 .product-image').append('<img class="bl-plp-image" src="' + url + '/i/annsummers' + dataImage + '" />');
+                //  }
                 console.log('image added');
                 data = data[i];
                 break;
@@ -14753,6 +14753,12 @@ $(document).ready(function () {
     $(document).on('click tap', '.bl-guide-banner', function () {
         // Set screen to full screen
         ASSTBG_1.toggleFullScreen(true);
+
+        // Set iPhone Class
+        if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
+            $('#id="bl-sex-toy-guide').addClass('bl-ios-device');
+            alert('iPhone');
+        }
 
         $('.bl-container').addClass('bl-display');
         $('body').addClass('bl-sex-toy-guide-visible');

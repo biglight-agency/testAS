@@ -66,6 +66,10 @@ html.bl-app-loading{
     display: block;
 }
 
+#bl-sex-toy-guide .col-1 .product-image .bl-plp-image{
+    display: none;
+}
+
 .bl-cross{
     color: transparent !important;
     position: absolute;
@@ -543,8 +547,8 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     display: none;
     position: fixed;
     width: 100%;
-    /* height: 100%; */
-    height: 100vh;
+    height: 100%;
+    /* height: 100vh; */
     background: black;
     z-index: 99998;
     opacity: 0.7;
@@ -563,8 +567,8 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
 /* Loading screen */
 .bl-loading-screen{
     width: 100%;
-    /* height: 100%; */
-    height: 100vh;
+    height: 100%;
+    /* height: 100vh; */
     z-index: 10;
     background: linear-gradient(200deg, #229ABA, #E3338B, #F0E02C);
     background: radial-gradient(circle, #229ABA, #E3338B, #F0E02C);
@@ -762,9 +766,19 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     width: calc(100% - 30px);
     margin: 5px auto;
     border-radius: 5px;
+    left: 0;
+    right: 0;
 }
 
-/**/
+/* PDP reviews - disable clicks */
+.trustpilot-widget, 
+.tp-widget-container,
+.tp-widget-container + div{
+    pointer-events: none;
+}
+.tp-widget-container + div{
+    display: none !important;
+}
 
 /* Rabbit introduction and info screen */
 .bl-info-page, .bl-intro-page{
@@ -884,8 +898,8 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     display: none;
     background: white;
     width: 100%;
-    /* height: 100%; */
-    height: 100vh;
+    height: 100%;
+    /* height: 100vh; */
     top: 0px;
     position: relative;
     z-index: 99999;
@@ -1291,7 +1305,8 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
 
 #bl-sex-toy-guide .bl-pdp-back-arrow{
     display: none;
-    position: relative;
+    position: fixed;
+    z-index: 9;
 }
 
 #bl-sex-toy-guide .bl-pdp-back-arrow .bl-pdp-back-arrow-icon{
@@ -1300,6 +1315,10 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     left: 60px;
     top: 11px;
 
+}
+
+#bl-sex-toy-guide #mp-pusher{
+    top: 55px;
 }
 
 .bl-add-to-bag-confirmation{
@@ -1312,13 +1331,8 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     left: 0;
     right: 0;
     text-align: center;
-    z-index: 9;
-    background: linear-gradient(200deg, #229ABA, #E3338B, #F0E02C);
-    background: radial-gradient(circle, #229ABA, #E3338B, #F0E02C);
-    background-size: 1200% 1000%;
-    -webkit-animation: fadeBG 50s ease infinite;
-    -moz-animation: fadeBG 50s ease infinite;
-    animation: fadeBG 50s ease infinite;
+    z-index: 10;
+    background-color: #E3338B;
     cursor: pointer;
     text-transform: uppercase;
     font-weight: bold;
@@ -1865,8 +1879,7 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     text-align: center;
 } */
 
-/* .bl-change-preference-button-cont{
-    position: fixed;
+.bl-change-preference-button-cont{
     height: 60px;
     color: white;
     background-color: black;
@@ -1878,8 +1891,13 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     text-transform: uppercase;
     font-size: 1.3em;
     cursor: pointer;
-} */
-.bl-change-preference-button-cont{
+    margin: 10px auto;
+    left: 0;
+    right: 0;
+    width: 95%;
+    border-radius: 10px;
+}
+/* .bl-change-preference-button-cont{
     position: fixed;
     height: 60px;
     color: white;
@@ -1892,11 +1910,11 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
     font-size: 1.3em;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 3%;
-}
+} */
 .bl-change-preference-button-cont p{
     position: relative;
     top: 3px;
+    padding-top: 15px;
 }
 
 .bl-pdp-back-button{
@@ -2222,8 +2240,8 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
 
 .bl-size-slider .bl-rabbit-size-image-container{
     width: 100%;
-    /* height: 100%; */
-    height: 100vh;
+    height: 100%;
+    /* height: 100vh; */
     position: relative;
 }
 

@@ -17343,6 +17343,7 @@ $(document).ready(function () {
         ASSTBG_1.toggleFullScreen(true);
 
         // Set iPhone Class
+        alert('in');
         if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
             $('#bl-sex-toy-guide').addClass('bl-ios-device');
             alert('iPhone');

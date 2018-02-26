@@ -17344,7 +17344,7 @@ $(document).ready(function () {
 
         // Set iPhone Class
         if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
-            $('#id="bl-sex-toy-guide').addClass('bl-ios-device');
+            $('#bl-sex-toy-guide').addClass('bl-ios-device');
             alert('iPhone');
         }
 

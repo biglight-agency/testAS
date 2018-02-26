@@ -9,6 +9,47 @@ html.bl-app-loading{
     pointer-events: none;
 }
 
+/* iPhone specific */
+#bl-sex-toy-guide.bl-ios-device .bl-guide-menu-item{
+    height: 20.7vh;
+    width: 20.7vh;
+}
+
+#bl-sex-toy-guide.bl-ios-device .bl-container .bl-rf-button{
+    padding: 1.7vh;
+}
+
+#bl-sex-toy-guide.bl-ios-device .bl-rf-button{
+    margin-top: 5px;
+}
+
+#bl-sex-toy-guide.bl-ios-devicee .bl-info-page, #bl-sex-toy-guide.bl-ios-device .bl-intro-page{
+    height: 92vh;
+}
+
+#bl-sex-toy-guide.bl-ios-device .bl-btn-container .bl-start{
+    bottom: 70px;
+}
+
+#bl-sex-toy-guide.bl-ios-device .bl-plp-page .bl-plp-horizontal-products{
+    height: 53vh;
+}
+
+#bl-sex-toy-guide.bl-ios-device .bl-info-container button{
+    margin-bottom: 110px;
+}
+
+#bl-sex-toy-guide.bl-ios-device .bl-slider-buttons{
+    bottom: 15vh;
+}
+
+#bl-sex-toy-guide.bl-ios-device .bl-change-preference-button-cont{
+    height: 45px;
+}
+
+#bl-sex-toy-guide.bl-ios-device .bl-change-preference-button-cont p{
+    padding-top: 10px;
+}
 /* OVERLAY LANDSCAPE */
 .bl-landscape-overlay{
     background: #E3338B; /* Old browsers */
@@ -911,7 +952,7 @@ html.bl-sex-toy-guide-visible, body.bl-sex-toy-guide-visible{
 
 .bl-container h3{
     color: white;
-    font-size: 4vh;
+    font-size: 3.7vh;
     position: relative;
     line-height: 40px;
     font-weight: 100;

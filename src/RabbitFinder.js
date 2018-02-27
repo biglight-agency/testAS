@@ -19,7 +19,7 @@
 */
 $(document).ready(function () {
 
-    // Rabbit
+    // Rabbits
     // Rabbits
     /* 
  Author: Chris Davies 
@@ -2795,10 +2795,19 @@ $(document).ready(function () {
              <div class="bl-guide-banner" style="height: 0;">
                  <div class="bl-banner-message">
                      <p class="bl-banner-title">Find your perfect Rabbit</p>
-                     <p class="bl-banner-desc"><span>Try the rabbit finder<span></p>
+                     <p class="bl-banner-desc"><span>Try the Rabbit Finder<span></p>
                  </div>
              </div>
          `;
+
+        const secondButtonHTML = `
+         <div class="bl-guide-banner" style="height: 0;">
+             <div class="bl-banner-message">
+                 <p class="bl-banner-title">Rotations and vibrations got you in a spin?</p>
+                 <p class="bl-banner-desc"><span>Try the Rabbit Finder<span></p>
+             </div>
+         </div>
+     `;
 
         const logoSVG = `
          <?xml version="1.0" encoding="utf-8"?>
@@ -16116,7 +16125,7 @@ $(document).ready(function () {
         $('nav.breadcrumb').after(buttonHTML);
         // Fade in the button on the 8th product
         var productList = $('.search-result-items li');
-        $(productList[7]).after(buttonHTML);
+        $(productList[7]).after(secondButtonHTML);
         $('.bl-guide-banner').animate({
             height: 70
         }, 2000);
@@ -16548,7 +16557,7 @@ $(document).ready(function () {
                 if (highestMatch === 0 || highestMatch === matchPercentage) {
                     highestMatch = matchPercentage;
                     matchPercentage = "Close match";
-                } else if (highestMatch > matchPercentage) {
+                } else if (highestMatch > matchPercentage || isNaN(matchPercentage)) {
                     matchPercentage = '';
                 }
 

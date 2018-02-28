@@ -16706,7 +16706,7 @@ ASRFS.setupRabbits();
                 content.details = `
                  <div class="bl-info-details">
                      <span>Top tip</span>
-                     <p>Give the best oral sensational. Hold your rabbit against your throat when giving oral sex, the vibrations will give them a mind blowing climax they’re sure  to thank you for.</p>
+                     <p>Give the best oral sensation. Hold your rabbit against your throat when giving oral sex, the vibrations will give them a mind blowing climax they’re sure  to thank you for.</p>
                      <span data-page="2" data-cat="style" class="bl-info-chevron"></span><span class="chevron-label">NEXT</span>
                      <div class="bl-circle-containers"><span class="active"><span></span></span><span><span></span></span><span><span></span></span></div>
                  </div>

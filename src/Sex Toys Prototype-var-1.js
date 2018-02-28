@@ -212,7 +212,7 @@ $(document).ready(function () {
              </div>
          `;
 
-         const secondButtonHTML = `
+        const secondButtonHTML = `
          <div class="bl-guide-banner" style="height: 0;">
              <div class="bl-banner-message">
                  <p class="bl-banner-title">Rotations and vibrations got you in a spin?</p>
@@ -220,6 +220,7 @@ $(document).ready(function () {
              </div>
          </div>
      `;
+
 
         const logoSVG = `
          <?xml version="1.0" encoding="utf-8"?>
@@ -13534,19 +13535,23 @@ $(document).ready(function () {
          `;
 
         // Fade in the button at the top of the page
-        $('nav.breadcrumb').after(buttonHTML);
+        // $('nav.breadcrumb').after(buttonHTML);
+        $('.refinements .only-on-mobile .only-on-mobile .count').before(buttonHTML);
         // Fade in the button on the 8th product
-        var productList = $('.search-result-items li');
+        var productList = $('.search-result-items > li');
         $(productList[7]).after(secondButtonHTML);
+
         $('.bl-guide-banner').animate({
-            height: 70
-        }, 2000);
+            height: 100
+        }, 1000);
 
         setTimeout(function () {
             $('.bl-banner-message .bl-banner-desc').animate({
-                opacity: 0.6
+                opacity: 1
             })
         }, 3000);
+
+
 
 
 
@@ -14598,15 +14603,15 @@ $(document).ready(function () {
                     url: URL
                 })
                     .done(function (data) {
-                        console.log("success");
+                        // console.log("success");
                         rabbits[x].id = x + 1;
                         rabbits[x].HTML = ASSTBG_1.setupPDPHTML($(data));
                         rabbits[x].status = 'success';
                     })
-                    .fail(function () {
+                    .fail(function (e) {
                         rabbits[x].status = 'error';
                         rabbits[x].HTML = 'Product not found';
-                        console.log("error");
+                        console.log("error = " + e);
                     });
             }
         }
@@ -14660,7 +14665,7 @@ $(document).ready(function () {
                 // if (dataImage !== undefined && dataImage !== null) {
                 $(data[i]).find('.col-2 .product-image').append('<img class="bl-plp-image" src="' + url + '/i/annsummers' + dataImage + '" />');
                 //  }
-                console.log('image added');
+                // console.log('image added');
                 data = data[i];
                 break;
             }
@@ -15319,13 +15324,40 @@ $(document).ready(function () {
         ASSTBG_1.setCookie('BL-PRODUCT-ADDED', 'true', 1);
     });
 
+    $(document).on('ajaxComplete', function () {
+        if ($('.bl-guide-banner.bl-guide-third').length === 0) {
+            const thirdButtonHTML = `
+            <div class="bl-guide-banner bl-guide-third" style="height: 0;">
+                <div class="bl-banner-message">
+                    <p class="bl-banner-header>DID YOU KNOW...</p>
+                    <p class="bl-banner-title">Legend has it that Egyptian queen, Cleopatra invented the first vibrator by pleasuring herself with a papyrus box filled with live bees... Buzzin'.</p>
+                    <p class="bl-banner-desc"><span>Learn more with our Rabbit Finder<span></p>
+                </div>
+            </div>
+        `;
+            var productList = $('.search-result-items > li');
+            $(productList[15]).after(thirdButtonHTML);
+
+            $('.bl-guide-banner.bl-guide-third').animate({
+                height: 70
+            }, 1000);
+
+            setTimeout(function () {
+                $('.bl-guide-third .bl-banner-message .bl-banner-desc').animate({
+                    opacity: 1
+                })
+            }, 3000);
+        }
+    });
+
+
     ASSTBG_1.exitHandler = function () {
         if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
             ///fire your event
             $('#bl-sex-toy-guide').removeClass('bl-display');
             $('body').removeClass('bl-sex-toy-guide-visible');
             $('html').removeClass('bl-sex-toy-guide-visible');
-            console.log('closed');
+            // console.log('closed');
 
         }
     }

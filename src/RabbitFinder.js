@@ -16839,7 +16839,7 @@ $(document).ready(function () {
                 searchValue: 2
             }, {
                 text: 'Medium <p>(5" to 5.5")</p>',
-                value: 'realistic',
+                value: 'medium',
                 animation: `<img src="${svgs.fiveToFive}" />`,
                 searchValue: 3
             }, {
@@ -16955,7 +16955,7 @@ $(document).ready(function () {
                 content.class = 'bl-style-slider';
             content.header = 'Choose a vibration style:';
             content.options = [{
-                text: 'Pulse patterns in the ears',
+                text: 'Variable pulse patterns',
                 value: 'ears',
                 animation: `<div class="bl-vibration-animation-overlay-circle-container">
                                  <div class="bl-vibration-animation-overlay-circle">

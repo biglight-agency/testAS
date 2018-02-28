@@ -24,7 +24,7 @@
     Size
     1: Mini 
     2: Smaller
-    3: Realistic
+    3: Medium
     4: Larger
 
     Feel (shape)
@@ -192,7 +192,7 @@ ASRFS.setupRabbits = function () {
         },{
             intensity: "Powerful",
             style: "3 speeds, 7 pulse patterns",
-            size: "Realistic",
+            size: "Medium",
             feel: "G-spot"
         }, {
             name: 'Rampant Rabbit The Metal One',
@@ -250,7 +250,7 @@ ASRFS.setupRabbits = function () {
         },{
             intensity: "Powerful",
             style: "3 speeds, 2 pulse patterns",
-            size: "Realistic",
+            size: "Medium",
             feel: "Contoured"
         }, {
             name: 'Rampant Rabbit The Aqua One',
@@ -308,7 +308,7 @@ ASRFS.setupRabbits = function () {
     //     },{
     //         intensity: "Powerful",
     //         style: "6 speeds and pulses",
-    //         size: "Realistic",
+    //         size: "Medium",
     //         feel: "Contoured"
     //     }, {
     //         name: 'Rampant Rabbit Vibrator -The Signature Moregasm Black One',
@@ -366,7 +366,7 @@ ASRFS.setupRabbits = function () {
         },{
             intensity: "Powerful",
             style: "3 speeds and 3 pulse patterns",
-            size: "Realistic",
+            size: "Medium",
             feel: "Contoured"
         }, {
             name: 'Moregasm Contour Rampant Rabbit',
@@ -424,7 +424,7 @@ ASRFS.setupRabbits = function () {
     //     },{
     //         intensity: "Moderate",
     //         style: "Rotations, 3 speeds and 10 vibration settings",
-    //         size: "Realistic",
+    //         size: "Medium",
     //         feel: "Contoured"
     //     }, {
     //         name: 'Rampant Rabbit The Pearlised One',
@@ -482,7 +482,7 @@ ASRFS.setupRabbits = function () {
         },{
             intensity: "Off the scale",
             style: "Variable speeds and patterns",
-            size: "Realistic",
+            size: "Medium",
             feel: "Contoured and flexible"
         }, {
             name: 'LELO Ina Wave Luxury G-Spot Vibrator',
@@ -540,7 +540,7 @@ ASRFS.setupRabbits = function () {
         },{
             intensity: "Moderate",
             style: "10 speeds and patterns",
-            size: "Realistic",
+            size: "Medium",
             feel: "Contoured and flexible"
         }, {
             name: 'Nova by We-Vibe',
@@ -656,7 +656,7 @@ ASRFS.setupRabbits = function () {
     //     }, {
     //         intensity: "Moderate",
     //         style: "Variable speeds and patterns",
-    //         size: "Realistic",
+    //         size: "Medium",
     //         feel: "Contoured"
     //     },{
     //         name: 'Rampant Rabbit Vibrator - The Purple Silicone Curved One',
@@ -921,7 +921,7 @@ ASRFS.setupRabbits = function () {
         },{
             intensity: "Powerful",
             style: "7 speeds and patterns",
-            size: "Realistic",
+            size: "Medium",
             feel: "Contoured and flexible"
         }, {
             name: 'Magnetize Rampant Rabbit',
@@ -1154,7 +1154,7 @@ ASRFS.setupRabbits = function () {
         },{
             intensity: "Moderate",
             style: "Rotations and variable patterns",
-            size: "Realistic",
+            size: "Medium",
             feel: "Straight"
         }, {
             name: 'Rampant Rabbit Vibrator - The Slim Rechargeable One',
@@ -1330,7 +1330,7 @@ ASRFS.setupRabbits = function () {
         },{
             intensity: "Intense",
             style: "Variable speeds and patterns",
-            size: "Realistic",
+            size: "Medium",
             feel: "Contoured"
         }, {
             name: 'Rampant Rabbit Vibrator - The Suction Base One',
@@ -1853,7 +1853,7 @@ ASRFS.setupRabbits = function () {
         },{
             intensity: "Intense",
             style: "Vibration speeds and patterns",
-            size: "Realistic",
+            size: "Medium",
             feel: "Contoured and g-spot"
         }, {
             name: 'The G Spot One',
@@ -1911,7 +1911,7 @@ ASRFS.setupRabbits = function () {
         },{
             intensity: "Powerful",
             style: "8 vibration speeds and patterns",
-            size: "Realistic",
+            size: "Medium",
             feel: "Contoured"
         }, {
             name: 'LELO Soraya Luxury Rechargeable Vibrator',
@@ -1969,7 +1969,7 @@ ASRFS.setupRabbits = function () {
         },{
             intensity: "Moderate",
             style: "Vibration patterns and speeds",
-            size: "Realistic",
+            size: "Medium",
             feel: "Contoured"
         }, {
             name: 'Remote Controlled Rampant Rabbit',
@@ -2085,7 +2085,7 @@ ASRFS.setupRabbits = function () {
         },{
             intensity: "Intense",
             style: "Vibration patterns and speeds",
-            size: "Realistic",
+            size: "Medium",
             feel: "Contoured"
         }, {
             name: 'PornHUB Virtual Rabbit',
@@ -2375,7 +2375,7 @@ ASRFS.setupRabbits = function () {
         },{
             intensity: "Moderate",
             style: "5 vibration pulse settings and speeds",
-            size: "Realistic",
+            size: "Medium",
             feel: "Contoured and g-spot"
         }, {
             name: 'Elation Rabbit',

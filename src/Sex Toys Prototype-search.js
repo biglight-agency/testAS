@@ -1270,7 +1270,7 @@ ASRFS.setupRabbits = function () {
         },{
             intensity: "Intense",
             style: "Variable speeds and patterns",
-            size: "Realistic",
+            size: "Medium",
             feel: "Contoured"
         }, {
             name: 'Pornhub Turbo Rabbit Vibrator',
@@ -2259,7 +2259,7 @@ ASRFS.setupRabbits = function () {
         },{
             intensity: "Moderate",
             style: "Variable vibration speeds",
-            size: "Smaller and realistic",
+            size: "Smaller and medium",
             feel: "Straight and g-spot"
         }, {
             name: 'Vibrating beginners one',
@@ -2317,7 +2317,7 @@ ASRFS.setupRabbits = function () {
         },{
             intensity: "Moderate",
             style: "3 Vibration speeds and rotations",
-            size: "Smaller and realistic",
+            size: "Smaller and medium",
             feel: "Straight"
         }, {
             name: 'Original One',

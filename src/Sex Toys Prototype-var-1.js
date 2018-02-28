@@ -14251,7 +14251,7 @@ $(document).ready(function () {
                 searchValue: 2
             }, {
                 text: 'Medium <p>(5" to 5.5")</p>',
-                value: 'medium',
+                value: 'realistic',
                 animation: `<img src="${svgs.fiveToFive}" />`,
                 searchValue: 3
             }, {

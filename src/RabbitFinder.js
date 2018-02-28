@@ -1292,7 +1292,7 @@ $(document).ready(function () {
             }, {
                 intensity: "Intense",
                 style: "Variable speeds and patterns",
-                size: "Realistic",
+                size: "Medium",
                 feel: "Contoured"
             }, {
                 name: 'Pornhub Turbo Rabbit Vibrator',
@@ -2281,7 +2281,7 @@ $(document).ready(function () {
             }, {
                 intensity: "Moderate",
                 style: "Variable vibration speeds",
-                size: "Smaller and realistic",
+                size: "Smaller and medium",
                 feel: "Straight and g-spot"
             }, {
                 name: 'Vibrating beginners one',
@@ -2339,7 +2339,7 @@ $(document).ready(function () {
             }, {
                 intensity: "Moderate",
                 style: "3 Vibration speeds and rotations",
-                size: "Smaller and realistic",
+                size: "Smaller and medium",
                 feel: "Straight"
             }, {
                 name: 'Original One',
@@ -16839,7 +16839,7 @@ $(document).ready(function () {
                 searchValue: 2
             }, {
                 text: 'Medium <p>(5" to 5.5")</p>',
-                value: 'medium',
+                value: 'realistic',
                 animation: `<img src="${svgs.fiveToFive}" />`,
                 searchValue: 3
             }, {

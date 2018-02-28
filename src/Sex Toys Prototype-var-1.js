@@ -15329,7 +15329,7 @@ $(document).ready(function () {
             const thirdButtonHTML = `
             <div class="bl-guide-banner bl-guide-third" style="height: 0;">
                 <div class="bl-banner-message">
-                    <p class="bl-banner-header>DID YOU KNOW...</p>
+                    <p class="bl-banner-header">DID YOU KNOW...</p>
                     <p class="bl-banner-title">Legend has it that Egyptian queen, Cleopatra invented the first vibrator by pleasuring herself with a papyrus box filled with live bees... Buzzin'.</p>
                     <p class="bl-banner-desc"><span>Learn more with our Rabbit Finder<span></p>
                 </div>

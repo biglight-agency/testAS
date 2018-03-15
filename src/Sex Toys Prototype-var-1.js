@@ -13957,59 +13957,61 @@ $(document).ready(function () {
         let highestMatch = 0;
         if (products.length > 0) {
             for (let i = 0; i < products.length; i++) {
-                let product = products[i];
-                let matchesHTML = '';
-                let matches = product.features.matchedFeatures;
-                let matchPercentage = product.matches * (100 / Object.keys(product.features.matchedFeatures).length);
-                let productHTML = product.HTML;
-                let ratings = $(productHTML).find('.product-rating').addClass('bl-ratings');
-                let price = $(productHTML).find('.product-price').addClass('bl-price');
-                if (price.length === 0) {
-                    price = product.features.price;
-                } else {
-                    price = $(price).html();
-                }
-                ratings = ratings[0] !== undefined ? ratings[0].outerHTML : '<div class="bl-ratings"></div>';
+                // don't add products which couldn't be found
+                if (products[i].status !== "error") {
+                    let product = products[i];
+                    let matchesHTML = '';
+                    let matches = product.features.matchedFeatures;
+                    let matchPercentage = product.matches * (100 / Object.keys(product.features.matchedFeatures).length);
+                    let productHTML = product.HTML;
+                    let ratings = $(productHTML).find('.product-rating').addClass('bl-ratings');
+                    let price = $(productHTML).find('.product-price').addClass('bl-price');
+                    if (price.length === 0) {
+                        price = product.features.price;
+                    } else {
+                        price = $(price).html();
+                    }
+                    ratings = ratings[0] !== undefined ? ratings[0].outerHTML : '<div class="bl-ratings"></div>';
 
-                if (highestMatch === 0 || highestMatch === matchPercentage) {
-                    highestMatch = matchPercentage;
-                    matchPercentage = "Close match";
-                } else if (highestMatch > matchPercentage || isNaN(matchPercentage)) {
-                    matchPercentage = '';
-                }
-
-
-                // Setup ticks
-                for (let prop in matches) {
-                    let tick = '';
-                    let property = '';
-
-                    if (showAllRabbits) {
-                        tick = 'bl-matched-tick';
+                    if (highestMatch === 0 || highestMatch === matchPercentage) {
+                        highestMatch = matchPercentage;
+                        matchPercentage = "Close match";
+                    } else if (highestMatch > matchPercentage || isNaN(matchPercentage)) {
                         matchPercentage = '';
-                    } else if (matches[prop] == true) {
-                        tick = 'bl-matched-tick';
                     }
 
-                    if (prop == 'size') {
-                        // Set product size
-                        property = product.optionsValue.size;
-                    } else if (prop == 'intensity') {
-                        // Set product vibration intensity
-                        property = product.optionsValue.intensity;
-                    } else if (prop == 'feel') {
-                        // Set product shape
-                        property = product.optionsValue.feel;
-                    } else if (prop == 'style') {
-                        // Set product vibration style
-                        property = product.optionsValue.style;
+
+                    // Setup ticks
+                    for (let prop in matches) {
+                        let tick = '';
+                        let property = '';
+
+                        if (showAllRabbits) {
+                            tick = 'bl-matched-tick';
+                            matchPercentage = '';
+                        } else if (matches[prop] == true) {
+                            tick = 'bl-matched-tick';
+                        }
+
+                        if (prop == 'size') {
+                            // Set product size
+                            property = product.optionsValue.size;
+                        } else if (prop == 'intensity') {
+                            // Set product vibration intensity
+                            property = product.optionsValue.intensity;
+                        } else if (prop == 'feel') {
+                            // Set product shape
+                            property = product.optionsValue.feel;
+                        } else if (prop == 'style') {
+                            // Set product vibration style
+                            property = product.optionsValue.style;
+                        }
+
+                        // console.log(prop);
+                        matchesHTML = matchesHTML + `<p><span class="${tick}"></span>${property}</p>`;
                     }
 
-                    // console.log(prop);
-                    matchesHTML = matchesHTML + `<p><span class="${tick}"></span>${property}</p>`;
-                }
-
-                let newItem = `
+                    let newItem = `
                  <div class="bl-product-plp-tile">
                      <p class="bl-product-title">${product.features.name}</p>
                      ${ratings}
@@ -14026,7 +14028,8 @@ $(document).ready(function () {
                  </div>
              
              `;
-                items = items + newItem;
+                    items = items + newItem;
+                }
             }
         } else {
             items = `
@@ -14251,7 +14254,7 @@ $(document).ready(function () {
                 searchValue: 2
             }, {
                 text: 'Medium <p>(5" to 5.5")</p>',
-                value: 'realistic',
+                value: 'medium',
                 animation: `<img src="${svgs.fiveToFive}" />`,
                 searchValue: 3
             }, {
@@ -14611,7 +14614,6 @@ $(document).ready(function () {
                     .fail(function (e) {
                         rabbits[x].status = 'error';
                         rabbits[x].HTML = 'Product not found';
-                        console.log("error = " + e);
                     });
             }
         }
@@ -14634,7 +14636,12 @@ $(document).ready(function () {
 
     }
 
+    ASSTBG_1.stockCheck = function (data) {
+
+    };
+
     ASSTBG_1.setupPDPHTML = function (data) {
+
         var html = '';
         var dataImage = '';
         var url = '';

@@ -633,62 +633,62 @@ ASRFS.setupRabbits = function () {
     );
 
     // PURPLE SILICONE CURVED RABBIT (UPF)>>PURPLE>>NO SIZE
-    ASRFS.pushRabbit(
-        11,
-        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-vibrator---the-purple-silicone-curved-one/80292.html',
-        'https://i1.adis.ws/i/annsummers/07CSSPAS1047043_Z?$product-large$',
-        {
-            intensity: [1],
-            style: [1, 3],
-            size: [3],
-            feel: [3]
-        }, {
-            intensity: "Moderate",
-            style: "Variable speeds and patterns",
-            size: "Medium",
-            feel: "Contoured"
-        },{
-            name: 'The Purple Silicone Curved One',
-            price: '£50.00',
-            brand: 'Ann Summers',
-            forCouples: false,
-            waterResistant: true,
-            flexibility: {
-                firm: false,
-                flexable: true,
-                soft: false
-            },
-            material: {
-                silicone: false,
-                metal: false
-            },
-            controllerType: {
-                pushButton: true,
-                switch: false,
-                app: false
-            },
-            noiseLevel: {
-                quiet: false,
-                normal: true
-            },
-            powerSource: {
-                USB: false,
-                battery: {
-                    used: true,
-                    batteryType: 'AAA',
-                    noBattery: 3,
-                    batteryIncluded: false,
-                }
-            },
-            matchedFeatures: {
-                size: false,
-                intensity: false,
-                feel: false,
-                style: false
-            }
-        },
-        0
-    );
+    // ASRFS.pushRabbit(
+    //     11,
+    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-vibrator---the-purple-silicone-curved-one/80292.html',
+    //     'https://i1.adis.ws/i/annsummers/07CSSPAS1047043_Z?$product-large$',
+    //     {
+    //         intensity: [1],
+    //         style: [1, 3],
+    //         size: [3],
+    //         feel: [3]
+    //     }, {
+    //         intensity: "Moderate",
+    //         style: "Variable speeds and patterns",
+    //         size: "Medium",
+    //         feel: "Contoured"
+    //     },{
+    //         name: 'The Purple Silicone Curved One',
+    //         price: '£50.00',
+    //         brand: 'Ann Summers',
+    //         forCouples: false,
+    //         waterResistant: true,
+    //         flexibility: {
+    //             firm: false,
+    //             flexable: true,
+    //             soft: false
+    //         },
+    //         material: {
+    //             silicone: false,
+    //             metal: false
+    //         },
+    //         controllerType: {
+    //             pushButton: true,
+    //             switch: false,
+    //             app: false
+    //         },
+    //         noiseLevel: {
+    //             quiet: false,
+    //             normal: true
+    //         },
+    //         powerSource: {
+    //             USB: false,
+    //             battery: {
+    //                 used: true,
+    //                 batteryType: 'AAA',
+    //                 noBattery: 3,
+    //                 batteryIncluded: false,
+    //             }
+    //         },
+    //         matchedFeatures: {
+    //             size: false,
+    //             intensity: false,
+    //             feel: false,
+    //             style: false
+    //         }
+    //     },
+    //     0
+    // );
 
     // RR THROBBING>>NO COLOUR>>NO SIZE
     ASRFS.pushRabbit(
@@ -1917,8 +1917,8 @@ ASRFS.setupRabbits = function () {
     // MILA PINK RECHARGABLE FLEXIBLE ONE
     ASRFS.pushRabbit(
         33,
-        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/mila-rechargeable-flexible-rabbit-vibrator/88414.html#start=10',
-        'https://i1.adis.ws/i/annsummers/07SCNRAS1189043_Z?$product-large$',
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbits-type-rechargeable/jil-mila-pink-rechargeable-flexible-rabbit-vibrator/105659.html',
+        'https://i1.adis.ws/i/annsummers/07NCSVAS1162043_Z?$product-large$',
         {
             intensity: [3],
             style: [1, 3],

@@ -19,7 +19,7 @@
     1: Pulse patterns
     2: Rotations
     3: Variable vibration speeds
-    4: Thrusting Shafts
+    4: Thrusting shaft
 
     Size
     1: Mini 
@@ -51,75 +51,64 @@ ASRFS.rabbit = function (id, url, imgURL, options, optionsValue, features, match
 }
 ASRFS.setupRabbits = function () {
     // OVO E6>>PINK>>NO SIZE
-    // ASRFS.pushRabbit(
-    //     1,
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-vibrators/ovo-e6-rechargeable-rabbit-triple-vibrator/85470.html',
-    //     'https://i1.adis.ws/i/annsummers/07SCNRAS1180041_Z?$product-large$',
-    //     {
-    //         intensity: [1],
-    //         style: [3],
-    //         size: [2, 3],
-    //         feel: [3]
-    //     },
-    //     {
-    //         intensity: "Moderate",
-    //         style: "Rotations",
-    //         size: "Smaller",
-    //         feel: "Straight"
-    //     },
-    //      {
-    //         name: 'OVO E6 Rechargeable Rabbit Triple Vibrator',
-    //         price: '£53.00',
-    //         brand: 'OVO',
-    //         forCouples: true,
-    //         waterResistant: true,
-    //         flexibility: {
-    //             firm: true,
-    //             flexable: false,
-    //             soft: false
-    //         },
-    //         material: {
-    //             silicone: false,
-    //             metal: false
-    //         },
-    //         controllerType: {
-    //             pushButton: true,
-    //             switch: false,
-    //             app: false
-    //         },
-    //         noiseLevel: {
-    //             quiet: true,
-    //             normal: false
-    //         },
-    //         powerSource: {
-    //             USB: true,
-    //             battery: {
-    //                 used: false,
-    //                 batteryType: '',
-    //                 noBattery: 0,
-    //                 batteryIncluded: false,
-    //             }
-    //         },
-    //         matchedFeatures: {
-    //             size: false,
-    //             intensity: false,
-    //             feel: false,
-    //             style: false
-    //         }
-    //     },
-    //     0
-    // );
-
-    // CHEAP THRILLS MINI RABBIT>>PINK>>NO SIZE -- REMOVED FROM SITE
-    // ASRFS.pushRabbit(
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/bunny-banger-mini-rabbit-vibrator/88295.html',
-    //     'https://i1.adis.ws/i/annsummers/07SCNRAS1187041_Z?$product-large$',
-    //     {
-    //         intensity: 1,
-    //         style: 1,
-    //         size: 1,
-    //         feel: 4
-    //     });
+    ASRFS.pushRabbit(
+        1,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-vibrators/ovo-e6-rechargeable-rabbit-triple-vibrator/85470.html',
+        'https://i1.adis.ws/i/annsummers/07SCNRAS1180041_Z?$product-large$',
+        {
+            intensity: [1],
+            style: [3],
+            size: [2, 3],
+            feel: [3]
+        },
+        {
+            intensity: "Moderate",
+            style: "Variable vibration patterns and speeds",
+            size: "Small to Medium",
+            feel: "G-spot"
+        },
+         {
+            name: 'OVO E6 Rechargeable Rabbit Triple Vibrator',
+            price: '£53.00',
+            brand: 'OVO',
+            forCouples: true,
+            waterResistant: true,
+            flexibility: {
+                firm: true,
+                flexable: false,
+                soft: false
+            },
+            material: {
+                silicone: false,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: true,
+                normal: false
+            },
+            powerSource: {
+                USB: true,
+                battery: {
+                    used: false,
+                    batteryType: '',
+                    noBattery: 0,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
 
     // THE BUNNY BANGER MINI RABBIT >>PINK>>NO SIZE
     ASRFS.pushRabbit(
@@ -187,11 +176,11 @@ ASRFS.setupRabbits = function () {
         {
             intensity: [3],
             style: [1, 3],
-            size: [2, 3],
+            size: [3],
             feel: [3]
         },{
             intensity: "Powerful",
-            style: "3 speeds, 7 pulse patterns",
+            style: "Variable vibration patterns and speeds",
             size: "Medium",
             feel: "G-spot"
         }, {
@@ -249,7 +238,7 @@ ASRFS.setupRabbits = function () {
             feel: [1]
         },{
             intensity: "Powerful",
-            style: "3 speeds, 2 pulse patterns",
+            style: "Variable vibration patterns and speeds",
             size: "Medium",
             feel: "Contoured"
         }, {
@@ -296,62 +285,62 @@ ASRFS.setupRabbits = function () {
     );
 
     // THE SIGNATURE ONE MOREGASM RABBIT>>BLACK>>NO SIZE
-    // ASRFS.pushRabbit(
-    //     5,
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-vibrator--the-signature-moregasm-black-one/74872.html',
-    //     'https://i1.adis.ws/i/annsummers/07CSSPAS1029006_Z?$product-large$',
-    //     {
-    //         intensity: [3],
-    //         style: [1, 3],
-    //         size: [3],
-    //         feel: [1]
-    //     },{
-    //         intensity: "Powerful",
-    //         style: "6 speeds and pulses",
-    //         size: "Medium",
-    //         feel: "Contoured"
-    //     }, {
-    //         name: 'Rampant Rabbit Vibrator -The Signature Moregasm Black One',
-    //         price: '£70.00',
-    //         brand: 'Ann Summers',
-    //         forCouples: false,
-    //         waterResistant: true,
-    //         flexibility: {
-    //             firm: true,
-    //             flexable: false,
-    //             soft: false
-    //         },
-    //         material: {
-    //             silicone: true,
-    //             metal: false
-    //         },
-    //         controllerType: {
-    //             pushButton: true,
-    //             switch: false,
-    //             app: false
-    //         },
-    //         noiseLevel: {
-    //             quiet: true,
-    //             normal: false
-    //         },
-    //         powerSource: {
-    //             USB: true,
-    //             battery: {
-    //                 used: false,
-    //                 batteryType: '',
-    //                 noBattery: 0,
-    //                 batteryIncluded: false,
-    //             }
-    //         },
-    //         matchedFeatures: {
-    //             size: false,
-    //             intensity: false,
-    //             feel: false,
-    //             style: false
-    //         }
-    //     },
-    //     0
-    // );
+    ASRFS.pushRabbit(
+        5,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-vibrator--the-signature-moregasm-black-one/74872.html',
+        'https://i1.adis.ws/i/annsummers/07CSSPAS1029006_Z?$product-large$',
+        {
+            intensity: [3],
+            style: [1, 3],
+            size: [3],
+            feel: [1]
+        },{
+            intensity: "Powerful",
+            style: "Variable vibration patterns and speeds",
+            size: "Medium",
+            feel: "Contoured"
+        }, {
+            name: 'The Signature Moregasm Black One',
+            price: '£70.00',
+            brand: 'Ann Summers',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: true,
+                flexable: false,
+                soft: false
+            },
+            material: {
+                silicone: true,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: true,
+                normal: false
+            },
+            powerSource: {
+                USB: true,
+                battery: {
+                    used: false,
+                    batteryType: '',
+                    noBattery: 0,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
 
     // MOREGASM CONTOUR RABBIT>>PINK>>NO SIZE
     ASRFS.pushRabbit(
@@ -365,7 +354,7 @@ ASRFS.setupRabbits = function () {
             feel: [1]
         },{
             intensity: "Powerful",
-            style: "3 speeds and 3 pulse patterns",
+            style: "Variable vibration patterns and speeds",
             size: "Medium",
             feel: "Contoured"
         }, {
@@ -412,62 +401,62 @@ ASRFS.setupRabbits = function () {
     );
 
     // THE PEARLISED ONE (SB)>>WHITE>>NO SIZE
-    // ASRFS.pushRabbit(
-    //     7,
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-the-pearlised-one/85199.html',
-    //     'https://i1.adis.ws/i/annsummers/07SCRTAS1050051_Z?$product-large$',
-    //     {
-    //         intensity: [1],
-    //         style: [1, 2, 3, 4],
-    //         size: [3],
-    //         feel: [3]
-    //     },{
-    //         intensity: "Moderate",
-    //         style: "Rotations, 3 speeds and 10 vibration settings",
-    //         size: "Medium",
-    //         feel: "Contoured"
-    //     }, {
-    //         name: 'Rampant Rabbit The Pearlised One',
-    //         price: '£40.00',
-    //         brand: 'Ann Summers',
-    //         forCouples: false,
-    //         waterResistant: true,
-    //         flexibility: {
-    //             firm: false,
-    //             flexable: true,
-    //             soft: false
-    //         },
-    //         material: {
-    //             silicone: true,
-    //             metal: false
-    //         },
-    //         controllerType: {
-    //             pushButton: true,
-    //             switch: false,
-    //             app: false
-    //         },
-    //         noiseLevel: {
-    //             quiet: false,
-    //             normal: true
-    //         },
-    //         powerSource: {
-    //             USB: false,
-    //             battery: {
-    //                 used: true,
-    //                 batteryType: 'AAA',
-    //                 noBattery: 3,
-    //                 batteryIncluded: false,
-    //             }
-    //         },
-    //         matchedFeatures: {
-    //             size: false,
-    //             intensity: false,
-    //             feel: false,
-    //             style: false
-    //         }
-    //     },
-    //     0
-    // );
+    ASRFS.pushRabbit(
+        7,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-the-pearlised-one/85199.html',
+        'https://i1.adis.ws/i/annsummers/07SCRTAS1050051_Z?$product-large$',
+        {
+            intensity: [1],
+            style: [1, 2, 3],
+            size: [3],
+            feel: [1]
+        },{
+            intensity: "Moderate",
+            style: "Variable vibration speeds and rotations",
+            size: "Medium",
+            feel: "Contoured"
+        }, {
+            name: 'Rampant Rabbit The Pearlised One',
+            price: '£50.00',
+            brand: 'Ann Summers',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: false,
+                flexable: true,
+                soft: false
+            },
+            material: {
+                silicone: true,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: false,
+                normal: true
+            },
+            powerSource: {
+                USB: false,
+                battery: {
+                    used: true,
+                    batteryType: 'AAA',
+                    noBattery: 3,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
 
     // INA WAVE CERISE>>CERISE>>NO SIZE
     ASRFS.pushRabbit(
@@ -481,7 +470,7 @@ ASRFS.setupRabbits = function () {
             feel: [1, 4]
         },{
             intensity: "Off the scale",
-            style: "Variable speeds and patterns",
+            style: "Variable vibration patterns and speeds",
             size: "Medium",
             feel: "Contoured and flexible"
         }, {
@@ -533,13 +522,13 @@ ASRFS.setupRabbits = function () {
         'https://www.annsummers.com/we-vibe-nova-rabbit-vibrator.html',
         'https://i1.adis.ws/i/annsummers/WeVibe_product_image_nova_1.jpg?qlt=90&fmt.jpeg.chroma=1,1,1',
         {
-            intensity: [1],
+            intensity: [3],
             style: [3, 1],
             size: [3],
             feel: [1, 4]
         },{
-            intensity: "Moderate",
-            style: "10 speeds and patterns",
+            intensity: "Powerful",
+            style: "10 vibration modes + Controllable via app",
             size: "Medium",
             feel: "Contoured and flexible"
         }, {
@@ -586,178 +575,178 @@ ASRFS.setupRabbits = function () {
     );
 
     // THE MIGHTY ONE PINK>>PINK>>NO SIZE
-    // ASRFS.pushRabbit(
-    //     10,
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-the-mighty-one/63326.html',
-    //     'https://i1.adis.ws/i/annsummers/07SCNRAS1155041_Z?$product-large$',
-    //     {
-    //         intensity: [3],
-    //         style: [3],
-    //         size: [4],
-    //         feel: [2, 3]
-    //     },{
-    //         intensity: "Moderate",
-    //         style: "Rotations",
-    //         size: "Smaller",
-    //         feel: "Straight"
-    //     }, {
-    //         name: 'Rampant Rabbit The Mighty One',
-    //         price: '£65.00',
-    //         brand: 'Ann Summers',
-    //         forCouples: false,
-    //         waterResistant: true,
-    //         flexibility: {
-    //             firm: true,
-    //             flexable: false,
-    //             soft: false
-    //         },
-    //         material: {
-    //             silicone: true,
-    //             metal: false
-    //         },
-    //         controllerType: {
-    //             pushButton: true,
-    //             switch: false,
-    //             app: false
-    //         },
-    //         noiseLevel: {
-    //             quiet: true,
-    //             normal: false
-    //         },
-    //         powerSource: {
-    //             USB: true,
-    //             battery: {
-    //                 used: false,
-    //                 batteryType: '',
-    //                 noBattery: 0,
-    //                 batteryIncluded: false,
-    //             }
-    //         },
-    //         matchedFeatures: {
-    //             size: false,
-    //             intensity: false,
-    //             feel: false,
-    //             style: false
-    //         }
-    //     },
-    //     0
-    // );
+    ASRFS.pushRabbit(
+        10,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-the-mighty-one/63326.html',
+        'https://i1.adis.ws/i/annsummers/07SCNRAS1155041_Z?$product-large$',
+        {
+            intensity: [3],
+            style: [3],
+            size: [4],
+            feel: [1, 4]
+        },{
+            intensity: "Moderate",
+            style: "Variable vibration speeds",
+            size: "Larger",
+            feel: "Contoured and flexible"
+        }, {
+            name: 'Rampant Rabbit The Mighty One',
+            price: '£65.00',
+            brand: 'Ann Summers',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: true,
+                flexable: false,
+                soft: false
+            },
+            material: {
+                silicone: true,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: true,
+                normal: false
+            },
+            powerSource: {
+                USB: true,
+                battery: {
+                    used: false,
+                    batteryType: '',
+                    noBattery: 0,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
 
     // PURPLE SILICONE CURVED RABBIT (UPF)>>PURPLE>>NO SIZE
-    // ASRFS.pushRabbit(
-    //     11,
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-vibrator---the-purple-silicone-curved-one/80292.html',
-    //     'https://i1.adis.ws/i/annsummers/07CSSPAS1047043_Z?$product-large$',
-    //     {
-    //         intensity: [1],
-    //         style: [3],
-    //         size: [3],
-    //         feel: [3]
-    //     }, {
-    //         intensity: "Moderate",
-    //         style: "Variable speeds and patterns",
-    //         size: "Medium",
-    //         feel: "Contoured"
-    //     },{
-    //         name: 'Rampant Rabbit Vibrator - The Purple Silicone Curved One',
-    //         price: '£50.00',
-    //         brand: 'Ann Summers',
-    //         forCouples: false,
-    //         waterResistant: true,
-    //         flexibility: {
-    //             firm: false,
-    //             flexable: true,
-    //             soft: false
-    //         },
-    //         material: {
-    //             silicone: false,
-    //             metal: false
-    //         },
-    //         controllerType: {
-    //             pushButton: true,
-    //             switch: false,
-    //             app: false
-    //         },
-    //         noiseLevel: {
-    //             quiet: false,
-    //             normal: true
-    //         },
-    //         powerSource: {
-    //             USB: false,
-    //             battery: {
-    //                 used: true,
-    //                 batteryType: 'AAA',
-    //                 noBattery: 3,
-    //                 batteryIncluded: false,
-    //             }
-    //         },
-    //         matchedFeatures: {
-    //             size: false,
-    //             intensity: false,
-    //             feel: false,
-    //             style: false
-    //         }
-    //     },
-    //     0
-    // );
+    ASRFS.pushRabbit(
+        11,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-vibrator---the-purple-silicone-curved-one/80292.html',
+        'https://i1.adis.ws/i/annsummers/07CSSPAS1047043_Z?$product-large$',
+        {
+            intensity: [1],
+            style: [1, 3],
+            size: [3],
+            feel: [3]
+        }, {
+            intensity: "Moderate",
+            style: "Variable speeds and patterns",
+            size: "Medium",
+            feel: "Contoured"
+        },{
+            name: 'The Purple Silicone Curved One',
+            price: '£50.00',
+            brand: 'Ann Summers',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: false,
+                flexable: true,
+                soft: false
+            },
+            material: {
+                silicone: false,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: false,
+                normal: true
+            },
+            powerSource: {
+                USB: false,
+                battery: {
+                    used: true,
+                    batteryType: 'AAA',
+                    noBattery: 3,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
 
     // RR THROBBING>>NO COLOUR>>NO SIZE
-    // ASRFS.pushRabbit(
-    //     12,
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-the-throbbing-one/43571.html',
-    //     'https://i1.adis.ws/i/annsummers/07SCNRAS1105037_Z?$product-large$',
-    //     {
-    //         intensity: [3],
-    //         style: [1, 4],
-    //         size: [4],
-    //         feel: [4]
-    //     },{
-    //         intensity: "Powerful",
-    //         style: "4 speeds and patterns",
-    //         size: "Larger",
-    //         feel: "G-spot"
-    //     }, {
-    //         name: 'Rampant Rabbit The Throbbing One',
-    //         price: '£45.00',
-    //         brand: 'Ann Summers',
-    //         forCouples: false,
-    //         waterResistant: true,
-    //         flexibility: {
-    //             firm: true,
-    //             flexable: false,
-    //             soft: false
-    //         },
-    //         material: {
-    //             silicone: false,
-    //             metal: false
-    //         },
-    //         controllerType: {
-    //             pushButton: true,
-    //             switch: false,
-    //             app: false
-    //         },
-    //         noiseLevel: {
-    //             quiet: false,
-    //             normal: true
-    //         },
-    //         powerSource: {
-    //             USB: false,
-    //             battery: {
-    //                 used: true,
-    //                 batteryType: 'AAA',
-    //                 noBattery: 4,
-    //                 batteryIncluded: false,
-    //             }
-    //         },
-    //         matchedFeatures: {
-    //             size: false,
-    //             intensity: false,
-    //             feel: false,
-    //             style: false
-    //         }
-    //     },
-    //     0
-    // );
+    ASRFS.pushRabbit(
+        12,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-the-throbbing-one/43571.html',
+        'https://i1.adis.ws/i/annsummers/07SCNRAS1105037_Z?$product-large$',
+        {
+            intensity: [3],
+            style: [1, 3],
+            size: [4],
+            feel: [3]
+        },{
+            intensity: "Powerful",
+            style: "Variable vibration patterns and speeds",
+            size: "Larger",
+            feel: "G-spot"
+        }, {
+            name: 'Rampant Rabbit The Throbbing One',
+            price: '£45.00',
+            brand: 'Ann Summers',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: true,
+                flexable: false,
+                soft: false
+            },
+            material: {
+                silicone: false,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: false,
+                normal: true
+            },
+            powerSource: {
+                USB: false,
+                battery: {
+                    used: true,
+                    batteryType: 'AAA',
+                    noBattery: 4,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
 
     // SENSATIONS FEEL THE RIPPLE ONE>>PINK>>NO SIZE
     ASRFS.pushRabbit(
@@ -771,7 +760,7 @@ ASRFS.setupRabbits = function () {
             feel: [2, 3]
         },{
             intensity: "Powerful",
-            style: "5 speeds and 7 patterns",
+            style: "Variable vibration patterns and speeds",
             size: "Larger",
             feel: "Straight and G-spot"
         }, {
@@ -779,7 +768,7 @@ ASRFS.setupRabbits = function () {
             price: '£55.00',
             brand: 'Ann Summers',
             forCouples: false,
-            waterResistant: true,
+            waterResistant: false,
             flexibility: {
                 firm: true,
                 flexable: false,
@@ -817,39 +806,6 @@ ASRFS.setupRabbits = function () {
         0
     );
 
-    // THE THRUSTING ONE>>PURPLE>>NO SIZE -- REMOVED FROM SITE
-    // ASRFS.pushRabbit(
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/thrusting-purple-rabbit/104973.html#q=THRUSTING&start=1',
-    //     'https://i1.adis.ws/i/annsummers/07NCHDAS1320043_Z?$product-large$',
-    //     {
-    //         intensity: 2,
-    //         style: 3,
-    //         size: 1,
-    //         feel: 1
-    //     });
-
-    // THE THRUSTING ONE>>PINK>>NO SIZE
-    // ASRFS.pushRabbit(
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/thrusting-pink-rabbit/104972.html#q=THRUSTING&start=2',
-    //     'https://i1.adis.ws/i/annsummers/07NCHDAS1319041_Z?$product-large$',
-    //     {
-    //         intensity: 1,
-    //         style: 3,
-    //         size: 1,
-    //         feel: 1
-    //     });
-
-    // // THE THRUSTING ONE>>BLACK>>NO SIZE
-    // ASRFS.pushRabbit(
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/thrusting-black-rabbit/104971.html#q=THRUSTING&start=3',
-    //     'https://i1.adis.ws/i/annsummers/07NCHDAS1318006_Z?$product-large$',
-    //     {
-    //         intensity: 2,
-    //         style: 3,
-    //         size: 1,
-    //         feel: 1
-    //     });
-
     // RR ROTATING ONE UPDATE>>SILVER>>NO SIZE
     ASRFS.pushRabbit(
         14,
@@ -862,7 +818,7 @@ ASRFS.setupRabbits = function () {
             feel: [2]
         },{
             intensity: "Powerful",
-            style: "3 speeds and 7 patterns",
+            style: "Variable vibration patterns and speeds",
             size: "Larger",
             feel: "Straight"
         }, {
@@ -920,7 +876,7 @@ ASRFS.setupRabbits = function () {
             feel: [1, 4]
         },{
             intensity: "Powerful",
-            style: "7 speeds and patterns",
+            style: "Variable vibration patterns and speeds",
             size: "Medium",
             feel: "Contoured and flexible"
         }, {
@@ -944,8 +900,8 @@ ASRFS.setupRabbits = function () {
                 app: false
             },
             noiseLevel: {
-                quiet: false,
-                normal: true
+                quiet: true,
+                normal: false
             },
             powerSource: {
                 USB: true,
@@ -966,39 +922,6 @@ ASRFS.setupRabbits = function () {
         0
     );
 
-    // SENSATIONS G-SPOT GESTURE ONE>>GREEN>>NO SIZE -- REMOVED FROM SITE
-    // ASRFS.pushRabbit(
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-vibrators/sex-toy-shop-by-category-gspot-vibrators/sensations-g-spot-gesture-vibrator/77606.html',
-    //     'https://i1.adis.ws/i/annsummers/07NCSVAS1142041_Z?$product-large$',
-    //     {
-    //         intensity: 2,
-    //         style: 3,
-    //         size: 1,
-    //         feel: 1
-    //     });
-
-    // STRAP ON COCK VIBRATING RABBIT>>PURPLE>>NO SIZE -- IS THIS REQUIRED?
-    // ASRFS.pushRabbit(
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-strap-ons/strap-on-rabbit/86670.html',
-    //     'https://i1.adis.ws/i/annsummers/07DLSNAS1062043_Z?$product-large$',
-    //     {
-    //         intensity: 2,
-    //         style: 3,
-    //         size: 1,
-    //         feel: 1
-    //     });
-
-    // RR THE NEON ONE SILICONE>>PINK>>NO SIZE -- REMOVED FROM SITE
-    // ASRFS.pushRabbit(
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-vibrator---the-silicone-neon-one/37204.html',
-    //     'https://i1.adis.ws/i/annsummers/07OTOTAS1034041_Z?$product-large$',
-    //     {
-    //         intensity: 2,
-    //         style: 3,
-    //         size: 1,
-    //         feel: 1
-    //     });
-
     // RR THE BENDY ONE>>NO COLOUR>>NO SIZE
     ASRFS.pushRabbit(
         16,
@@ -1011,7 +934,7 @@ ASRFS.setupRabbits = function () {
             feel: [1, 3, 4]
         },{
             intensity: "Powerful",
-            style: "3 speeds and 7 patterns",
+            style: "Variable vibration patterns and speeds",
             size: "Larger",
             feel: "Contoured, flexible and G-spot"
         }, {
@@ -1035,8 +958,8 @@ ASRFS.setupRabbits = function () {
                 app: false
             },
             noiseLevel: {
-                quiet: false,
-                normal: true
+                quiet: true,
+                normal: false
             },
             powerSource: {
                 USB: false,
@@ -1069,12 +992,12 @@ ASRFS.setupRabbits = function () {
             feel: [1]
         },{
             intensity: "Powerful",
-            style: "3 speeds and 3 pulse patterns",
+            style: "Variable vibration patterns and speeds",
             size: "Larger",
             feel: "Contoured"
         }, {
             name: 'Rampant Rabbit Vibrator - The Moregasm Move Rechargeable One',
-            price: '£52.50',
+            price: '£75.00',
             brand: 'Ann Summers',
             forCouples: false,
             waterResistant: true,
@@ -1115,29 +1038,6 @@ ASRFS.setupRabbits = function () {
         0
     );
 
-    // RR USB Rechargeable COCK RING>>BLACK>>NO SIZE -- IS THIS REQUIRED?
-    // ASRFS.pushRabbit(
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-vibrators/rocks-off-ignition-usb-rechargeable-bullet-vibrator/85228.html',
-    //     'https://i1.adis.ws/i/annsummers/07CSHDAS1573025_Z?$product-large$',
-    //     {
-    //         intensity: 2,
-    //         style: 3,
-    //         size: 1,
-    //         feel: 1
-    //     });
-
-
-    // // JUST THE EARS UPDATE>>PURPLE>>NO SIZE -- IS THIS REQUIRED?
-    // ASRFS.pushRabbit(
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-vibrators/just-the-ears-rampant-rabbit-vibrator/91256.html',
-    //     'https://i1.adis.ws/i/annsummers/07CSHDAS1580025_Z?$product-large$',
-    //     {
-    //         intensity: 2,
-    //         style: 3,
-    //         size: 1,
-    //         feel: 1
-    //     });
-
 
     // NEWLY ADDED TO THE SITE 01/01/2018
 
@@ -1148,76 +1048,18 @@ ASRFS.setupRabbits = function () {
         'https://i1.adis.ws/i/annsummers/07CSNRAS1041043_Z?$product-mobile-large$',
         {
             intensity: [1],
-            style: [1, 2],
+            style: [1, 3],
             size: [3],
             feel: [2]
         },{
             intensity: "Moderate",
-            style: "Rotations and variable patterns",
+            style: "Variable vibration patterns and speeds",
             size: "Medium",
             feel: "Straight"
         }, {
-            name: 'Rampant Rabbit Vibrator - The Slim Rechargeable One',
+            name: 'The Slim Rechargeable One',
             price: '£55.00',
-            brand: 'OVO',
-            forCouples: false,
-            waterResistant: true,
-            flexibility: {
-                firm: true,
-                flexable: false,
-                soft: false
-            },
-            material: {
-                silicone: false,
-                metal: false
-            },
-            controllerType: {
-                pushButton: true,
-                switch: false,
-                app: false
-            },
-            noiseLevel: {
-                quiet: false,
-                normal: true
-            },
-            powerSource: {
-                USB: true,
-                battery: {
-                    used: false,
-                    batteryType: '',
-                    noBattery: 0,
-                    batteryIncluded: false,
-                }
-            },
-            matchedFeatures: {
-                size: false,
-                intensity: false,
-                feel: false,
-                style: false
-            }
-        },
-        0
-    );
-
-    // MILA RECHARGABLE FLEXIBLE ONE
-    ASRFS.pushRabbit(
-        19,
-        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/mila-rechargeable-flexible-rabbit-vibrator/88414.html#start=10',
-        'https://i1.adis.ws/i/annsummers/07SCNRAS1189043_Z?$product-large$',
-        {
-            intensity: [3],
-            style: [1, 3],
-            size: [4],
-            feel: [1, 4]
-        },{
-            intensity: "Powerful",
-            style: "Variable speeds and patterns",
-            size: "Larger",
-            feel: "Contoured and flexible"
-        }, {
-            name: 'Mila Rechargeable Flexible Rabbit Vibrator',
-            price: '£90.00',
-            brand: 'OVO',
+            brand: 'Ann Summers',
             forCouples: false,
             waterResistant: true,
             flexibility: {
@@ -1257,63 +1099,121 @@ ASRFS.setupRabbits = function () {
         0
     );
 
+    // MILA RECHARGABLE FLEXIBLE ONE
+    // ASRFS.pushRabbit(
+    //     19,
+    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/mila-rechargeable-flexible-rabbit-vibrator/88414.html#start=10',
+    //     'https://i1.adis.ws/i/annsummers/07SCNRAS1189043_Z?$product-large$',
+    //     {
+    //         intensity: [3],
+    //         style: [1, 3],
+    //         size: [4],
+    //         feel: [1, 4]
+    //     },{
+    //         intensity: "Powerful",
+    //         style: "Variable vibration patterns and speeds",
+    //         size: "Larger",
+    //         feel: "Contoured and flexible"
+    //     }, {
+    //         name: 'Mila Rechargeable Flexible Rabbit Vibrator',
+    //         price: '£90.00',
+    //         brand: 'OVO',
+    //         forCouples: false,
+    //         waterResistant: true,
+    //         flexibility: {
+    //             firm: true,
+    //             flexable: false,
+    //             soft: false
+    //         },
+    //         material: {
+    //             silicone: false,
+    //             metal: false
+    //         },
+    //         controllerType: {
+    //             pushButton: true,
+    //             switch: false,
+    //             app: false
+    //         },
+    //         noiseLevel: {
+    //             quiet: true,
+    //             normal: false
+    //         },
+    //         powerSource: {
+    //             USB: true,
+    //             battery: {
+    //                 used: false,
+    //                 batteryType: '',
+    //                 noBattery: 0,
+    //                 batteryIncluded: false,
+    //             }
+    //         },
+    //         matchedFeatures: {
+    //             size: false,
+    //             intensity: false,
+    //             feel: false,
+    //             style: false
+    //         }
+    //     },
+    //     0
+    // );
+
     // PORNHUB TURBO CHARGED
-    ASRFS.pushRabbit(
-        20,
-        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/pornhub-turbo-rabbit-vibrator/94589.html#start=11',
-        'https://i1.adis.ws/i/annsummers/07NCHDAS1295006_Z?$product-large$',
-        {
-            intensity: [2],
-            style: [1, 3],
-            size: [3],
-            feel: [1]
-        },{
-            intensity: "Intense",
-            style: "Variable speeds and patterns",
-            size: "Medium",
-            feel: "Contoured"
-        }, {
-            name: 'Pornhub Turbo Rabbit Vibrator',
-            price: '£75.00',
-            brand: 'OVO',
-            forCouples: false,
-            waterResistant: true,
-            flexibility: {
-                firm: true,
-                flexable: false,
-                soft: false
-            },
-            material: {
-                silicone: false,
-                metal: false
-            },
-            controllerType: {
-                pushButton: true,
-                switch: false,
-                app: false
-            },
-            noiseLevel: {
-                quiet: false,
-                normal: true
-            },
-            powerSource: {
-                USB: true,
-                battery: {
-                    used: false,
-                    batteryType: '',
-                    noBattery: 0,
-                    batteryIncluded: false,
-                }
-            },
-            matchedFeatures: {
-                size: false,
-                intensity: false,
-                feel: false,
-                style: false
-            }
-        },
-        0
-    );
+    // ASRFS.pushRabbit(
+    //     20,
+    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/pornhub-turbo-rabbit-vibrator/94589.html#start=11',
+    //     'https://i1.adis.ws/i/annsummers/07NCHDAS1295006_Z?$product-large$',
+    //     {
+    //         intensity: [2],
+    //         style: [1, 3],
+    //         size: [3],
+    //         feel: [1]
+    //     },{
+    //         intensity: "Intense",
+    //         style: "Variable speeds and patterns",
+    //         size: "Medium",
+    //         feel: "Contoured"
+    //     }, {
+    //         name: 'Pornhub Turbo Rabbit Vibrator',
+    //         price: '£75.00',
+    //         brand: 'OVO',
+    //         forCouples: false,
+    //         waterResistant: true,
+    //         flexibility: {
+    //             firm: true,
+    //             flexable: false,
+    //             soft: false
+    //         },
+    //         material: {
+    //             silicone: false,
+    //             metal: false
+    //         },
+    //         controllerType: {
+    //             pushButton: true,
+    //             switch: false,
+    //             app: false
+    //         },
+    //         noiseLevel: {
+    //             quiet: false,
+    //             normal: true
+    //         },
+    //         powerSource: {
+    //             USB: true,
+    //             battery: {
+    //                 used: false,
+    //                 batteryType: '',
+    //                 noBattery: 0,
+    //                 batteryIncluded: false,
+    //             }
+    //         },
+    //         matchedFeatures: {
+    //             size: false,
+    //             intensity: false,
+    //             feel: false,
+    //             style: false
+    //         }
+    //     },
+    //     0
+    // );
 
 
 
@@ -1329,13 +1229,13 @@ ASRFS.setupRabbits = function () {
             feel: [1]
         },{
             intensity: "Intense",
-            style: "Variable speeds and patterns",
+            style: "Variable vibration patterns and speeds",
             size: "Medium",
             feel: "Contoured"
         }, {
-            name: 'Rampant Rabbit Vibrator - The Suction Base One',
+            name: 'The Suction Base One',
             price: '£55.00',
-            brand: 'OVO',
+            brand: 'Ann Summers',
             forCouples: false,
             waterResistant: true,
             flexibility: {
@@ -1353,8 +1253,8 @@ ASRFS.setupRabbits = function () {
                 app: false
             },
             noiseLevel: {
-                quiet: false,
-                normal: true
+                quiet: true,
+                normal: false
             },
             powerSource: {
                 USB: true,
@@ -1376,353 +1276,353 @@ ASRFS.setupRabbits = function () {
     );
 
     // SEARLE PINK RECHARGABLE
-    // ASRFS.pushRabbit(
-    //     22,
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/searle-pink-rechargeable-rabbit/104975.html#start=3',
-    //     'https://i1.adis.ws/i/annsummers/07NCHDAS1322041_Z?$product-large$',
-    //     {
-    //         intensity: [3],
-    //         style: [1, 3],
-    //         size: [2],
-    //         feel: [3]
-    //     },{
-    //         intensity: "Powerful",
-    //         style: "Variable speeds and patterns",
-    //         size: "Smaller",
-    //         feel: "Contoured"
-    //     }, {
-    //         name: 'Searle Black Rechargeable Rabbit',
-    //         price: '£70.00',
-    //         brand: 'OVO',
-    //         forCouples: false,
-    //         waterResistant: true,
-    //         flexibility: {
-    //             firm: true,
-    //             flexable: false,
-    //             soft: false
-    //         },
-    //         material: {
-    //             silicone: false,
-    //             metal: false
-    //         },
-    //         controllerType: {
-    //             pushButton: true,
-    //             switch: false,
-    //             app: false
-    //         },
-    //         noiseLevel: {
-    //             quiet: false,
-    //             normal: true
-    //         },
-    //         powerSource: {
-    //             USB: true,
-    //             battery: {
-    //                 used: false,
-    //                 batteryType: '',
-    //                 noBattery: 0,
-    //                 batteryIncluded: false,
-    //             }
-    //         },
-    //         matchedFeatures: {
-    //             size: false,
-    //             intensity: false,
-    //             feel: false,
-    //             style: false
-    //         }
-    //     },
-    //     0
-    // );
+    ASRFS.pushRabbit(
+        22,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/searle-pink-rechargeable-rabbit/104975.html#start=3',
+        'https://i1.adis.ws/i/annsummers/07NCHDAS1322041_Z?$product-large$',
+        {
+            intensity: [3],
+            style: [1, 3],
+            size: [2],
+            feel: [3]
+        },{
+            intensity: "Powerful",
+            style: "Variable vibration patterns and speeds",
+            size: "Smaller",
+            feel: "Contoured"
+        }, {
+            name: 'Searle Black Rechargeable Rabbit',
+            price: '£70.00',
+            brand: 'Searle',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: true,
+                flexable: false,
+                soft: false
+            },
+            material: {
+                silicone: false,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: true,
+                normal: false
+            },
+            powerSource: {
+                USB: true,
+                battery: {
+                    used: false,
+                    batteryType: '',
+                    noBattery: 0,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
 
 
     // // SEARLE BLACK RECHARGABLE
-    // ASRFS.pushRabbit(
-    //     23,
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/searle-black-rechargeable-rabbit/104974.html#start=5',
-    //     'https://i1.adis.ws/i/annsummers/07NCHDAS1321006_Z?$product-mobile-large$',
-    //     {
-    //         intensity: [3],
-    //         style: [1, 3],
-    //         size: [2],
-    //         feel: [3]
-    //     },{
-    //         intensity: "Powerful",
-    //         style: "Variable speeds and patterns",
-    //         size: "Smaller",
-    //         feel: "Contoured"
-    //     }, {
-    //         name: 'Searle Black Rechargeable Rabbit',
-    //         price: '£70.00',
-    //         brand: 'OVO',
-    //         forCouples: false,
-    //         waterResistant: true,
-    //         flexibility: {
-    //             firm: true,
-    //             flexable: false,
-    //             soft: false
-    //         },
-    //         material: {
-    //             silicone: false,
-    //             metal: false
-    //         },
-    //         controllerType: {
-    //             pushButton: true,
-    //             switch: false,
-    //             app: false
-    //         },
-    //         noiseLevel: {
-    //             quiet: false,
-    //             normal: true
-    //         },
-    //         powerSource: {
-    //             USB: true,
-    //             battery: {
-    //                 used: false,
-    //                 batteryType: '',
-    //                 noBattery: 0,
-    //                 batteryIncluded: false,
-    //             }
-    //         },
-    //         matchedFeatures: {
-    //             size: false,
-    //             intensity: false,
-    //             feel: false,
-    //             style: false
-    //         }
-    //     },
-    //     0
-    // );
+    ASRFS.pushRabbit(
+        23,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/searle-black-rechargeable-rabbit/104974.html#start=5',
+        'https://i1.adis.ws/i/annsummers/07NCHDAS1321006_Z?$product-mobile-large$',
+        {
+            intensity: [3],
+            style: [1, 3],
+            size: [2],
+            feel: [3]
+        },{
+            intensity: "Powerful",
+            style: "Variable vibration patterns and speeds",
+            size: "Smaller",
+            feel: "Contoured"
+        }, {
+            name: 'Searle Black Rechargeable Rabbit',
+            price: '£70.00',
+            brand: 'Searle',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: true,
+                flexable: false,
+                soft: false
+            },
+            material: {
+                silicone: false,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: true,
+                normal: false
+            },
+            powerSource: {
+                USB: true,
+                battery: {
+                    used: false,
+                    batteryType: '',
+                    noBattery: 0,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
 
     // // SEARLE PURPLE RECHARGABLE
-    // ASRFS.pushRabbit(
-    //     24,
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/searle-purple-rechargeable-rabbit/104976.html#start=7',
-    //     'https://i1.adis.ws/i/annsummers/07NCHDAS1323043_Z?$product-mobile-large$',
-    //     {
-    //         intensity: [3],
-    //         style: [1, 3],
-    //         size: [2],
-    //         feel: [3]
-    //     }, {
-    //         intensity: "Powerful",
-    //         style: "Variable speeds and patterns",
-    //         size: "Smaller",
-    //         feel: "Contoured"
-    //     },{
-    //         name: 'Searle Purple Rechargeable Rabbit',
-    //         price: '£70.00',
-    //         brand: 'OVO',
-    //         forCouples: false,
-    //         waterResistant: true,
-    //         flexibility: {
-    //             firm: true,
-    //             flexable: false,
-    //             soft: false
-    //         },
-    //         material: {
-    //             silicone: false,
-    //             metal: false
-    //         },
-    //         controllerType: {
-    //             pushButton: true,
-    //             switch: false,
-    //             app: false
-    //         },
-    //         noiseLevel: {
-    //             quiet: false,
-    //             normal: true
-    //         },
-    //         powerSource: {
-    //             USB: true,
-    //             battery: {
-    //                 used: false,
-    //                 batteryType: '',
-    //                 noBattery: 0,
-    //                 batteryIncluded: false,
-    //             }
-    //         },
-    //         matchedFeatures: {
-    //             size: false,
-    //             intensity: false,
-    //             feel: false,
-    //             style: false
-    //         }
-    //     },
-    //     0
-    // );
+    ASRFS.pushRabbit(
+        24,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/searle-purple-rechargeable-rabbit/104976.html#start=7',
+        'https://i1.adis.ws/i/annsummers/07NCHDAS1323043_Z?$product-mobile-large$',
+        {
+            intensity: [3],
+            style: [1, 3],
+            size: [2],
+            feel: [3]
+        }, {
+            intensity: "Powerful",
+            style: "Variable vibration patterns and speeds",
+            size: "Smaller",
+            feel: "Contoured"
+        },{
+            name: 'Searle Purple Rechargeable Rabbit',
+            price: '£70.00',
+            brand: 'Searle',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: true,
+                flexable: false,
+                soft: false
+            },
+            material: {
+                silicone: false,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: true,
+                normal: false
+            },
+            powerSource: {
+                USB: true,
+                battery: {
+                    used: false,
+                    batteryType: '',
+                    noBattery: 0,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
 
     // SILICONE PURPLE G-SPOT ONE
-    // ASRFS.pushRabbit(
-    //     25,
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/silicone-bunny-purple-rabbit/104967.html#start=4',
-    //     'https://i1.adis.ws/i/annsummers/07NCHDAS1323043_Z?$product-mobile-large$',
-    //     {
-    //         intensity: [3],
-    //         style: [1],
-    //         size: [2],
-    //         feel: [2, 4]
-    //     },{
-    //         intensity: "Powerful",
-    //         style: "Variable patterns",
-    //         size: "Smaller",
-    //         feel: "Flexible and G-spot"
-    //     }, {
-    //         name: 'Silicone Bunny Purple Rabbit',
-    //         price: '£70.00',
-    //         brand: 'OVO',
-    //         forCouples: false,
-    //         waterResistant: true,
-    //         flexibility: {
-    //             firm: true,
-    //             flexable: false,
-    //             soft: false
-    //         },
-    //         material: {
-    //             silicone: false,
-    //             metal: false
-    //         },
-    //         controllerType: {
-    //             pushButton: true,
-    //             switch: false,
-    //             app: false
-    //         },
-    //         noiseLevel: {
-    //             quiet: false,
-    //             normal: true
-    //         },
-    //         powerSource: {
-    //             USB: true,
-    //             battery: {
-    //                 used: false,
-    //                 batteryType: '',
-    //                 noBattery: 0,
-    //                 batteryIncluded: false,
-    //             }
-    //         },
-    //         matchedFeatures: {
-    //             size: false,
-    //             intensity: false,
-    //             feel: false,
-    //             style: false
-    //         }
-    //     },
-    //     0
-    // );
+    ASRFS.pushRabbit(
+        25,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/silicone-bunny-purple-rabbit/104967.html#start=4',
+        'https://i1.adis.ws/i/annsummers/07NCHDAS1323043_Z?$product-mobile-large$',
+        {
+            intensity: [3],
+            style: [1],
+            size: [2],
+            feel: [3, 4]
+        },{
+            intensity: "Powerful",
+            style: "Vibration patterns",
+            size: "Smaller",
+            feel: "Flexible and G-spot"
+        }, {
+            name: 'Silicone Bunny Purple Rabbit',
+            price: '£70.00',
+            brand: 'Shots Toys',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: true,
+                flexable: false,
+                soft: false
+            },
+            material: {
+                silicone: false,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: true,
+                normal: false
+            },
+            powerSource: {
+                USB: false,
+                battery: {
+                    used: false,
+                    batteryType: '',
+                    noBattery: 0,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
 
     // // SILICONE PINK G-SPOT ONE
-    // ASRFS.pushRabbit(
-    //     26,
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/silicone-bunny-pink-rabbit/104966.html#start=8',
-    //     'https://i1.adis.ws/i/annsummers/07NCHDAS1316041_Z?$product-mobile-large$',
-    //     {
-    //         intensity: [3],
-    //         style: [1],
-    //         size: [2],
-    //         feel: [2, 4]
-    //     },{
-    //         intensity: "Powerful",
-    //         style: "Variable patterns",
-    //         size: "Smaller",
-    //         feel: "Flexible and G-spot"
-    //     }, {
-    //         name: 'Silicone Bunny Pink Rabbit',
-    //         price: '£70.00',
-    //         brand: 'OVO',
-    //         forCouples: false,
-    //         waterResistant: true,
-    //         flexibility: {
-    //             firm: true,
-    //             flexable: false,
-    //             soft: false
-    //         },
-    //         material: {
-    //             silicone: false,
-    //             metal: false
-    //         },
-    //         controllerType: {
-    //             pushButton: true,
-    //             switch: false,
-    //             app: false
-    //         },
-    //         noiseLevel: {
-    //             quiet: false,
-    //             normal: true
-    //         },
-    //         powerSource: {
-    //             USB: true,
-    //             battery: {
-    //                 used: false,
-    //                 batteryType: '',
-    //                 noBattery: 0,
-    //                 batteryIncluded: false,
-    //             }
-    //         },
-    //         matchedFeatures: {
-    //             size: false,
-    //             intensity: false,
-    //             feel: false,
-    //             style: false
-    //         }
-    //     },
-    //     0
-    // );
+    ASRFS.pushRabbit(
+        26,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/silicone-bunny-pink-rabbit/104966.html#start=8',
+        'https://i1.adis.ws/i/annsummers/07NCHDAS1316041_Z?$product-mobile-large$',
+        {
+            intensity: [3],
+            style: [1],
+            size: [2],
+            feel: [3, 4]
+        },{
+            intensity: "Powerful",
+            style: "Vibration patterns",
+            size: "Smaller",
+            feel: "Flexible and G-spot"
+        }, {
+            name: 'Silicone Bunny Pink Rabbit',
+            price: '£70.00',
+            brand: 'Shots Toys',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: true,
+                flexable: false,
+                soft: false
+            },
+            material: {
+                silicone: false,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: true,
+                normal: false
+            },
+            powerSource: {
+                USB: false,
+                battery: {
+                    used: false,
+                    batteryType: '',
+                    noBattery: 0,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
 
     // // SILICONE BLACK G-SPOT ONE
-    // ASRFS.pushRabbit(
-    //     27,
-    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/silicone-bunny-black-rabbit/104962.html#start=9',
-    //     'https://i1.adis.ws/i/annsummers/07NCHDAS1315006_Z?$product-mobile-large$',
-    //     {
-    //         intensity: [3],
-    //         style: [1],
-    //         size: [2],
-    //         feel: [2, 4]
-    //     },{
-    //         intensity: "Powerful",
-    //         style: "Variable patterns",
-    //         size: "Smaller",
-    //         feel: "Flexible and G-spot"
-    //     }, {
-    //         name: 'Silicone Bunny Black Rabbit',
-    //         price: '£70.00',
-    //         brand: 'OVO',
-    //         forCouples: false,
-    //         waterResistant: true,
-    //         flexibility: {
-    //             firm: true,
-    //             flexable: false,
-    //             soft: false
-    //         },
-    //         material: {
-    //             silicone: false,
-    //             metal: false
-    //         },
-    //         controllerType: {
-    //             pushButton: true,
-    //             switch: false,
-    //             app: false
-    //         },
-    //         noiseLevel: {
-    //             quiet: false,
-    //             normal: true
-    //         },
-    //         powerSource: {
-    //             USB: true,
-    //             battery: {
-    //                 used: false,
-    //                 batteryType: '',
-    //                 noBattery: 0,
-    //                 batteryIncluded: false,
-    //             }
-    //         },
-    //         matchedFeatures: {
-    //             size: false,
-    //             intensity: false,
-    //             feel: false,
-    //             style: false
-    //         }
-    //     },
-    //     0
-    // );
+    ASRFS.pushRabbit(
+        27,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/silicone-bunny-black-rabbit/104962.html#start=9',
+        'https://i1.adis.ws/i/annsummers/07NCHDAS1315006_Z?$product-mobile-large$',
+        {
+            intensity: [3],
+            style: [1],
+            size: [2],
+            feel: [3, 4]
+        },{
+            intensity: "Powerful",
+            style: "Vibration patterns",
+            size: "Smaller",
+            feel: "Flexible and G-spot"
+        }, {
+            name: 'Silicone Bunny Black Rabbit',
+            price: '£70.00',
+            brand: 'Shots Toys',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: true,
+                flexable: false,
+                soft: false
+            },
+            material: {
+                silicone: false,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: true,
+                normal: false
+            },
+            powerSource: {
+                USB: false,
+                battery: {
+                    used: false,
+                    batteryType: '',
+                    noBattery: 0,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
 
     // THE THRUSTING ONE ONE
     ASRFS.pushRabbit(
@@ -1736,13 +1636,13 @@ ASRFS.setupRabbits = function () {
             feel: [2]
         },{
             intensity: "Moderate",
-            style: "3 rotations, 7 vibrations and thrusting",
+            style: "Variable vibration speeds and Thrusting",
             size: "Smaller",
             feel: "Straight"
         }, {
             name: 'Rampant Rabbit Vibrator -The Thrusting One',
-            price: '£35.00',
-            brand: 'OVO',
+            price: '45.00',
+            brand: 'Ann Summers',
             forCouples: false,
             waterResistant: false,
             flexibility: {
@@ -1794,7 +1694,7 @@ ASRFS.setupRabbits = function () {
             feel: [1]
         },{
             intensity: "Moderate",
-            style: "10 speed",
+            style: "Variable vibration speeds",
             size: "Smaller",
             feel: "Contoured"
         }, {
@@ -1846,18 +1746,18 @@ ASRFS.setupRabbits = function () {
         'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-vibrator---the-g-spot-one/86355.html#start=12',
         'https://i1.adis.ws/i/annsummers/07SCNRAS1181041_Z?$product-mobile-large$',
         {
-            intensity: [2],
+            intensity: [1],
             style: [1, 3],
             size: [3],
             feel: [1, 3]
         },{
             intensity: "Intense",
-            style: "Vibration speeds and patterns",
+            style: "Variable vibration patterns and speeds",
             size: "Medium",
             feel: "Contoured and g-spot"
         }, {
             name: 'The G Spot One',
-            price: '£28.00',
+            price: '£50.00',
             brand: 'Ann Summers',
             forCouples: false,
             waterResistant: false,
@@ -1902,7 +1802,7 @@ ASRFS.setupRabbits = function () {
     ASRFS.pushRabbit(
         31,
         'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-vibrators/lelo-soraya-luxury-rechargeable-vibrator/50714.html#start=6',
-        'https://i1.adis.ws/i/annsummers/07SCNRAS1163016_Z?$product-mobile-large$',
+        'https://i1.adis.ws/i/annsummers/07SCNRAS1121041_Z?$product-large$',
         {
             intensity: [3],
             style: [1, 3],
@@ -1910,7 +1810,7 @@ ASRFS.setupRabbits = function () {
             feel: [1]
         },{
             intensity: "Powerful",
-            style: "8 vibration speeds and patterns",
+            style: "Variable vibration patterns and speeds",
             size: "Medium",
             feel: "Contoured"
         }, {
@@ -1918,7 +1818,7 @@ ASRFS.setupRabbits = function () {
             price: '£189.00',
             brand: 'LELO',
             forCouples: false,
-            waterResistant: false,
+            waterResistant: true,
             flexibility: {
                 firm: true,
                 flexable: false,
@@ -1962,13 +1862,13 @@ ASRFS.setupRabbits = function () {
         'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbits-type-rechargeable/remote-controlled-rampant-rabbit/104339.html#start=3',
         'https://i1.adis.ws/i/annsummers/07CPHDAS1018006_Z?$product-mobile-large$',
         {
-            intensity: [1],
+            intensity: [2],
             style: [1, 3],
             size: [3],
             feel: [1]
         },{
-            intensity: "Moderate",
-            style: "Vibration patterns and speeds",
+            intensity: "Intense",
+            style: "Variable vibration patterns and speeds",
             size: "Medium",
             feel: "Contoured"
         }, {
@@ -1976,7 +1876,7 @@ ASRFS.setupRabbits = function () {
             price: '£75.00',
             brand: 'Ann Summers',
             forCouples: true,
-            waterResistant: false,
+            waterResistant: true,
             flexibility: {
                 firm: true,
                 flexable: false,
@@ -2016,9 +1916,9 @@ ASRFS.setupRabbits = function () {
 
     // MILA PINK RECHARGABLE FLEXIBLE ONE
     ASRFS.pushRabbit(
-        32,
+        33,
         'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/mila-rechargeable-flexible-rabbit-vibrator/88414.html#start=10',
-        'https://i1.adis.ws/i/annsummers/07NCSVAS1162043_Z?$product-mobile-large$',
+        'https://i1.adis.ws/i/annsummers/07SCNRAS1189043_Z?$product-large$',
         {
             intensity: [3],
             style: [1, 3],
@@ -2026,7 +1926,7 @@ ASRFS.setupRabbits = function () {
             feel: [1, 4]
         },{
             intensity: "Powerful",
-            style: "Vibration patterns and speeds",
+            style: "Variable vibration patterns and speeds",
             size: "Larger",
             feel: "Contoured and flexible"
         }, {
@@ -2073,29 +1973,145 @@ ASRFS.setupRabbits = function () {
     );
 
     // PornHUB Virtual Rabbit
+    // ASRFS.pushRabbit(
+    //     33,
+    //     'https://www.annsummers.com/pornhub-virtual-rabbit.html#start=8',
+    //     'https://i1.adis.ws/i/annsummers/PH-RABBIT-VIRTUAL-TOY-v1_z?$product-large$',
+    //     {
+    //         intensity: [2],
+    //         style: [1, 3],
+    //         size: [3],
+    //         feel: [1]
+    //     },{
+    //         intensity: "Intense",
+    //         style: "Vibration patterns and speeds",
+    //         size: "Medium",
+    //         feel: "Contoured"
+    //     }, {
+    //         name: 'PornHUB Virtual Rabbit',
+    //         price: '£139.00',
+    //         brand: 'Pornhub',
+    //         forCouples: true,
+    //         waterResistant: true,
+    //         flexibility: {
+    //             firm: false,
+    //             flexable: true,
+    //             soft: false
+    //         },
+    //         material: {
+    //             silicone: true,
+    //             metal: false
+    //         },
+    //         controllerType: {
+    //             pushButton: false,
+    //             switch: true,
+    //             app: false
+    //         },
+    //         noiseLevel: {
+    //             quiet: true,
+    //             normal: false
+    //         },
+    //         powerSource: {
+    //             USB: true,
+    //             battery: {
+    //                 used: false,
+    //                 batteryType: '',
+    //                 noBattery: 2,
+    //                 batteryIncluded: false,
+    //             }
+    //         },
+    //         matchedFeatures: {
+    //             size: false,
+    //             intensity: false,
+    //             feel: false,
+    //             style: false
+    //         }
+    //     },
+    //     0
+    // );
+
+    // The Sleek One
+    // ASRFS.pushRabbit(
+    //     34,
+    //     'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-vibrator---the-sleek-one/92294.html#start=5',
+    //     'https://i1.adis.ws/i/annsummers/07CSNRAS1046014_Z?$product-mobile-large$',
+    //     {
+    //         intensity: [1],
+    //         style: [1],
+    //         size: [2],
+    //         feel: [1 ,3]
+    //     },{
+    //         intensity: "Moderate",
+    //         style: "10 pulse settings",
+    //         size: "Smaller",
+    //         feel: "Contoured and g-spot"
+    //     }, {
+    //         name: 'The Sleek One',
+    //         price: '£50.00',
+    //         brand: 'Ann Summers',
+    //         forCouples: false,
+    //         waterResistant: true,
+    //         flexibility: {
+    //             firm: true,
+    //             flexable: false,
+    //             soft: false
+    //         },
+    //         material: {
+    //             silicone: true,
+    //             metal: false
+    //         },
+    //         controllerType: {
+    //             pushButton: false,
+    //             switch: true,
+    //             app: false
+    //         },
+    //         noiseLevel: {
+    //             quiet: false,
+    //             normal: true
+    //         },
+    //         powerSource: {
+    //             USB: true,
+    //             battery: {
+    //                 used: false,
+    //                 batteryType: '',
+    //                 noBattery: 2,
+    //                 batteryIncluded: false,
+    //             }
+    //         },
+    //         matchedFeatures: {
+    //             size: false,
+    //             intensity: false,
+    //             feel: false,
+    //             style: false
+    //         }
+    //     },
+    //     0
+    // );
+
+    // Rechargable mini one
     ASRFS.pushRabbit(
-        33,
-        'https://www.annsummers.com/pornhub-virtual-rabbit.html#start=8',
-        'https://i1.adis.ws/i/annsummers/PH-RABBIT-VIRTUAL-TOY-v1_z?$product-large$',
+        35,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-vibrator--the-rechargeable-mini-one/63316.html#start=2',
+        'https://i1.adis.ws/i/annsummers/07SCNRAS1153041_Z?$product-mobile-large$',
         {
-            intensity: [2],
-            style: [1, 3],
-            size: [3],
-            feel: [1]
+            intensity: [3],
+            style: [3],
+            size: [1],
+            feel: [1, 3]
         },{
-            intensity: "Intense",
-            style: "Vibration patterns and speeds",
-            size: "Medium",
-            feel: "Contoured"
+            intensity: "Powerful",
+            style: "Variable vibration speeds",
+            size: "Mini",
+            feel: "Contoured and g-spot"
         }, {
-            name: 'PornHUB Virtual Rabbit',
-            price: '£139.00',
-            brand: 'Pornhub',
-            forCouples: true,
-            waterResistant: true,
+            name: 'Rechargable mini one',
+            price: '£45.00',
+            brand: 'Ann Summers',
+            forCouples: false,
+            waterResistant: false,
             flexibility: {
-                firm: false,
-                flexable: true,
+                firm: true,
+                flexable: false,
                 soft: false
             },
             material: {
@@ -2130,136 +2146,20 @@ ASRFS.setupRabbits = function () {
         0
     );
 
-    // The Sleek One
-    ASRFS.pushRabbit(
-        34,
-        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-vibrator---the-sleek-one/92294.html#start=5',
-        'https://i1.adis.ws/i/annsummers/07CSNRAS1046014_Z?$product-mobile-large$',
-        {
-            intensity: [1],
-            style: [1],
-            size: [2],
-            feel: [1 ,3]
-        },{
-            intensity: "Moderate",
-            style: "10 pulse settings",
-            size: "Smaller",
-            feel: "Contoured and g-spot"
-        }, {
-            name: 'The Sleek One',
-            price: '£50.00',
-            brand: 'Ann Summers',
-            forCouples: false,
-            waterResistant: true,
-            flexibility: {
-                firm: true,
-                flexable: false,
-                soft: false
-            },
-            material: {
-                silicone: true,
-                metal: false
-            },
-            controllerType: {
-                pushButton: false,
-                switch: true,
-                app: false
-            },
-            noiseLevel: {
-                quiet: false,
-                normal: true
-            },
-            powerSource: {
-                USB: true,
-                battery: {
-                    used: false,
-                    batteryType: '',
-                    noBattery: 2,
-                    batteryIncluded: false,
-                }
-            },
-            matchedFeatures: {
-                size: false,
-                intensity: false,
-                feel: false,
-                style: false
-            }
-        },
-        0
-    );
-
-    // Rechargable mini one
-    ASRFS.pushRabbit(
-        35,
-        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-vibrator--the-rechargeable-mini-one/63316.html#start=2',
-        'https://i1.adis.ws/i/annsummers/07SCNRAS1153041_Z?$product-mobile-large$',
-        {
-            intensity: [1],
-            style: [3],
-            size: [1],
-            feel: [1, 3]
-        },{
-            intensity: "Moderate",
-            style: "Variable vibration speeds",
-            size: "Mini",
-            feel: "Contoured and g-spot"
-        }, {
-            name: 'Rechargable mini one',
-            price: '£45.00',
-            brand: 'Ann Summers',
-            forCouples: false,
-            waterResistant: false,
-            flexibility: {
-                firm: true,
-                flexable: false,
-                soft: false
-            },
-            material: {
-                silicone: true,
-                metal: false
-            },
-            controllerType: {
-                pushButton: false,
-                switch: true,
-                app: false
-            },
-            noiseLevel: {
-                quiet: false,
-                normal: true
-            },
-            powerSource: {
-                USB: true,
-                battery: {
-                    used: false,
-                    batteryType: '',
-                    noBattery: 2,
-                    batteryIncluded: false,
-                }
-            },
-            matchedFeatures: {
-                size: false,
-                intensity: false,
-                feel: false,
-                style: false
-            }
-        },
-        0
-    );
-
     // Vibrating beginners one
     ASRFS.pushRabbit(
         36,
         'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/vibrating-beginners-rabbit/100263.html#start=8',
         'https://i1.adis.ws/i/annsummers/07SCNRAS1197043_Z?$product-mobile-large$',
         {
-            intensity: [1],
+            intensity: [2],
             style: [3],
             size: [2 ,3],
             feel: [2, 3]
         },{
             intensity: "Moderate",
             style: "Variable vibration speeds",
-            size: "Smaller and medium",
+            size: "Small to medium",
             feel: "Straight and g-spot"
         }, {
             name: 'Vibrating beginners one',
@@ -2310,14 +2210,14 @@ ASRFS.setupRabbits = function () {
         'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/the-original-rampant-rabbit/67767.html#start=3',
         'https://i1.adis.ws/i/annsummers/07SCRTAS1047041_Z?$product-mobile-large$',
         {
-            intensity: [1],
+            intensity: [3],
             style: [2, 3],
             size: [2, 3],
             feel: [2]
         },{
             intensity: "Moderate",
-            style: "3 Vibration speeds and rotations",
-            size: "Smaller and medium",
+            style: "Variable vibration speeds and rotations",
+            size: "Small to medium",
             feel: "Straight"
         }, {
             name: 'Original One',
@@ -2340,8 +2240,8 @@ ASRFS.setupRabbits = function () {
                 app: false
             },
             noiseLevel: {
-                quiet: false,
-                normal: true
+                quiet: true,
+                normal: false
             },
             powerSource: {
                 USB: false,
@@ -2374,7 +2274,7 @@ ASRFS.setupRabbits = function () {
             feel: [1, 3]
         },{
             intensity: "Moderate",
-            style: "5 vibration pulse settings and speeds",
+            style: "Variable vibration patterns and speeds",
             size: "Medium",
             feel: "Contoured and g-spot"
         }, {
@@ -2419,6 +2319,647 @@ ASRFS.setupRabbits = function () {
         },
         0
     );
+
+
+    //NEW PRODUCTS 21 March 2018
+    // Rampant Rabbit Vibrator - The Purple Silicone Curved One
+    ASRFS.pushRabbit(
+        39,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-vibrator---the-purple-silicone-curved-one/80292.html',
+        'https://i1.adis.ws/i/annsummers/07CSSPAS1047043_Z?$product-large$',
+        {
+            intensity: [1],
+            style: [1, 3],
+            size: [3],
+            feel: [1, 3]
+        },{
+            intensity: "Moderate",
+            style: "Vibration patterns and speeds",
+            size: "Medium",
+            feel: "Contoured and g-spot"
+        }, {
+            name: 'The Purple Silicone Curved One',
+            price: '£50.00',
+            brand: 'Ann Summers',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: true,
+                flexable: false,
+                soft: false
+            },
+            material: {
+                silicone: true,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: false,
+                normal: true
+            },
+            powerSource: {
+                USB: false,
+                battery: {
+                    used: false,
+                    batteryType: 'AAA',
+                    noBattery: 3,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
+
+    // Jil Mila Rechargeable Flexible Rabbit Vibrator
+    ASRFS.pushRabbit(
+        40,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/jil-mila-rechargeable-flexible-rabbit-vibrator/88414.html#start=10',
+        'https://i1.adis.ws/i/annsummers/07SCNRAS1189043_Z?$product-large$',
+        {
+            intensity: [3],
+            style: [1, 3],
+            size: [4],
+            feel: [1, 4]
+        },{
+            intensity: "Powerful",
+            style: "Vibration patterns and speeds",
+            size: "Larger",
+            feel: "Contoured and flexible"
+        }, {
+            name: 'Jil Mila Rechargeable Flexible Rabbit Vibrator',
+            price: '£90.00',
+            brand: 'Jil',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: false,
+                flexable: true,
+                soft: false
+            },
+            material: {
+                silicone: true,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: true,
+                normal: false
+            },
+            powerSource: {
+                USB: true,
+                battery: {
+                    used: false,
+                    batteryType: '',
+                    noBattery: 3,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
+
+    // Vibrating Black Rabbit
+    ASRFS.pushRabbit(
+        41,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/vibrating-black-rabbit/104940.html',
+        'https://i1.adis.ws/i/annsummers/07NCHDAS1306006_Z?$product-large$',
+        {
+            intensity: [3],
+            style: [1, 2],
+            size: [2],
+            feel: [2]
+        },{
+            intensity: "Powerful",
+            style: "Vibration patterns and rotations",
+            size: "Smaller",
+            feel: "Straight"
+        }, {
+            name: 'Vibrating Black Rabbit',
+            price: '£40.00',
+            brand: 'Shots Toys',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: false,
+                flexable: false,
+                soft: true
+            },
+            material: {
+                silicone: true,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: false,
+                normal: true
+            },
+            powerSource: {
+                USB: false,
+                battery: {
+                    used: false,
+                    batteryType: 'AAA',
+                    noBattery: 2,
+                    batteryIncluded: true,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
+
+    // Vibrating Pink Rabbit
+    ASRFS.pushRabbit(
+        42,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/vibrating-pink-rabbit/104941.html#q=vibrating%2Bpink%2Brabbit&start=12',
+        'https://i1.adis.ws/i/annsummers/07NCHDAS1307041_Z?$product-large$',
+        {
+            intensity: [3],
+            style: [1, 2],
+            size: [2],
+            feel: [2]
+        },{
+            intensity: "Powerful",
+            style: "Vibration patterns and rotations",
+            size: "Smaller",
+            feel: "Straight"
+        }, {
+            name: 'Vibrating Pink Rabbit',
+            price: '£40.00',
+            brand: 'Shots Toys',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: false,
+                flexable: false,
+                soft: true
+            },
+            material: {
+                silicone: true,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: false,
+                normal: true
+            },
+            powerSource: {
+                USB: false,
+                battery: {
+                    used: false,
+                    batteryType: 'AAA',
+                    noBattery: 2,
+                    batteryIncluded: true,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
+
+    // Jil Ava Rechargeable Flexible Rabbit
+    ASRFS.pushRabbit(
+        43,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbits-type-rechargeable/jil-ava-rechargeable-flexible-rabbit/104692.html',
+        'https://i1.adis.ws/i/annsummers/07NCSVAS1160041_Z?$product-large$',
+        {
+            intensity: [3],
+            style: [1, 3],
+            size: [4],
+            feel: [1]
+        },{
+            intensity: "Powerful",
+            style: "Vibration patterns and speeds",
+            size: "Larger",
+            feel: "Contoured"
+        }, {
+            name: 'Jil Ava Rechargeable Flexible Rabbit',
+            price: '£90.00',
+            brand: 'Jil',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: false,
+                flexable: true,
+                soft: false
+            },
+            material: {
+                silicone: true,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: true,
+                normal: false
+            },
+            powerSource: {
+                USB: true,
+                battery: {
+                    used: false,
+                    batteryType: '',
+                    noBattery: 2,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
+
+    // Jil Keira Rechargeable Flexible Vibrator
+    ASRFS.pushRabbit(
+        44,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-vibrators/jil-keira-rechargeable-flexible-vibrator/104690.html',
+        'https://i1.adis.ws/i/annsummers/07NCSVAS1159043_Z?$product-large$',
+        {
+            intensity: [3],
+            style: [1, 3],
+            size: [4],
+            feel: [1, 4]
+        },{
+            intensity: "Powerful",
+            style: "Variable vibration patterns and speeds",
+            size: "Larger",
+            feel: "Contoured and flexible"
+        }, {
+            name: 'Jil Keira Rechargeable Flexible Vibrator',
+            price: '£90.00',
+            brand: 'Jil',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: false,
+                flexable: true,
+                soft: false
+            },
+            material: {
+                silicone: true,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: true,
+                normal: false
+            },
+            powerSource: {
+                USB: true,
+                battery: {
+                    used: false,
+                    batteryType: '',
+                    noBattery: 2,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
+
+    // Rampant Rabbit Vibrator - The Sleek One
+    ASRFS.pushRabbit(
+        45,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-vibrator---the-sleek-one/92294.html#start=5',
+        'https://i1.adis.ws/i/annsummers/07CSNRAS1046014_Z?$product-large$',
+        {
+            intensity: [1],
+            style: [1, 3],
+            size: [2],
+            feel: [1, 4]
+        },{
+            intensity: "Moderate",
+            style: "10 pulse settings and speeds",
+            size: "Smaller",
+            feel: "Contoured and g-spot"
+        }, {
+            name: 'The Sleek One',
+            price: '£50.00',
+            brand: 'Ann Summers',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: false,
+                flexable: true,
+                soft: false
+            },
+            material: {
+                silicone: true,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: false,
+                normal: true
+            },
+            powerSource: {
+                USB: true,
+                battery: {
+                    used: false,
+                    batteryType: '',
+                    noBattery: 2,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
+
+    // Sensations Feel The Ripple Rampant Rabbit
+    ASRFS.pushRabbit(
+        46,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/sensations-feel-the-ripple-rampant-rabbit/76408.html#start=12',
+        'https://i1.adis.ws/i/annsummers/07CSSPAS1043041_Z?$product-large$',
+        {
+            intensity: [3],
+            style: [1, 3],
+            size: [3],
+            feel: [2, 3]
+        },{
+            intensity: "Powerful",
+            style: "Variable vibration patterns and speeds",
+            size: "Medium",
+            feel: "Straight and g-spot"
+        }, {
+            name: 'Sensations Feel The Ripple Rampant Rabbit',
+            price: '£55.00',
+            brand: 'Ann Summers',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: true,
+                flexable: false,
+                soft: false
+            },
+            material: {
+                silicone: true,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: false,
+                normal: true
+            },
+            powerSource: {
+                USB: false,
+                battery: {
+                    used: false,
+                    batteryType: 'AAA',
+                    noBattery: 3,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
+
+    // Jil Hayden Rechargeable Flexible Couples Rabbit Vibrator
+    ASRFS.pushRabbit(
+        47,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-couples/jil-hayden-rechargeable-flexible-couples-rabbit-vibrator/88416.html#start=12',
+        'https://i1.adis.ws/i/annsummers/07CSSPAS1052043_Z?$product-large$',
+        {
+            intensity: [3],
+            style: [1, 3],
+            size: [3],
+            feel: [1, 3, 4]
+        },{
+            intensity: "Powerful",
+            style: "Variable vibration patterns and speeds",
+            size: "Medium",
+            feel: "Flexible, contoured and g-spot"
+        }, {
+            name: 'Jil Hayden Rechargeable Flexible Couples Rabbit Vibrator',
+            price: '£85.00',
+            brand: 'Jil',
+            forCouples: true,
+            waterResistant: true,
+            flexibility: {
+                firm: false,
+                flexable: true,
+                soft: false
+            },
+            material: {
+                silicone: true,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: true,
+                normal: false
+            },
+            powerSource: {
+                USB: true,
+                battery: {
+                    used: false,
+                    batteryType: '',
+                    noBattery: 3,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
+
+    // Sensations Feel The G-Spot Rampant Rabbit
+    ASRFS.pushRabbit(
+        48,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/sensations-feel-the-g-spot-rampant-rabbit/76386.html',
+        'https://i1.adis.ws/i/annsummers/07CSSPAS1042026_Z?$product-large$',
+        {
+            intensity: [3],
+            style: [1, 3, 4],
+            size: [3],
+            feel: [2, 3, 4]
+        },{
+            intensity: "Powerful",
+            style: "Variable vibration patterns and thrusting",
+            size: "Medium",
+            feel: "Straight, flexible and g-spot"
+        }, {
+            name: 'Sensations Feel The G-Spot Rampant Rabbit',
+            price: '£55.00',
+            brand: 'Ann Summers',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: false,
+                flexable: true,
+                soft: false
+            },
+            material: {
+                silicone: true,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: false,
+                normal: true
+            },
+            powerSource: {
+                USB: false,
+                battery: {
+                    used: false,
+                    batteryType: 'AAA',
+                    noBattery: 3,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
+
+    // Rampant Rabbit Vibrator - The Silicone Neon One
+    ASRFS.pushRabbit(
+        49,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/rampant-rabbit-vibrator---the-silicone-neon-one/37204.html',
+        'https://i1.adis.ws/i/annsummers/07OTOTAS1034041_Z?$product-large$',
+        {
+            intensity: [3],
+            style: [2, 3],
+            size: [4],
+            feel: [2, 3]
+        },{
+            intensity: "Powerful",
+            style: "Vibration patterns and rotations",
+            size: "Larger",
+            feel: "Straight and g-spot"
+        }, {
+            name: 'The Silicone Neon One',
+            price: '£60.00',
+            brand: 'Ann Summers',
+            forCouples: false,
+            waterResistant: true,
+            flexibility: {
+                firm: false,
+                flexable: true,
+                soft: false
+            },
+            material: {
+                silicone: true,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: true,
+                normal: false
+            },
+            powerSource: {
+                USB: false,
+                battery: {
+                    used: false,
+                    batteryType: 'AAA',
+                    noBattery: 3,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
+
 
 }
 

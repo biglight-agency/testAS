@@ -19,7 +19,6 @@
 */
 $(document).ready(function () {
 
-
      // Rabbits
     /* 
  Author: Chris Davies 
@@ -1018,7 +1017,7 @@ ASRFS.setupRabbits = function () {
             size: "Larger",
             feel: "Contoured"
         }, {
-            name: 'Rampant Rabbit Vibrator - The Moregasm Move Rechargeable One',
+            name: 'The Moregasm Move Rechargeable One',
             price: '£75.00',
             brand: 'Ann Summers',
             forCouples: false,
@@ -1313,7 +1312,7 @@ ASRFS.setupRabbits = function () {
             size: "Smaller",
             feel: "Contoured"
         }, {
-            name: 'Searle Black Rechargeable Rabbit',
+            name: 'Searle Pink Rechargeable Rabbit',
             price: '£70.00',
             brand: 'Searle',
             forCouples: false,
@@ -1476,7 +1475,7 @@ ASRFS.setupRabbits = function () {
     ASRFS.pushRabbit(
         25,
         'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/silicone-bunny-purple-rabbit/104967.html#start=4',
-        'https://i1.adis.ws/i/annsummers/07NCHDAS1323043_Z?$product-mobile-large$',
+        'https://i1.adis.ws/i/annsummers/07NCHDAS1317043_Z?$product-large$',
         {
             intensity: [3],
             style: [1],
@@ -1662,7 +1661,7 @@ ASRFS.setupRabbits = function () {
             size: "Smaller",
             feel: "Straight"
         }, {
-            name: 'Rampant Rabbit Vibrator -The Thrusting One',
+            name: 'The Thrusting One',
             price: '45.00',
             brand: 'Ann Summers',
             forCouples: false,

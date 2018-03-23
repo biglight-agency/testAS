@@ -63,7 +63,7 @@ ASRFS.setupRabbits = function () {
         },
         {
             intensity: "Moderate",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Small to Medium",
             feel: "G-spot"
         },
@@ -180,7 +180,7 @@ ASRFS.setupRabbits = function () {
             feel: [3]
         },{
             intensity: "Powerful",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Medium",
             feel: "G-spot"
         }, {
@@ -238,7 +238,7 @@ ASRFS.setupRabbits = function () {
             feel: [1]
         },{
             intensity: "Powerful",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Medium",
             feel: "Contoured"
         }, {
@@ -296,7 +296,7 @@ ASRFS.setupRabbits = function () {
             feel: [1]
         },{
             intensity: "Powerful",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Medium",
             feel: "Contoured"
         }, {
@@ -354,7 +354,7 @@ ASRFS.setupRabbits = function () {
             feel: [1]
         },{
             intensity: "Powerful",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Medium",
             feel: "Contoured"
         }, {
@@ -470,7 +470,7 @@ ASRFS.setupRabbits = function () {
             feel: [1, 4]
         },{
             intensity: "Off the scale",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Medium",
             feel: "Contoured and flexible"
         }, {
@@ -702,7 +702,7 @@ ASRFS.setupRabbits = function () {
             feel: [3]
         },{
             intensity: "Powerful",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Larger",
             feel: "G-spot"
         }, {
@@ -760,7 +760,7 @@ ASRFS.setupRabbits = function () {
             feel: [2, 3]
         },{
             intensity: "Powerful",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Larger",
             feel: "Straight and G-spot"
         }, {
@@ -818,7 +818,7 @@ ASRFS.setupRabbits = function () {
             feel: [2]
         },{
             intensity: "Powerful",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Larger",
             feel: "Straight"
         }, {
@@ -876,7 +876,7 @@ ASRFS.setupRabbits = function () {
             feel: [1, 4]
         },{
             intensity: "Powerful",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Medium",
             feel: "Contoured and flexible"
         }, {
@@ -934,7 +934,7 @@ ASRFS.setupRabbits = function () {
             feel: [1, 3, 4]
         },{
             intensity: "Powerful",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Larger",
             feel: "Contoured, flexible and G-spot"
         }, {
@@ -992,7 +992,7 @@ ASRFS.setupRabbits = function () {
             feel: [1]
         },{
             intensity: "Powerful",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Larger",
             feel: "Contoured"
         }, {
@@ -1053,7 +1053,7 @@ ASRFS.setupRabbits = function () {
             feel: [2]
         },{
             intensity: "Moderate",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Medium",
             feel: "Straight"
         }, {
@@ -1111,7 +1111,7 @@ ASRFS.setupRabbits = function () {
     //         feel: [1, 4]
     //     },{
     //         intensity: "Powerful",
-    //         style: "Variable vibration patterns and speeds",
+    //         style: "Variable speeds and patterns",
     //         size: "Larger",
     //         feel: "Contoured and flexible"
     //     }, {
@@ -1229,7 +1229,7 @@ ASRFS.setupRabbits = function () {
             feel: [1]
         },{
             intensity: "Intense",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Medium",
             feel: "Contoured"
         }, {
@@ -1287,7 +1287,7 @@ ASRFS.setupRabbits = function () {
             feel: [3]
         },{
             intensity: "Powerful",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Smaller",
             feel: "Contoured"
         }, {
@@ -1346,7 +1346,7 @@ ASRFS.setupRabbits = function () {
             feel: [3]
         },{
             intensity: "Powerful",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Smaller",
             feel: "Contoured"
         }, {
@@ -1404,7 +1404,7 @@ ASRFS.setupRabbits = function () {
             feel: [3]
         }, {
             intensity: "Powerful",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Smaller",
             feel: "Contoured"
         },{
@@ -1752,7 +1752,7 @@ ASRFS.setupRabbits = function () {
             feel: [1, 3]
         },{
             intensity: "Intense",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Medium",
             feel: "Contoured and g-spot"
         }, {
@@ -1810,7 +1810,7 @@ ASRFS.setupRabbits = function () {
             feel: [1]
         },{
             intensity: "Powerful",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Medium",
             feel: "Contoured"
         }, {
@@ -1868,7 +1868,7 @@ ASRFS.setupRabbits = function () {
             feel: [1]
         },{
             intensity: "Intense",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Medium",
             feel: "Contoured"
         }, {
@@ -1926,7 +1926,7 @@ ASRFS.setupRabbits = function () {
             feel: [1, 4]
         },{
             intensity: "Powerful",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Larger",
             feel: "Contoured and flexible"
         }, {
@@ -2274,7 +2274,7 @@ ASRFS.setupRabbits = function () {
             feel: [1, 3]
         },{
             intensity: "Moderate",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Medium",
             feel: "Contoured and g-spot"
         }, {
@@ -2624,7 +2624,7 @@ ASRFS.setupRabbits = function () {
             feel: [1, 4]
         },{
             intensity: "Powerful",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Larger",
             feel: "Contoured and flexible"
         }, {
@@ -2740,7 +2740,7 @@ ASRFS.setupRabbits = function () {
             feel: [2, 3]
         },{
             intensity: "Powerful",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Medium",
             feel: "Straight and g-spot"
         }, {
@@ -2798,7 +2798,7 @@ ASRFS.setupRabbits = function () {
             feel: [1, 3, 4]
         },{
             intensity: "Powerful",
-            style: "Variable vibration patterns and speeds",
+            style: "Variable speeds and patterns",
             size: "Medium",
             feel: "Flexible, contoured and g-spot"
         }, {

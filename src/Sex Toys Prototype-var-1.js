@@ -13536,7 +13536,18 @@ $(document).ready(function () {
 
         // Fade in the button at the top of the page
         // $('nav.breadcrumb').after(buttonHTML);
-        $('.refinements .only-on-mobile .only-on-mobile .count').before(buttonHTML);
+        var checkURL = window.location.href;
+        var vibratorsURL = "https://www.annsummers.com/sex-toys/shop-by-category/vibrators/";
+        var rampantURL = "https://www.annsummers.com/sex-toys/shop-by-category/rampant-rabbits/";
+        var newToysURL = "https://www.annsummers.com/new-in/shop-by-category/new-in-sex-toys/";
+        var topRatedToysURL = "https://www.annsummers.com/sex-toys/highlights/top-rated/";
+        
+        if(checkURL.indexOf(vibratorsURL) > -1 || 
+           checkURL.indexOf(rampantURL) > -1  ||
+           checkURL.indexOf(newToysURL) > -1  || 
+           checkURL.indexOf(topRatedToysURL) > -1 ){
+            $('.refinements .only-on-mobile .only-on-mobile .count').before(buttonHTML);
+        }
         // Fade in the button on the 8th product
         var productList = $('.search-result-items > li');
         $(productList[7]).after(secondButtonHTML);
@@ -13882,7 +13893,7 @@ $(document).ready(function () {
                      <p class="bl-plp-header">Suggested for you:</p>
                      <div class="bl-plp-horizontal-filters-cont">
                          <div class="bl-plp-horizontal-filter-title">
-                             <p>REFINE:</p>
+                             <p>FILTER:</p>
                          </div>
                          <div class="bl-plp-horizontal-filter">
                              <div class="bl-pdp-filter" data-filter="waterproof"><span class="bl-hide">${tickSVG}</span></div>
@@ -14248,12 +14259,12 @@ $(document).ready(function () {
                 animation: `<img src="${svgs.upToThree}" />`,
                 searchValue: 1
             }, {
-                text: 'Smaller <p>(3" to 5")</p>',
+                text: 'Smaller <p>(3" to 4")</p>',
                 value: 'smaller',
                 animation: `<img src="${svgs.threeToFive}" />`,
                 searchValue: 2
             }, {
-                text: 'Medium <p>(5" to 5.5")</p>',
+                text: 'Medium <p>(4" to 5.5")</p>',
                 value: 'medium',
                 animation: `<img src="${svgs.fiveToFive}" />`,
                 searchValue: 3
@@ -14321,7 +14332,8 @@ $(document).ready(function () {
             const svgs = ASSTBG_1.getShapeSVGs();
             content.type = 'feel',
                 content.class = 'bl-feel-slider';
-            content.header = 'Find the best shape for you:';
+            //content.header = 'Find the best shape for you:';
+            content.header = 'Choose your shape:';
             // content.options = [{
             //     text: 'Straight',
             //     value: 'firm',

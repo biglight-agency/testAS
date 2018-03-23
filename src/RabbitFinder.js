@@ -16664,7 +16664,19 @@ ASRFS.setupRabbits();
 
         // Fade in the button at the top of the page
         // $('nav.breadcrumb').after(buttonHTML);
-        $('.refinements .only-on-mobile .only-on-mobile .count').before(buttonHTML);
+        var checkURL = window.location.href;
+        var vibratorsURL = "https://www.annsummers.com/sex-toys/shop-by-category/vibrators/";
+        var rampantURL = "https://www.annsummers.com/sex-toys/shop-by-category/rampant-rabbits/";
+        var newToysURL = "https://www.annsummers.com/new-in/shop-by-category/new-in-sex-toys/";
+        var topRatedToysURL = "https://www.annsummers.com/sex-toys/highlights/top-rated/";
+        
+
+        if(checkURL.indexOf(vibratorsURL) > -1 || 
+           checkURL.indexOf(rampantURL) > -1  ||
+           checkURL.indexOf(newToysURL) > -1  || 
+           checkURL.indexOf(topRatedToysURL) > -1 ){
+            $('.refinements .only-on-mobile .only-on-mobile .count').before(buttonHTML);
+        }
         // Fade in the button on the 8th product
         var productList = $('.search-result-items > li');
         $(productList[7]).after(secondButtonHTML);

@@ -17851,7 +17851,7 @@ ASRFS.setupRabbits();
         $('html').addClass('bl-app-loading');
         setTimeout(function () {
             $('html').removeClass('bl-app-loading');
-        }, 1000);
+        }, 2000);
     }
 
     // RESULTS FUNCTION

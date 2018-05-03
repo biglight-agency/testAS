@@ -17851,7 +17851,7 @@ ASRFS.setupRabbits();
         $('html').addClass('bl-app-loading');
         setTimeout(function () {
             $('html').removeClass('bl-app-loading');
-        }, 2000);
+        }, 500);
     }
 
     // RESULTS FUNCTION
@@ -17950,7 +17950,7 @@ ASRFS.setupRabbits();
                 }
                 loadingDotTotal++;
 
-            }, 500);
+            }, 1500);
 
             // Setup loading screen
             setTimeout(function () {
@@ -17960,9 +17960,9 @@ ASRFS.setupRabbits();
                 // $('.bl-loading-screen .vibe').show();
                 // $('.bl-loading-screen .question-mark').show();
 
-                setTimeout(fadeOut, 1000);
+                setTimeout(fadeOut, 2000);
                 clearInterval(loadingDots);
-            }, 3000);
+            }, 4000);
 
             function fadeOut() {
                 $('.bl-loading-screen').removeClass('bl-active', 'bl-loading');

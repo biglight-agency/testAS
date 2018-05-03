@@ -17950,7 +17950,7 @@ ASRFS.setupRabbits();
                 }
                 loadingDotTotal++;
 
-            }, 2000);
+            }, 500);
 
             // Setup loading screen
             setTimeout(function () {
@@ -17960,9 +17960,9 @@ ASRFS.setupRabbits();
                 // $('.bl-loading-screen .vibe').show();
                 // $('.bl-loading-screen .question-mark').show();
 
-                setTimeout(fadeOut, 3500);
+                setTimeout(fadeOut, 1800);
                 clearInterval(loadingDots);
-            }, 5000);
+            }, 20000);
 
             function fadeOut() {
                 $('.bl-loading-screen').removeClass('bl-active', 'bl-loading');

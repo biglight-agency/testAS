@@ -1,6 +1,10 @@
 /* Ann Summers Sex Toy Buyer Guide Prototype Styles 
     Dev: Chris Davies */
 
+    /** Passion SVG **/
+    .bl-passion-svg svg{
+        height: 50px;
+    }
 
     html.bl-app-loading{
         pointer-events: none;

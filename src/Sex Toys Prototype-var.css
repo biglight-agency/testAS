@@ -3,7 +3,13 @@
 
     /** Passion SVG **/
     .bl-passion-svg svg{
-        height: 50px;
+        height: 40px;
+    }
+
+    .bl-passion-svg{
+        top: -40px;
+        position: relative;
+        text-align: center;
     }
 
     html.bl-app-loading{

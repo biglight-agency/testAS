@@ -43,10 +43,10 @@ $(document).ready(function () {
     4: Thrusting shaft
 
     Size
-    1: Mini 
-    2: Smaller
-    3: Medium
-    4: Larger
+    1: Mini - Up to 3 inches
+    2: Smaller - 3 - 4 inches
+    3: Medium - 4 - 5.5 inches
+    4: Larger - Over 5 inches
 
     Feel (shape)
     1: Contoured
@@ -3488,6 +3488,64 @@ ASRFS.setupRabbits = function () {
                 USB: false,
                 battery: {
                     used: true,
+                    batteryType: '',
+                    noBattery: 0,
+                    batteryIncluded: false,
+                }
+            },
+            matchedFeatures: {
+                size: false,
+                intensity: false,
+                feel: false,
+                style: false
+            }
+        },
+        0
+    );
+
+    // Luxe Silicone Rampant Rabbit
+    ASRFS.pushRabbit(
+        59,
+        'https://www.annsummers.com/sex-toys/sex-toys-shop-by-category/sex-toys-rampant-rabbits/luxe-silicone-rampant-rabbit/116960.html',
+        'https://i1.adis.ws/i/annsummers/07SCNRAS1207006_Z?$product-mobile-large$',
+        {
+            intensity: [3],
+            style: [3],
+            size: [3],
+            feel: [3]
+        },{
+            intensity: "Powerful",
+            style: "10 vibration patterns",
+            size: "Mixture",
+            feel: "G-spot"
+        }, {
+            name: 'Luxe Silicone Rampant Rabbit',
+            price: '£80.00',
+            brand: 'Ann Summers',
+            forCouples: false,
+            waterResistant: false,
+            flexibility: {
+                firm: true,
+                flexable: false,
+                soft: false
+            },
+            material: {
+                silicone: true,
+                metal: false
+            },
+            controllerType: {
+                pushButton: true,
+                switch: false,
+                app: false
+            },
+            noiseLevel: {
+                quiet: false,
+                normal: true
+            },
+            powerSource: {
+                USB: true,
+                battery: {
+                    used: false,
                     batteryType: '',
                     noBattery: 0,
                     batteryIncluded: false,
